@@ -17,7 +17,8 @@
 
 | Código | Apellidos y nombres | GitHub username |
 |---|---|---|
-| u20231a257 | Corvacho Damian, Brayan Alexis | BralexCD|
+| U20231a257 | Corvacho Damian, Brayan Alexis | BralexCD|
+| U202319057 | Frank Anthony, Huingo Tello | Franz2308|
 
 ## Registro de Versiones del Informe
 
