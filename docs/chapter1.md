@@ -22,7 +22,9 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-Esta sección será completada por el equipo.
+| Foto | Apellidos y nombres | Código | Carrera | Perfil y habilidades |
+|---|---|---|---|---|
+| <img src="../assets/chapter1/Brayan.png" alt="Brayan Alexis Corvacho Damian" width="80"> | Brayan Alexis Corvacho Damian | u20231a257 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC. Poseo conocimientos sólidos en Python, JavaScript y desarrollo web. Me apasiona la resolución de problemas algorítmicos y el trabajo en equipo para crear soluciones innovadoras. |
 
 ## 1.2 Solution Profile
 
