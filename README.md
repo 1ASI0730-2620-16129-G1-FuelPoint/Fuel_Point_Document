@@ -20,6 +20,7 @@
 | U20231a257 | Corvacho Damian, Brayan Alexis | BralexCD|
 | U202319057 | Frank Anthony, Huingo Tello | Franz2308|
 | U202318620 | Joan Fabricio, Payano Puchuri | joanfpp2-ai|
+| U20231B842 | Mantilla Maldonado, Enrique Manuel | enrique-mantilla|
 ## Registro de Versiones del Informe
 
 | Versión | Fecha | Autores | Descripción de modificación |
