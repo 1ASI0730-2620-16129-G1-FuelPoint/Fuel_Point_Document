@@ -128,7 +128,7 @@ Estas métricas constituyen objetivos de validación, no resultados alcanzados. 
 
 El Lean UX Canvas consolida la relación entre el problema de negocio, los usuarios, los resultados esperados y el aprendizaje necesario para reducir el riesgo de la propuesta.
 
-![Lean UX Canvas de la solución FullTank](assets/chapter1/lean-ux-canvas2.0.png)
+![Lean UX Canvas de la solución FullTank](../assets/chapter1/lean-ux-canvas2.0.png)
 
 *Figura 1. Lean UX Canvas incorporado por el equipo como base visual de la propuesta. La tabla siguiente presenta la versión textual actualizada para FullTank y facilita la lectura y trazabilidad de su contenido.*
 
