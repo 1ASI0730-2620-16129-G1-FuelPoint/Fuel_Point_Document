@@ -29,3 +29,27 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 | <img src="../assets/chapter1/Integrantes/JoanFT.png" alt="Joan Fabricio Payano Puchuri" width="80"> | Joan Fabricio Payano Puchuri | U202318620 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en C++, Python, JavaScript, HTML y CSS. Me apasiona el desarrollo de software y la búsqueda constante de nuevas formas de mejorar mis habilidades. Destaco por mi capacidad para trabajar en equipo, asumir nuevos retos y adaptarme a diferentes situaciones, siempre con la disposición de aprender, aportar soluciones y dar lo mejor de mí en cada proyecto.|
 | <img src="../assets/chapter1/Integrantes/Enrique.jpg" alt="Enrique Manuel Mantilla Maldonado" width="80"> | Enrique Manuel Mantilla Maldonado | U20231B842 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en Python, C++ y JavaScript. Me apasiona la tecnología y el desarrollo de software, y busco aprender cosas nuevas en el camino.|
 | Foto pendiente | Joan Salvador Carhuayal Suarez | U202219040 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación de Python, C++, HTLM, CSS y JavaScript. Me gusta el mundo de la tecnología y el desarrollo de software, espero seguir mejorando mis habilidades y conocimientos para formarme como profesional.|
+
+## 1.2 Solution Profile
+
+### 1.2.1 Antecedentes y problemática
+
+#### Entorno de aplicación de FullTank
+
+### 1.2.2 Lean UX Process
+
+#### 1.2.2.1 Lean UX Problem Statements
+
+#### 1.2.2.2 Lean UX Assumptions
+
+#### 1.2.2.3 Lean UX Hypothesis Statements
+
+#### 1.2.2.4 Lean UX Canvas
+
+## 1.3 Segmentos objetivo
+
+### Segmento 1: empresas compradoras de combustible
+
+### Segmento 2: empresas proveedoras de combustible
+
+### Relación entre los segmentos

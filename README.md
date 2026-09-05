@@ -42,6 +42,8 @@ El informe se desarrolla de forma colaborativa en Markdown. El equipo aplicará 
 - [Student Outcome](#student-outcome)
 - [Capítulo I: Introducción](docs/chapter1.md)
   - [1.1 Startup Profile](docs/chapter1.md#11-startup-profile)
+  - [1.2 Solution Profile](docs/chapter1.md#12-solution-profile)
+  - [1.3 Segmentos objetivo](docs/chapter1.md#13-segmentos-objetivo)
 - Capítulo II: Requirements Elicitation & Analysis — pendiente
 - Capítulo III: Requirements Specification — pendiente
 - Capítulo IV: Product Design — pendiente
