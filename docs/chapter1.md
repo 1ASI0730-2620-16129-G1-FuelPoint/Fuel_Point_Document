@@ -66,7 +66,7 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 #### 1.2.2.4 Lean UX Canvas
 
-
+<img src="../assets/chapter1/Lean UX/lean-ux-canvas.png" alt="Lean UX Canvas">
 
 ## 1.3 Segmentos objetivo
 
