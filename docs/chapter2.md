@@ -189,6 +189,18 @@ El Journey busca evidenciar los puntos críticos de su experiencia actual, ident
 
 ### 2.3.4 Empathy Mapping
 
+Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y observaciones recolectadas durante el análisis de los User Persona. Se colocó al centro de cada mapa al usuario correspondiente (Carlos y Andrea) y se respondieron las preguntas claves sobre su entorno, emociones, comportamientos y necesidades.
+
+-Segmento 1: Empresas solicitantes de combustible
+
+
+ <img src="../assets/chapter-2/empathyCarlos.png" alt="empathyMapping de Carlos"/>
+
+
+-Segmento 2: Proveedores de Combustible
+
+ <img src="../assets/chapter-2/empathyAndrea.png" alt="empathyMapping de Andrea"/>
+
 ## 2.4 Big Picture Event Storming
 
 ### Step 1 – Free Exploration (Exploración Libre)
