@@ -44,7 +44,29 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 #### 1.2.2.3 Lean UX Hypothesis Statements
 
+**Hypothesis Statement 01:**
+* *Creemos* que la centralización de los pedidos en nuestra plataforma reducirá el margen de errores causados por problemas de coordinación entre las empresas solicitantes y los proveedores drásticamente.
+* *Sabremos* que hemos tenido éxito
+* *Cuando* luego de los primeros tres meses de uso se reporte que más de un 70% de los pedidos realizados fueron confirmados sin necesidad de correcciones posteriores.
+
+**Hypothesis Statement 02:**
+* *Creemos* que ofrecer más herramientas para el control y seguimiento de pedidos mejorará la satisfacción de los clientes solicitantes.
+* *Sabremos* que hemos tenido éxito
+* *Cuando* se observe una reducción del 30% en llamadas de seguimiento.
+
+**Hypothesis Statement 03:**
+* *Creemos* que la plataforma permitirá a los proveedores optimizar el proceso de gestión de los pedidos y reducir el tiempo que toma cumplir con cada uno.
+* *Sabremos* que hemos tenido éxito
+* *Cuando* los proveedores logren reducir en un 20% el tiempo promedio entre confirmación y entrega de pedidos.
+
+**Hypothesis Statement 04:**
+* *Creemos* que las notificaciones automáticas sobre el estado de los pedidos reducirán la necesidad de una gran cantidad de operadores comerciales de alta disponibilidad.
+* *Sabremos* que hemos tenido éxito
+* *Cuando* las solicitudes de información por parte de clientes disminuyan en un 40% y el tiempo promedio de atención se reduzca en un 60% tras el primer trimestre de uso.
+
 #### 1.2.2.4 Lean UX Canvas
+
+
 
 ## 1.3 Segmentos objetivo
 
