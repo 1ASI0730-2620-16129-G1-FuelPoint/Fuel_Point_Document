@@ -34,7 +34,26 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 ### 1.2.1 Antecedentes y problemática
 
-#### Entorno de aplicación de FullTank
+- **What? (¿Qué?)**  
+  La problemática principal es la falta de un sistema centralizado y digital para gestionar los pedidos de combustible, lo que genera errores humanos, duplicación de esfuerzos y retrasos en las entregas.
+
+- **When? (¿Cuándo?)**  
+  El problema se presenta constantemente en el proceso de gestión de pedidos, especialmente cuando hay un alto volumen de solicitudes o múltiples pedidos a coordinar.
+
+- **Where? (¿Dónde?)**  
+  El problema ocurre en empresas solicitantes de combustible y proveedores, tanto en áreas urbanas como rurales, donde la infraestructura digital aún no está optimizada.
+
+- **Who? (¿Quién?)**  
+  Los principales afectados son las empresas solicitantes (medianas y grandes), los proveedores de combustible y los encargados de la logística y gestión de pedidos.
+
+- **Why? (¿Por qué?)**  
+  El problema radica en la falta de integración entre los métodos actuales de gestión (como correos y aplicaciones de mensajería), que dificultan un control centralizado y preciso de los pedidos.
+
+- **How? (¿Cómo?)**  
+  Los procesos actuales son desorganizados, utilizando diversas plataformas desconectadas, lo que impide tener un flujo de trabajo eficiente y controlado.
+
+- **How Much? (¿Cuánto?)**  
+  La magnitud del problema es considerable, pues cada día se pierden horas valiosas debido a la ineficiencia y los errores, lo que incrementa los costos operativos y puede generar pérdidas económicas significativas.
 
 ### 1.2.2 Lean UX Process
 
