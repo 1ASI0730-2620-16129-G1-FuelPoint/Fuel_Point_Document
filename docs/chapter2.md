@@ -146,6 +146,40 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 
 ### 2.2.1. Diseño de entrevistas.
 
+**A. Proveedores de Combustible**
+
+**Preguntas:**
+
+1. ¿Cuál es su cargo dentro de la empresa proveedora?
+2. ¿Qué tipos de clientes atienden principalmente (logística, construcción, minería, agroindustria)?
+3. ¿Qué volumen de operaciones realizan mensualmente?
+4. ¿Cómo gestionan actualmente los pedidos y contratos de sus clientes?
+5. ¿Qué problemas han experimentado con los métodos tradicionales (llamadas, correos, planillas)?
+6. ¿Utilizan algún software especializado para ventas o logística?
+7. ¿Qué características valoraría más en una plataforma digital para gestionar pedidos?
+8. ¿Considera que una solución que centralice cotizaciones, contratos y entregas sería útil para su empresa?
+9. ¿Qué tan importante es para ustedes tener reportes históricos y comparativos de ventas?
+10. ¿Qué estrategias usan actualmente para fidelizar clientes, y cómo cree que una plataforma como NombredelaStartup podría apoyarlos?
+
+---
+
+**B. Empresas Solicitantes**
+
+**Preguntas:**
+
+1. ¿Cuál es su cargo en la empresa?
+2. ¿Hace cuánto tiempo trabaja en el sector energético/logístico?
+3. ¿Qué volumen de combustible gestionan aproximadamente al mes?
+4. ¿Cómo gestionan actualmente la compra y control de combustible?
+5. ¿Qué herramientas usan (Excel, llamadas, correos, sistemas propios)?
+6. ¿Cuáles son los principales problemas que enfrentan con su sistema actual?
+7. ¿Qué tan importante es para usted contar con trazabilidad en tiempo real?
+8. ¿Qué dispositivos utilizan para gestionar pedidos (PC, móvil, tablet)?
+9. ¿Qué información considera más valiosa al momento de comprar combustible (precio, tiempo de entrega, historial de proveedor, etc.)?
+10. ¿Cómo afecta la falta de transparencia en los precios a sus decisiones de compra?
+11. ¿Le interesaría recibir notificaciones en tiempo real sobre cambios de precio o estado de sus pedidos?
+12. ¿Qué barreras considera que dificultarían implementar una solución digital como NombredelaStartup en su empresa?
+
 ### 2.2.2 Registro de entrevistas
 
 ### 2.2.3 Análisis de entrevistas
