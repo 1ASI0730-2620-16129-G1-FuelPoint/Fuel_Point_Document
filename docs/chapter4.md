@@ -433,14 +433,200 @@ De esta manera, los component diagrams permiten entender cómo la arquitectura s
   <img src="./../assets/chapter-4/BackendComponents-dark.png" alt="Component diagram" width="500"/>
 </div>
 
----
-
 ## 4.7 Software Object-Oriented Design
+
+En esta sección se presenta el diseño orientado a objetos del sistema, el cual desarrolla con mayor detalle la implementación interna de los componentes identificados en los diagramas C4 del apartado 4.6. A partir de los contenedores y componentes definidos (Landing Page, Web Application, API y Database), se derivan diagramas de clases específicos para cada bounded context del dominio, con el objetivo de mostrar:
+
+- Cómo se modelan las entidades, agregados, servicios, repositorios y controladores en el backend para cada contexto.
+- Cómo se estructuran los componentes de presentación, lógica de aplicación y acceso a datos en el frontend.
+- Cómo se reflejan estos modelos en el diseño de la base de datos relacional, identificando qué tablas pertenecen a cada bounded context.
+
+De esta forma, el diseño orientado a objetos enlaza el nivel arquitectónico (C4 Model) con el nivel de implementación, permitiendo verificar la coherencia entre bounded contexts, responsabilidades de cada módulo y decisiones de diseño técnico, como el uso de interfaces de servicio, repositorios, ensambladores y value objects por contexto.
 
 ### 4.7.1 Class Diagrams
 *Sección reservada para los diagramas de clases orientados a objetos (frontend y backend) estructurados por Bounded Context, a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
 
----
+En esta subsección se presentan los diagramas de clases que detallan la estructura interna de los principales componentes para cada bounded context. Estos diagramas complementan al Component Diagram de la API Application y a los contenedores definidos, proporcionando una vista centrada en clases, relaciones y responsabilidades.
+
+
+En esta subsección se presentan los diagramas de clases que detallan la estructura interna de los principales componentes para cada bounded context. Estos diagramas complementan al Component Diagram de la API Application y a los contenedores definidos, proporcionando una vista centrada en clases, relaciones y responsabilidades.
+
+
+### Diagramas de clases del Frontend
+
+A nivel de frontend, se modelan las clases en función de los módulos y vistas que consumen los servicios expuestos por la API. La aplicación web sigue una arquitectura modular basada en bounded contexts, donde cada contexto se organiza en packages independientes con las siguientes capas:
+
+- **domain/model**: contiene las estructuras que representan los modelos de datos y value objects utilizados en la interfaz.
+- **application**: incluye servicios de aplicación que coordinan la lógica necesaria para interactuar con el backend.
+- **infrastructure/api**: encapsula las llamadas HTTP a la API mediante un cliente centralizado.
+- **presentation**: agrupa las vistas y componentes de interfaz de usuario, así como los mecanismos de gestión de estado cuando es necesario compartir información entre múltiples vistas.
+
+**Diagrama del Frontend completo:**
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend.png" alt="frontend classes"/>
+</div>
+
+El diagrama completo del frontend muestra la organización general de la capa de presentación, incluyendo todos los bounded contexts agrupados en packages independientes, los mecanismos de gestión de estado global, el cliente HTTP centralizado con manejo de autenticación, y los componentes encargados de la protección de rutas según el rol del usuario autenticado. Cada vista se conecta a su servicio correspondiente, el cual interactúa con la capa de infraestructura para consumir los servicios REST del backend.
+
+**Diagrama del Frontend dividido por contextos:**
+
+- **Identity & Access Frontend**  
+  Responsabilidad: Maneja las vistas de registro, inicio de sesión, recuperación de contraseña y edición de perfil de usuario.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_iam.png" alt="frontend iam"/>
+</div>
+
+- **Catalog Frontend**  
+  Responsabilidad: Maneja las vistas de gestión del inventario de recursos ofrecidos por el proveedor.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_catalog.png" alt="frontend catalog"/>
+</div>
+
+- **Ordering Frontend**  
+  Responsabilidad: Maneja las vistas del ciclo de vida completo de pedidos: creación de solicitudes, aprobación, rechazo, despacho, confirmación de entrega y cierre.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_ordering.png" alt="frontend ordering"/>
+</div>
+
+- **Payment Frontend**  
+  Responsabilidad: Maneja las vistas para que el cliente registre comprobantes de pago vinculados a una orden.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_payment.png" alt="frontend payment"/>
+</div>
+
+- **Fulfillment Frontend**  
+  Responsabilidad: Maneja las vistas de gestión de recursos logísticos (por ejemplo, vehículos y operadores) y la asignación de despacho a órdenes aprobadas.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_fullfillment.png" alt="frontend fullfillment"/>
+</div>
+
+- **Notification Frontend**  
+  Responsabilidad: Maneja el panel de notificaciones dentro de la aplicación para informar a los usuarios sobre cambios en el estado de los pedidos.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_notification.png" alt="frontend notification"/>
+</div>
+
+- **Reporting & Analytics Frontend**  
+  Responsabilidad: Maneja las vistas de visualización de métricas, gráficos de consumo o ventas, y la descarga de reportes.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_reporting.png" alt="frontend analysis"/>
+</div>
+
+
+- **Equipment Frontend**  
+  Responsabilidad: Maneja las vistas para que el cliente registre, actualice, elimine y visualice sus equipos (vehículos, generadores, maquinaria), incluyendo el tipo de combustible requerido y el estado operativo de cada uno.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_equipment.png" alt="frontend equipment"/>
+</div>
+
+- **Inventory Frontend**  
+  Responsabilidad: Maneja las vistas de gestión del inventario de combustible por parte del proveedor, incluyendo el registro, actualización y eliminación de ítems, así como la visualización de niveles de stock y precio por litro.
+
+<div allign="center">
+  <img src="../assets/chapter-4/frontend_inventory.png" alt="frontend inventory"/>
+</div>
+
+### Diagramas de clases del Backend
+
+A nivel de backend, los diagramas de clases reflejan la implementación detallada de los módulos definidos como componentes dentro de la API. El sistema sigue una arquitectura por capas organizada por bounded contexts, donde cada contexto mantiene una clara separación de responsabilidades:
+
+- **interfaces**: expone los endpoints del sistema (controladores REST) y componentes encargados de transformar datos entre modelos externos e internos.
+- **domain**: contiene las entidades, agregados, value objects, así como comandos, consultas e interfaces que definen el comportamiento del dominio.
+- **application**: implementa la lógica de negocio mediante servicios que ejecutan comandos y consultas.
+- **infrastructure**: define los mecanismos de persistencia y comunicación con sistemas externos, incluyendo repositorios y servicios de integración.
+
+**Diagrama del Backend completo:**
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend.png" alt="backend"/>
+</div>
+
+El diagrama completo del backend muestra la organización de todos los bounded contexts como módulos independientes dentro del sistema. Se visualizan las dependencias entre contextos, donde el bounded context de Ordering actúa como núcleo del sistema y coordina a los demás contextos mediante interfaces.
+
+Las principales dependencias incluyen:
+- Verificación de pagos antes de aprobar órdenes.
+- Gestión y liberación de recursos logísticos.
+- Validación y actualización de inventario.
+- Generación de notificaciones ante cambios de estado.
+- Alimentación de datos para reportes y análisis.
+
+Todas las interacciones entre bounded contexts se realizan a través de interfaces, evitando dependencias directas de implementación y favoreciendo el desacoplamiento.
+
+**Diagrama del Backend dividido por contextos:**
+
+- **Identity & Access Backend**  
+  Responsabilidad: Gestiona el registro de usuarios, autenticación, autorización y control de acceso.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_iam.png" alt="backend iam"/>
+</div>
+
+- **Catalog Backend**  
+  Responsabilidad: Gestiona el inventario de recursos disponibles, incluyendo stock y características relevantes.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_catalog.png" alt="backend catalog"/>
+</div>
+
+- **Ordering Backend**  
+  Responsabilidad: Orquesta el ciclo de vida completo del pedido. Es el bounded context central que coordina la interacción con los demás contextos.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_ordering.png" alt="backend ordering"/>
+</div>
+
+
+- **Payment Backend**  
+  Responsabilidad: Gestiona el registro y validación de pagos asociados a órdenes.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_payment.png" alt="backend payment"/>
+</div>
+
+- **Fulfillment Backend**  
+  Responsabilidad: Gestiona los recursos necesarios para la ejecución de entregas y su asignación a órdenes.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_fulfillment.png" alt="backend fullfilment"/>
+</div>
+
+- **Notification Backend**  
+  Responsabilidad: Genera y gestiona notificaciones ante eventos relevantes del sistema.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_notification.png" alt="backend notification"/>
+</div>
+
+
+- **Reporting & Analytics Backend**  
+  Responsabilidad: Agrega información histórica para generar métricas, análisis y reportes.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_reporting.png" alt="backend analysis"/>
+</div>
+
+- **Equipment Backend**  
+  Responsabilidad: Gestiona el registro, actualización, eliminación y consulta de los equipos del cliente, así como la asignación del tipo de combustible requerido por cada equipo.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_equipment.png" alt="backend equipment"/>
+</div>
+
+- **Inventory Backend**  
+  Responsabilidad: Gestiona el registro, actualización y eliminación de los productos de combustible del proveedor, validando la información del ítem y controlando los niveles de stock disponible y precio por litro.
+
+<div allign="center">
+  <img src="../assets/chapter-4/backend_inventory.png" alt="backend inventory"/>
+</div>
 
 ## 4.8 Database Design
 
