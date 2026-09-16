@@ -357,9 +357,28 @@ El bounded context Equipment se encarga de la gestión y monitoreo de los equipo
   <img src="./../assets/chapter-4/Equipment.png" alt="Bounded context Equipment" width="500"/>
 </div>
 
-
 ### 4.6.2 Software Architecture Context Diagram
-*Sección reservada para el diagrama de contexto de la arquitectura del sistema según el modelo C4, a ser incorporado por el integrante asignado según el reparto de trabajo del equipo.*
+En este nivel se presenta una vista de alto nivel de la arquitectura, donde el foco está en el sistema de software FullTank Platform como una "caja negra" y en las interacciones que mantiene con sus usuarios y con otros sistemas externos.
+
+El context diagram muestra al FullTank Platform como un recuadro central, rodeado por los principales actores y sistemas con los que se comunica:
+
+Visitor: usuario anónimo que navega la landing page para conocer la plataforma, revisar sus beneficios y registrarse en el sistema.
+
+Client (Requester): representante de una empresa que requiere combustible. Interactúa con la plataforma para explorar el catálogo de proveedores y sus productos, gestionar sus equipos (vehículos, generadores, maquinaria), crear solicitudes de abastecimiento, registrar pagos, hacer seguimiento de pedidos y confirmar entregas.
+
+Provider: representante de una empresa proveedora de combustible. Gestiona su inventario de productos, evalúa solicitudes entrantes, aprueba o rechaza pedidos, asigna recursos logísticos (transporte y conductores) y ejecuta despachos.
+
+Email Service: sistema externo encargado de enviar correos electrónicos, principalmente para la recuperación de contraseñas y notificaciones relacionadas a autenticación.
+
+Cloud Storage: sistema externo utilizado para almacenar comprobantes de pago (vouchers) cargados por los clientes.
+
+PDF Generator Service: sistema externo encargado de generar reportes en formato PDF, como resúmenes de consumo y ventas.
+
+En el diagrama se representan las relaciones entre estos elementos, destacando que los usuarios (Visitor, Client y Provider) interactúan directamente con FullTank, mientras que el sistema se encarga de orquestar la comunicación con los servicios externos (correo, almacenamiento y generación de reportes). Esta vista permite comprender el alcance del sistema, sus límites de responsabilidad y el ecosistema en el que opera antes de entrar en detalles internos.
+
+<div allign="center">
+  <img src="./../assets/chapter-4/SystemContextDiagram.png" alt="Context diagram" width="500"/>
+</div>
 
 ### 4.6.3 Software Architecture Container Diagrams
 *Sección reservada para el diagrama de contenedores de la arquitectura del sistema según el modelo C4, a ser incorporado por el integrante asignado según el reparto de trabajo del equipo.*
