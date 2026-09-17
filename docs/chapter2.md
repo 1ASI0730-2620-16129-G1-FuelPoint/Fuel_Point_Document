@@ -196,7 +196,66 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 
 ### 2.3.1 User Personas
 
+Los User Personas son perfiles arquetípicos que representan a los usuarios de cada segmento objetivo. Se construyeron a partir de los patrones comunes encontrados en las entrevistas de la sección 2.2: cargos, rutinas, herramientas, frustraciones y metas que se repitieron entre los entrevistados. Se elaboraron en UXPressia y sirven de referencia para el User Task Matrix, los User Journey Maps, los Empathy Maps, el Impact Mapping y el diseño de la aplicación web.
+
+**Segmento 1: empresas solicitantes de combustible**
+
+**Carlos Ramírez Torres** (32 años, Lima) es encargado logístico de una constructora mediana que depende del suministro constante de combustible para operar maquinaria pesada. Tiene más de diez años de experiencia en logística y operaciones. Coordina varios pedidos a la vez, supervisa las entregas y debe evitar que la obra se detenga. Hoy gestiona sus pedidos por llamadas, correo y WhatsApp, por lo que la información queda desordenada y sin trazabilidad.
+
+- **Metas:** reducir en al menos 30 % los retrasos en las entregas, centralizar todos sus pedidos en una sola plataforma, mejorar la comunicación con sus proveedores y decidir con datos.
+- **Frustraciones:** falta de una confirmación clara de sus pedidos, errores por mala comunicación, tiempo perdido en seguimiento manual y herramientas desconectadas.
+- **Tecnología:** usa laptop y computadora de escritorio con Windows y un celular Android; navega en Google Chrome.
+- **Cita:** «Necesito saber exactamente dónde está mi pedido sin tener que estar llamando todo el día».
+
+<img src="../assets/chapter-2/userCarlos.png" alt="User Persona Carlos Ramírez Torres, encargado logístico de una empresa solicitante de combustible" width="600"/>
+
+**Segmento 2: empresas proveedoras de combustible**
+
+**Andrea López Castillo** (28 años, Callao) es gestora de ventas regional en una distribuidora de combustible que atiende a varios clientes industriales. Coordina los pedidos, asigna las rutas de entrega y supervisa que cada despacho se cumpla. Recibe muchas solicitudes al día y las procesa de forma manual, lo que le genera sobrecarga operativa.
+
+- **Metas:** reducir en 50 % los errores logísticos, optimizar las rutas de distribución, disminuir el tiempo de gestión de pedidos y aumentar la satisfacción de sus clientes.
+- **Necesidades:** una bandeja única de pedidos, visibilidad del estado de cada despacho y avisos automáticos que eviten responder las mismas consultas.
+- **Frustraciones:** exceso de llamadas y mensajes de clientes, dificultad para organizar muchos pedidos, falta de visibilidad en tiempo real y procesos manuales repetitivos.
+- **Tecnología:** trabaja principalmente desde laptop y computadora de escritorio con Windows y usa un celular Android en campo; navega en Google Chrome.
+- **Cita:** «Si pudiera ver todos los pedidos organizados automáticamente, ahorraría horas de trabajo cada día».
+
+<img src="../assets/chapter-2/userAndrea.png" alt="User Persona Andrea López Castillo, gestora de ventas regional de una empresa proveedora de combustible" width="600"/>
+
+Siguiendo el enfoque de Lean UX (Gothelf & Seiden, 2021), los User Personas priorizan metas, necesidades y comportamientos sobre los datos demográficos, y son documentos vivos: se actualizarán cada vez que las entrevistas o las pruebas de usabilidad aporten nueva evidencia sobre los usuarios.
+
+Ambos perfiles comparten la dependencia de canales desconectados y la necesidad de conocer el estado real de cada pedido. Carlos necesita, sobre todo, registrar y seguir sus pedidos sin llamar. Andrea necesita organizar, validar y despachar muchos pedidos con menos trabajo manual.
+
 ### 2.3.2 User Task Matrix
+
+El User Task Matrix recoge las tareas que Carlos y Andrea realizan para cumplir sus objetivos, usen o no FullTank. Para cada tarea se estima su **frecuencia** (con qué periodicidad se realiza) y su **importancia** (cuánto afecta a la continuidad de la operación) en cada segmento. Las valoraciones se basan en lo relatado en las entrevistas y usan la escala Alta, Media y Baja.
+
+| Tarea | Solicitante: frecuencia | Solicitante: importancia | Proveedor: frecuencia | Proveedor: importancia |
+|---|---|---|---|---|
+| Registrar o recibir pedidos de combustible | Alta | Alta | Alta | Alta |
+| Validar la información del pedido | Media | Alta | Alta | Alta |
+| Registrar o validar el comprobante de pago | Media | Alta | Alta | Alta |
+| Consultar o actualizar el estado del pedido | Alta | Alta | Alta | Alta |
+| Modificar o cancelar un pedido | Media | Media | Baja | Media |
+| Comparar y elegir proveedores | Baja | Alta | No aplica | No aplica |
+| Controlar el nivel de combustible de equipos y tanques | Alta | Alta | No aplica | No aplica |
+| Gestionar el inventario de combustible | No aplica | No aplica | Alta | Alta |
+| Asignar cisternas y conductores a un despacho | No aplica | No aplica | Alta | Alta |
+| Programar y planificar entregas | Baja | Media | Alta | Alta |
+| Gestionar varios pedidos a la vez | Media | Media | Alta | Alta |
+| Confirmar la recepción del pedido | Media | Alta | Media | Alta |
+| Comunicarse entre cliente y proveedor | Alta | Alta | Alta | Alta |
+| Recibir o enviar notificaciones | Alta | Alta | Alta | Alta |
+| Revisar el historial de pedidos | Media | Media | Media | Media |
+| Monitorear consumo o ventas | Baja | Media | Media | Media |
+| Generar reportes y métricas | Baja | Media | Media | Media |
+
+**Análisis**
+
+- **Tareas críticas compartidas:** registrar o recibir pedidos, consultar su estado, comunicarse y recibir notificaciones son de frecuencia e importancia altas en ambos segmentos. Por eso forman el núcleo del producto: el flujo de pedidos con estados compartidos y las notificaciones automáticas.
+- **Solicitante:** además del pedido, Carlos controla a diario el nivel de sus equipos y tanques, ya que de ello depende cuándo pedir combustible. Esto justifica el módulo de equipos y los accesos directos para crear una solicitud.
+- **Proveedor:** Andrea concentra la mayor carga en validar pagos, asignar cisternas y conductores, planificar entregas y gestionar varios pedidos a la vez. Estas tareas justifican la bandeja de solicitudes entrantes, el módulo de flota y el inventario.
+- **Tareas de apoyo:** el historial, el monitoreo y los reportes tienen importancia media. Se ofrecerán en módulos secundarios de la aplicación, sin interrumpir el flujo principal.
+
 
 ### 2.3.3 User Journey Mapping
 
