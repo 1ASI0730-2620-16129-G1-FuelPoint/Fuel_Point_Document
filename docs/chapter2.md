@@ -182,7 +182,58 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 
 ### 2.2.2 Registro de entrevistas
 
+**1. Segmento 1: Empresas solicitantes de combustible**
+
+- Entrevista 1:
+
+| Campo                    | Detalle |
+|-------------------------|---------|
+| **Nombre entrevistado** | Denis Paul Requejo Sanchez |
+| **Edad**               | 34 |
+| **Departamento**       | Lima |
+| **Fecha**              | No consignada |
+| **Inicio del video**   | 00:00 |
+| **Fin del video**      | 05:35 |
+| **Duración**           | 05:35 |
+| **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQD9W1DrB9WQS4N8_M5GJPorAXnVh-sF_SPbza6v5m4C4_A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YbIC1j |
+| **Foto entrevista**    | <img src="../assets/chapter-2/PaulEntrevista.png" alt="Captura entrevistado Denis Paul Requejo Sanchez" style="width: 30%; max-width: 150px;"/> |
+| **Resumen**           | El entrevistado se desempeña como jefe de operaciones logísticas, con aproximadamente 8 años de experiencia en el sector, enfocado en la coordinación del abastecimiento y distribución de combustible, gestionando un volumen mensual que oscila entre 40,000 y 60,000 galones según la demanda. Actualmente, la gestión de compra y control se realiza mediante un enfoque tradicional basado en correos, llamadas y registros en hojas de Excel, complementado con el uso de WhatsApp para coordinaciones rápidas, sin contar con un sistema integrado. Entre los principales problemas identificados destacan el desorden en la información, la duplicidad de datos y la presencia de errores en los pedidos, lo que evidencia limitaciones en la eficiencia operativa. La trazabilidad en tiempo real es considerada altamente importante, ya que permitiría mejorar el control de los procesos y facilitar una respuesta oportuna ante incidencias. En cuanto a herramientas, se utilizan principalmente computadoras en oficina y dispositivos móviles en campo, reflejando una operación híbrida. Los factores más relevantes en la toma de decisiones son el precio, el tiempo de entrega y el historial de cumplimiento del proveedor. Asimismo, la falta de transparencia en los precios genera desconfianza y dificulta la comparación entre opciones. El entrevistado muestra una actitud positiva hacia el uso de notificaciones en tiempo real, destacando su utilidad para mejorar la planificación y la toma de decisiones. Finalmente, identifica como principales barreras para la adopción de una solución digital la resistencia al cambio por parte del personal y el tiempo requerido para su capacitación. |
+
+**2. Segmento 2: Proveedores de combustible**
+
+- Entrevista 1:
+
+| Campo                    | Detalle |
+|-------------------------|---------|
+| **Nombre entrevistado** | Carlos Mendoza |
+| **Edad**               | 50 |
+| **Departamento**       | Lima |
+| **Fecha**              | No consignada |
+| **Inicio del video**   | 00:00 |
+| **Fin del video**      | 04:41 |
+| **Duración**           | 04:41 |
+| **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQAc_YdFgDxbSIN6wUPQrIZ-ARLL0hIcgJwoS9AJHEcnpD4?e=fdVXa8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista**    | <img src="../assets/chapter-2/CarlosEntrevista.png" alt="Captura entrevistado Carlos Mendoza" style="width: 30%; max-width: 150px;"/> |
+| **Resumen**           | El entrevistado se desempeña como jefe de logística y operaciones comerciales, con responsabilidad sobre todo el flujo desde la solicitud del cliente hasta la entrega final del combustible, atendiendo principalmente a clientes de gran volumen en sectores como minería y agroindustria, que representan cerca del 90% de su cartera. Maneja un volumen mensual de entre 40,000 y 60,000 galones, operando bajo contratos marco anuales donde los pedidos se reciben mediante órdenes de compra enviadas por correo electrónico. El proceso incluye validaciones internas como revisión de crédito en sistemas ERP y posterior programación de la flota, lo que introduce múltiples puntos de fricción. Entre los principales problemas destacan la falta de trazabilidad en tiempo real, retrasos por burocracia interna, dependencia de correos que pueden quedar sin atención, y la necesidad constante de coordinar manualmente información con choferes para responder a clientes, lo que genera ineficiencia y sobrecarga operativa. Aunque cuentan con sistemas para contabilidad y GPS para flota, estos no están integrados, lo que limita la visibilidad completa del proceso. El entrevistado valora altamente soluciones que integren automáticamente pedidos, validaciones y despachos, permitiendo al cliente subir órdenes, validar condiciones y rastrear entregas en tiempo real sin intermediación. Asimismo, considera clave contar con reportes dinámicos para análisis de desempeño, consumo por zonas y tiempos de entrega. Señala que una plataforma centralizada representaría un salto importante en la madurez digital de la empresa, permitiendo escalar operaciones sin incrementar significativamente el personal. Finalmente, destaca que la fidelización en su sector depende del cumplimiento estricto y la ausencia de fallas, y que una solución digital podría convertirse en una ventaja competitiva al ofrecer mayor transparencia, control y posicionamiento como socio tecnológico ante sus clientes. |
+
+- Entrevista 2:
+
+| Campo                    | Detalle |
+|-------------------------|---------|
+| **Nombre entrevistado** | Lucia Fernandez |
+| **Edad**               | 21 |
+| **Departamento**       | Lima |
+| **Fecha**              | No consignada |
+| **Inicio del video**   | 00:00 |
+| **Fin del video**      | 04:44 |
+| **Duración**           | 04:44 |
+| **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQAVGJhcIxtqRpfX4RZjsRWyASN4B5-P0T-EiUi1238xlu4?e=X46Kf3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista**    | <img src="../assets/chapter-2/LuciaEntrevista.png" alt="Captura entrevistada Lucia Fernandez" style="width: 30%; max-width: 120px;"/> |
+| **Resumen**           | La entrevistada se desempeña como gerenta de ventas en una empresa proveedora de combustible, asumiendo además funciones relacionadas con operaciones y cobranzas, atendiendo principalmente a clientes del sector transporte y logística, como flotas de camiones y talleres con tanques propios. Maneja un volumen mensual de entre 25,000 y 40,000 galones, con una gestión de pedidos altamente dependiente de canales informales como WhatsApp y llamadas telefónicas, mientras que la información se transfiere manualmente a hojas de Excel compartidas con el área de despacho. Los contratos de mayor escala se gestionan por correo, pero la operación diaria se basa principalmente en comunicación directa. Entre los principales problemas identificados destacan la pérdida de pedidos por saturación de mensajes, errores al transcribir información al sistema, y demoras en procesos como facturación y coordinación interna. Aunque cuentan con un sistema contable, no disponen de herramientas integradas para la gestión logística, dependiendo en gran medida de Excel y la memoria operativa del equipo. La entrevistada valora especialmente soluciones digitales que sean simples e intuitivas, adaptadas a usuarios no técnicos, permitiendo registrar pedidos de forma rápida y visualizar la información organizada por prioridad. Considera que una plataforma que centralice pedidos, contratos y entregas sería altamente beneficiosa, ya que reduciría errores y optimizaría el tiempo de gestión. Asimismo, destaca la importancia de contar con reportes históricos para mejorar la planificación y negociación con proveedores, y señala que la fidelización de clientes se basa en el trato directo y el acceso a crédito, pudiendo fortalecerse mediante herramientas que brinden mayor transparencia, visibilidad del estado de cuenta y seguimiento en tiempo real de los pedidos. |
+
 ### 2.2.3 Análisis de entrevistas
+
+*TODO: Completar análisis tras alcanzar el número mínimo de entrevistas requeridas para ambos segmentos.*
 
 ### Segmento 1: Empresas Solicitantes de Combustible
 
