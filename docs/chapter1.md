@@ -57,9 +57,79 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 ### 1.2.2 Lean UX Process
 
+FuelPoint aplica Lean UX al desarrollo de FullTank para convertir las creencias iniciales del equipo en hipótesis que se puedan comprobar. El punto de partida es el Lean UX Canvas de la sección 1.2.2.4, que organiza en un solo tablero el problema de negocio, los usuarios, las soluciones propuestas, los resultados esperados y lo que el equipo necesita aprender primero. Las secciones siguientes desarrollan cada una de esas ideas.
+
+Las assumptions de esta sección no son hechos confirmados. Se validarán mediante las entrevistas de Needfinding, los artefactos de UX, los prototipos y la evidencia de uso del producto. Si la evidencia no las respalda, se ajustarán antes de comprometer esfuerzo de desarrollo.
+
 #### 1.2.2.1 Lean UX Problem Statements
 
+Los Problem Statements parten del recuadro **Business Problem** del Lean UX Canvas y se redactan con la plantilla de Lean UX para iniciativas nuevas (Gothelf & Seiden, 2021): estado actual del dominio, brecha no resuelta, estrategia del producto, enfoque inicial y criterio de éxito. Se formula uno por segmento objetivo.
+
+**Problem Statement 1: empresas solicitantes de combustible**
+
+El estado actual de la distribución de combustibles se ha concentrado en que las empresas medianas y grandes que necesitan combustible de forma constante para su maquinaria, vehículos y equipos gestionen sus pedidos por llamadas telefónicas, correos electrónicos y aplicaciones de mensajería. Estos métodos informales generan desorganización y errores, y no les dan visibilidad en tiempo real del estado de sus pedidos.
+
+Los productos y servicios existentes no resuelven un proceso de pedido ágil, ordenado y confiable en el que el solicitante sepa en todo momento en qué etapa está su combustible.
+
+FullTank abordará esta brecha con una aplicación web de trazabilidad en tiempo real que muestre el estado de cada pedido, envíe alertas sobre los eventos críticos y conserve el historial de pedidos y entregas. El enfoque inicial serán las empresas solicitantes medianas y grandes que dependen del combustible para operar.
+
+Sabremos que tenemos éxito cuando los solicitantes usen FullTank de forma recurrente para seguir sus pedidos y más del 70 % de sus envíos se completen sin necesidad de correcciones posteriores.
+
+**Problem Statement 2: empresas proveedoras de combustible**
+
+El estado actual de la distribución de combustibles se ha concentrado en que las empresas proveedoras que atienden a clientes corporativos e industriales reciban y coordinen los pedidos por llamadas, correos y mensajería. Esto les genera desorganización y errores en las entregas, y les resta visibilidad en tiempo real, lo que afecta su eficiencia operativa y su relación con los clientes.
+
+Los productos y servicios existentes no resuelven una herramienta que les permita optimizar sus operaciones y diferenciarse en un mercado cada vez más competitivo.
+
+FullTank abordará esta brecha con un dashboard de métricas clave, un módulo de gestión de transportistas, alertas automáticas y pagos en línea integrados a cada pedido. El enfoque inicial serán las empresas dedicadas a la distribución de combustible para clientes corporativos o industriales.
+
+Sabremos que tenemos éxito cuando los proveedores gestionen sus pedidos, pagos y transportistas dentro de la plataforma de forma recurrente cada semana y se mantengan activos mes a mes.
+
 #### 1.2.2.2 Lean UX Assumptions
+
+Las assumptions se organizan en cinco categorías que corresponden a los recuadros del Lean UX Canvas. Cada categoría desarrolla las ideas registradas en el recuadro correspondiente.
+
+**Business Assumptions** 
+
+- El sector de distribución de combustibles tiene serias ineficiencias porque la gestión de pedidos depende de llamadas telefónicas, correos electrónicos y aplicaciones de mensajería.
+- Esa informalidad es la causa de la desorganización, de los errores y de la falta de visibilidad en tiempo real que sufren solicitantes y proveedores.
+- Estos problemas afectan directamente la eficiencia operativa de las empresas y la relación entre proveedores y clientes, por lo que ambos segmentos tienen motivos para cambiar su forma de trabajar.
+- Los usuarios valoran la comunicación directa y las notificaciones en tiempo real como la forma más efectiva de reducir los errores en las entregas. Este es el supuesto más importante de validar primero: si resulta falso, la solución principal perdería sentido y habría que replantear el enfoque del producto.
+
+**Business Outcome Assumptions** 
+
+- Los usuarios usan FullTank de manera recurrente para mejorar la trazabilidad de sus pedidos en tiempo real.
+- Los usuarios se mantienen activos de forma regular en la plataforma, lo que se medirá con la **tasa de retención mensual**.
+- Los envíos se completan sin necesidad de correcciones posteriores, lo que se medirá con el **porcentaje de envíos completados sin correcciones**.
+- Los usuarios crean pedidos, registran pagos y gestionan transportistas dentro de la plataforma cada semana, lo que se medirá con el **número promedio de interacciones por semana**.
+
+**User Assumptions** 
+
+- **Empresas solicitantes de combustible:** son empresas medianas y grandes que necesitan combustible de forma constante para desarrollar sus operaciones. Lo usan para alimentar maquinaria, vehículos o equipos, por lo que un retraso en el abastecimiento puede detener su trabajo. Buscan procesos más ágiles, ordenados y confiables para gestionar sus pedidos.
+- **Proveedores de combustible:** son empresas dedicadas a la distribución de combustibles que atienden principalmente a clientes corporativos o industriales. Coordinan varios pedidos, transportistas y entregas al mismo tiempo. Buscan herramientas que les permitan optimizar sus operaciones y diferenciarse en un mercado cada vez más competitivo.
+
+**User Outcome and Benefit Assumptions** 
+
+Empresas solicitantes de combustible:
+
+- Asegurar el abastecimiento oportuno de combustible para que su maquinaria y sus operaciones no se detengan.
+- Reducir los errores que provoca la informalidad de los procesos actuales, como pedidos mal registrados o datos incompletos.
+- Mantener una comunicación constante con sus proveedores y saber en qué estado está cada pedido sin tener que llamar.
+
+Proveedores de combustible:
+
+- Mejorar la experiencia de sus clientes mediante canales digitales que reemplacen las llamadas y los mensajes dispersos.
+- Reducir los errores en las entregas causados por información incompleta o mal gestionada.
+- Optimizar la planificación logística y la distribución de sus pedidos.
+
+**Feature Assumptions** 
+
+- Una **aplicación web de trazabilidad en tiempo real** permitirá a solicitantes y proveedores visualizar el estado de cada pedido de combustible.
+- Las **alertas y notificaciones en la web** sobre eventos críticos (retrasos, correcciones necesarias y entregas completadas) reducirán los errores y las consultas manuales.
+- Un **dashboard interactivo con métricas clave** (envíos completados, tiempos de entrega e incidencias) ayudará a los usuarios a supervisar su operación.
+- La **integración con pasarelas de pago en línea** permitirá realizar las transacciones de forma rápida y segura dentro de la plataforma.
+- Un **módulo de gestión de transportistas** permitirá al proveedor asignar operadores, hacer seguimiento y evaluar su desempeño.
+- El **historial y los reportes descargables** de pedidos y entregas darán a clientes y proveedores un registro verificable de sus operaciones.
 
 #### 1.2.2.3 Lean UX Hypothesis Statements
 
