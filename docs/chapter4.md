@@ -254,33 +254,567 @@ El sistema de navegación de FullTank proporciona recorridos coherentes, accesib
 ## 4.3 Landing Page UI Design
 
 ### 4.3.1 Landing Page Wireframe
-*Sección reservada para los esquemas estructurales y wireframes de baja fidelidad de la Landing Page (versiones Desktop y Mobile), a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
 
 ### 4.3.2 Landing Page Mock-up
-*Sección reservada para los diseños visuales de alta fidelidad (mock-ups) de la Landing Page (versiones Desktop y Mobile), a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
+
 
 ---
 
 ## 4.4 Web Applications UX/UI Design
 
 ### 4.4.1 Web Applications Wireframes
-*Sección reservada para los wireframes de baja fidelidad de las interfaces de la aplicación web para solicitantes y proveedores (versiones Desktop y Mobile), a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
+
 
 ### 4.4.2 Web Applications Wireflow Diagrams
-*Sección reservada para los diagramas de wireflow que detallan el flujo de navegación entre vistas de la aplicación web, a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
+
+Los wireflows combinan los wireframes de la sección 4.4.1 con las transiciones entre pantallas. Muestran qué acción lleva al usuario de una vista a otra y permiten comprobar, antes de diseñar en alta fidelidad, que cada objetivo se completa con pocos pasos y sin callejones sin salida. Se elaboraron en Figma, uno por segmento.
+
+Ambos recorridos parten del inicio de sesión, que también da acceso al registro de una cuenta corporativa y a la recuperación de contraseña. Tras autenticarse, la aplicación lleva al usuario al dashboard de su rol, y desde allí la barra lateral le da acceso directo a cada módulo.
+
+**Wireflow del segmento solicitante (Carlos Ramírez)**
+
+Está pensado para registrar pedidos y seguirlos con la menor cantidad de pasos. Desde el Dashboard, Carlos puede:
+
+- ir a **Equipment** para revisar el nivel de sus equipos y registrar uno nuevo con el formulario *Add Equipment*;
+- ir a **Requests** para ver sus solicitudes, abrir el detalle de una de ellas con su seguimiento y crear una nueva;
+- ir a **Suppliers** para comparar proveedores y abrir el directorio de proveedores verificados;
+- consultar **Reports** con su consumo y sus gastos;
+- actualizar sus datos en **Account Settings**.
+
+<div align="center">
+  <img src="./../assets/chapter-4/wireflow-buyer.png" alt="Wireflow de la aplicación web para el segmento de empresas solicitantes de combustible" width="1000"/>
+</div>
+
+**Wireflow del segmento proveedor (Andrea López)**
+
+Prioriza la atención de muchos pedidos a la vez. Desde el Dashboard, Andrea puede:
+
+- abrir **Requests** para aprobar o rechazar las solicitudes entrantes;
+- abrir **Orders** para seguir los despachos en curso y entrar al detalle de cada orden;
+- mantener su **Inventory** actualizado;
+- administrar su **Fleet** de cisternas y conductores;
+- revisar **Reports** de ventas y el reporte de clientes;
+- actualizar su **Account Settings**.
+
+<div align="center">
+  <img src="./../assets/chapter-4/wireflow-supplier.png" alt="Wireflow de la aplicación web para el segmento de empresas proveedoras de combustible" width="1000"/>
+</div>
+
+**Transiciones principales**
+
+| Segmento | Pantalla de origen | Acción del usuario | Pantalla de destino |
+|---|---|---|---|
+| Ambos | Sign In | Ingresa credenciales válidas y presiona «Ingresar» | Dashboard de su rol |
+| Ambos | Sign In | Presiona «Regístrate aquí» | Sign Up |
+| Ambos | Sign In | Presiona «¿Olvidaste tu contraseña?» | Password Recovery |
+| Solicitante | Dashboard | Selecciona «Requests» en la barra lateral | Requests |
+| Solicitante | Requests | Presiona «New Fuel Request» | New Fuel Request |
+| Solicitante | Requests | Selecciona una solicitud | Request Detail |
+| Solicitante | Dashboard | Selecciona «Equipment» | Equipment |
+| Solicitante | Equipment | Presiona «Register New Asset» | Add Equipment |
+| Solicitante | Dashboard | Selecciona «Suppliers» | Suppliers |
+| Solicitante | Suppliers | Presiona «View All» | Verified Suppliers Directory |
+| Proveedor | Dashboard | Selecciona «Requests» | Incoming Requests |
+| Proveedor | Incoming Requests | Presiona «Approve» o «Reject» | Incoming Requests con el estado actualizado |
+| Proveedor | Dashboard | Selecciona «Orders» | Orders |
+| Proveedor | Orders | Presiona «Details» | Order Detail |
+| Proveedor | Dashboard | Selecciona «Reports» | Reports |
+| Proveedor | Reports | Presiona «View All Clients» | Client Reports |
 
 ### 4.4.3 Web Applications Mock-ups
-*Sección reservada para los mock-ups de alta fidelidad de la aplicación web para los segmentos de solicitantes y proveedores (versiones Desktop y Mobile), a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
+
+Los mock-ups son los diseños de alta fidelidad de la aplicación web. Se elaboraron en Figma a partir de los wireframes y wireflows anteriores y aplican el sistema de diseño de la sección 4.1:
+
+- tipografía Inter;
+- azul primario y ámbar para las acciones destacadas;
+- colores semánticos para los estados;
+- espaciado en múltiplos de 8 px.
+
+Se presentan en versión desktop y mobile para ambos segmentos. Los componentes se eligieron para que su implementación con Vue 3 y PrimeVue sea directa:
+
+- `Sidebar` y `Menu` para la navegación;
+- `Card` para los indicadores;
+- `DataTable` para las listas;
+- `Tag` para los estados;
+- `Timeline` para el seguimiento;
+- `Chart` para los reportes.
+
+#### Acceso a la aplicación
+
+**Inicio de sesión.** Pantalla dividida en dos columnas.
+
+- **Izquierda:** el formulario pide el correo corporativo y la contraseña, y ofrece los enlaces para recuperar la contraseña y para crear una cuenta.
+- **Derecha:** una imagen de una cisterna refuerza el contexto del producto.
+- **Botón principal:** «Ingresar» usa el color de acento para destacar la acción.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-sign-in.png" alt="Mock-up de inicio de sesión de FullTank" width="700"/>
+</div>
+
+**Registro de cuenta corporativa.** Mantiene la misma estructura y solicita el nombre de la empresa, el correo corporativo y la contraseña. Tras el registro, el usuario recibe un correo de validación y vuelve al inicio de sesión.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-sign-up.png" alt="Mock-up de registro de cuenta corporativa de FullTank" width="700"/>
+</div>
+
+#### Segmento solicitante: versión desktop
+
+Las pantallas del solicitante comparten:
+
+- una barra lateral con los módulos Dashboard, Requests, Suppliers, Equipment y Reports;
+- una barra superior con las notificaciones y la configuración.
+
+**Dashboard.**
+
+- **Indicadores:** consumo total de combustible, solicitudes pendientes y tanques con baja capacidad.
+- **Consumo:** tendencia diaria, semanal o mensual.
+- **Tanques:** nivel de cada uno, con colores semánticos.
+- **Pedidos activos:** tabla con destino, proveedor, volumen, hora estimada de llegada y estado.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mock-up desktop del dashboard del solicitante" width="800"/>
+</div>
+
+**Directorio de proveedores verificados.**
+
+- **Datos de cada proveedor:** cobertura, tipos de combustible, capacidad mensual, pedido mínimo e índice de confiabilidad.
+- **Acciones:** solicitar una cotización o marcar al proveedor como favorito.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-suppliers.png" alt="Mock-up desktop del directorio de proveedores verificados" width="800"/>
+</div>
+
+**Recomendación de proveedores.** Destaca al proveedor más adecuado para los equipos del solicitante y compara alternativas por tipo de combustible, precio unitario, tiempo de entrega y cumplimiento.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-recommendations.png" alt="Mock-up desktop de recomendación de proveedores" width="800"/>
+</div>
+
+**Nueva solicitud de combustible.** Guía el registro en tres pasos:
+
+1. tipo y cantidad de combustible;
+2. lugar de entrega, con apoyo de un mapa;
+3. prioridad e instrucciones adicionales.
+
+Un panel lateral resume el pedido y su costo estimado antes de enviarlo o guardarlo como borrador.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-create-request.png" alt="Mock-up desktop del formulario de nueva solicitud de combustible" width="800"/>
+</div>
+
+**Lista de solicitudes.** Resume las solicitudes activas, las pendientes, el volumen en tránsito y las completadas en el día. La tabla permite ordenar, paginar y abrir el detalle de cada solicitud.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-requests.png" alt="Mock-up desktop de la lista de solicitudes del solicitante" width="800"/>
+</div>
+
+**Detalle de la solicitud.** Reúne:
+
+- las especificaciones del pedido;
+- el mapa del lugar de entrega;
+- la línea de tiempo de estados;
+- el proveedor, el conductor y la cisterna asignados, con la hora estimada de llegada;
+- las notas y los documentos adjuntos.
+
+Desde aquí el solicitante puede contactar al proveedor.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-request-detail.png" alt="Mock-up desktop del detalle de una solicitud" width="800"/>
+</div>
+
+**Equipos.** Presenta los tanques y equipos del solicitante en tarjetas con su capacidad, su porcentaje restante y su fecha de última recarga. Cada tarjeta permite solicitar una recarga, y al pie se listan las últimas solicitudes de recarga.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-equipment.png" alt="Mock-up desktop de la gestión de equipos del solicitante" width="800"/>
+</div>
+
+**Reportes.** Resume el consumo total, el gasto y la eficiencia del periodo seleccionado. Muestra la tendencia semanal de consumo y la tabla de gastos recientes, y permite exportar a PDF.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-reports.png" alt="Mock-up desktop de reportes de consumo del solicitante" width="800"/>
+</div>
+
+**Configuración de la cuenta.** Permite editar los datos del perfil y el idioma, cambiar la contraseña, activar la autenticación en dos pasos y elegir qué notificaciones recibir.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-profile.png" alt="Mock-up desktop de la configuración de cuenta del solicitante" width="800"/>
+</div>
+
+#### Segmento proveedor: versión desktop
+
+Las pantallas del proveedor comparten una barra lateral con los módulos Dashboard, Requests, Reports, Orders, Inventory y Fleet.
+
+**Dashboard.**
+
+- **Indicadores:** volumen vendido, órdenes pendientes y alertas de inventario bajo.
+- **Ventas:** tendencia de ventas.
+- **Depósitos:** nivel de cada uno.
+- **Órdenes activas:** tabla con destino, volumen, hora estimada y estado.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-dashboard.png" alt="Mock-up desktop del dashboard del proveedor" width="800"/>
+</div>
+
+**Solicitudes entrantes.** Es la bandeja de trabajo principal. Cada solicitud muestra:
+
+- el cliente;
+- el combustible y la cantidad;
+- el lugar;
+- la prioridad;
+- el estado del pago (pendiente, comprobante cargado o verificado);
+- los botones para aprobar o rechazar.
+
+Un registro inferior muestra las últimas acciones realizadas.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-incoming-requests.png" alt="Mock-up desktop de la bandeja de solicitudes entrantes del proveedor" width="800"/>
+</div>
+
+**Órdenes en curso.** Muestra los despachos en tránsito, en carga, con retraso y entregados en el día. La tabla lista cada orden con su estado y su hora estimada, y un panel lateral agrupa las alertas prioritarias.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-orders.png" alt="Mock-up desktop de las órdenes en curso del proveedor" width="800"/>
+</div>
+
+**Detalle de la orden.** Combina:
+
+- el seguimiento de la ruta en un mapa;
+- la cisterna y el conductor asignados;
+- la línea de tiempo de la orden;
+- los datos del cliente y el manifiesto de carga;
+- las notas y requisitos de entrega.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-order-detail.png" alt="Mock-up desktop del detalle de una orden del proveedor" width="800"/>
+</div>
+
+**Inventario.** Muestra el stock total por tipo de combustible y las alertas activas. Una tabla lo distribuye por depósito con la capacidad ocupada y el tipo de producto, y el botón «Add Inventory» registra nuevos ingresos.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-inventory.png" alt="Mock-up desktop del inventario del proveedor" width="800"/>
+</div>
+
+**Flota.** Resume el tamaño de la flota, su disponibilidad, los mantenimientos y las alertas de seguridad. Muestra la disponibilidad de los conductores y las unidades con su estado y nivel de carga, y permite registrar un nuevo vehículo.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-fleet.png" alt="Mock-up desktop de la gestión de flota del proveedor" width="800"/>
+</div>
+
+**Reportes de ventas.** Presenta los ingresos del periodo con su tendencia mensual, la tasa de cumplimiento y el tiempo promedio de entrega. Incluye el desempeño por cliente y la exportación a PDF.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-reports.png" alt="Mock-up desktop de reportes de ventas del proveedor" width="800"/>
+</div>
+
+**Reporte de clientes.** Muestra la cartera de clientes con su sector, volumen, última actividad y estado, junto con la distribución del volumen por sector industrial.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-client-reports.png" alt="Mock-up desktop del reporte de clientes del proveedor" width="800"/>
+</div>
+
+**Configuración de la cuenta.** Ofrece las mismas opciones de perfil, seguridad y notificaciones que el solicitante, con alertas específicas de inventario.
+
+<div align="center">
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-profile.png" alt="Mock-up desktop de la configuración de cuenta del proveedor" width="800"/>
+</div>
+
+#### Segmento solicitante: versión mobile
+
+La versión mobile sigue un enfoque responsive:
+
+- la barra lateral se convierte en un menú hamburguesa;
+- las tablas se transforman en tarjetas apiladas;
+- los botones ocupan todo el ancho para facilitar el uso táctil.
+
+Está pensada para un solicitante que suele estar en obra o en planta y necesita pedir combustible o revisar una entrega desde su celular.
+
+- **Dashboard:** pedidos activos, balance de combustible, consumo de la semana, estado de los tanques y pedidos recientes.
+- **Proveedores:** buscador con filtros rápidos y tarjetas con calificación, cobertura, pedido mínimo y tiempo de entrega.
+- **Recomendaciones:** proveedor más confiable y alternativas ordenadas por puntaje.
+- **Nueva solicitud:** los tres pasos del formulario desktop en una sola columna, con el total estimado antes de enviar.
+
+<p align="center">
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-dashboard.png" alt="Mock-up mobile del dashboard del solicitante" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-suppliers.png" alt="Mock-up mobile del directorio de proveedores" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-recommendations.png" alt="Mock-up mobile de recomendación de proveedores" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-create-request.png" alt="Mock-up mobile de nueva solicitud de combustible" width="200"/>
+</p>
+
+- **Solicitudes:** buscador y tarjetas con el estado, el tipo de combustible, la cantidad y el acceso al detalle o al seguimiento.
+- **Detalle de la solicitud:** mapa, combustible y volumen, proveedor y conductor con botón de llamada, y línea de tiempo del pedido.
+- **Equipos:** nivel de cada tanque en un indicador circular, con acceso directo a solicitar o programar una recarga.
+- **Reportes:** consumo del periodo, gasto por sede y exportación a PDF.
+
+<p align="center">
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-requests.png" alt="Mock-up mobile de la lista de solicitudes" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-request-detail.png" alt="Mock-up mobile del detalle de una solicitud" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-equipment.png" alt="Mock-up mobile de equipos del solicitante" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-reports.png" alt="Mock-up mobile de reportes del solicitante" width="200"/>
+</p>
+
+#### Segmento proveedor: versión mobile
+
+La versión mobile del proveedor permite supervisar la operación logística en campo con la misma información que la versión desktop.
+
+- **Menú de navegación:** el menú hamburguesa despliega los mismos módulos que la barra lateral.
+- **Dashboard:** órdenes activas, balance de combustible, tendencia de ventas y solicitudes urgentes con botones para aceptar o rechazar.
+- **Órdenes en progreso:** tarjetas con mapa, combustible, hora estimada de llegada, destino y cisterna asignada.
+- **Seguimiento de la orden:** ubicación de la cisterna, datos del conductor con opciones de mensaje y llamada, y manifiesto de carga.
+
+<p align="center">
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-menu.png" alt="Mock-up mobile del menú de navegación del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-dashboard.png" alt="Mock-up mobile del dashboard del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-orders.png" alt="Mock-up mobile de órdenes en progreso" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-order-tracking.png" alt="Mock-up mobile del seguimiento de una orden" width="200"/>
+</p>
+
+- **Inventario:** tarjetas por depósito con el nivel de cada combustible y etiquetas de estado (crítico, óptimo o bajo).
+- **Flota:** vehículos activos con su estado, destino y tiempo estimado, y un botón flotante para registrar una unidad.
+- **Reportes:** ingresos del periodo, tendencia de volumen y descarga del reporte en PDF.
+- **Reporte de clientes:** volumen por sector y cartera de clientes.
+- **Configuración de la cuenta:** perfil, seguridad y preferencias de notificación en una sola columna.
+
+<p align="center">
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-inventory.png" alt="Mock-up mobile del inventario del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-fleet.png" alt="Mock-up mobile de la flota del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-reports.png" alt="Mock-up mobile de reportes del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-client-reports.png" alt="Mock-up mobile del reporte de clientes" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-profile.png" alt="Mock-up mobile de la configuración de cuenta del proveedor" width="200"/>
+</p>
 
 ### 4.4.4 Web Applications User Flow Diagrams
-*Sección reservada para los diagramas de flujo de usuario (happy paths y unhappy paths) para los objetivos clave del sistema, a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
 
----
+Los User Flow Diagrams representan el recorrido que sigue un usuario para cumplir un objetivo concreto (User Goal) dentro de la aplicación. Para cada objetivo se describe:
+
+- el **happy path**, en el que el usuario completa la tarea sin inconvenientes;
+- los **unhappy paths**, en los que un error o una condición no cumplida desvía el flujo.
+
+Cada objetivo se relaciona con las historias de usuario del capítulo III y con los User Personas Carlos Ramírez (solicitante) y Andrea López (proveedora).
+
+#### User Goal 1: iniciar sesión
+
+- **User Personas:** Carlos Ramírez y Andrea López.
+- **Historias relacionadas:** EP04 — Autenticación y Registro.
+
+**Happy path.** El usuario ingresa su correo corporativo y su contraseña en la pantalla de inicio de sesión y presiona «Ingresar». El sistema valida sus credenciales y lo lleva al dashboard de su rol, desde donde puede gestionar sus pedidos.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-1-happy.png" alt="User flow del inicio de sesión: happy path" width="800"/>
+</div>
+
+**Unhappy path.** El usuario ingresa credenciales incorrectas. Al presionar «Ingresar», el sistema no permite el acceso y muestra el mensaje «Usuario y/o contraseña incorrectos». El usuario permanece en la misma pantalla para corregir los datos y volver a intentarlo.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-1-unhappy.png" alt="User flow del inicio de sesión: unhappy path" width="800"/>
+</div>
+
+#### User Goal 2: crear una cuenta corporativa
+
+- **User Personas:** visitantes que serán solicitantes o proveedores.
+- **Historias relacionadas:** EP04 — Autenticación y Registro.
+
+**Happy path.** Desde el inicio de sesión, el visitante presiona «Regístrate aquí» y llega al formulario de registro. Completa el nombre de su empresa, su correo corporativo y una contraseña válida, y presiona «Registrarse». El sistema crea la cuenta y lo devuelve al inicio de sesión para que ingrese con sus nuevas credenciales.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-2-happy.png" alt="User flow del registro de cuenta: happy path" width="800"/>
+</div>
+
+**Unhappy paths.** Se contemplan dos errores:
+
+- un dato con formato inválido, como un correo mal escrito;
+- uno o más campos obligatorios vacíos.
+
+En ambos casos el sistema no crea la cuenta, se mantiene en el formulario y muestra en rojo el mensaje «Campos inválidos» o «Complete todos los campos».
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-2-unhappy.png" alt="User flow del registro de cuenta: unhappy paths" width="800"/>
+</div>
+
+#### User Goal 3: recuperar el acceso a la cuenta
+
+- **User Personas:** Carlos Ramírez y Andrea López.
+- **Historias relacionadas:** EP04 — Autenticación y Registro; TS-02.
+
+**Happy path.**
+
+1. Desde el inicio de sesión, el usuario presiona «¿Olvidaste tu contraseña?».
+2. Ingresa su correo corporativo y presiona «Enviar código».
+3. En la pantalla «Restablecer contraseña» escribe el código recibido, su nueva contraseña y la confirmación.
+4. Presiona «Actualizar contraseña» y el proceso termina con éxito.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-3-happy.png" alt="User flow de recuperación de contraseña: happy path" width="800"/>
+</div>
+
+**Unhappy path.** El usuario ingresa un correo que no está registrado. Al presionar «Enviar código», el sistema no continúa y muestra el mensaje «Correo no registrado, ingrese un correo válido» hasta que el usuario corrija el dato.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-3-unhappy.png" alt="User flow de recuperación de contraseña: unhappy path" width="800"/>
+</div>
+
+#### User Goal 4: registrar un pedido de combustible
+
+- **User Persona:** Carlos Ramírez.
+- **Historias relacionadas:** US-05 Registrar nuevo pedido y US-08 Registrar información de pago.
+
+**Happy path.**
+
+1. Desde su dashboard, Carlos entra a «Requests» y presiona «New Fuel Request».
+2. Selecciona el tipo de combustible, indica la cantidad y el lugar de entrega, y elige la prioridad.
+3. Revisa el resumen de costos y presiona «Submit Request».
+4. El sistema registra el pedido con estado «Pending» y lo lleva a la lista de solicitudes, donde el pedido aparece al inicio.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-4-happy.png" alt="User flow del registro de un pedido: happy path" width="800"/>
+</div>
+
+**Unhappy paths.** El pedido no se envía si Carlos:
+
+- deja campos obligatorios vacíos, como el tipo de combustible;
+- ingresa una cantidad igual o menor a cero, o mayor al límite permitido.
+
+El sistema se mantiene en el formulario, resalta los campos con error y explica qué debe corregirse.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-4-unhappy.png" alt="User flow del registro de un pedido: unhappy paths" width="800"/>
+</div>
+
+#### User Goal 5: aprobar un pedido con pago validado
+
+- **User Persona:** Andrea López.
+- **Historias relacionadas:** US-10 Ver pedidos pendientes, US-11 Aprobar pedido y US-42 Rechazar pedido.
+
+**Happy path.**
+
+1. Desde su dashboard, Andrea entra a «Requests» y revisa la bandeja de solicitudes entrantes.
+2. Ubica un pedido cuyo pago figura como verificado.
+3. Comprueba que los comprobantes cubren el total y presiona «Approve».
+4. El pedido cambia a «Approved», se muestra una confirmación y el solicitante recibe una notificación.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-5-happy.png" alt="User flow de la aprobación de un pedido: happy path" width="800"/>
+</div>
+
+**Unhappy paths.** El pago del pedido está pendiente, es inválido o no cubre el total.
+
+- Si Andrea intenta aprobarlo, el sistema no cambia el estado y muestra un mensaje que indica que el pago está incompleto.
+- Andrea puede esperar a que el cliente regularice el pago o presionar «Reject»; en ese caso debe ingresar un motivo obligatorio antes de confirmar el rechazo.
+
+<div align="center">
+  <img src="./../assets/chapter-4/user-flow-goal-5-unhappy.png" alt="User flow de la aprobación de un pedido: unhappy paths" width="800"/>
+</div>
+
+#### User Goal 6: despachar un pedido aprobado
+
+- **User Persona:** Andrea López.
+- **Historias relacionadas:** US-12 Marcar pedido como despachado; TS-17, TS-18 y TS-19.
+- **Happy path:** Andrea abre un pedido aprobado desde «Orders», le asigna una cisterna y un conductor disponibles de su flota y lo despacha. El pedido pasa a «In Transit», el solicitante recibe una notificación y la línea de tiempo se actualiza.
+- **Unhappy paths:**
+  - no hay cisternas o conductores disponibles: el sistema lo indica y no permite despachar hasta que se libere un recurso;
+  - el pedido todavía no fue aprobado: la acción de despacho no está disponible.
+
+```mermaid
+flowchart LR
+    A[Orders] --> B[Detalle de la orden aprobada]
+    B --> C{¿Hay cisterna y conductor disponibles?}
+    C -- Sí --> D[Asignar cisterna y conductor]
+    D --> E[Despachar]
+    E --> F[Estado In Transit y cliente notificado]
+    C -- No --> G[Mensaje: no hay recursos disponibles]
+    G --> A
+    B --> H{¿Pedido aprobado?}
+    H -- No --> I[Despacho no disponible]
+    classDef ok fill:#D1FAE5,stroke:#047857,color:#065F46
+    classDef bad fill:#FEE2E2,stroke:#B91C1C,color:#991B1B
+    class F ok
+    class G,I bad
+```
+
+#### User Goal 7: seguir y confirmar la entrega
+
+- **User Persona:** Carlos Ramírez.
+- **Historias relacionadas:** US-06 Consultar estado del pedido, US-07 Confirmar recepción y US-13 Cerrar pedido.
+- **Happy path:** Carlos recibe la notificación de despacho y abre el detalle de su solicitud. Sigue la cisterna en el mapa y, cuando el combustible llega, confirma la recepción. El pedido pasa a «Completed» y el proveedor puede cerrarlo.
+- **Unhappy paths:**
+  - el pedido aún no está en tránsito: la confirmación no está disponible;
+  - el pedido ya fue confirmado: el sistema bloquea la acción e informa que la entrega ya fue registrada.
+
+```mermaid
+flowchart LR
+    A[Notificación: pedido despachado] --> B[Detalle de la solicitud]
+    B --> C[Seguir la cisterna en el mapa]
+    C --> D{¿Estado In Transit?}
+    D -- Sí --> E[Confirmar recepción]
+    E --> F{¿Ya estaba confirmado?}
+    F -- No --> G[Estado Completed]
+    G --> H[El proveedor cierra el pedido]
+    D -- No --> I[Confirmación no disponible]
+    F -- Sí --> J[Mensaje: la entrega ya fue registrada]
+    classDef ok fill:#D1FAE5,stroke:#047857,color:#065F46
+    classDef bad fill:#FEE2E2,stroke:#B91C1C,color:#991B1B
+    class G,H ok
+    class I,J bad
+```
 
 ## 4.5 Web Applications Prototyping
-*Sección reservada para la documentación y especificación de los prototipos interactivos de la aplicación web (versiones Desktop y Mobile), a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
 
----
+El prototipo interactivo de FullTank se construyó en Figma sobre los mock-ups de la sección 4.4.3, en versión desktop y mobile. Simula cómo los usuarios se autentican, registran y siguen sus pedidos, y cómo los proveedores los aprueban, despachan y controlan.
+
+**Tipo de prototipo y objetivo**
+
+Siguiendo a Gothelf y Seiden (2021), el tipo de prototipo se eligió según quién lo usará y qué se quiere aprender.
+
+- **Tipo:** prototipo on-screen de alta fidelidad, porque se evaluará con responsables de abastecimiento y de despacho que deben reconocer en él una herramienta de trabajo real.
+- **Alcance:** no simula todo el producto, sino los flujos principales, que son los que concentran el mayor riesgo:
+  - registrar un pedido;
+  - aprobarlo;
+  - despacharlo;
+  - seguirlo hasta su entrega.
+- **Qué se quiere aprender:**
+  - si ambos segmentos completan esas tareas sin ayuda;
+  - si entienden los estados del pedido;
+  - si encuentran valor suficiente para dejar las llamadas y los mensajes.
+
+**Criterios de diseño**
+
+- **Arquitectura centrada en el usuario:** las tareas más frecuentes del User Task Matrix (registrar y seguir pedidos, validar pagos, despachar y recibir notificaciones) están a uno o dos clics desde el dashboard.
+- **Navegación consistente:** en desktop, la barra lateral fija da acceso a los módulos de cada rol, como define la sección 4.1.2; en mobile, el mismo contenido se despliega desde un menú hamburguesa.
+- **Patrones de interacción conocidos:**
+  - tarjetas para indicadores y proveedores;
+  - tablas con filtros y paginación para listas extensas;
+  - etiquetas de color para los estados del pedido;
+  - líneas de tiempo para el seguimiento;
+  - formularios por pasos para las solicitudes.
+- **Diseño accesible:**
+  - contraste conforme a WCAG 2.1 AA;
+  - tipografía Inter con jerarquía clara;
+  - botones amplios en mobile;
+  - mensajes de error que explican cómo corregir cada dato.
+
+**Flujos del prototipo**
+
+| Flujo | Segmento | Recorrido |
+|---|---|---|
+| Flujo 1: acceso | Ambos | Inicio de sesión → registro de cuenta → recuperación de contraseña → dashboard según el rol |
+| Flujo 2: proveedor | Andrea López | Dashboard → solicitudes entrantes (aprobar o rechazar) → órdenes → detalle de la orden → inventario → flota → reportes → configuración |
+| Flujo 3: solicitante | Carlos Ramírez | Dashboard → proveedores y recomendaciones → nueva solicitud → lista de solicitudes → detalle y seguimiento → equipos → reportes → configuración |
+
+**Versión desktop.** Está orientada a la gestión completa. El dashboard concentra los indicadores y los pedidos activos, la barra lateral lleva a cada módulo y las vistas de detalle agrupan en paneles la información del pedido, la logística y las acciones disponibles.
+
+**Versión mobile.** Prioriza la consulta rápida en campo:
+
+- resumen inmediato de pedidos y alertas;
+- tarjetas apiladas en lugar de tablas;
+- acciones principales al alcance del pulgar;
+- acceso a todos los módulos desde el menú hamburguesa.
+
+**Relación con los User Flow Diagrams.** Los flujos del prototipo recorren los happy paths de los User Goals de la sección 4.4.4, y los estados de error se muestran con los mensajes definidos en los unhappy paths.
+
+**Enlaces**
+
+- Diseño y prototipo en Figma: [FullTank en Figma](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1&t=I3nr2x0tcAinM7gE-1)
+- Video de recorrido del prototipo: [Prototype video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQD-R7UX2DcKRJNLtZjqQtj5ASvmAemq4_ar5XNntIFluHs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=qn4iaM)
+
 
 ## 4.6 Domain-Driven Software Architecture
 
