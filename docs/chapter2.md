@@ -360,9 +360,49 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
  <img src="../assets/chapter-2/empathyAndrea.png" alt="empathyMapping de Andrea"/>
 
 ## 2.4 Big Picture Event Storming
+Para comprender a profundidad el dominio del negocio de Prime Fuel y alinear la visión tecnológica con las operaciones reales de compraventa y distribución de combustible, el equipo llevó a cabo una sesión de Event Storming. Esta técnica colaborativa nos permitió identificar los hitos clave del sistema sin adelantarnos a detalles técnicos.
 
 ### Step 1 – Free Exploration (Exploración Libre)
+En esta primera etapa, el equipo realizó una lluvia de ideas desestructurada para capturar todos los Eventos de Dominio relevantes de la operativa logística y comercial. Utilizando notas de color naranja (post-its), registramos hechos que ya ocurrieron en el negocio, redactados estrictamente en tiempo pasado (ej. Fuel request created, Fuel dispatched).
+
+El objetivo principal fue plasmar sobre el lienzo la realidad del negocio, desde el registro de usuarios hasta el despacho físico en las cisternas, priorizando la cantidad de eventos sobre el orden cronológico o la jerarquía.
 
 ### Step 2 – Structured Organization (Líneas de Tiempo)
+Tras listar los eventos de dominio, procedimos a organizar el caos inicial estructurando los post-its en un flujo lógico de negocio de izquierda a derecha. Agrupamos los eventos en cuatro grandes bloques temporales que reflejan el ciclo de vida real de una operación de abastecimiento de combustible:
+
+- Onboarding & Contracting: Abarca el registro de las empresas y la formalización de los contratos de exclusividad.
+- Order Management: Contiene el núcleo transaccional administrativo, desde la creación de la solicitud y envío de cotizaciones, hasta la confirmación y validación financiera.
+- Logistics & Dispatch: Refleja la operativa física, incluyendo la asignación de cisternas (Tanker assigned to order), actualización de inventarios y la entrega del combustible.
+- Monitoring & Analytics: Agrupa los eventos asíncronos de valor agregado, como el envío de notificaciones, alertas de precios y reportes de consumo
+  
+Esta estructura temporal nos ayudó a identificar claramente las áreas críticas donde la digitalización eliminará los actuales cuellos de botella del sector.
 
 ## 2.5 Ubiquitous Language
+En este proyecto, cuyo objetivo principal es mejorar la eficiencia, la trazabilidad y la comunicación en la gestión y distribución de combustible mediante una plataforma web, se ha definido el siguiente lenguaje ubicuo para garantizar la claridad y la coherencia entre usuarios, desarrolladores y partes interesadas:
+
+| Término | Definición |
+| --- | --- |
+| Solicitud de Combustible | Pedido generado por una empresa cliente que especifica el tipo, la cantidad y los detalles de entrega de combustible. |
+| Empresa Cliente | Organización que requiere combustible para sus operaciones y utiliza la plataforma para realizar y rastrear pedidos. |
+| Proveedor de Combustible | Empresa responsable de recibir, validar y atender las solicitudes de combustible. |
+| Estado del Pedido | Etapa actual de una solicitud (ej. pendiente, validado, programado, en entrega, completado). |
+| Seguimiento del Pedido | Monitoreo en tiempo real del progreso y la ubicación de una entrega de combustible. |
+| Programación de Entrega | Proceso de asignación de fecha, hora y recursos logísticos para cumplir con una solicitud de combustible. |
+| Panel Centralizado | Interfaz principal donde los usuarios visualizan pedidos, métricas y el estado operacional. |
+| Notificación | Mensaje automatizado que informa a los usuarios sobre actualizaciones o cambios en sus solicitudes de combustible. |
+| Historial de Pedidos | Registro de solicitudes de combustible pasadas, incluyendo detalles y resultados. |
+| Planificación Logística | Organización y optimización de rutas, entregas y recursos operativos. |
+| Proceso de Validación | Paso en el que el proveedor confirma la disponibilidad, precisión y factibilidad de una solicitud. |
+| Comunicación Integrada | Sistema integrado de chat o mensajería que permite la interacción directa entre clientes y proveedores. |
+| Métricas Operativas | Indicadores como tiempo de entrega, eficiencia y tasas de error utilizados para la evaluación del desempeño. |
+| Reporte | Documento o panel generado que resume el consumo de combustible, las entregas y los datos de desempeño. |
+| Sesión | Período autenticado en el que un usuario accede a la plataforma con credenciales seguras. |
+| Roles y Permisos | Controles de acceso que definen qué acciones puede realizar cada tipo de usuario (cliente o proveedor). |
+
+Beneficios esperados del lenguaje ubicuo:
+
+- Facilita la comunicación entre desarrolladores, usuarios y las partes interesadas del sistema.
+- Mejora la comprensión de los procesos y funcionalidades fundamentales del sistema.
+- Reduce la ambigüedad y las interpretaciones erróneas durante el diseño y el desarrollo.
+- Garantiza la coherencia entre la documentación, las interfaces y la implementación.
+  
