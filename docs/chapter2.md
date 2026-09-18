@@ -367,6 +367,11 @@ En esta primera etapa, el equipo realizó una lluvia de ideas desestructurada pa
 
 El objetivo principal fue plasmar sobre el lienzo la realidad del negocio, desde el registro de usuarios hasta el despacho físico en las cisternas, priorizando la cantidad de eventos sobre el orden cronológico o la jerarquía.
 
+<div align="center">
+  <img src="../assets/chapter-2/step1.png" alt="Step 1 - Unstructured Exploration" width="100%"/>
+  <p><em>Figura X: Step 1 - Exploración libre de eventos de dominio.</em></p>
+</div>
+
 ### Step 2 – Structured Organization (Líneas de Tiempo)
 Tras listar los eventos de dominio, procedimos a organizar el caos inicial estructurando los post-its en un flujo lógico de negocio de izquierda a derecha. Agrupamos los eventos en cuatro grandes bloques temporales que reflejan el ciclo de vida real de una operación de abastecimiento de combustible:
 
@@ -376,6 +381,11 @@ Tras listar los eventos de dominio, procedimos a organizar el caos inicial estru
 - Monitoring & Analytics: Agrupa los eventos asíncronos de valor agregado, como el envío de notificaciones, alertas de precios y reportes de consumo
   
 Esta estructura temporal nos ayudó a identificar claramente las áreas críticas donde la digitalización eliminará los actuales cuellos de botella del sector.
+
+<div align="center">
+  <img src="../assets/chapter-2/step2.png" alt="Step 2 - Structured Organization" width="100%"/>
+  <p><em>Figura Y: Step 2 - Organización temporal por flujos de negocio.</em></p>
+</div>
 
 ## 2.5 Ubiquitous Language
 En este proyecto, cuyo objetivo principal es mejorar la eficiencia, la trazabilidad y la comunicación en la gestión y distribución de combustible mediante una plataforma web, se ha definido el siguiente lenguaje ubicuo para garantizar la claridad y la coherencia entre usuarios, desarrolladores y partes interesadas:
