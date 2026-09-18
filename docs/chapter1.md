@@ -160,7 +160,22 @@ Proveedores de combustible:
 ## 1.3 Segmentos objetivo
 
 ### Segmento 1: empresas compradoras de combustible
+Empresas medianas y grandes que requieren de combustible de forma constante para el desarrollo de sus operaciones. Utilizan este recurso para alimentar maquinaria, vehículos o equipos, y buscan procesos más ágiles, ordenados y confiables para su gestión de pedidos. Además, mantienen un contrato de exclusividad con un proveedor de combustible, lo que les permite tener un flujo constante de pedidos y una relación comercial estable.
+
+Necesidades:
+
+- Asegurar el abastecimiento oportuno de combustible.
+- Reducir errores derivados de la informalidad en los procesos.
+- Mantener constante comunicación con proveedores.
 
 ### Segmento 2: empresas proveedoras de combustible
+Son empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Buscan herramientas que les permitan, optimizar sus operaciones y diferenciarse en un mercado cada vez más competitivo.
+
+Motivaciones:
+
+- Mejorar la experiencia del cliente mediante canales digitales.
+- Reducir errores en la entrega por información incompleta o mal gestionada.
+- Optimizar la planificación logística y distribución.
 
 ### Relación entre los segmentos
+La interacción entre las empresas compradoras y proveedoras de combustible configura una relación comercial B2B de alta interdependencia operativa, fortalecida por la existencia de contratos de exclusividad que garantizan un flujo de pedidos constante y una estabilidad a largo plazo. En este marco, las necesidades del comprador por asegurar un abastecimiento oportuno, reducir la informalidad en los procesos y mantener una comunicación constante se alinean de manera directa con las motivaciones logísticas del distribuidor, quien busca optimizar su planificación, minimizar errores en la entrega derivados de la información incompleta y mejorar la experiencia del cliente a través de canales digitales. De este modo, la eliminación de deficiencias en la gestión de pedidos actúa como el nexo integrador que concilia las exigencias de continuidad operativa del comprador con la eficiencia logística y diferenciación competitiva del proveedor.   
