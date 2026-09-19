@@ -295,19 +295,334 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
 
 #### 5.2.1.1. Sprint Planning 1
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación de la tabla formal de antecedentes de Sprint Planning 1, incluyendo fecha, hora, plataforma de reunión, participantes con código universitario, Sprint Goal, Sprint Velocity y suma de Story Points reales del equipo).*
+<table border>
+    <tr align="center">
+        <td><strong>Sprint #</strong></td>
+        <td><strong>Sprint 1</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr align="center">
+        <td>Date</td>
+        <td>09/04/2026</td>
+    </tr>
+    <tr align="center">
+        <td>Time</td>
+        <td>15:00 PM</td>
+    </tr>
+    <tr align="center">
+        <td>Location</td>
+        <td>Meet</td>
+    </tr>
+    <tr align="center">
+        <td>Prepared by</td>
+        <td>Milenko Cayanchi</td>
+    </tr>
+    <tr align="center">
+        <td>Attendess (to planning meeting)</td>
+        <td>
+          Corvacho Damian, Brayan Alexis - U20231a257<br>
+          Frank Anthony, Huingo Tello - U202319057<br>
+          Joan Fabricio, Payano Puchuri - U202318620<br>
+          Mantilla Maldonado, Enrique Manuel - U20231B842<br>
+          Carhuayal Suarez, Joan Salvador - U202219040
+        </td>
+    </tr>
+    <tr align="center">
+        <td>Sprint 0 Review Summary</td>
+        <td>No hubo sprint previo</td>
+    </tr>
+    <tr align="center">
+        <td>Sprint 0 Retrospective Summary</td>
+        <td>No hubo sprint previo</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><strong>Sprint Goal & User Stories</strong></td>
+    </tr>
+    <tr>
+        <td align="center">Sprint 1 Goal</td>
+        <td>Nuestro objetivo es comunicar la propuesta de valor de FullTank a clientes y proveedores potenciales
+            mediante una página de destino funcional. Creemos que esto genera conocimiento de la marca e interés en
+            la conversión entre las empresas que solicitan combustible y los proveedores. Esto se confirmará cuando 
+            los visitantes puedan navegar por todas las secciones, cambiar de idioma y acceder al formulario de registro
+            sin errores.
+        </td>
+    </tr>
+    <tr align="center">
+        <td>Sprint 1 Velocity</td>
+        <td>17</td>
+    </tr>
+    <tr align="center">
+        <td>Sum of Story Point</td>
+        <td>17</td>
+    </tr>
+</table>
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación de la matriz LACX con la asignación real de roles de Líder (L) y Colaborador (C) por integrante de FuelPoint para los aspectos de Landing Page y Documentación).*
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Team Member</th>
+      <th>GitHub Username</th>
+      <th>Landing Page</th>
+      <th>Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Frank Anthony, Huingo Tello</td>
+      <td>MaxghZZ</td>
+      <td>L</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <td>Joan Fabricio, Payano Puchuri</td>
+      <td>DhudsQ</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Mantilla Maldonado, Enrique Manuel</td>
+      <td>DerDFHE</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Carhuayal Suarez, Joan Salvador</td>
+      <td>aponceperales</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Brayan Alexis Corvacho Damian</td>
+      <td>BralexCD</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+
 
 #### 5.2.1.3. Sprint Backlog 1
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación de la tabla oficial de Sprint Backlog 1, conteniendo el desglose de User Stories priorizadas, tareas/work-items con identificadores únicos, descripciones de valor, estimaciones en horas, miembros asignados y estado de cumplimiento).*
+<table border>
+    <tr align="center">
+        <td colspan="2"><strong>Sprint #</strong></td>
+        <td colspan="6"><strong>Sprint 1</strong></td>
+    </tr>
+    <tr align="center">
+        <td colspan="2"><strong>User Story</strong></td>
+        <td colspan="6"><strong>Work-Item / Task</strong></td>
+    </tr>
+    <tr align="center">
+        <td><strong>Id</strong></td>
+        <td><strong>Title</strong></td>
+        <td><strong>Id</strong></td>
+        <td><strong>Title</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Estimation (Hours)</strong></td>
+        <td><strong>Assigned to</strong></td>
+        <td><strong>Status (To do / In process / To review / Done)</strong></td>
+    </tr>
+    <tr align="center">
+        <td>US-01</td>
+        <td>Ver sección Home</td>
+        <td>W-01</td>
+        <td>Sección Home</td>
+        <td>Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FullTank para comprender rápidamente el objetivo del sistema</td>
+        <td>5 horas</td>
+        <td>Enrique</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-02</td>
+        <td>Ver sección About Us</td>
+        <td>W-02</td>
+        <td>Sección About Us</td>
+        <td>Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FullTank para confiar en el sistema</td>
+        <td>4 horas</td>
+        <td>Bryan</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-03</td>
+        <td>Ver sección How it Works?</td>
+        <td>W-03</td>
+        <td>Sección How it works?</td>
+        <td>Como visitante de ambos segmentos, quiero entender cómo funciona FullTank paso a paso para evaluar si se ajusta a mis necesidades</td>
+        <td>5 horas</td>
+        <td>Enrique</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-36</td>
+        <td>Ver sección Benefits</td>
+        <td>W-04</td>
+        <td>Sección Beneficios</td>
+        <td>Como visitante de ambos segmentos, quiero conocer las principales ventajas con las que puedo contar para evaluar la implementación de la plataforma</td>
+        <td>4 horas</td>
+        <td>JoanC</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-37</td>
+        <td>Ver sección Lo que Dicen Nuestros Clientes</td>
+        <td>W-05</td>
+        <td>Sección Testimonios</td>
+        <td>Como visitante de ambos segmentos, quiero conocer los testimonios de los usuarios de FullTank para tener confianza en la plataforma y saber que otras empresas ya la están usando.</td>
+        <td>6 horas</td>
+        <td>Frank</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-04</td>
+        <td>Enviar mensaje de contacto</td>
+        <td>W-06</td>
+        <td>Contacto</td>
+        <td>Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información</td>
+        <td>5 horas</td>
+        <td>Brayan</td>
+        <td>In Process</td>
+    </tr>
+    <tr align="center">
+        <td>US-38</td>
+        <td>Ver sección Planes y Precios</td>
+        <td>W-07</td>
+        <td>Sección Planes y Precios</td>
+        <td>Como visitante (ambos segmentos), quiero saber que planes se adecuan a mis necesidades para poder iniciar un proceso de registro o solicitud.</td>
+        <td>6 horas</td>
+        <td>JoanP</td>
+        <td>Done</td>
+    </tr>
+    <tr align="center">
+        <td>US-39</td>
+        <td>Cambiar idioma</td>
+        <td>W-08</td>
+        <td>Idioma</td>
+        <td>Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido</td>
+        <td>8 horas</td>
+        <td>JoanC</td>
+        <td>In Process</td>
+    </tr>
+</table>
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación de la tabla de evidencias de commits de desarrollo del Sprint 1, detallando repositorio verificado de FuelPoint, rama de trabajo, identificador hash de commit, mensaje imperativo en inglés y fecha de registro).*
+Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Page de FullTank, cumpliendo con las User Stories priorizadas. Se trabajó en la maquetación de las secciones principales, implementación de estilos CSS, diseño responsive para diferentes dispositivos y subida de los cambios al repositorio grupal. Los commits fueron realizados en la rama main, cada uno agregando una sección de la Landing Page
+
+<table border>
+  <thead>
+    <tr>
+      <th>Repositorio</th>
+      <th>Rama</th>
+      <th>ID de Commit</th>
+      <th>Mensaje de Commit</th>
+      <th>Descripción del Commit</th>
+      <th>Fecha de Commit</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>5596c00</td>
+    <td>feat: add initial landing page structure for FullTank web platform</td>
+    <td>-</td>
+    <td>24/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>6c22e93</td>
+    <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
+    <td>-</td>
+    <td>24/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>02df602</td>
+    <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
+    <td>-</td>
+    <td>24/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>25bd1bf</td>
+    <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
+    <td>-</td>
+    <td>24/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>feat/about us</td>
+    <td>0408f5d</td>
+    <td>docs: improved the spelling</td>
+    <td>-</td>
+    <td>25/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>feat/about us</td>
+    <td>389615f</td>
+    <td>docs: added images file</td>
+    <td>-</td>
+    <td>25/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>771e406</td>
+    <td>add team profiles and about-the-team video section</td>
+    <td>-</td>
+    <td>25/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>68e2115</td>
+    <td>docs: fix landing page text</td>
+    <td>-</td>
+    <td>25/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>3ce5d9d</td>
+    <td>feat(about the product): add stakeholder video for the future</td>
+    <td>-</td>
+    <td>26/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>d6c516c</td>
+    <td>fix(english switched): everything is now translated to english</td>
+    <td>-</td>
+    <td>26/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>bc61806</td>
+    <td>fix(responsive design):responsive design corrected</td>
+    <td>-</td>
+    <td>26/04/2026</td>
+  </tr>
+  <tr>
+    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>main</td>
+    <td>bae9d2d</td>
+    <td>fix(main.js): minor translation problems solved</td>
+    <td>-</td>
+    <td>26/04/2026</td>
+  </tr>
+</tbody>
+
+</table>
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
