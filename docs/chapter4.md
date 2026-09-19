@@ -255,15 +255,388 @@ El sistema de navegación de FullTank proporciona recorridos coherentes, accesib
 
 ### 4.3.1 Landing Page Wireframe
 
+En esta sección se presentan los esquemas estructurales (wireframes) de baja fidelidad para la Landing Page de *Full-Tank*, diseñados en Figma. Estos diagramas establecen la jerarquía visual, la distribución de contenido y el comportamiento responsivo antes de aplicar el estilo visual final, asegurando que la interfaz cumpla con nuestros objetivos de negocio.
+
+**Desktop Web Browser Wireframe**
+<div align="center">
+  <img src="./../assets/chapter-4/Wireframe1.png" alt="Wireframe" width="100%"/>
+</div>
+
+* **Header (Navegación):** Se utiliza una organización horizontal fija con el logotipo a la izquierda, los enlaces de navegación centralizados (*Home, How it works, Benefits, Pricing, Testimonials, Contact) y el botón principal de *Call to Action (*"Request a Demo"*) resaltado a la derecha para incentivar la conversión inmediata.
+* **Hero Section (Home):** Ocupa la primera vista con un título de propuesta de valor centrado, un subtítulo descriptivo y un botón primario de "Request a Demo", acompañado de un placeholder (caja gris) para una imagen representativa del dashboard de Full-Tank a la derecha.
+* **Body Sections:**
+  * **How it works:** Se organiza secuencialmente en 3 o 4 columnas, mostrando los pasos del flujo operativo.
+  * **Benefits & Testimonials:** Se estructuran de forma matricial para facilitar la lectura de características clave y generar confianza al mostrar los casos de éxito de otras empresas.
+  * **Pricing:** Presentado mediante tablas comparativas para destacar claramente los planes de suscripción.
+* **Footer:** Contiene los enlaces legales obligatorios (Términos y Condiciones), información de contacto y enlaces a redes sociales, cumpliendo con la ética y responsabilidad exigida en el proyecto.
+
 ### 4.3.2 Landing Page Mock-up
 
+**Hero de nuestra landing:** El hero de nuestra plataforma FullTank presenta una grafica principal relacionada con la gestión eficiente de combustible en entornos industriales, transmitiendo control, tecnología y optimización. Incluye un título claro: "Leave the chaos. behind. Manage fuel like a pro". Una breve descripción resume la propuesta de valor, destacando la automatización del proceso de compra y distribución. Un botón de llamado a la acción "Comenzar ahora" invita a los usuarios a iniciar su experiencia. En la parte superior, una barra de navegación permite acceder fácilmente a todas las secciones, garantizando una experiencia fluida e intuitiva.
 
+![alt text](../assets/chapter-4/landing1.png)
+
+
+**Features:** La sección de "Features" muestra las funcionalidades clave de FullTank. El diseño sigue una forma de cards para la facil lectura
+
+![alt text](../assets/chapter-4/landing2.png)
+
+**About Us:** La sección "About Us" presenta a PrimeFuel, la empresa detrás de FullTank. Aquí compartimos nuestra misión de digitalizar la gestión de combustible y nuestros valores de innovación, eficiencia y confiabilidad.
+![alt text](../assets/chapter-4/landing3.png)
+
+**Plans:** En la sección "Plans", detallamos los planes de suscripción disponibles. Las tarjetas incluyen opciones como "Plan Starter" y "Plan Pro", mostrando precios, características y beneficios. También se ofrece la opción de visualizar precios mensuales o anuales, facilitando la elección según las necesidades del cliente.
+
+![alt text](../assets/chapter-4/landing4.png)
+
+**Footer:** El Footer de la landing page contiene enlaces útiles y recursos adicionales.
+
+![alt text](../assets/chapter-4/landing5.png)
 ---
 
 ## 4.4 Web Applications UX/UI Design
 
+Los wireframes y mockups aquí presentados muestran la estructura inicial de las vistas principales, priorizando la jerarquía visual, la simplicidad de navegación, la accesibilidad, la escalabilidad futura y la claridad en la presentación de información crítica como rutas, paraderos, notificaciones y configuraciones del usuario.
+
+
 ### 4.4.1 Web Applications Wireframes
 
+Esta sección presenta la propuesta visual y funcional de las aplicaciones que integran la experiencia de FullTank, diseñada para optimizar la interacción entre proveedores y compradores de combustible.
+
+**Wireframe 1 / Inicial**
+
+El primer wireframe representa la Landing Page principal de FullTank, diseñada como una herramienta de conversión masiva para atraer tanto a empresas solicitantes como a proveedores.
+
+En el cuerpo de la página, la información se desglosa siguiendo una secuencia lógica que construye confianza y educación sobre el servicio. Se incluyen secciones dedicadas a la historia de la startup (About Us) y al funcionamiento paso a paso del sistema (How it works), utilizando bloques modulares que permiten un escaneo rápido del contenido. Esta estructura se complementa con una cuadrícula de características que resaltan los beneficios técnicos, como la trazabilidad y la centralización de datos, fundamentales para resolver los dolores detectados en la etapa de investigación.
+
+Hacia el final de la navegación, se presenta una sección de planes y suscripciones que utiliza el principio de jerarquía visual para destacar la opción más equilibrada, facilitando la toma de decisiones del usuario. El diseño concluye con un pie de página (footer) que centraliza los datos de contacto y redes sociales, asegurando que el usuario tenga siempre una vía de comunicación abierta con PrimeFuel. Todo el conjunto ha sido diseñado bajo criterios de diseño inclusivo, empleando dimensiones de botones generosas y una organización de elementos que prioriza la legibilidad y la facilidad de interacción en dispositivos móviles.
+
+<div align="center">
+  <img src="./../assets/chapter-4/Wireframe1.png" alt="Estilos" width="310"/>
+</div>
+
+**Wireframe 2**
+
+Este diseño presenta un layout de pantalla dividida (dos columnas). En el lado izquierdo, se observa el logotipo o texto de la marca ("Fulltank") en la esquina superior. En el centro geométrico de esta columna, hay un contenedor ("Login") que aloja dos campos de entrada de texto (representados por rectángulos gris claro) y un botón de acción primaria (rectángulo gris oscuro). El lado derecho está dominado por un gran marcador de posición gráfico (indicado por la equis).
+
+<div align="center">
+  <img src="../assets/chapter-4/Login.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 3**
+
+Mantiene la misma estructura de pantalla dividida y contenedor gráfico a la derecha. El contenedor izquierdo, titulado "Create corporate Account", expande el formulario a tres campos de entrada de texto horizontales y un botón de acción primaria inferior.
+
+<div align="center">
+  <img src="../assets/chapter-4/Create account.png" alt="Estilos" width="700"/>
+</div>
+
+
+**Wireframe 4**
+
+Esta es la vista principal (Home) de la aplicación tras el inicio de sesión. Presenta un sistema de navegación lateral izquierdo (Sidebar) con enlaces a diferentes módulos. En el área principal, emplea un patrón de diseño tipo Dashboard con una jerarquía clara: tarjetas de indicadores clave de rendimiento (KPIs) en la parte superior, gráficos centrales (tendencia de consumo y niveles de tanques con barras de progreso) y una tabla de datos (Data Table) inferior para órdenes de logística activas.
+
+<div align="center">
+  <img src="../assets/chapter-4/Dashboard View.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 5**
+
+Vista dedicada a la gestión de solicitudes. Mantiene la barra lateral constante. Incorpora controles de búsqueda y acciones primarias en la esquina superior derecha. Utiliza tarjetas de resumen para el estado de las solicitudes (Totales, Pendientes, En tránsito, Completadas) y dedica la mayor parte del espacio a una tabla de datos extensa con opciones de ordenamiento (Sort), paginación y controles de acción por fila.
+
+<div align="center">
+  <img src="../assets/chapter-4/Fuel Requests Management View.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 6**
+
+Vista de reportería. Sigue la misma estructura base. Presenta KPIs financieros y de eficiencia en la parte superior. El centro visual es un gran gráfico de barras para visualizar las tendencias de consumo. En la parte inferior, una tabla de datos de "Gastos Recientes" que incluye un botón de filtrado explícito (Filter).
+
+<div align="center">
+  <img src="../assets/chapter-4/Reports & Analytics View.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 7**
+
+Módulo de proveedores. Presenta un layout mixto. En la parte superior, integra un contenedor gráfico grande (posiblemente un mapa o imagen destacada) junto a una tarjeta de detalles del proveedor. Debajo, muestra tarjetas de información resumida con botones "View Details" (posiblemente para proveedores frecuentes), y finaliza con una tabla de datos paginada para listar a todos los proveedores recomendados.
+
+<div align="center">
+  <img src="../assets/chapter-4/Suppliers Directory View.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 8**
+
+Vista del directorio de proveedores verificados. Mantiene la barra de navegación lateral y presenta dos tarjetas de indicadores (KPIs) en la parte superior ("Total Suppliers" y "Verified Coverage"). El contenido principal se organiza mediante una lista vertical de tarjetas, donde cada una representa a un proveedor, incluyendo un marcador para su logotipo, líneas de texto descriptivo, botones de acción rápida y una casilla de selección. Incluye controles de paginación en la parte inferior.
+
+
+<div align="center">
+  <img src="../assets/chapter-4/Verified Suppliers Directory View.png" alt="Verified Suppliers Directory View" width="700"/>
+</div>
+
+**Wireframe 9**
+
+Vista de detalles de seguimiento logístico o inspección. La pantalla presenta un layout complejo de paneles divisibles. En la columna izquierda, muestra tarjetas de resumen y un componente gráfico central destacado (probablemente un mapa de geolocalización o un visor de imágenes) con controles inferiores. En el panel derecho, se agrupa la información detallada del estado de la operación, barras de progreso y un botón de acción principal para gestionar el registro.
+
+<div align="center">
+  <img src="../assets/chapter-4/Logistics Tracking Details View.png" alt="Add Equipment Form View" width="700"/>
+</div>
+
+**Wireframe 10**
+
+Vista del formulario para la adición de nuevo equipamiento. Presenta un diseño limpio bajo el título "Add Equipment". El contenedor central organiza los campos de entrada de datos en un formato de dos columnas para optimizar el espacio en resoluciones de escritorio. Finaliza con un botón de acción primaria ("Save Equipment") alineado a la derecha en la parte inferior del formulario.
+
+HTML
+<div align="center">
+  <img src="../assets/chapter-4/Add Equipment Form View.png" alt="Add Equipment Form View" width="700"/>
+</div>
+
+
+**Wireframe 11**
+
+Vista de detalles de una solicitud de combustible específica. Mantiene la barra de navegación lateral. En la cabecera, muestra el identificador de la orden junto a espacios para botones de acción secundarios. El área de contenido adopta un diseño de cuadrícula (grid) asimétrico dividido en dos columnas. La columna principal (izquierda) agrupa las especificaciones de la orden, un amplio contenedor gráfico (diseñado para un mapa interactivo de seguimiento o tracking) y un componente de línea de tiempo (Timeline) para detallar los estados logísticos. La columna lateral (derecha) exhibe el perfil del proveedor con una llamada a la acción ("Contact Provider"), seguido de secciones para notas, instrucciones y documentos adjuntos.
+
+<div align="center">
+  <img src="../assets/chapter-4/Request Details View.png" alt="Request Details View" width="700"/>
+</div>
+
+**Wireframe 12**
+
+Este wireframe muestra una pantalla de gestión de inventario, cuyo propósito es visualizar y controlar los productos disponibles, permitiendo revisar existencias y realizar acciones sobre cada ítem de forma organizada.
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierInventory.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 13**
+
+Este wireframe muestra una pantalla de gestión de órdenes, enfocada en visualizar, organizar y dar seguimiento a pedidos, combinando una tabla principal con detalles y un panel lateral para información o acciones rápidas.
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierOrder.png" alt="Estilos" width="700"/>
+</div>
+
+Este wireframe muestra una pantalla de detalle de una orden, cuyo propósito es visualizar toda la información específica de un pedido, incluyendo su estado, datos relacionados y posibles acciones, en una vista más completa y organizada.
+
+**Wireframe 14**
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierOrder2.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 15**
+
+Este wireframe muestra una pantalla para gestionar solicitudes entrantes de proveedores, donde el usuario puede revisar y tomar acciones sobre pedidos de forma rápida, usando filtros y una tabla con las solicitudes
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierRequest.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 16**
+
+El wireframe representa un dashboard para la gestión operativa de una plataforma logística o de suministro de combustible, cuyo propósito es centralizar información clave para la toma de decisiones.
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierDashboard.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 17**
+
+El wireframe representa una pantalla de la cuenta, donde puede verificar los datos de su cuenta, su seguridad y ver las notificaciones
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierAccount.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 18**
+
+El wireframe representa una pantalla de fletes, donde se puede revisar el costo de los fletes y revisar que conductor será el más apropiado
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierFleet.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 19**
+
+El wireframe representa una pantalla para gestionar reportes, donde se puede revisar las ventas que fueron concluidas y las ventas actuales. Por otra parte, existen los filtos para este tipo de imagenes que les sera útil ya que permite buscar la informacion más rápido.
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierReport.png" alt="Estilos" width="700"/>
+</div>
+
+**Wireframe 20**
+
+El wireframe representa una pantalla de gestion de reportes, aqui se pueden revisar las estadisticas de la empresa como la cantidad de clientes o las órdenes activas. Además, se puede revisar que sector está invirtiendo más en combustible
+
+<div align="center">
+  <img src="../assets/chapter-4/wireframe-supplierReport2.png" alt="Estilos" width="700"/>
+</div>
+
+
+
+### **Mobile**
+**Wireframe 1**
+
+La adaptación móvil de la página principal prioriza la jerarquía vertical para asegurar una navegación fluida en pantallas pequeñas. La arquitectura de información reorganiza el menú en un componente de "hamburguesa" y transforma las tarjetas de planes y beneficios en una disposición de columna única. Los botones de llamado a la acción se han redimensionado para ocupar el ancho de la pantalla, facilitando la interacción táctil y guiando al usuario directamente hacia el registro o inicio de sesión.
+
+<div align="center">
+  <img src="./../assets/chapter-4/Prinicpial Mobile.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 2**
+
+Los wireframes de Inicio de Sesión y Recuperación de Contraseña se han simplificado al máximo para evitar la fatiga visual. En la versión móvil, los campos de entrada de datos son los protagonistas absolutos, utilizando etiquetas claras y botones de gran escala. El diseño inclusivo se evidencia en el espaciado entre elementos, optimizado para evitar errores de pulsación y garantizar un acceso rápido incluso para operarios en entornos de alta movilidad.
+
+<div align="center">
+  <img src="./../assets/chapter-4/o Registro para Mobile.png" alt="Estilos" width="200"/>
+</div>
+
+### Compradores
+
+**Wireframe 3**
+
+Este wireframe de Búsqueda de Proveedores organiza el directorio mediante un diseño de tarjetas verticales que facilita la comparación rápida de opciones en pantallas móviles.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM1.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 4**
+
+Este wireframe del Dashboard Operativo para Compradores organiza la información crítica en una estructura vertical de cuatro niveles para un monitoreo rápido. Su arquitectura de información prioriza métricas inmediatas como órdenes activas y balance de combustible, seguidas de un gráfico de consumo semanal y el estado detallado de los tanques de almacenamiento.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM2.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 5**
+
+Este wireframe de Monitoreo de Equipos utiliza un diseño de tarjetas individuales para gestionar el estado de los tanques y unidades de combustible de forma independiente. Su arquitectura de información destaca visualmente el porcentaje de llenado mediante gráficos circulares, permitiendo una lectura rápida de la capacidad y la fecha del último reabastecimiento.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM3.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 6**
+
+Este wireframe de Reportes y Analítica presenta una estructura de auditoría móvil centrada en la síntesis de datos logísticos complejos. Su arquitectura de información se divide en módulos que incluyen un selector de rango de fechas, un gráfico detallado de consumo de combustible y un desglose de gastos por sede, facilitando el control financiero.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM4.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 7**
+
+Este wireframe de Gestión de Solicitudes Activas organiza el flujo de pedidos mediante una lista de tarjetas de estado que permite el seguimiento en tiempo real.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM5.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 8**
+
+Este wireframe de Seguimiento de Orden en Tiempo Real utiliza una arquitectura de información de alta visibilidad para reducir la incertidumbre del comprador. La interfaz prioriza un mapa geolocalizado en la parte superior, seguido de tarjetas con datos técnicos del combustible y la identificación del conductor.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM6.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 9**
+
+Este wireframe de Recomendaciones de Proveedores implementa una arquitectura de información basada en algoritmos de confianza, priorizando a los socios con mayor puntaje de fiabilidad. La interfaz destaca una tarjeta principal para el proveedor "más confiable" con métricas de desempeño detalladas, seguida de un listado categorizado que diferencia entre proveedores contratados y bajo demanda.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM7.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 10**
+
+Este wireframe de Nueva Solicitud de Combustible implementa un flujo de formulario por pasos para guiar al comprador en la configuración de pedidos complejos. Su arquitectura de información segmenta el proceso en tres niveles lógicos: selección de producto, ubicación mediante mapa interactivo y programación de entrega, finalizando con un resumen de costos detallado.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WM8.png" alt="Estilos" width="200"/>
+</div>
+
+
+### Proveedores
+
+**Wireframe 11**
+
+Este wireframe organiza la gestión comercial mediante una estructura vertical de tres niveles. Su arquitectura de información prioriza el balance total y las métricas de ingresos mensuales en la parte superior, seguidas de un gráfico de desempeño de ventas y un listado de órdenes recientes para una validación rápida.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV1.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 12**
+
+Este wireframe centraliza la gestión operativa del proveedor mediante una estructura de monitoreo en tiempo real. Su arquitectura de información destaca métricas de órdenes activas y balance de combustible, seguidas de una gráfica de tendencias de venta semanal para facilitar la toma de decisiones.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV2.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 13**
+
+Este wireframe de Gestión de Flota Activa organiza el monitoreo de vehículos mediante una lista de tarjetas de estado para un control logístico en tiempo real.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV4.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 14**
+
+Este wireframe de Órdenes en Progreso para proveedores centraliza el monitoreo logístico de los despachos activos mediante tarjetas con mapas integrados. Su arquitectura de información destaca el estado de tránsito, la ubicación geográfica en tiempo real y datos críticos como el tiempo estimado de llegada (ETA) y la identificación de la unidad de transporte.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV5.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 15**
+
+Este wireframe de Reportes de Clientes organiza la inteligencia de negocios del proveedor mediante un análisis segmentado de su cartera. Su arquitectura de información prioriza métricas generales (total de clientes y volumen) y la distribución del suministro por sectores mediante barras de progreso, facilitando la identificación de los mercados con mayor demanda.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV6.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 16**
+
+Este wireframe de Monitoreo de Inventario en Sedes organiza el estado de los depósitos mediante tarjetas de alerta que priorizan la urgencia operativa. Su arquitectura de información utiliza barras de estado y etiquetas de nivel (Critical, Optimal, Low Stock) para informar sobre el volumen de distintos combustibles en cada terminal.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV7.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 17**
+
+Este wireframe de Gestión de Solicitudes Entrantes permite a los proveedores procesar órdenes de logística mediante un sistema de validación rápida. Su arquitectura de información organiza las peticiones en tarjetas individuales que muestran el volumen solicitado y los ingresos proyectados, clasificando su prioridad mediante etiquetas de estado.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV8.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 18**
+
+Este wireframe de Manifiesto de Carga y Seguimiento del Conductor organiza la información logística detallada para una supervisión precisa de la entrega. Su arquitectura de información destaca un mapa de geolocalización superior, seguido del perfil del conductor con canales de comunicación directa y un desglose técnico de la carga.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV9.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 19**
+
+Este wireframe de Perfil y Configuración de Cuenta organiza la gestión de identidad y seguridad del usuario en una estructura vertical de fácil navegación. Su arquitectura de información se divide en tres bloques lógicos: datos personales, seguridad y preferencias de notificaciones, permitiendo un control granular sobre la cuenta.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV3.png" alt="Estilos" width="200"/>
+</div>
+
+**Wireframe 20**
+
+Este wireframe representa el Menú de Navegación Lateral (Sidebar), el componente central que articula la experiencia de usuario en ambas versiones de la aplicación.
+
+<div align="center">
+  <img src="./../assets/chapter-4/WMV0.png" alt="Estilos" width="200"/>
+</div>
 
 ### 4.4.2 Web Applications Wireflow Diagrams
 
