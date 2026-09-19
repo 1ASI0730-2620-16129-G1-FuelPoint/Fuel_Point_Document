@@ -631,23 +631,24 @@ En el sprint 1 se diseñó el primer modelo de la landing page. Esta cuenta con 
 ![Home](../assets/chapter-5/HomeLandingPage.png)
 
 - **About Us:** Explica quiénes somos y nuestra misión para generar confianza.
-![About Us 1](../assets/chapter-5/AboutUs1LandingPage.png)
-![About Us 2]..)
+![About Us 1](../assets-chapter-5/AboutUs1LandingPage.png)
+![About Us 2](../assets-chapter-5/AboutUs2LandingPage2.png)
+![About Us 3](../assets-chapter-5/AboutUs3LandingPage.png)
 
 - **Benefits:** Explica los beneficios de implementar FullTank en el área logística de la empresa.
-![Benefits](../assets/chapter-5/BenefitsLandingPage.png)
+![Benefits](../assets-chapter-5/BenefitsLandingPage.png)
 
 - **How it works?:** Describe de forma sencilla y visual el funcionamiento de FullTank paso a paso.
-![How it works?](../assets/chapter-5/HowItWorksLandingPage.png)
+![How it works?](../assets-chapter-5/HowItWorksLandingPage.png)
 
 - **Testimonials:** Muestra algunas de las empresas o usuarios que confían en FullTank como referencia de credibilidad.
-![Testimonials](../assets/chapter-5/TestimonialsLandingPage.png)
+![Testimonials](../assets-chapter-5/TestimonialsLandingPage.png)
 
 - **Pricing:** Propone planes y precios que puedan acomodarse a las necesidades del usuario.
-![Pricing](../assets/chapter-5/PricingLandingPage.png)
+![Pricing](../assets-chapter-5/PricingLandingPage.png)
 
 - **Contact Us:** Ofrece un formulario y datos de contacto directo para resolver dudas o solicitar soporte.
-![Contact Us](../assets/chapter-5/ContactUsLandingPage.png)
+![Contact Us](../assets-chapter-5/ContactUsLandingPage.png)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
