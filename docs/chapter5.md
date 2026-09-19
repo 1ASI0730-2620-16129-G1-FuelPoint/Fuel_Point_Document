@@ -652,12 +652,29 @@ En el sprint 1 se diseñó el primer modelo de la landing page. Esta cuenta con 
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Registro de la evidencia sobre el estado de la documentación de Web Services / API durante el Sprint 1).*
+Durante el Sprint 1, el equipo se enfocó en el desarrollo del Landing Page de FullTank, por lo cual no se implementaron ni documentaron endpoints relacionados a Web Services. Los trabajos de desarrollo backend, integración de API y documentación con OpenAPI están planificados para Sprints posteriores.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación de las evidencias visuales y métricas del despliegue en producción de la Landing Page de FullTank en GitHub Pages).*
+Resumen:
+El despliegue inicial de la Landing Page de FullTank fue realizado exitosamente utilizando Vercel.
+
+Detalles del Despliegue:
+- URL de la Landing Page: https://primefuel.github.io/FullTank_LandingPage/
+- Repositorio: https://github.com/PrimeFuel/FullTank_LandingPage
+
+Evidencia:
+
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-*(Sección reservada para Joan Salvador Carhuayal Suarez: Incorporación del balance de colaboración del equipo durante el Sprint 1, evidencias de actividad en GitHub, canales de comunicación y retrospectiva del trabajo conjunto).*
+Resumen:
+El equipo colaboró mediante GitHub y WhatsApp durante el Sprint. Las actividades principales se centraron en el desarrollo y despliegue de la Landing Page.
+
+Evidencia de Colaboración:
+- Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
+
+Principales Herramientas de Comunicación:
+- GitHub (control de versiones y manejo de issues)
+- WhatsApp (comunicación diaria y aclaraciones rápidas)
+- Google Meet (reuniones de planificación de sprint)
