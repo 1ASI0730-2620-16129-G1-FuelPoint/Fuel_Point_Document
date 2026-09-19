@@ -1540,8 +1540,9 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 ### 4.8.1 Database Diagrams
 La base de datos relacional almacena todos los datos del dominio del sistema. Las tablas se organizan en correspondencia directa con los bounded contexts definidos en el diseño orientado a objetos. A continuación, se detalla qué tablas pertenecen a cada contexto y cuál es su responsabilidad dentro del modelo de datos.
 
-
-
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos.png" alt="backend analysis"/>
+</div>
 
 
 Identity & Access — Base de datos
@@ -1551,8 +1552,9 @@ Responsabilidad: Almacena la información de usuarios, sesiones y las extensione
 - CLIENT: extensión del perfil para empresas solicitantes (id_client, id_user FK, company_name, company_ruc, industry, created_at).
 - PROVIDER: extensión del perfil para empresas proveedoras (id_provider, id_user FK, company_name, company_ruc, description, created_at).
 
-
-
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_identity.png" alt="tablas de identity"/>
+</div>
 
 
 Catalog — Base de datos
@@ -1561,7 +1563,9 @@ Responsabilidad: Almacena el inventario disponible de cada proveedor, incluyendo
 - INVENTORY: registro de stock por tipo de recurso (id_inventory, id_provider FK, fuel_type, quantity_liters, price_per_liter, updated_at).
 
 
-
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_catalogo.png" alt="tablas de catalogo"/>
+</div>
 
 
 Ordering — Base de datos
@@ -1572,15 +1576,21 @@ Responsabilidad: Almacena el ciclo de vida completo de solicitudes y órdenes, i
 - ORDER: orden generada a partir de una solicitud aprobada (id_order, id_request FK, status, approved_at, dispatched_at, delivered_at, closed_at, rejection_reason, created_at).
 
 
-
-
-
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_ordering.png" alt="tablas de orders"/>
+</div>
 
 
 Payment — Base de datos
 Responsabilidad: Almacena los registros de pago asociados a las órdenes.
 
 - PAYMENT: comprobante de pago vinculado a una orden (id_payment, id_order FK, operation_code, amount, bank_name, voucher_url, payment_date, status, registered_at).
+
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
+</div><div allign="center">
+  <img src="../assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
+</div>
 
 
 Fulfillment — Base de datos
@@ -1590,16 +1600,25 @@ Responsabilidad: Almacena los recursos logísticos y su asignación a órdenes.
 - DRIVER: operador asignado al transporte (id_driver, id_provider FK, full_name, dni, license_number, phone_number, is_available, created_at).
 - DISPATCH: asignación de recursos a una orden (id_dispatch, id_order FK, id_transport FK, id_driver FK, assigned_at, status).
 
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_fullfillment.png" alt="tablas de fullfilment"/>
+</div>
 
 Notification — Base de datos
 Responsabilidad: Almacena las notificaciones generadas por eventos del sistema.
 
 - NOTIFICATION: notificación asociada a un usuario (id_notification, id_user FK, id_order FK, type, message, is_read, created_at).
 
-
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_notification.png" alt="tablas de fullfilment"/>
+</div>
 
 
 Reporting & Analytics — Base de datos
 Responsabilidad: Almacena la información de reportes generados a partir de datos históricos.
 
 - REPORT: reporte generado por un usuario (id_report, id_user FK, type, pdf_url, generated_at).
+
+<div allign="center">
+  <img src="../assets/chapter-4/baseDatos_analysis.png" alt="tablas de analysis"/>
+</div>
