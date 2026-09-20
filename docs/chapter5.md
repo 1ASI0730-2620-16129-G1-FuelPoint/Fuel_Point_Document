@@ -660,8 +660,8 @@ Resumen:
 El despliegue inicial de la Landing Page de FullTank fue realizado exitosamente utilizando Vercel.
 
 Detalles del Despliegue:
-- URL de la Landing Page: https://primefuel.github.io/FullTank_LandingPage/
-- Repositorio: https://github.com/PrimeFuel/FullTank_LandingPage
+- URL de la Landing Page: https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/
+- Repositorio: https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page
 
 Evidencia:
 
