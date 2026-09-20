@@ -1,27 +1,31 @@
-# FuelPoint - Informe del Proyecto FullTank
-
 <div align="center">
-  <p><strong>Universidad Peruana de Ciencias Aplicadas</strong></p>
-  <p>Ingeniería de Software</p>
-  <p><strong>1ASI0730 - Aplicaciones Web</strong></p>
-  <p>NRC: <strong>16129</strong></p>
-  <h2>Informe del Trabajo Final</h2>
+  <img src="logo_upc.PNG" alt="Logo UPC">
+  <p>Universidad Peruana de Ciencias Aplicadas</p>
+  <p>Carrera de Ingeniería de Software</p>
+  <p><strong>1ASI0730</strong></p>
+  <p><strong>Aplicaciones Web</strong></p>
+  <p>NRC:</p>
+  <p><strong>16129</strong></p>
+  <p><strong>Informe del Trabajo Final</strong></p>
   <p>Docente: <strong>Sánchez Seña, Alberto Wilmer</strong></p>
-  <p>Startup: <strong>FuelPoint</strong></p>
-  <p>Producto: <strong>FullTank</strong></p>
+  <p>Equipo:</p>
+  <p><strong>FuelPoint</strong></p>
+  <p>Proyecto:</p>
+  <p><strong>FullTank</strong></p>
+
+  <p><strong>Integrantes</strong></p>
+
+  | Código | Apellidos y nombres |
+  |---|---|
+  | U20231a257 | Corvacho Damian, Brayan Alexis |
+  | U202319057 | Frank Anthony, Huingo Tello |
+  | U202318620 | Joan Fabricio, Payano Puchuri |
+  | U20231B842 | Mantilla Maldonado, Enrique Manuel | 
+  | U202219040 | Carhuayal Suarez, Joan Salvador | 
+
   <p>Período académico 2026-20</p>
   <p>Agosto de 2026</p>
 </div>
-
-## Integrantes
-
-| Código | Apellidos y nombres | GitHub username |
-|---|---|---|
-| U20231a257 | Corvacho Damian, Brayan Alexis | BralexCD|
-| U202319057 | Frank Anthony, Huingo Tello | Franz2308|
-| U202318620 | Joan Fabricio, Payano Puchuri | joanfpp2-ai|
-| U20231B842 | Mantilla Maldonado, Enrique Manuel | enrique-mantilla|
-| U202219040 | Carhuayal Suarez, Joan Salvador | joann113|
 
 ## Registro de Versiones del Informe
 
@@ -31,11 +35,9 @@
 
 ## Project Report Collaboration Insights
 
-**Repositorio del informe:** <!-- TODO: añadir URL pública del repositorio -->
+**Repositorio del informe:** https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Fuel_Point_Document
 
 El informe se desarrolla de forma colaborativa en Markdown. El equipo aplicará GitFlow, Conventional Commits y Semantic Versioning. Para cada entrega se añadirán aquí una explicación del trabajo colaborativo y evidencias de los analíticos de contribución del repositorio.
-
-<!-- TODO AV1: insertar capturas de Contributors, Commits over time y Network, acompañadas de una interpretación coherente con el Registro de Versiones. -->
 
 ## Contenido
 
@@ -64,8 +66,6 @@ El curso contribuye al **ABET - EAC Student Outcome 5**: capacidad de funcionar 
 ## Conclusiones
 
 Las conclusiones de AV1 se redactarán después de contrastar los hallazgos de investigación, los artefactos de requisitos y los resultados del Sprint 1. No deben anticipar resultados que todavía no cuenten con evidencia.
-
-<!-- TODO AV1: redactar conclusiones y recomendaciones trazables a los Problem Statements, assumptions, Hypothesis Statements y resultados del Sprint 1. -->
 
 ## Bibliografía
 
