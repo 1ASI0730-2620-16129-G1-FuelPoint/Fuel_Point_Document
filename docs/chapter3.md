@@ -304,7 +304,7 @@
 </table>
 
 
-#### EP08 — Logística y Despacho
+#### EP06 — Logística y Despacho
 
 <table border>
   <thead>
@@ -319,41 +319,41 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP08 — Logística y Despacho:</b> Como proveedor, quiero gestionar mi flota de vehículos y conductores para asignarlos correctamente a cada despacho.</td>
+  <td colspan="5"><b>EP06 — Logística y Despacho:</b> Como proveedor, quiero gestionar mi flota de vehículos y conductores para asignarlos correctamente a cada despacho.</td>
 </tr>
 <tr>
   <td>US-22</td>
   <td>Validar disponibilidad de transporte</td>
   <td>Como proveedor, quiero saber qué vehículos están disponibles antes de asignarlos para vincularlos correctamente.</td>
   <td><b>Escenario 1: Vehículo no disponible por superposición</b><br/>Dado que el proveedor visualiza el listado de vehículos,<br/>Cuando un vehículo está asignado a otro pedido para la misma fecha y hora estimada,<br/>Entonces el sistema lo muestra como no disponible.<br/><br/><b>Escenario 2: Vehículo disponible</b><br/>Dado que el proveedor visualiza un vehículo sin conflictos de agenda,<br/>Cuando se carga el listado de vehículos,<br/>Entonces dicho vehículo se muestra como seleccionable.<br/><br/><b>Escenario 3: Conflicto en tiempo real</b><br/>Dado que el proveedor intenta seleccionar un vehículo que fue asignado recientemente por otro usuario,<br/>Cuando realiza la acción,<br/>Entonces el sistema bloquea la selección y muestra un mensaje de actualización.</td>
-  <td>EP08</td>
+  <td>EP06</td>
 </tr>
 <tr>
   <td>US-44</td>
   <td>Gestionar vehículos de flota</td>
   <td>Como proveedor, quiero registrar y administrar los vehículos de mi flota para tenerlos disponibles al momento de asignarlos a pedidos.</td>
   <td><b>Escenario 1: Registro exitoso de vehículo</b><br/>Dado que el proveedor accede al módulo de flota y completa los datos del vehículo,<br/>Cuando guarda el registro,<br/>Entonces el vehículo queda disponible para ser asignado a pedidos.<br/><br/><b>Escenario 2: Placa duplicada</b><br/>Dado que el proveedor intenta registrar un vehículo con una placa ya existente,<br/>Cuando intenta guardar,<br/>Entonces el sistema muestra un error indicando que la placa ya está registrada.<br/><br/><b>Escenario 3: Eliminación de vehículo</b><br/>Dado que el proveedor elimina un vehículo de la flota,<br/>Cuando confirma la acción,<br/>Entonces el vehículo deja de aparecer como opción en la asignación de pedidos.</td>
-  <td>EP08</td>
+  <td>EP06</td>
 </tr>
 <tr>
   <td>US-45</td>
   <td>Gestionar conductores</td>
   <td>Como proveedor, quiero registrar y administrar los conductores de mi empresa para asignarlos correctamente a los despachos.</td>
   <td><b>Escenario 1: Registro exitoso de conductor</b><br/>Dado que el proveedor completa los datos del conductor (nombre, DNI, licencia),<br/>Cuando guarda el registro,<br/>Entonces el conductor queda disponible para ser asignado a pedidos.<br/><br/><b>Escenario 2: DNI duplicado</b><br/>Dado que el proveedor intenta registrar un conductor con un DNI ya existente,<br/>Cuando intenta guardar,<br/>Entonces el sistema notifica que el conductor ya está registrado.<br/><br/><b>Escenario 3: Edición de datos de conductor</b><br/>Dado que el proveedor actualiza los datos de un conductor existente,<br/>Cuando guarda los cambios,<br/>Entonces la información se actualiza correctamente en el sistema.</td>
-  <td>EP08</td>
+  <td>EP06</td>
 </tr>
 <tr>
   <td>US-49</td>
   <td>Asignar recursos a despacho</td>
   <td>Como proveedor, quiero asignar un vehículo y un conductor a un pedido aprobado en una sola operación para agilizar la preparación del despacho.</td>
   <td><b>Escenario 1: Asignación exitosa de recursos al despacho</b><br/>Dado que el proveedor selecciona un pedido aprobado y elige un vehículo y conductor disponibles,<br/>Cuando confirma la asignación,<br/>Entonces ambos recursos quedan vinculados al pedido y el despacho queda registrado con estado "Asignado".<br/><br/><b>Escenario 2: Recursos no disponibles para la fecha del pedido</b><br/>Dado que el proveedor intenta asignar recursos a un pedido y tanto el vehículo como el conductor seleccionados ya tienen compromisos en esa fecha,<br/>Cuando ejecuta la asignación,<br/>Entonces el sistema muestra cuáles recursos están en conflicto e impide completar la operación.</td>
-  <td>EP08</td>
+  <td>EP06</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP09 — Perfil de Usuario
+#### EP07 — Perfil de Usuario
 
 <table border>
   <thead>
@@ -368,27 +368,27 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP09 — Perfil de Usuario:</b> Como usuario registrado, quiero ver y editar mi perfil para mantener mi información actualizada en la plataforma.</td>
+  <td colspan="5"><b>EP07 — Perfil de Usuario:</b> Como usuario registrado, quiero ver y editar mi perfil para mantener mi información actualizada en la plataforma.</td>
 </tr>
 <tr>
   <td>US-23</td>
   <td>Ver perfil de usuario</td>
   <td>Como usuario registrado, quiero ver mis datos de perfil para revisar mi información registrada.</td>
   <td><b>Escenario 1: Visualización exitosa del perfil</b><br/>Dado que el usuario tiene sesión activa,<br/>Cuando accede a su perfil,<br/>Entonces ve su nombre, correo y rol.<br/><br/><b>Escenario 2: Error en la carga de datos</b><br/>Dado que el usuario accede a su perfil y ocurre un error al obtener los datos,<br/>Cuando se carga la vista,<br/>Entonces se muestra un mensaje de error y se sugiere reintentar.<br/><br/><b>Escenario 3: Restricción de datos de otros usuarios</b><br/>Dado que el usuario tiene sesión activa,<br/>Cuando intenta ver otro perfil,<br/>Entonces el sistema restringe el acceso y muestra su propia información.</td>
-  <td>EP09</td>
+  <td>EP07</td>
 </tr>
 <tr>
   <td>US-24</td>
   <td>Editar datos de perfil</td>
   <td>Como usuario registrado, quiero editar mis datos para mantener mi información actualizada.</td>
   <td><b>Escenario 1: Edición y guardado exitoso</b><br/>Dado que el usuario modifica uno o más campos del formulario,<br/>Cuando la información ingresada es válida,<br/>Entonces el sistema guarda los cambios correctamente.<br/><br/><b>Escenario 2: Campo obligatorio vacío</b><br/>Dado que el usuario deja un campo obligatorio vacío,<br/>Cuando intenta guardar,<br/>Entonces el sistema muestra un mensaje de validación indicando el campo requerido.<br/><br/><b>Escenario 3: Error del servidor al guardar</b><br/>Dado que el usuario intenta guardar y ocurre un fallo en el servidor,<br/>Cuando se realiza la acción,<br/>Entonces se muestra un mensaje de error y los datos ingresados permanecen visibles.</td>
-  <td>EP09</td>
+  <td>EP07</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP10 — Soporte y Contacto
+#### EP08 — Soporte y Contacto
 
 <table border>
   <thead>
@@ -403,27 +403,27 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP10 — Soporte y Contacto:</b> Como usuario, quiero acceder a soporte y datos de contacto para resolver dudas sin necesidad de intermediarios.</td>
+  <td colspan="5"><b>EP08 — Soporte y Contacto:</b> Como usuario, quiero acceder a soporte y datos de contacto para resolver dudas sin necesidad de intermediarios.</td>
 </tr>
 <tr>
   <td>US-25</td>
   <td>Ver sección de preguntas frecuentes</td>
   <td>Como visitante de ambos segmentos, quiero acceder a una sección de preguntas frecuentes para resolver dudas rápidamente.</td>
   <td><b>Escenario 1: Visualización de preguntas comunes</b><br/>Dado que el visitante accede a la sección,<br/>Cuando se carga el contenido,<br/>Entonces puede leer las preguntas y respuestas más frecuentes.<br/><br/><b>Escenario 2: Organización por categorías</b><br/>Dado que el visitante accede a la sección de preguntas frecuentes con muchas entradas,<br/>Cuando navega por la sección,<br/>Entonces puede visualizarlas clasificadas en categorías.<br/><br/><b>Escenario 3: Error al cargar FAQs</b><br/>Dado que el visitante accede a la sección y ocurre un fallo en la carga,<br/>Cuando intenta visualizar las preguntas frecuentes,<br/>Entonces se muestra un mensaje de error o un contenido informativo alternativo.</td>
-  <td>EP10</td>
+  <td>EP08</td>
 </tr>
 <tr>
   <td>US-26</td>
   <td>Acceder a información de contacto rápido</td>
   <td>Como usuario de ambos segmentos, quiero ver datos de contacto directo (teléfono o correo) para hacer consultas urgentes.</td>
   <td><b>Escenario 1: Visualización de datos de contacto</b><br/>Dado que el usuario accede a la sección de soporte,<br/>Cuando se carga la página,<br/>Entonces puede visualizar claramente el correo de soporte y número telefónico.<br/><br/><b>Escenario 2: Acceso al correo de cliente</b><br/>Dado que el usuario hace clic en la dirección de correo,<br/>Cuando tiene una app de correo configurada,<br/>Entonces se abre automáticamente su aplicación de correo predeterminada.<br/><br/><b>Escenario 3: Falla en la configuración de contacto</b><br/>Dado que el usuario accede a la página y los datos de contacto no están bien configurados,<br/>Cuando se carga la sección de contacto,<br/>Entonces el sistema muestra un mensaje genérico invitando a intentar más tarde.</td>
-  <td>EP10</td>
+  <td>EP08</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP11 — Búsqueda y Filtrado
+#### EP09 — Búsqueda y Filtrado
 
 <table border>
   <thead>
@@ -438,27 +438,27 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP11 — Búsqueda y Filtrado:</b> Como usuario, quiero buscar y filtrar pedidos para encontrar rápidamente la información que necesito.</td>
+  <td colspan="5"><b>EP09 — Búsqueda y Filtrado:</b> Como usuario, quiero buscar y filtrar pedidos para encontrar rápidamente la información que necesito.</td>
 </tr>
 <tr>
   <td>US-27</td>
   <td>Buscar pedido por código</td>
   <td>Como usuario de ambos segmentos, quiero buscar un pedido específico por su código para encontrarlo rápidamente.</td>
   <td><b>Escenario 1: Pedido encontrado</b><br/>Dado que el usuario escribe un código válido,<br/>Cuando existe un pedido con ese código,<br/>Entonces se muestra el resultado correspondiente.<br/><br/><b>Escenario 2: Pedido no encontrado</b><br/>Dado que el usuario digita un código no correspondiente a ningún pedido,<br/>Cuando finaliza la búsqueda,<br/>Entonces el sistema muestra un mensaje de que no hay coincidencias.</td>
-  <td>EP11</td>
+  <td>EP09</td>
 </tr>
 <tr>
   <td>US-28</td>
   <td>Filtrar pedidos por estado</td>
   <td>Como usuario de ambos segmentos, quiero filtrar mis pedidos por estado (pendiente, aprobado, entregado) para facilitar la revisión.</td>
   <td><b>Escenario 1: Aplicar filtro correctamente</b><br/>Dado que el usuario selecciona un estado,<br/>Cuando se aplica el filtro,<br/>Entonces solo se muestran los pedidos con ese estado.<br/><br/><b>Escenario 2: No hay pedidos en ese estado</b><br/>Dado que el usuario selecciona un estado que no tiene coincidencias,<br/>Cuando ejecuta el filtro,<br/>Entonces se muestra un mensaje indicando que no hay pedidos para ese estado.</td>
-  <td>EP11</td>
+  <td>EP09</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP12 — Notificaciones
+#### EP10 — Notificaciones
 
 <table border>
   <thead>
@@ -473,27 +473,27 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP12 — Notificaciones:</b> Como solicitante, quiero recibir notificaciones automáticas para estar informado sobre los cambios de estado de mis pedidos.</td>
+  <td colspan="5"><b>EP10 — Notificaciones:</b> Como solicitante, quiero recibir notificaciones automáticas para estar informado sobre los cambios de estado de mis pedidos.</td>
 </tr>
 <tr>
   <td>US-29</td>
   <td>Recibir notificación de aprobación</td>
   <td>Como solicitante, quiero recibir una notificación cuando un pedido sea aprobado o rechazado para estar informado.</td>
   <td><b>Escenario 1: Visualización de notificación</b><br/>Dado que el proveedor cambia el estado del pedido,<br/>Cuando el solicitante inicia sesión,<br/>Entonces ve una notificación del evento.<br/><br/><b>Escenario 2: Pedido actualizado desde otra sesión</b><br/>Dado que el solicitante aún no ha leído la notificación,<br/>Cuando actualiza la interfaz,<br/>Entonces la notificación se mantiene visible hasta que sea marcada como leída.</td>
-  <td>EP12</td>
+  <td>EP10</td>
 </tr>
 <tr>
   <td>US-30</td>
   <td>Notificación de pedido despachado</td>
   <td>Como solicitante, quiero recibir una notificación cuando un pedido haya sido despachado para estar informado.</td>
   <td><b>Escenario 1: Pedido marcado como despachado</b><br/>Dado que el proveedor marca el pedido como despachado,<br/>Cuando el solicitante consulta su cuenta,<br/>Entonces puede ver la notificación correspondiente.<br/><br/><b>Escenario 2: Visualización posterior del evento</b><br/>Dado que el pedido fue despachado anteriormente,<br/>Cuando el solicitante accede en otro momento,<br/>Entonces la notificación sigue disponible hasta ser archivada o leída.</td>
-  <td>EP12</td>
+  <td>EP10</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP13 — Gestión de Clientes (Proveedor)
+#### EP11 — Gestión de Clientes (Proveedor)
 
 <table border>
   <thead>
@@ -508,27 +508,27 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP13 — Gestión de Clientes (Proveedor):</b> Como proveedor, quiero ver el listado y detalle de mis clientes para analizar su historial y frecuencia de pedidos.</td>
+  <td colspan="5"><b>EP11 — Gestión de Clientes (Proveedor):</b> Como proveedor, quiero ver el listado y detalle de mis clientes para analizar su historial y frecuencia de pedidos.</td>
 </tr>
 <tr>
   <td>US-31</td>
   <td>Ver listado de empresas</td>
   <td>Como proveedor, quiero ver una lista de empresas solicitantes para identificar a mis clientes frecuentes.</td>
   <td><b>Escenario 1: Visualización del listado</b><br/>Dado que el proveedor accede al módulo de empresas,<br/>Cuando se carga el listado,<br/>Entonces se muestran nombre, pedidos activos y total histórico por empresa.<br/><br/><b>Escenario 2: Lista vacía o sin datos</b><br/>Dado que el proveedor accede al módulo y no hay empresas registradas,<br/>Cuando se carga la vista,<br/>Entonces se muestra un mensaje indicando que no hay empresas disponibles.</td>
-  <td>EP13</td>
+  <td>EP11</td>
 </tr>
 <tr>
   <td>US-32</td>
   <td>Ver detalles de empresa</td>
   <td>Como proveedor, quiero ver información detallada de una empresa solicitante para analizar su historial de pedidos.</td>
   <td><b>Escenario 1: Acceso a detalle de empresa</b><br/>Dado que el proveedor selecciona una empresa,<br/>Cuando se carga el detalle,<br/>Entonces visualiza pedidos realizados, cantidades solicitadas y fechas.<br/><br/><b>Escenario 2: Empresa sin historial de pedidos</b><br/>Dado que el proveedor selecciona una empresa que aún no ha realizado pedidos,<br/>Cuando se accede a su perfil,<br/>Entonces se muestra un mensaje indicando que no hay historial disponible.</td>
-  <td>EP13</td>
+  <td>EP11</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP14 — Reportes y Analytics
+#### EP12 — Reportes y Analytics
 
 <table border>
   <thead>
@@ -543,41 +543,41 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP14 — Reportes y Analytics:</b> Como usuario, quiero acceder a gráficos y reportes descargables para analizar mi consumo o ventas por periodo.</td>
+  <td colspan="5"><b>EP12 — Reportes y Analytics:</b> Como usuario, quiero acceder a gráficos y reportes descargables para analizar mi consumo o ventas por periodo.</td>
 </tr>
 <tr>
   <td>US-33</td>
   <td>Ver gráfico de consumo (Solicitante)</td>
   <td>Como solicitante, quiero ver un gráfico de mi consumo mensual para tener control sobre el uso del combustible.</td>
   <td><b>Escenario 1: Gráfico con datos disponibles</b><br/>Dado que el solicitante ha realizado pedidos,<br/>Cuando accede al módulo de reportes,<br/>Entonces se visualiza un gráfico con galones consumidos por mes.<br/><br/><b>Escenario 2: Sin datos de consumo</b><br/>Dado que el solicitante no ha hecho pedidos aún,<br/>Cuando accede al gráfico,<br/>Entonces se muestra un mensaje de que no hay datos suficientes.</td>
-  <td>EP14</td>
+  <td>EP12</td>
 </tr>
 <tr>
   <td>US-34</td>
   <td>Ver gráfico de ventas (Proveedor)</td>
   <td>Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.</td>
   <td><b>Escenario 1: Datos disponibles para graficar</b><br/>Dado que el proveedor ha despachado pedidos,<br/>Cuando accede al módulo de reportes,<br/>Entonces se visualiza un gráfico con las ventas mensuales totales.<br/><br/><b>Escenario 2: Sin pedidos registrados</b><br/>Dado que el proveedor no ha realizado ventas aún,<br/>Cuando accede al gráfico,<br/>Entonces se muestra un mensaje de que no hay datos suficientes.</td>
-  <td>EP14</td>
+  <td>EP12</td>
 </tr>
 <tr>
   <td>US-35</td>
   <td>Descargar reporte PDF</td>
   <td>Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.</td>
   <td><b>Escenario 1: Generación de PDF con datos</b><br/>Dado que el usuario hace clic en "Descargar",<br/>Cuando hay datos en el periodo seleccionado,<br/>Entonces se genera un archivo PDF descargable.<br/><br/><b>Escenario 2: No hay datos en el periodo seleccionado</b><br/>Dado que el usuario no tiene registros en el periodo seleccionado,<br/>Cuando se solicita la descarga,<br/>Entonces el sistema notifica que no hay contenido para exportar.<br/><br/><b>Escenario 3: Falla en la generación del PDF</b><br/>Dado que el usuario intenta descargar el archivo y ocurre un error en el backend al generar el PDF,<br/>Cuando hace clic en el botón de descargar,<br/>Entonces se muestra un mensaje de error sin afectar la sesión.</td>
-  <td>EP14</td>
+  <td>EP12</td>
 </tr>
 <tr>
   <td>US-48</td>
   <td>Ver distribución de ventas por sector</td>
   <td>Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.</td>
   <td><b>Escenario 1: Visualización de distribución con datos disponibles</b><br/>Dado que el proveedor accede al módulo de reportes de clientes,<br/>Cuando existen ventas registradas en más de un sector industrial,<br/>Entonces el sistema muestra un gráfico de barras con el volumen y porcentaje de participación por sector.<br/><br/><b>Escenario 2: Sin distribución por sector disponible</b><br/>Dado que el proveedor aún no tiene ventas registradas o todos sus clientes pertenecen al mismo sector,<br/>Cuando accede a la sección de distribución,<br/>Entonces el sistema muestra un mensaje indicando que no hay datos suficientes para mostrar la distribución.</td>
-  <td>EP14</td>
+  <td>EP12</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP15 — Gestión de Inventario (Proveedor)
+#### EP13 — Gestión de Inventario (Proveedor)
 
 <table border>
   <thead>
@@ -592,14 +592,14 @@
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP15 — Gestión de Inventario (Proveedor):</b> Como proveedor, quiero administrar mi catálogo de productos de combustible para mantenerlo actualizado y disponible en la plataforma.</td>
+  <td colspan="5"><b>EP13 — Gestión de Inventario (Proveedor):</b> Como proveedor, quiero administrar mi catálogo de productos de combustible para mantenerlo actualizado y disponible en la plataforma.</td>
 </tr>
 <tr>
   <td>US-46</td>
   <td>Gestionar inventario de combustibles</td>
   <td>Como proveedor, quiero registrar, editar y eliminar los productos de combustible de mi catálogo para que estén disponibles como opciones al crear un pedido.</td>
   <td><b>Escenario 1: Registro y visualización de productos en el inventario</b><br/>Dado que el proveedor accede al módulo de inventario y completa los campos requeridos del formulario de producto (nombre, tipo de combustible, precio por litro y unidad),<br/>Cuando guarda el registro,<br/>Entonces el producto aparece listado en el inventario con su información completa y queda disponible para ser referenciado en nuevos pedidos.<br/><br/><b>Escenario 2: Edición y eliminación de un producto existente</b><br/>Dado que el proveedor selecciona un producto ya registrado en el inventario,<br/>Cuando actualiza sus datos o confirma su eliminación,<br/>Entonces los cambios se reflejan de inmediato en el listado y el producto editado o eliminado no genera inconsistencias en pedidos en curso.</td>
-  <td>EP15</td>
+  <td>EP13</td>
 </tr>
 
 </tbody>
@@ -609,7 +609,7 @@
 
 Las historias técnicas describen lo que el equipo de desarrollo necesita del RESTful API de FullTank para implementar las historias funcionales. Están escritas desde la perspectiva del developer que consume los servicios. Sus criterios de aceptación, en Gherkin, especifican los códigos de estado HTTP y las respuestas esperadas. Los endpoints se exponen bajo el prefijo `/api/v1`, intercambian datos en JSON, requieren un token JWT salvo en el inicio de sesión, el registro y la recuperación de contraseña, y se documentan con OpenAPI y Swagger UI.
 
-#### EP06 — API de Autenticación
+#### EP14 — API de Autenticación
 
 <table border>
   <thead>
@@ -624,34 +624,34 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP06 — API de Autenticación:</b> Como developer, quiero contar con endpoints de autenticación para implementar el inicio de sesión, el cierre de sesión y la recuperación de contraseña.</td>
+  <td colspan="5"><b>EP14 — API de Autenticación:</b> Como developer, quiero contar con endpoints de autenticación para implementar el inicio de sesión, el cierre de sesión y la recuperación de contraseña.</td>
 </tr>
 <tr>
   <td>TS-01</td>
   <td>Endpoint: Iniciar sesión</td>
   <td>Como developer, quiero un endpoint <code>POST /api/v1/authentication/sign-in</code> para autenticar a los usuarios y obtener un token de acceso.</td>
   <td><b>Escenario 1: Autenticación exitosa</b><br/>Dado que el developer envía un correo y una contraseña válidos,<br/>Cuando realiza la solicitud al endpoint de inicio de sesión,<br/>Entonces recibe status 200 con un token JWT, el identificador del usuario y su rol.<br/><br/><b>Escenario 2: Credenciales inválidas</b><br/>Dado que el developer envía un correo o una contraseña incorrectos,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 401 con un mensaje de error que no indica cuál de los dos datos falló.<br/><br/><b>Escenario 3: Error interno del servidor</b><br/>Dado que el developer realiza la solicitud y ocurre un error en el servidor,<br/>Cuando se procesa la autenticación,<br/>Entonces recibe status 500 con un mensaje genérico de error.</td>
-  <td>EP06</td>
+  <td>EP14</td>
 </tr>
 <tr>
   <td>TS-02</td>
   <td>Endpoint: Recuperar contraseña</td>
   <td>Como developer, quiero un endpoint <code>POST /api/v1/authentication/password-recovery</code> para enviar al usuario un código de recuperación por correo.</td>
   <td><b>Escenario 1: Solicitud válida</b><br/>Dado que el developer envía un correo registrado,<br/>Cuando realiza la solicitud al endpoint de recuperación,<br/>Entonces el sistema genera un código con vigencia limitada, lo envía mediante el servicio de correo y responde con status 200.<br/><br/><b>Escenario 2: Correo no registrado</b><br/>Dado que el developer envía un correo que no existe en la base de datos,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 404 y no se envía ningún correo.<br/><br/><b>Escenario 3: Falla del servicio de correo</b><br/>Dado que el developer envía un correo registrado y el servicio de correo no responde,<br/>Cuando se intenta enviar el mensaje,<br/>Entonces recibe status 500 y el error queda registrado en los logs del servidor.</td>
-  <td>EP06</td>
+  <td>EP14</td>
 </tr>
 <tr>
   <td>TS-03</td>
   <td>Endpoint: Cerrar sesión</td>
   <td>Como developer, quiero un endpoint <code>POST /api/v1/authentication/sign-out</code> para cerrar la sesión del usuario.</td>
   <td><b>Escenario 1: Cierre de sesión exitoso</b><br/>Dado que el developer envía un token válido,<br/>Cuando realiza la solicitud al endpoint de cierre de sesión,<br/>Entonces el token queda invalidado y recibe status 200.<br/><br/><b>Escenario 2: Token inválido o expirado</b><br/>Dado que el developer envía un token no válido o expirado,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 401 y no se realiza ninguna acción.<br/><br/><b>Escenario 3: Uso de un token invalidado</b><br/>Dado que el developer ya cerró la sesión,<br/>Cuando usa el mismo token para consumir otro endpoint protegido,<br/>Entonces recibe status 401.</td>
-  <td>EP06</td>
+  <td>EP14</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP07 — API de Pedidos
+#### EP15 — API de Pedidos
 
 <table border>
   <thead>
@@ -666,41 +666,41 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP07 — API de Pedidos:</b> Como developer, quiero contar con endpoints de pedidos para crear, consultar, confirmar y cancelar órdenes de combustible desde el frontend.</td>
+  <td colspan="5"><b>EP15 — API de Pedidos:</b> Como developer, quiero contar con endpoints de pedidos para crear, consultar, confirmar y cancelar órdenes de combustible desde el frontend.</td>
 </tr>
 <tr>
   <td>TS-04</td>
   <td>Endpoint: Crear pedido</td>
   <td>Como developer, quiero un endpoint <code>POST /api/v1/orders</code> para registrar un nuevo pedido de combustible.</td>
   <td><b>Escenario 1: Petición con datos completos</b><br/>Dado que el developer envía el producto, la cantidad, la dirección de entrega y la fecha requerida,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 201 con el identificador del pedido y su estado inicial «Pending».<br/><br/><b>Escenario 2: Petición incompleta</b><br/>Dado que el developer omite uno o más campos obligatorios,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 con el detalle de los campos que faltan.<br/><br/><b>Escenario 3: Cantidad inválida</b><br/>Dado que el developer envía una cantidad igual o menor a cero,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 con un mensaje de validación y el pedido no se registra.</td>
-  <td>EP07</td>
+  <td>EP15</td>
 </tr>
 <tr>
   <td>TS-05</td>
   <td>Endpoint: Consultar pedidos por usuario</td>
   <td>Como developer, quiero un endpoint <code>GET /api/v1/users/{userId}/orders</code> para obtener todos los pedidos de un usuario.</td>
   <td><b>Escenario 1: Usuario con pedidos registrados</b><br/>Dado que el usuario tiene pedidos en el sistema,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con la lista de sus pedidos.<br/><br/><b>Escenario 2: Usuario sin pedidos</b><br/>Dado que el usuario aún no ha realizado pedidos,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con una lista vacía.<br/><br/><b>Escenario 3: Consulta de pedidos ajenos</b><br/>Dado que el token pertenece a un usuario distinto del indicado en la ruta,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 403.</td>
-  <td>EP07</td>
+  <td>EP15</td>
 </tr>
 <tr>
   <td>TS-13</td>
   <td>Endpoint: Consultar pedidos</td>
   <td>Como developer, quiero los endpoints <code>GET /api/v1/orders</code> y <code>GET /api/v1/orders/{orderId}</code> para listar pedidos, filtrarlos por empresa solicitante o proveedora y consultarlos por su identificador.</td>
   <td><b>Escenario 1: Consulta exitosa por identificador</b><br/>Dado que el developer envía el identificador de un pedido existente,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 200 con el detalle del pedido.<br/><br/><b>Escenario 2: Consulta por empresa</b><br/>Dado que el developer envía el identificador de una empresa solicitante o proveedora como parámetro,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 200 con la lista de pedidos asociados a esa empresa.<br/><br/><b>Escenario 3: Pedido no encontrado</b><br/>Dado que el developer envía un identificador que no corresponde a ningún pedido,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 404 con un mensaje de error.</td>
-  <td>EP07</td>
+  <td>EP15</td>
 </tr>
 <tr>
   <td>TS-14</td>
   <td>Endpoint: Confirmar o cancelar pedido</td>
   <td>Como developer, quiero los endpoints <code>PATCH /api/v1/orders/{orderId}/confirmation</code> y <code>PATCH /api/v1/orders/{orderId}/cancellation</code> para confirmar la recepción o cancelar un pedido.</td>
   <td><b>Escenario 1: Confirmación exitosa</b><br/>Dado que el pedido está en estado «In Transit»,<br/>Cuando el developer envía la confirmación de recepción,<br/>Entonces el pedido cambia a «Completed» y recibe status 200.<br/><br/><b>Escenario 2: Cancelación exitosa</b><br/>Dado que el pedido está en estado «Pending»,<br/>Cuando el developer envía la cancelación,<br/>Entonces el pedido cambia a «Cancelled» y recibe status 200.<br/><br/><b>Escenario 3: Acción no válida para el estado actual</b><br/>Dado que el pedido ya fue cerrado o cancelado,<br/>Cuando el developer intenta confirmarlo o cancelarlo,<br/>Entonces recibe status 409 con un mensaje que indica el estado actual del pedido.</td>
-  <td>EP07</td>
+  <td>EP15</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP08 — Gestión de Usuarios y Empresas
+#### EP16 — Gestión de Usuarios y Empresas
 
 <table border>
   <thead>
@@ -715,48 +715,48 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP08 — Gestión de Usuarios y Empresas:</b> Como developer, quiero contar con endpoints para administrar los usuarios y las empresas solicitantes y proveedoras de la plataforma.</td>
+  <td colspan="5"><b>EP16 — Gestión de Usuarios y Empresas:</b> Como developer, quiero contar con endpoints para administrar los usuarios y las empresas solicitantes y proveedoras de la plataforma.</td>
 </tr>
 <tr>
   <td>TS-06</td>
   <td>Endpoint: Registrar usuario</td>
   <td>Como developer, quiero un endpoint <code>POST /api/v1/authentication/sign-up</code> para registrar nuevos usuarios con su rol de solicitante o proveedor.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía el nombre de la empresa, un correo no registrado, una contraseña válida y el rol,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 201 con el identificador del nuevo usuario, sin incluir la contraseña.<br/><br/><b>Escenario 2: Correo ya registrado</b><br/>Dado que el developer envía un correo que ya existe,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 409 y no se crea el usuario.<br/><br/><b>Escenario 3: Datos inválidos</b><br/>Dado que el developer envía un correo con formato incorrecto o una contraseña que no cumple la política de seguridad,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 con el detalle de los campos inválidos.</td>
-  <td>EP08</td>
+  <td>EP16</td>
 </tr>
 <tr>
   <td>TS-07</td>
   <td>Endpoint: Consultar usuarios</td>
   <td>Como developer, quiero los endpoints <code>GET /api/v1/users</code> y <code>GET /api/v1/users/{userId}</code> para listar los usuarios y consultar uno por su identificador.</td>
   <td><b>Escenario 1: Listado de usuarios</b><br/>Dado que existen usuarios registrados,<br/>Cuando el developer consulta el listado,<br/>Entonces recibe status 200 con la lista de usuarios, sin datos sensibles como la contraseña.<br/><br/><b>Escenario 2: Consulta por identificador</b><br/>Dado que el developer envía el identificador de un usuario existente,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 200 con los datos del usuario.<br/><br/><b>Escenario 3: Usuario no encontrado</b><br/>Dado que el developer envía un identificador inexistente,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 404.</td>
-  <td>EP08</td>
+  <td>EP16</td>
 </tr>
 <tr>
   <td>TS-08</td>
   <td>Endpoint: Gestionar empresas solicitantes</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/buyer-companies</code> para registrar, listar, consultar y actualizar empresas solicitantes.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía la razón social, el RUC, el sector y la dirección de una empresa,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador de la empresa.<br/><br/><b>Escenario 2: RUC duplicado o inválido</b><br/>Dado que el developer envía un RUC ya registrado o que no tiene 11 dígitos,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 o 409 según el caso y la empresa no se registra.<br/><br/><b>Escenario 3: Actualización exitosa</b><br/>Dado que la empresa existe,<br/>Cuando el developer envía un <code>PUT</code> con datos válidos,<br/>Entonces recibe status 200 con la información actualizada.</td>
-  <td>EP08</td>
+  <td>EP16</td>
 </tr>
 <tr>
   <td>TS-09</td>
   <td>Endpoint: Gestionar empresas proveedoras</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/provider-companies</code> para registrar, listar, consultar y actualizar empresas proveedoras.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía la razón social, el RUC, el número de registro de hidrocarburos y la zona de cobertura,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador del proveedor.<br/><br/><b>Escenario 2: Registro de hidrocarburos faltante</b><br/>Dado que el developer omite el número de registro de hidrocarburos,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 y el proveedor no se registra.<br/><br/><b>Escenario 3: Listado para el catálogo</b><br/>Dado que existen proveedores registrados,<br/>Cuando el developer realiza un <code>GET</code>,<br/>Entonces recibe status 200 con la lista de proveedores y sus datos públicos.</td>
-  <td>EP08</td>
+  <td>EP16</td>
 </tr>
 <tr>
   <td>TS-10</td>
   <td>Endpoint: Actualizar perfil de usuario</td>
   <td>Como developer, quiero un endpoint <code>PUT /api/v1/users/me/profile</code> para que un usuario autenticado actualice los datos de su propio perfil.</td>
   <td><b>Escenario 1: Actualización exitosa</b><br/>Dado que el developer envía un token válido y datos de perfil correctos,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 200 con el perfil actualizado.<br/><br/><b>Escenario 2: Datos inválidos</b><br/>Dado que el developer envía un teléfono o un idioma con formato incorrecto,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 y el perfil no se modifica.<br/><br/><b>Escenario 3: Sin autenticación</b><br/>Dado que el developer no envía un token,<br/>Cuando consume el endpoint,<br/>Entonces recibe status 401.</td>
-  <td>EP08</td>
+  <td>EP16</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP09 — Gestión de Inventario
+#### EP17 — Gestión de Inventario
 
 <table border>
   <thead>
@@ -771,27 +771,27 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP09 — Gestión de Inventario:</b> Como developer, quiero contar con endpoints para administrar los productos de combustible de cada proveedor y su stock disponible.</td>
+  <td colspan="5"><b>EP17 — Gestión de Inventario:</b> Como developer, quiero contar con endpoints para administrar los productos de combustible de cada proveedor y su stock disponible.</td>
 </tr>
 <tr>
   <td>TS-11</td>
   <td>Endpoint: Gestionar productos de combustible</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/fuel-products</code> para crear, listar, consultar, actualizar y eliminar productos de combustible.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía el nombre, el tipo de combustible, el precio por litro y el stock inicial,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador del producto.<br/><br/><b>Escenario 2: Precio inválido</b><br/>Dado que el developer envía un precio igual o menor a cero,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 y el producto no se registra.<br/><br/><b>Escenario 3: Eliminación de producto con pedidos en curso</b><br/>Dado que el producto está asociado a pedidos que aún no se han cerrado,<br/>Cuando el developer realiza un <code>DELETE</code>,<br/>Entonces recibe status 409 y el producto no se elimina.</td>
-  <td>EP09</td>
+  <td>EP17</td>
 </tr>
 <tr>
   <td>TS-12</td>
   <td>Endpoint: Actualizar stock de producto</td>
   <td>Como developer, quiero un endpoint <code>PATCH /api/v1/fuel-products/{productId}/stock</code> para actualizar el stock disponible de un producto.</td>
   <td><b>Escenario 1: Actualización exitosa</b><br/>Dado que el producto existe y el developer envía una cantidad válida,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 200 con el stock actualizado.<br/><br/><b>Escenario 2: Stock negativo</b><br/>Dado que la actualización dejaría el stock por debajo de cero,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400 y el stock no cambia.<br/><br/><b>Escenario 3: Producto no encontrado</b><br/>Dado que el developer envía un identificador inexistente,<br/>Cuando consume el endpoint,<br/>Entonces recibe status 404.</td>
-  <td>EP09</td>
+  <td>EP17</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP10 — Gestión Logística
+#### EP18 — Gestión Logística
 
 <table border>
   <thead>
@@ -806,48 +806,48 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP10 — Gestión Logística:</b> Como developer, quiero contar con endpoints para administrar las solicitudes, las entregas, los vehículos y los conductores que intervienen en el despacho de combustible.</td>
+  <td colspan="5"><b>EP18 — Gestión Logística:</b> Como developer, quiero contar con endpoints para administrar las solicitudes, las entregas, los vehículos y los conductores que intervienen en el despacho de combustible.</td>
 </tr>
 <tr>
   <td>TS-15</td>
   <td>Endpoint: Gestionar solicitudes de combustible</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/fuel-requests</code> para crear, listar, aceptar y rechazar solicitudes de combustible.</td>
   <td><b>Escenario 1: Aceptación de una solicitud</b><br/>Dado que la solicitud está en estado «Pending» y su pago fue validado,<br/>Cuando el developer realiza un <code>PATCH</code> a <code>/{requestId}/acceptance</code>,<br/>Entonces la solicitud cambia a «Approved», se genera la orden correspondiente y recibe status 200.<br/><br/><b>Escenario 2: Rechazo con motivo</b><br/>Dado que la solicitud está en estado «Pending»,<br/>Cuando el developer realiza un <code>PATCH</code> a <code>/{requestId}/rejection</code> con un motivo,<br/>Entonces la solicitud cambia a «Rejected» y recibe status 200.<br/><br/><b>Escenario 3: Rechazo sin motivo o solicitud ya procesada</b><br/>Dado que el developer no envía un motivo o la solicitud ya fue aprobada,<br/>Cuando intenta rechazarla,<br/>Entonces recibe status 400 o 409 según el caso y el estado no cambia.</td>
-  <td>EP10</td>
+  <td>EP18</td>
 </tr>
 <tr>
   <td>TS-16</td>
   <td>Endpoint: Consultar solicitud por identificador</td>
   <td>Como developer, quiero un endpoint <code>GET /api/v1/fuel-requests/{requestId}</code> para consultar el detalle de una solicitud específica.</td>
   <td><b>Escenario 1: Consulta exitosa</b><br/>Dado que la solicitud existe y pertenece al usuario autenticado,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con el producto, la cantidad, el estado, las fechas, el pago y la asignación logística.<br/><br/><b>Escenario 2: Solicitud no encontrada</b><br/>Dado que el developer envía un identificador inexistente,<br/>Cuando consulta el endpoint,<br/>Entonces recibe status 404.<br/><br/><b>Escenario 3: Solicitud ajena</b><br/>Dado que la solicitud no pertenece a la empresa del usuario autenticado,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 403.</td>
-  <td>EP10</td>
+  <td>EP18</td>
 </tr>
 <tr>
   <td>TS-17</td>
   <td>Endpoint: Gestionar entregas</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/deliveries</code> para crear, despachar, completar, marcar como fallida y consultar entregas.</td>
   <td><b>Escenario 1: Creación de una entrega</b><br/>Dado que la orden está aprobada y el developer envía el vehículo y el conductor disponibles,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 y el vehículo y el conductor quedan asignados.<br/><br/><b>Escenario 2: Despacho y cierre de la entrega</b><br/>Dado que la entrega existe,<br/>Cuando el developer realiza un <code>PATCH</code> a <code>/{deliveryId}/dispatch</code> y luego a <code>/{deliveryId}/completion</code>,<br/>Entonces el pedido pasa a «In Transit» y luego a «Completed», se liberan los recursos y recibe status 200 en cada paso.<br/><br/><b>Escenario 3: Entrega fallida</b><br/>Dado que la entrega está en tránsito,<br/>Cuando el developer realiza un <code>PATCH</code> a <code>/{deliveryId}/failure</code> con el motivo,<br/>Entonces la entrega queda como fallida, el motivo se registra y recibe status 200.</td>
-  <td>EP10</td>
+  <td>EP18</td>
 </tr>
 <tr>
   <td>TS-18</td>
   <td>Endpoint: Gestionar conductores</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/drivers</code> para registrar, consultar, actualizar y eliminar conductores.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía el nombre, el documento de identidad y el número de licencia,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador del conductor.<br/><br/><b>Escenario 2: Documento duplicado</b><br/>Dado que ya existe un conductor con el mismo documento,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 409.<br/><br/><b>Escenario 3: Eliminación de un conductor asignado</b><br/>Dado que el conductor tiene una entrega en curso,<br/>Cuando el developer realiza un <code>DELETE</code>,<br/>Entonces recibe status 409 y el conductor no se elimina.</td>
-  <td>EP10</td>
+  <td>EP18</td>
 </tr>
 <tr>
   <td>TS-19</td>
   <td>Endpoint: Gestionar vehículos</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/vehicles</code> para registrar, consultar, actualizar y eliminar vehículos cisterna.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía la placa, el modelo y la capacidad de carga,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador del vehículo.<br/><br/><b>Escenario 2: Placa duplicada o capacidad inválida</b><br/>Dado que la placa ya existe o la capacidad es menor o igual a cero,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 409 o 400 según el caso.<br/><br/><b>Escenario 3: Consulta de disponibilidad</b><br/>Dado que existen vehículos registrados,<br/>Cuando el developer realiza un <code>GET</code> filtrando por estado disponible,<br/>Entonces recibe status 200 solo con los vehículos sin entregas en curso.</td>
-  <td>EP10</td>
+  <td>EP18</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP11 — Gestión de Pagos
+#### EP19 — Gestión de Pagos
 
 <table border>
   <thead>
@@ -862,27 +862,27 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP11 — Gestión de Pagos:</b> Como developer, quiero contar con endpoints para registrar, validar y consultar los pagos asociados a los pedidos.</td>
+  <td colspan="5"><b>EP19 — Gestión de Pagos:</b> Como developer, quiero contar con endpoints para registrar, validar y consultar los pagos asociados a los pedidos.</td>
 </tr>
 <tr>
   <td>TS-20</td>
   <td>Endpoint: Registrar y validar pagos</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/payments</code> para registrar un pago con su comprobante y para que el proveedor lo apruebe u observe.</td>
   <td><b>Escenario 1: Registro de un pago</b><br/>Dado que el developer envía el identificador del pedido, el número de operación, el monto y el archivo del comprobante,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces el comprobante se guarda en el almacenamiento en la nube y recibe status 201 con el pago en estado «Pending».<br/><br/><b>Escenario 2: Número de operación repetido</b><br/>Dado que el número de operación ya fue registrado,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 409 y el pago no se registra.<br/><br/><b>Escenario 3: Validación del monto</b><br/>Dado que el proveedor realiza un <code>PATCH</code> a <code>/{paymentId}/approval</code>,<br/>Cuando la suma de los pagos del pedido cubre el total,<br/>Entonces el pago cambia a «Approved» y recibe status 200; si no lo cubre, recibe status 422 con el monto pendiente.</td>
-  <td>EP11</td>
+  <td>EP19</td>
 </tr>
 <tr>
   <td>TS-21</td>
   <td>Endpoint: Consultar pagos</td>
   <td>Como developer, quiero un endpoint <code>GET /api/v1/payments</code> para consultar pagos por pedido, empresa o estado.</td>
   <td><b>Escenario 1: Consulta por pedido</b><br/>Dado que el pedido tiene pagos registrados,<br/>Cuando el developer consulta el endpoint con el parámetro <code>orderId</code>,<br/>Entonces recibe status 200 con los pagos del pedido y el monto total cubierto.<br/><br/><b>Escenario 2: Consulta por estado</b><br/>Dado que existen pagos con distintos estados,<br/>Cuando el developer filtra por <code>status</code>,<br/>Entonces recibe status 200 solo con los pagos que cumplen el filtro.<br/><br/><b>Escenario 3: Sin resultados</b><br/>Dado que no existen pagos que cumplan los filtros,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con una lista vacía.</td>
-  <td>EP11</td>
+  <td>EP19</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP12 — Catálogo y Equipos
+#### EP20 — Catálogo y Equipos
 
 <table border>
   <thead>
@@ -897,41 +897,41 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP12 — Catálogo y Equipos:</b> Como developer, quiero contar con endpoints para gestionar las calificaciones de proveedores, los equipos de los solicitantes y sus proveedores favoritos.</td>
+  <td colspan="5"><b>EP20 — Catálogo y Equipos:</b> Como developer, quiero contar con endpoints para gestionar las calificaciones de proveedores, los equipos de los solicitantes y sus proveedores favoritos.</td>
 </tr>
 <tr>
   <td>TS-22</td>
   <td>Endpoint: Calificar proveedores</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/provider-ratings</code> para crear, listar y actualizar calificaciones de proveedores.</td>
   <td><b>Escenario 1: Calificación exitosa</b><br/>Dado que el solicitante tiene un pedido completado con el proveedor,<br/>Cuando el developer envía un <code>POST</code> con una puntuación de 1 a 5 y un comentario,<br/>Entonces recibe status 201 y se recalcula el promedio del proveedor.<br/><br/><b>Escenario 2: Puntuación fuera de rango</b><br/>Dado que el developer envía una puntuación menor que 1 o mayor que 5,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400.<br/><br/><b>Escenario 3: Calificación sin pedido completado</b><br/>Dado que el solicitante no tiene pedidos completados con ese proveedor,<br/>Cuando el developer intenta calificarlo,<br/>Entonces recibe status 403.</td>
-  <td>EP12</td>
+  <td>EP20</td>
 </tr>
 <tr>
   <td>TS-23</td>
   <td>Endpoint: Gestionar equipos</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/equipment</code> para registrar, actualizar, listar y consultar los equipos de un solicitante.</td>
   <td><b>Escenario 1: Registro exitoso</b><br/>Dado que el developer envía el tipo, la marca, el modelo, el tipo de combustible y la capacidad del tanque,<br/>Cuando realiza un <code>POST</code>,<br/>Entonces recibe status 201 con el identificador del equipo.<br/><br/><b>Escenario 2: Capacidad inválida</b><br/>Dado que el developer envía una capacidad igual o menor a cero,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 400.<br/><br/><b>Escenario 3: Listado por empresa</b><br/>Dado que el solicitante tiene equipos registrados,<br/>Cuando el developer realiza un <code>GET</code>,<br/>Entonces recibe status 200 solo con los equipos de la empresa del usuario autenticado.</td>
-  <td>EP12</td>
+  <td>EP20</td>
 </tr>
 <tr>
   <td>TS-24</td>
   <td>Endpoint: Asignar proveedor favorito</td>
   <td>Como developer, quiero un endpoint <code>PATCH /api/v1/equipment/{equipmentId}/favorite-provider</code> para asignar un proveedor favorito a un equipo.</td>
   <td><b>Escenario 1: Asignación exitosa</b><br/>Dado que el proveedor ofrece el tipo de combustible que usa el equipo,<br/>Cuando el developer envía el identificador del proveedor,<br/>Entonces recibe status 200 con el equipo actualizado.<br/><br/><b>Escenario 2: Combustible incompatible</b><br/>Dado que el proveedor no ofrece el tipo de combustible del equipo,<br/>Cuando se procesa la solicitud,<br/>Entonces recibe status 422 con un mensaje de incompatibilidad.<br/><br/><b>Escenario 3: Proveedor o equipo inexistente</b><br/>Dado que el developer envía un identificador que no existe,<br/>Cuando consume el endpoint,<br/>Entonces recibe status 404.</td>
-  <td>EP12</td>
+  <td>EP20</td>
 </tr>
 <tr>
   <td>TS-25</td>
   <td>Endpoint: Eliminar equipo</td>
   <td>Como developer, quiero un endpoint <code>DELETE /api/v1/equipment/{equipmentId}</code> para eliminar un equipo registrado.</td>
   <td><b>Escenario 1: Eliminación exitosa</b><br/>Dado que el equipo existe y no tiene pedidos en curso,<br/>Cuando el developer realiza el <code>DELETE</code>,<br/>Entonces recibe status 204 y el equipo ya no aparece en el listado.<br/><br/><b>Escenario 2: Equipo con pedidos en curso</b><br/>Dado que el equipo está asociado a un pedido que aún no se cierra,<br/>Cuando el developer intenta eliminarlo,<br/>Entonces recibe status 409.<br/><br/><b>Escenario 3: Equipo ajeno</b><br/>Dado que el equipo pertenece a otra empresa,<br/>Cuando el developer intenta eliminarlo,<br/>Entonces recibe status 403.</td>
-  <td>EP12</td>
+  <td>EP20</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP13 — Sistema de Notificaciones
+#### EP21 — Sistema de Notificaciones
 
 <table border>
   <thead>
@@ -946,20 +946,20 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP13 — Sistema de Notificaciones:</b> Como developer, quiero contar con endpoints para generar, consultar y actualizar las notificaciones de la plataforma.</td>
+  <td colspan="5"><b>EP21 — Sistema de Notificaciones:</b> Como developer, quiero contar con endpoints para generar, consultar y actualizar las notificaciones de la plataforma.</td>
 </tr>
 <tr>
   <td>TS-26</td>
   <td>Endpoint: Gestionar notificaciones</td>
   <td>Como developer, quiero los endpoints de <code>/api/v1/notifications</code> para crear notificaciones ante cambios de estado, consultarlas y marcarlas como leídas.</td>
   <td><b>Escenario 1: Notificación por cambio de estado</b><br/>Dado que un pedido cambia de estado,<br/>Cuando el sistema procesa el evento,<br/>Entonces se crea una notificación para el solicitante o el proveedor según corresponda.<br/><br/><b>Escenario 2: Consulta de notificaciones</b><br/>Dado que el usuario tiene notificaciones,<br/>Cuando el developer realiza un <code>GET</code>,<br/>Entonces recibe status 200 con las notificaciones del usuario autenticado, ordenadas de la más reciente a la más antigua.<br/><br/><b>Escenario 3: Marcar como leída</b><br/>Dado que la notificación pertenece al usuario,<br/>Cuando el developer realiza un <code>PATCH</code> a <code>/{notificationId}/read</code>,<br/>Entonces recibe status 200 y la notificación figura como leída; si pertenece a otro usuario, recibe status 403.</td>
-  <td>EP13</td>
+  <td>EP21</td>
 </tr>
 
 </tbody>
 </table>
 
-#### EP14 — Reportes y Analítica
+#### EP22 — Reportes y Analítica
 
 <table border>
   <thead>
@@ -974,14 +974,14 @@ Las historias técnicas describen lo que el equipo de desarrollo necesita del RE
   <tbody>
 
 <tr>
-  <td colspan="5"><b>EP14 — Reportes y Analítica:</b> Como developer, quiero contar con endpoints para obtener las métricas y los reportes de consumo y de ventas de la plataforma.</td>
+  <td colspan="5"><b>EP22 — Reportes y Analítica:</b> Como developer, quiero contar con endpoints para obtener las métricas y los reportes de consumo y de ventas de la plataforma.</td>
 </tr>
 <tr>
   <td>TS-27</td>
   <td>Endpoint: Reportes y analítica</td>
   <td>Como developer, quiero los endpoints <code>GET /api/v1/analytics/consumption</code> y <code>GET /api/v1/analytics/sales</code> para obtener indicadores de consumo del solicitante y de ventas del proveedor, y exportarlos en PDF.</td>
   <td><b>Escenario 1: Indicadores con datos</b><br/>Dado que existen pedidos cerrados en el rango de fechas enviado,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con los totales de volumen y monto y su distribución por periodo.<br/><br/><b>Escenario 2: Rango sin datos o inválido</b><br/>Dado que el rango no tiene pedidos o la fecha inicial es posterior a la final,<br/>Cuando el developer consulta el endpoint,<br/>Entonces recibe status 200 con indicadores en cero o status 400, respectivamente.<br/><br/><b>Escenario 3: Exportación en PDF</b><br/>Dado que el developer envía el parámetro <code>format=pdf</code>,<br/>Cuando se genera el reporte mediante el servicio externo de PDF,<br/>Entonces recibe status 200 con el archivo; si el servicio falla, recibe status 502 sin afectar la sesión.</td>
-  <td>EP14</td>
+  <td>EP22</td>
 </tr>
 
 </tbody>
