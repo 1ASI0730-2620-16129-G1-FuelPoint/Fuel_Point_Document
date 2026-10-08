@@ -1627,3 +1627,10 @@ Equipment — Base de datos
 Responsabilidad: Almacena los equipos registrados por las empresas solicitantes que requieren abastecimiento de combustible (vehículos, maquinaria pesada, grupos electrógenos), permitiendo registrar sus características técnicas y capacidad de tanque.
 
 - EQUIPMENT: registro de equipos del cliente solicitante (id_equipment, id_client FK, name, equipment_type, fuel_type, tank_capacity, is_operational, created_at, updated_at).
+
+
+Inventory — Base de datos
+Responsabilidad: Almacena los productos de combustible y el control de inventario de las empresas distribuidoras, registrando volúmenes disponibles, stock reservado para despachos en tránsito, precios unitarios por litro y umbrales mínimos de abastecimiento.
+
+- INVENTORY_ITEM: registro de stock de combustible por proveedor (id_inventory_item, id_provider FK, fuel_type, stock_liters, reserved_liters, available_liters, unit_price, min_stock_alert, last_restocked_at, updated_at).
+
