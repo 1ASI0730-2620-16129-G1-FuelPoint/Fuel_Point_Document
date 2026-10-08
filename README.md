@@ -233,10 +233,10 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Entrega | Título del Video | Plataforma | Enlace de Visualización | Duración |
 |---|---|---|---|:---:|
-| **AV1** | Exposición de Avance 1 — Presentación de Proyecto y Landing Page | Microsoft Stream | [Ver Video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQAV1VideoPlaceholder) | 18:45 |
+| **AV1** | Exposición de Avance 1 — Presentación de Proyecto y Landing Page | YouTube | [Ver Video en YouTube](https://youtu.be/slU0pE19KAY) | 21:27 |
 | **TB1** | Exposición de Trabajo Parcial — Arquitectura y Frontend Web Application | Microsoft Stream | [Ver Video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQTB1VideoPlaceholder) | 24:10 |
 
-> *Nota: Los enlaces privados de Microsoft Stream se encuentran restringidos a la organización institucional UPC.*
+> *Nota: El video de exposición de AV1 cuenta con acceso público en YouTube, mientras que el enlace de TB1 en Microsoft Stream se encuentra restringido a la organización institucional UPC.*
 
 ### Anexo B - Repositorios Oficiales y Artefactos Digitales
 
