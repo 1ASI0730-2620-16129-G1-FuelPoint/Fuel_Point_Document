@@ -94,8 +94,13 @@ A la fecha del presente informe, la organización oficial cuenta exclusivamente 
    * **Propósito:** Aloja el código fuente completo de la página de aterrizaje del producto, desarrollada con HTML5, CSS3 y JavaScript puro, configurada para su despliegue público en GitHub Pages.
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page)
 
+3. **Repositorio de la Web Application (Frontend):**
+   * **Nombre:** `Full_Tank_Frontend`
+   * **Propósito:** Aloja la aplicación web cliente Single Page Application (SPA) desarrollada en Vue 3 con Composition API, Pinia, PrimeVue y Vue Router. Su arquitectura modular desacopla el frontend en Bounded Contexts independientes (`iam`, `catalog`, `ordering`, `fulfillment`, `notification`, `payment`, `reporting`, `equipment`, `inventory`) coordinados sobre una base común (`shared`).
+   * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+
 > [!NOTE]
-> Conforme al roadmap de desarrollo del proyecto, los repositorios correspondientes a la **Web Application** (Vue 3 + PrimeVue) y a los **Web Services / REST API** (ASP.NET Core en C#) serán inicializados y publicados en los sprints subsiguientes de implementación. Siguiendo las directivas de integridad académica, no se presentan URLs ficticias ni provisionales para dichos componentes hasta su creación formal.
+> Conforme al roadmap de desarrollo del proyecto, el repositorio correspondiente a los **Web Services / REST API** (ASP.NET Core 8 en C#) y su esquema relacional serán inicializados y publicados en los sprints subsiguientes de backend (Sprint 3 / AV2). Siguiendo las directivas de integridad académica, no se presentan URLs ficticias ni provisionales para el backend hasta su despliegue formal.
 > El repositorio de Web Services incluirá la solución de la API y proyectos separados para las pruebas unitarias y las pruebas de integración/aceptación.
 
 #### Estrategia de Ramificación GitFlow
@@ -247,15 +252,18 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
   4. Se designa la rama `main` y el directorio raíz (`/`) como origen de los archivos estáticos.
   5. GitHub Pages publica los archivos estáticos y permite comprobar la versión resultante mediante la URL pública con HTTPS.
 
-#### 2. Web Application (Frontend - Configuración Prevista)
+#### 2. Web Application (Frontend - Configuración y Despliegue)
 
-* **Tecnologías:** Vue 3, Vite, PrimeVue (Material Design) y JavaScript.
-* **Estado de despliegue:** *Pendiente de implementación y aprovisionamiento.* El repositorio y el despliegue del frontend se construirán durante los sprints correspondientes según el roadmap del proyecto.
+* **Tecnologías:** Vue 3 (Composition API con `<script setup>`), Vite 8, PrimeVue 4 (Material Design), Pinia 3, Vue Router 4, Vue I18n 9, Vitest y Axios.
+* **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+* **Arquitectura modular de entrega:** La aplicación web cliente sigue una descomposición por Bounded Contexts independientes (`fulfillment`, `notification`, `iam`, `ordering`, etc.) integrados sobre una capa compartida (`shared`). Cada módulo encapsula sus modelos de dominio, ensambladores, cliente API REST, store de Pinia y vistas de presentación.
 * **Requisitos y empaquetado reproducible:**
-  * Entorno: una versión LTS de Node.js compatible con el proyecto y el gestor de paquetes npm; la versión seleccionada debe declararse en `package.json`.
-  * Instalación reproducible de dependencias: `npm ci` cuando exista un archivo `package-lock.json` versionado; `npm install` se reserva para la incorporación o actualización controlada de dependencias.
-  * Compilación y empaquetado optimizado: `npm run build`, lo cual produce los activos estáticos minimizados y empaquetados en el directorio `/dist`.
-* **Estrategia de despliegue proyectada:** Alojamiento estático en la nube con pipeline de integración y despliegue continuo (CI/CD) mediante GitHub Actions. El proveedor específico (por ejemplo, Vercel, Netlify o AWS CloudFront) y la URL de publicación quedan marcados formalmente como pendientes de decisión de infraestructura por parte del equipo.
+  * Entorno: Node.js (LTS v20+) y gestor de dependencias npm.
+  * Instalación reproducible de paquetes: `npm install` o `npm ci`.
+  * Verificación de pruebas unitarias: `npm test` (ejecución automatizada de suites de prueba con Vitest para stores y clientes API).
+  * Compilación y empaquetado optimizado: `npm run build:demo` o `npm run build`, lo cual produce los bundles minimizados en el directorio `/dist`.
+  * Servidor de desarrollo local: `npm run dev` (iniciando el entorno de recarga rápida con Vite en `http://localhost:5173/`).
+* **Estrategia de despliegue:** Alojamiento estático en la nube (Vercel) con reescritura de rutas para Single Page Application (`rewrites: [{ "source": "/(.*)", "destination": "/index.html" }]`) y consumo parametrizado de servicios API mediante variables de entorno `VITE_BASE_API_URL`.
 
 #### 3. Web Services / RESTful API (Backend - Configuración Prevista)
 
