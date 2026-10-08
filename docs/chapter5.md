@@ -288,11 +288,6 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
 
 ### 5.2.1. Sprint 1
 
-> [!IMPORTANT]
-> **Aviso de asignación y consolidación de evidencias:**
-> Conforme al plan de trabajo y la distribución interna del equipo, las secciones comprendidas entre la **5.2.1.1** y la **5.2.1.8** corresponden al aporte y recopilación de evidencias a cargo de **Joan Salvador Carhuayal Suarez (`@joann113`)**.
-> A continuación se presenta la estructura exacta y normalizada según la rúbrica oficial, reservada para que dicho integrante inserte los datos, métricas y capturas reales una vez culminadas e integradas las actividades del Sprint 1 en los repositorios correspondientes.
-
 #### 5.2.1.1. Sprint Planning 1
 
 <table border>
@@ -317,7 +312,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
     </tr>
     <tr align="center">
         <td>Prepared by</td>
-        <td>Milenko Cayanchi</td>
+        <td>Brayan Alexis Corvacho Damian</td>
     </tr>
     <tr align="center">
         <td>Attendess (to planning meeting)</td>
@@ -391,7 +386,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
     </tr>
     <tr>
       <td>Carhuayal Suarez, Joan Salvador</td>
-      <td>aponceperales</td>
+      <td>joann113</td>
       <td>C</td>
       <td>C</td>
     </tr>
