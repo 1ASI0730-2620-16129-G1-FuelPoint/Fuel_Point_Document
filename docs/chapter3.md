@@ -1067,4 +1067,26 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
 | **49** | TS-03 | Endpoint: Logout | Como developer, quiero un endpoint para cerrar sesión. | 1 |
 | **50** | TS-04 | Endpoint: Crear pedido | Como developer, quiero un endpoint para registrar un nuevo pedido de combustible. | 3 |
 | **51** | TS-05 | Endpoint: Consultar pedidos por usuario | Como developer, quiero un endpoint para obtener todos los pedidos de un usuario. | 2 |
+| **52** | TS-13 | Endpoint: Consultar pedidos | Como developer, quiero los endpoints para listar pedidos, filtrarlos por empresa y consultarlos por su identificador. | 2 |
+| **53** | TS-14 | Endpoint: Confirmar o cancelar pedido | Como developer, quiero los endpoints para confirmar la recepción o cancelar un pedido de combustible. | 2 |
+| **54** | TS-06 | Endpoint: Registrar usuario | Como developer, quiero un endpoint para registrar nuevos usuarios con su rol de solicitante o proveedor. | 3 |
+| **55** | TS-07 | Endpoint: Consultar usuarios | Como developer, quiero los endpoints para listar los usuarios registrados y consultar uno por su identificador. | 2 |
+| **56** | TS-08 | Endpoint: Gestionar empresas solicitantes | Como developer, quiero los endpoints para registrar, listar, consultar y actualizar empresas solicitantes. | 3 |
+| **57** | TS-09 | Endpoint: Gestionar empresas proveedoras | Como developer, quiero los endpoints para registrar, listar, consultar y actualizar empresas proveedoras. | 3 |
+| **58** | TS-10 | Endpoint: Actualizar perfil de usuario | Como developer, quiero un endpoint para que un usuario autenticado actualice los datos de su propio perfil. | 2 |
+| **59** | TS-11 | Endpoint: Gestionar productos de combustible | Como developer, quiero los endpoints para crear, listar, consultar, actualizar y eliminar productos de combustible. | 3 |
+| **60** | TS-12 | Endpoint: Actualizar stock de producto | Como developer, quiero un endpoint para actualizar el stock disponible de un producto de combustible. | 2 |
+| **61** | TS-15 | Endpoint: Gestionar solicitudes de combustible | Como developer, quiero los endpoints para crear, listar, aceptar y rechazar solicitudes de combustible. | 3 |
+| **62** | TS-16 | Endpoint: Consultar solicitud por identificador | Como developer, quiero un endpoint para consultar el detalle de una solicitud específica. | 2 |
+| **63** | TS-17 | Endpoint: Gestionar entregas | Como developer, quiero los endpoints para crear, despachar, completar, marcar como fallida y consultar entregas. | 3 |
+| **64** | TS-18 | Endpoint: Gestionar conductores | Como developer, quiero los endpoints para registrar, consultar, actualizar y eliminar conductores. | 3 |
+| **65** | TS-19 | Endpoint: Gestionar vehículos | Como developer, quiero los endpoints para registrar, consultar, actualizar y eliminar vehículos cisterna. | 3 |
+| **66** | TS-20 | Endpoint: Registrar y validar pagos | Como developer, quiero los endpoints para registrar un pago con comprobante y para que el proveedor lo apruebe u observe. | 3 |
+| **67** | TS-21 | Endpoint: Consultar pagos | Como developer, quiero un endpoint para consultar pagos por pedido, empresa o estado. | 2 |
+| **68** | TS-22 | Endpoint: Calificar proveedores | Como developer, quiero los endpoints para crear, listar y actualizar calificaciones de proveedores. | 2 |
+| **69** | TS-23 | Endpoint: Gestionar equipos | Como developer, quiero los endpoints para registrar, actualizar, listar y consultar los equipos de un solicitante. | 3 |
+| **70** | TS-24 | Endpoint: Asignar proveedor favorito | Como developer, quiero un endpoint para asignar un proveedor favorito a un equipo. | 2 |
+| **71** | TS-25 | Endpoint: Eliminar equipo | Como developer, quiero un endpoint para eliminar un equipo registrado sin pedidos en curso. | 1 |
+| **72** | TS-26 | Endpoint: Gestionar notificaciones | Como developer, quiero los endpoints para crear notificaciones ante cambios de estado, consultarlas y marcarlas como leídas. | 2 |
+| **73** | TS-27 | Endpoint: Reportes y analítica | Como developer, quiero los endpoints para obtener indicadores de consumo y ventas y exportarlos en formato PDF. | 3 |
 
