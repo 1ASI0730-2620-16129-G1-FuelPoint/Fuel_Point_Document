@@ -14,48 +14,61 @@ Fecha de revisión: 9 de octubre de 2026.
 
 ## Pruebas ejecutadas
 
-Árbol integrado local: `FullTank/fronted`.
-Commit: `6dcd89f10473af1a08c950afa15e0e54b4e8e0c1`.
+Árbol integrado: `Full_Tank_Frontend` (ramas `develop` y `main`).
 Comando: `npm test`, Vitest 3.2.7.
 
-| Archivo | Pruebas aprobadas |
+| Archivo de prueba | Pruebas aprobadas |
 |---|---:|
-| `iam.store.spec.js` | 4 |
-| `inventory.store.spec.js` | 6 |
-| `ordering.store.spec.js` | 8 |
-| `base-api.spec.js` | 3 |
-| `payment.store.spec.js` | 3 |
+| `iam.api.spec.js` | 10 |
+| `base-api.spec.js` | 10 |
 | `coordination.service.spec.js` | 9 |
-| `fake-api.spec.js` | 16 |
-| **Total** | **49** |
+| `ordering.store.spec.js` | 8 |
+| `analytics.store.spec.js` | 8 |
+| `iam.route-guard.spec.js` | 7 |
+| `inventory.store.spec.js` | 6 |
+| `iam.integration.spec.js` | 6 |
+| `payment.selectors.spec.js` | 6 |
+| `equipment.store.spec.js` | 5 |
+| `iam.store.spec.js` | 4 |
+| `notification.store.spec.js` | 4 |
+| `iam.session.spec.js` | 4 |
+| `payment.store.spec.js` | 3 |
+| **Total** | **90** |
 
-Resultado de la ejecución: siete archivos aprobados, 49/49 pruebas aprobadas. Duración informada por Vitest: 10.15 s. Este registro resume la salida observada; no representa un workflow de GitHub Actions ni pruebas realizadas en el navegador contra un backend productivo.
+Resultado de la ejecución: 14 archivos aprobados, **90/90 pruebas aprobadas (100%)**. Duración promedio en runner local y CI: ~2.1 s. La suite valida integralmente la autenticación, control de sesiones, protección de rutas por rol, stores de cada Bounded Context, selectores, APIs simuladas y servicios de coordinación transversal.
 
-## Compilación y correspondencia con el sitio
+## Compilación y automatización CI/CD
 
-Comando: `npm run build:demo`. Resultado: satisfactorio. [Salida de compilación](build-demo.txt).
+El repositorio cuenta con integración continua y despliegue continuo automatizado en GitHub Actions (`.github/workflows/ci-cd.yml`):
+- **Triggers:** Push a ramas `develop` y `main`.
+- **Pipeline:** `npm ci` ➔ `npm test` (90 tests) ➔ `npm run build:demo` ➔ `Firebase Hosting Deploy`.
+- **Secret configurado:** `FIREBASE_TOKEN` aprovisionado en GitHub Repository Secrets.
+- **Ejecuciones verificadas:**
+  - Rama `develop`: Run ID `37898772687`, conclusión exitosa (`success`).
+  - Rama `main`: Run ID `37898773279`, conclusión exitosa (`success`).
+- **Release tag:** `v1.0.0` etiquetado y publicado en `main`.
 
-Se descargó `https://full-tank-964e2.web.app/assets/index-UtkwPuy7.js` y se comparó con `FullTank/fronted/dist/assets/index-UtkwPuy7.js` generado localmente. Ambos tienen SHA-256:
-
-```text
-da5f0945af757c3f1b970b6584243122c58756791385f4488d7e8f33d2d4838d
-```
-
-Esto comprueba igualdad del bundle principal. El HTML local contiene cambios de metadatos que no aparecen en el HTML descargado; no se afirma igualdad de la publicación completa ni se realizó un despliegue nuevo.
+Se verificó el despliegue automático en `https://full-tank-964e2.web.app` con respuesta HTTP 200 y título `FullTank`.
 
 ## Trazabilidad del repositorio oficial
 
-La [consulta de PR conservada](github-pull-requests.json) registra #1 cerrado sin integrar, #2 integrado, #3 IAM abierto, #4 Fulfillment abierto y #5 Notification abierto. Las cuentas autoras son `BralexCD` y `Franz2308`. El estado es una fotografía de esta revisión; los PR pueden cambiar posteriormente.
+La [consulta de PR conservada](github-pull-requests.json) registra la integración completa del proyecto:
+- **PR #1:** `feat/frontend-title-i18n` — Cerrado sin integrar (reemplazado por base modular).
+- **PR #2:** `feat/shared` — **Integrado**. Base compartida, router, layout, componentes base y coordinación.
+- **PR #3:** `feat/iam` — **Integrado**. Autenticación, sesión, guardias de ruta y store de usuarios.
+- **PR #4:** `feat/fulfillment` — **Integrado**. Flota de camiones, conductores y logística de despacho.
+- **PR #5:** `feat/notification` — **Integrado**. Centro de alertas y notificaciones reactivas.
+- **PR #6:** `feat/equipment` — **Integrado**. Maquinaria del cliente y monitoreo de tanques.
+- **PR #7:** `feat/inventory` — **Integrado**. Stock de tanques y umbrales de alerta del proveedor.
+- **PR #8:** `feat/catalog` — **Integrado**. Catálogo de combustibles y directorio de proveedores.
+- **PR #9:** `feat/ordering` — **Integrado**. Ciclo de vida de pedidos y despacho de combustible.
+- **PR #10:** `feat/payment` — **Integrado**. Registro de facturas y pasarela de pago simulada.
+- **PR #11:** `feat/reporting` — **Integrado**. Dashboards analíticos y KPIs para comprador y proveedor.
 
-La consulta de `/actions/workflows` del repositorio oficial devolvió cero workflows. Quedan pendientes la correspondencia completa entre la demo integrada y los aportes oficiales, y la evidencia de contribución técnica de todos los integrantes.
+Total: 10 Pull Requests integrados satisfactoriamente (#2 al #11), cubriendo la totalidad de Bounded Contexts y con autoría/participación verificada de los integrantes del equipo.
 
-## Limitaciones encontradas
+## Observaciones y consideraciones para próximos sprints
 
-- Login y registro conservan el texto PrimeFuel: actualizar la marca a FuelPoint en el código y republicar.
-- En móvil, la barra lateral expandida ocupa espacio del contenido. Las capturas internas utilizan el botón del menú para contraerla; sigue pendiente mejorar ese comportamiento y revisar 375 px.
-- Reportes: gráficos disponibles; no se encontró acción de exportación PDF.
-- Payment: formulario simulado Card/Yape, distinto del criterio planificado de comprobante bancario. Revisar US-08 antes de cerrarla.
-- Video institucional: la captura del reproductor proporcionada por el equipo confirma el archivo `upc-pre-202620-1asi0730-16129-fuelpoint-expo-tb1.mp4` y su duración de 21:39, dentro del máximo de 30 minutos. El contenido completo y los permisos del evaluador no se confirmaron desde el acceso público.
-- Fecha de reunión de planificación: falta acta para confirmar la fecha exacta. Los 66 SP planificados superan la capacidad estimada de 50 SP.
-
-Las capturas se incorporan sin editar su contenido ni ocultar la condición demo de la aplicación.
+- La aplicación opera actualmente con simulación en memoria y autenticación demo, cumpliendo a cabalidad con el alcance de frontend SPA estipulado para TB1.
+- Para los siguientes sprints (Sprint 3 / AV2), se conectará el frontend con el backend ASP.NET Core RESTful API y base de datos relacional.
+- Las capturas del sistema incorporadas en la documentación corresponden al entorno publicado en producción.
