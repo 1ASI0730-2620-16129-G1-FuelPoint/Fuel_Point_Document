@@ -100,10 +100,6 @@ A la fecha del presente informe, la organización oficial cuenta exclusivamente 
    * **Propósito:** Aloja la aplicación web cliente Single Page Application (SPA) desarrollada en Vue 3 con Composition API, Pinia, PrimeVue y Vue Router. Su arquitectura modular desacopla el frontend en Bounded Contexts independientes (`iam`, `catalog`, `ordering`, `fulfillment`, `notification`, `payment`, `reporting`, `equipment`, `inventory`) coordinados sobre una base común (`shared`).
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
 
-> [!NOTE]
-> Conforme al roadmap de desarrollo del proyecto, el repositorio correspondiente a los **Web Services / REST API** (ASP.NET Core 8 en C#) y su esquema relacional serán inicializados y publicados en los sprints subsiguientes de backend (Sprint 3 / AV2). Siguiendo las directivas de integridad académica, no se presentan URLs ficticias ni provisionales para el backend hasta su despliegue formal.
-> El repositorio de Web Services incluirá la solución de la API y proyectos separados para las pruebas unitarias y las pruebas de integración/aceptación.
-
 #### Estrategia de Ramificación GitFlow
 
 Para gobernar el ciclo de vida del código fuente, el equipo implementa el flujo de trabajo estructurado **GitFlow**, el cual define roles específicos para cada rama y evita la contaminación de la base de código estable:
