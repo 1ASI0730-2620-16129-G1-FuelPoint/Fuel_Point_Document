@@ -245,7 +245,7 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 | **Landing Page Repository** | Código fuente de la página de aterrizaje (HTML5/CSS3/JS) | [Full_Tank_Landing_Page en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page) |
 | **Landing Page Deployed** | Despliegue público en producción de la Landing Page | [FullTank Landing Page en GitHub Pages](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/) |
 | **Web Application Repository** | Código fuente del Frontend SPA (Vue 3, Pinia, PrimeVue) | [Full_Tank_Frontend en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend) |
-| **Web Application Deployed** | Frontend publicado en Firebase Hosting; demo académica TB1 | [FullTank Web App en Producción](https://full-tank-964e2.web.app/iam/login) |
+| **Web Application Deployed** | Frontend publicado en Firebase Hosting; demo académica TB1 | [FullTank Web App en Producción](https://full-tank-964e2.web.app/) |
 | **Tablero del Proyecto (Trello)** | Tableros Kanban de Product Backlog y Sprints | [Tablero Oficial FullTank en Trello](https://trello.com/b/6h5mZ8L6) |
 | **Diseño y Prototipo (Figma)** | Wireframes, Mockups y Prototipo Navegable | [FullTank en Figma](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1) |
 | **Sesión DDD EventStorming (Miro)** | Lienzo de modelado de Bounded Contexts y eventos | [EventStorming FullTank en Miro](https://miro.com/app/board/uXjVGgOzeI4=/) |
