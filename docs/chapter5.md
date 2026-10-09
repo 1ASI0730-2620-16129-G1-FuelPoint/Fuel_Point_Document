@@ -479,7 +479,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
         <td>Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información</td>
         <td>5 horas</td>
         <td>Brayan</td>
-        <td>In Process</td>
+        <td>Done</td>
     </tr>
     <tr align="center">
         <td>US-38</td>
@@ -499,7 +499,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
         <td>Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido</td>
         <td>8 horas</td>
         <td>JoanC</td>
-        <td>In Process</td>
+        <td>Done</td>
     </tr>
 </table>
 
