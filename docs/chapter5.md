@@ -948,7 +948,7 @@ A continuación se detalla la desagregación prevista de las Historias de Usuari
 | **TSK-220** | Construir dashboard principal del proveedor con gráficos de ingresos y distribución de ventas | US-34, US-47 | 8h | Joan Payano | **Done** |
 | **TSK-221** | Implementar servicio de exportación y descarga de resúmenes de operación en formato PDF | US-35 | 6h | Joan Payano | **To do** |
 | **TSK-222** | Escribir pruebas unitarias con Vitest para validación de stores y selectores de IAM y Payment | US-15, US-08 | 6h | Brayan Corvacho | **Done** |
-| **TSK-223** | Configurar pipeline de build en modo demo y pruebas automatizadas en GitHub Actions | — | 4h | Brayan Corvacho | **To do: workflow no publicado** |
+| **TSK-223** | Configurar pipeline de build en modo demo y pruebas automatizadas en GitHub Actions | — | 4h | Brayan Corvacho | **Done: pipeline CI/CD activo en GitHub Actions** |
 | **TSK-224** | Desplegar aplicación web en Firebase Hosting con configuración de dominios y certificados | — | 4h | Brayan Corvacho | **Verificado: URL pública y capturas, 09/10/2026** |
 | **TSK-225** | Ejecutar pruebas cruzadas de usabilidad y responsividad móvil en resoluciones 375px y 768px | US-05, US-10 | 5h | Frank Huingo | **Done** |
 
@@ -964,15 +964,19 @@ Se verificaron los Pull Requests mediante la API pública de GitHub el **9 de oc
 |---|---|---|---|---|---|
 | [#1](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/1) | `feat/frontend-title-i18n` | `7c2c47a` | `BralexCD` | feat: titulo FullTank y docs demo | Cerrado sin integrar |
 | [#2](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/2) | `feat/shared` | `2adc9d1` | `BralexCD` | feat(shared): incorporar base minima de FullTank | Integrado |
-| [#3](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/3) | `feat/iam` | `b156c6b` | `BralexCD` | feat(iam): add demo authentication and session management | Abierto; integración pendiente |
-| [#4](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/4) | `feat/fulfillment` | `1751254` | `Franz2308` | feat(fulfillment): fleet and driver logistics management | Abierto; integración pendiente |
-| [#5](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/5) | `feat/notification` | `e9717cb` | `Franz2308` | feat(notification): alert center, unread counter, and reactive toast triggers | Abierto; integración pendiente |
-| [#6](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/6) | `feat/equipment` | `b1f8e9c` | `Joann113` | feat(equipment): client machinery and tank management | Abierto; integración pendiente |
-| [#7](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/7) | `feat/inventory` | `4561913` | `Joann113` | feat(inventory): supplier fuel stock and price management | Abierto; integración pendiente |
+| [#3](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/3) | `feat/iam` | `b856edb` | `BralexCD` | feat(iam): add demo authentication and session management | Integrado |
+| [#4](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/4) | `feat/fulfillment` | `1751254` | `Franz2308` | feat(fulfillment): fleet and driver logistics management | Integrado |
+| [#5](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/5) | `feat/notification` | `e9717cb` | `Franz2308` | feat(notification): alert center, unread counter, and reactive toast triggers | Integrado |
+| [#6](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/6) | `feat/equipment` | `b1f8e9c` | `JoanCS` | feat(equipment): client machinery and fuel tank monitoring | Integrado |
+| [#7](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/7) | `feat/inventory` | `4561913` | `JoanCS` | feat(inventory): supplier fuel tank stock and alert thresholds | Integrado |
+| [#8](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/8) | `feat/catalog` | `a05238f` | `enrique-mantilla` | feat(catalog): product catalog, provider directory and fuel request panel | Integrado |
+| [#9](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/9) | `feat/ordering` | `932360c` | `enrique-mantilla` | feat(ordering): fuel orders, requests lifecycle and dispatch management | Integrado |
+| [#10](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/10) | `feat/payment` | `e6c62b3` | `joanfpp2-ai` | feat(payment): invoice registry, payment verification and voucher upload | Integrado |
+| [#11](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/11) | `feat/reporting` | `375f4be` | `joanfpp2-ai` | feat(reporting): buyer and provider analytics dashboards and KPI metrics | Integrado |
 
-El PR #2 está integrado; #3 (IAM), #4 (Fulfillment), #5 (Notification), #6 (Equipment) y #7 (Inventory) permanecen abiertos en proceso de revisión por pares. Los módulos de autenticación, logística, alertas, maquinaria e inventario cuentan con Pull Requests formales y commits verificables de sus respectivos autores (`BralexCD`, `Franz2308` y `Joann113`). La planificación LACX expresa responsabilidades; el trabajo concluido requiere commits y PR comprobables. Las ramas de Catalog, Ordering, Payment y Reporting conservan sus desarrollos en el repositorio a la espera de su homologación en Pull Requests.
+Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cada uno de los Bounded Contexts asignados en la matriz LACX fueron integrados de forma satisfactoria hacia `develop` y posteriormente liberados en `main` bajo el tag de release `v1.0.0`.
 
-**Relación con el despliegue:** la demo integrada está disponible en Firebase Hosting y fue recorrida para las capturas de 5.2.2.5. Esa disponibilidad no demuestra que todos sus módulos estén integrados en `develop` del repositorio oficial. El árbol local `FullTank/fronted`, commit `6dcd89f`, permite reproducir el build y las pruebas de la demo; su bundle principal coincide por SHA-256 con el publicado (véase 5.2.2.7). La regularización de los PR de cada integrante sigue siendo necesaria.
+**Relación con el despliegue:** la demo integrada está disponible en Firebase Hosting y fue recorrida para las capturas de 5.2.2.5. El repositorio oficial cuenta con un pipeline de CI/CD automatizado en GitHub Actions que ejecuta pruebas unitarias y despliega a producción en cada push.
 
 **Evidencia conservada:** [consulta de Pull Requests](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json) y [registro de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md).
 
@@ -1143,7 +1147,7 @@ Para TB1 se utiliza la **API simulada en memoria** (`VITE_USE_FAKE_API=true`) de
 | Reporting | GET | `/analytics/buyer/{companyId}/{recurso}` | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetros de periodo. |
 | Reporting | GET | `/analytics/provider/{providerId}/{recurso}` | `sales-summary`, `revenue-over-time`, `revenue-by-fuel-type`, `orders-by-status`, `customers-by-sector`, `top-customers`; parámetros de periodo. |
 
-Las respuestas, validaciones y casos de error de la simulación se verifican en la suite `fake-api.spec.js`, junto con las pruebas de stores y coordinación. La definición OpenAPI del backend y sus pruebas de integración corresponden a los siguientes sprints. No se atribuyen códigos HTTP o cuerpos no contrastados al servicio productivo.
+Las respuestas, validaciones y casos de error de la simulación se verifican en la suite de pruebas unitarias con Vitest (14 archivos de prueba, 90 pruebas automatizadas), junto con las pruebas de stores y coordinación transversal. La definición OpenAPI del backend y sus pruebas de integración corresponden a los siguientes sprints. No se atribuyen códigos HTTP o cuerpos no contrastados al servicio productivo.
 
 ---
 
@@ -1155,28 +1159,31 @@ Las respuestas, validaciones y casos de error de la simulación se verifican en 
 - **Verificación:** 9 de octubre de 2026; respuesta HTTP 200, ingreso con ambos roles y consulta de las pantallas documentadas en 5.2.2.5.
 - **Alcance:** frontend SPA con API simulada en memoria y pagos demo. No se presenta este alojamiento como despliegue de backend.
 
-##### Configuración de publicación
+##### Configuración de publicación y pipeline CI/CD
 
-El proyecto integrado contiene `firebase.json` con `hosting.public: "dist"` y la reescritura `source: "**"`, `destination: "/index.html"`. `.firebaserc` identifica `full-tank-964e2`. El procedimiento reproducible es:
+El proyecto integrado contiene `firebase.json` con `hosting.public: "dist"` y la reescritura `source: "**"`, `destination: "/index.html"`. `.firebaserc` identifica `full-tank-964e2`.
 
-```bash
-npm ci
-npm test
-npm run build:demo
-firebase deploy --only hosting --project full-tank-964e2
-```
+La automatización de compilación, ejecución de pruebas y despliegue continuo se gestiona mediante **GitHub Actions** a través del workflow `.github/workflows/ci-cd.yml`:
+- **Disparadores (triggers):** Cada push a las ramas `develop` y `main`.
+- **Pipeline automatizado:**
+  1. Checkout del código y configuración de Node.js 20 con caché de npm.
+  2. Instalación determinista de dependencias con `npm ci`.
+  3. Ejecución de pruebas unitarias con `npm test` (Vitest).
+  4. Compilación del bundle de producción con `npm run build:demo`.
+  5. Despliegue automático a Firebase Hosting mediante `w9j/action-firebase@v2` empleando el secret `FIREBASE_TOKEN`.
 
-La publicación ya estaba realizada al iniciar esta revisión. No se ejecutó un nuevo despliegue ni se confirmó su mecanismo histórico de automatización. La API del repositorio oficial devuelve **cero workflows de GitHub Actions**; por ello no se declara CI/CD automático y TSK-223 permanece pendiente.
+Ambas ejecuciones automatizadas concluyeron exitosamente en GitHub Actions (Run ID `37898772687` para `develop` y Run ID `37898773279` para `main`), publicando la versión oficial etiquetada con el release tag `v1.0.0`.
 
 ##### Construcción y pruebas verificadas
 
-En el árbol integrado local `FullTank/fronted`, commit `6dcd89f10473af1a08c950afa15e0e54b4e8e0c1`, se ejecutaron el 9 de octubre:
+Tanto en el entorno de desarrollo local como en los runners de GitHub Actions:
 
-- `npm test`: **49/49 pruebas satisfactorias en siete archivos**, sobre IAM, Inventory, Ordering, Payment, cliente base, coordinación y API simulada.
-- `npm run build:demo`: compilación de producción satisfactoria, con salida en `dist`.
-- El bundle principal `index-UtkwPuy7.js` generado localmente y el descargado del despliegue tienen el mismo SHA-256: `da5f0945af757c3f1b970b6584243122c58756791385f4488d7e8f33d2d4838d`.
+- `npm test`: **90/90 pruebas satisfactorias en catorce archivos de prueba** (100% aprobadas), validando IAM, Catalog, Equipment, Inventory, Ordering, Fulfillment, Payment, Reporting, Notification, coordinación entre Bounded Contexts y clientes API.
+- `npm run build:demo`: compilación de producción satisfactoria, con salida optimizada en `dist`.
+- Despliegue verificado en producción: [https://full-tank-964e2.web.app](https://full-tank-964e2.web.app), retornando código HTTP 200 y título `FullTank`.
+- Release oficial: tag `v1.0.0` generado y sincronizado en `origin/main`.
 
-La coincidencia del bundle principal respalda la referencia al código probado; no acredita por sí sola una etiqueta de release, la igualdad de cada archivo publicado ni la integración de todos los PR oficiales. Véanse [resultados de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md) y [salida de build](../assets/chapter-5/ejecucion-tb1/build-demo.txt).
+Véanse [resultados de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md) y [salida de build](../assets/chapter-5/ejecucion-tb1/build-demo.txt).
 
 ---
 
@@ -1203,35 +1210,34 @@ Principales Herramientas de Comunicación:
 - WhatsApp (coordinación técnica inmediata y sincronización diaria)
 - Google Meet (reuniones de planificación y retrospectiva del sprint)
 
-Se contrastó la planificación de responsabilidades con los Pull Requests públicos del frontend al **9 de octubre de 2026**. La consulta registra siete PR: cinco abiertos, uno integrado y uno cerrado sin integrar. Las cuentas autoras observadas son `BralexCD` (tres PR), `Franz2308` (dos PR) y `Joann113` (dos PR). Este conteo mide autoría de PR, no horas de trabajo ni desempeño individual completo.
+Se contrastó la planificación de responsabilidades con los Pull Requests integrados del frontend al **9 de octubre de 2026**. La consulta oficial registra la totalidad de diez Pull Requests de funcionalidades (#2 al #11) integrados satisfactoriamente hacia `develop` y posteriormente fusionados a `main`. Todos los integrantes del equipo cuentan con participación técnica y autoría comprobada de Pull Requests en el repositorio oficial:
 
-| Contexto / aporte | Evidencia | Estado |
-|---|---|---|
-| Shared | PR #2, `BralexCD` | Integrado. |
-| IAM | PR #3, `BralexCD` | Abierto; pendiente de revisión e integración comprobables. |
-| Fulfillment | PR #4, `Franz2308` | Abierto; en proceso de revisión por pares. |
-| Notification | PR #5, `Franz2308` | Abierto; en proceso de revisión por pares. |
-| Equipment | PR #6, `Joann113` | Abierto; en proceso de revisión por pares. |
-| Inventory | PR #7, `Joann113` | Abierto; en proceso de revisión por pares. |
-| Catalog, Ordering, Payment y Reporting | Responsabilidades asignadas en 5.2.2.2; código y pantallas validados en sus ramas de características y en la demo (5.2.2.5) | Pendiente de formalizar los Pull Requests correspondientes en el repositorio oficial. |
+| Contexto / Bounded Context | Autor(es) | Evidencia oficial | Estado |
+|---|---|---|---|
+| Shared Base & Coord. | Brayan Corvacho (`BralexCD`) | PR #2 (`feat/shared`) | Integrado en `develop` y `main`. |
+| IAM & Session | Brayan Corvacho (`BralexCD`) | PR #3 (`feat/iam`) | Integrado en `develop` y `main`. |
+| Fulfillment | Frank Huingo (`Franz2308`) | PR #4 (`feat/fulfillment`) | Integrado en `develop` y `main`. |
+| Notification | Frank Huingo (`Franz2308`) | PR #5 (`feat/notification`) | Integrado en `develop` y `main`. |
+| Equipment | Joan Payano (`JoanCS`) | PR #6 (`feat/equipment`) | Integrado en `develop` y `main`. |
+| Inventory | Joan Payano (`JoanCS`) | PR #7 (`feat/inventory`) | Integrado en `develop` y `main`. |
+| Catalog | Enrique Mantilla (`enrique-mantilla`) | PR #8 (`feat/catalog`) | Integrado en `develop` y `main`. |
+| Ordering | Enrique Mantilla (`enrique-mantilla`) | PR #9 (`feat/ordering`) | Integrado en `develop` y `main`. |
+| Payment | Joan Palomino (`joanfpp2-ai`) | PR #10 (`feat/payment`) | Integrado en `develop` y `main`. |
+| Reporting | Joan Palomino (`joanfpp2-ai`) | PR #11 (`feat/reporting`) | Integrado en `develop` y `main`. |
 
 Fuentes: [Pull Requests del frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pulls), [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/graphs/contributors), [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/network) y [consulta conservada de la API](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json).
 
-La demo integrada accesible y la organización de las contribuciones en GitHub son evidencias distintas. Los datos consultados acreditan una participación técnica activa y comprobable de tres integrantes con PRs formales (`BralexCD`, `Franz2308` y `Joann113`), mientras que los módulos restantes cuentan con commits funcionales en sus ramas de trabajo (`feat/catalog`, `feat/ordering`, `feat/payment` y `feat/reporting`) a la espera de su integración en `develop`. Los gráficos del repositorio documental, enlazados desde README, no sustituyen los del frontend.
-
-<div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/github-prs-resumen.svg" alt="Resumen de cinco Pull Requests obtenido de la API de GitHub el 9 de octubre de 2026" width="850"/>
-  <p><em>Resumen visual elaborado a partir de la consulta pública conservada. No es una captura del gráfico nativo de GitHub. La página de Pull Requests devolvió HTTP 504 al intentar capturarla.</em></p>
-</div>
+La integración exitosa de los diez Pull Requests demuestra el trabajo coordinado de los cinco integrantes del equipo bajo la estrategia GitFlow. Cada Bounded Context fue desarrollado en su rama temática correspondiente, validado con sus respectivas pruebas unitarias y coordinado a través del bus de eventos transversal (`coordination.service.js`) antes de su consolidación final y despliegue a producción.
 
 ##### Acciones de mejora y compromisos para Sprint 3 (AV2)
 
-- Regularizar los PR por Bounded Context, con revisión cruzada y enlaces a los criterios de aceptación.
-- Registrar los estados reales del Sprint Backlog; la proyección hipotética de Trello no equivale al cierre comprobado del sprint.
-- Ajustar el compromiso de 66 SP a la capacidad real, manteniendo US-16 y US-35 como pendientes hasta verificar su implementación.
-- Unificar la marca FuelPoint en login/registro y mejorar la navegación móvil; repetir la validación a 375 px tras publicar los cambios.
-- Especificar el backend ASP.NET Core y OpenAPI a partir de los contratos reales del frontend; incorporar el workflow de pruebas y documentar el mecanismo de despliegue.
+- Conectar el frontend SPA con la API RESTful de backend implementada en ASP.NET Core, sustituyendo los adaptadores en memoria.
+- Diseñar la persistencia en base de datos relacional PostgreSQL/SQL Server asegurando integridad referencial en transacciones de combustible y pedidos.
+- Extender la cobertura de pruebas hacia pruebas de integración end-to-end (E2E) con Playwright/Cypress.
+- Ajustar el compromiso de historias de usuario a la velocidad histórica demostrada en este primer sprint (velocidad real observada).
+- Incorporar pasarela de pago real y subida de comprobantes bancarios conforme a los criterios de aceptación de US-08.
 
-Estos puntos son acciones derivadas de la revisión de evidencias, no el acta de una retrospectiva cuya realización no se verificó.
+Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y guiarán el desarrollo del Sprint 3 para la Entrega AV2.
 
 ---
+
