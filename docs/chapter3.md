@@ -1008,9 +1008,15 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
    - **Enlace público al tablero del Product Backlog:** [https://trello.com/b/6h5mZ8L6](https://trello.com/b/6h5mZ8L6)
 
 <div align="center">
-  <img src="../assets/chapter-3/product-backlog-trello.png" alt="Captura del tablero Product Backlog en Trello" width="850"/>
-  <p><em>Figura: Tablero del Product Backlog priorizado por valor de negocio en Trello.</em></p>
+  <img src="../assets-chapter-5/trello.png" alt="Captura de Trello con 17 historias en Product Backlog y 34 en Hecho bajo el escenario hipotético de TB1" width="850"/>
+  <p><em>Figura: Captura del tablero FullTank · FuelPoint, escenario hipotético de cumplimiento del plan TB1, 8 de octubre de 2026.</em></p>
 </div>
+
+La captura proporcionada muestra la proyección del tablero si se cumple el plan de integración del frontend para TB1: **34 historias (87 Story Points) en Hecho** y **17 historias (35 Story Points) en Product Backlog**. Las tarjetas trasladadas a Hecho incluyen una nota de «HECHO HIPOTÉTICO TB1 · Sprint 2» y consideran el uso de mocks/adaptadores demo. Este estado representa planificación y no acredita ejecución real, aprobación de Pull Requests ni despliegue del backend; el cierre real requiere verificar los criterios de aceptación y adjuntar las evidencias correspondientes.
+
+Las 17 historias pendientes corresponden a 10 historias de Landing Page, recuperación de contraseña (US-16), descarga de reportes PDF (US-35) y cinco endpoints (TS-01 a TS-05). La lista de documentación conserva ocho pendientes que no forman parte de los Story Points del producto y no aparecen en el encuadre de esta captura.
+
+El tablero de esta captura contiene **51 historias**, mientras que la tabla documental siguiente incluye **73**. Las 22 historias técnicas adicionales de la tabla aún requieren incorporarse al tablero; los conteos de la captura se refieren exclusivamente a sus 51 tarjetas de producto.
 
 ### Tabla de Control del Product Backlog
 
@@ -1089,4 +1095,3 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
 | **71** | TS-25 | Endpoint: Eliminar equipo | Como developer, quiero un endpoint para eliminar un equipo registrado sin pedidos en curso. | 1 |
 | **72** | TS-26 | Endpoint: Gestionar notificaciones | Como developer, quiero los endpoints para crear notificaciones ante cambios de estado, consultarlas y marcarlas como leídas. | 2 |
 | **73** | TS-27 | Endpoint: Reportes y analítica | Como developer, quiero los endpoints para obtener indicadores de consumo y ventas y exportarlos en formato PDF. | 3 |
-
