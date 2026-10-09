@@ -190,7 +190,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Betsabe Maldonado Estrella |
 | **Edad**               | 52 |
-| **Departamento**       | Lima |
+| **Distrito**           | San Isidro, Lima |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 03:45 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQCkouwLUL7JT7ks3UohUtfUAeA0xot3mF3G4dxzBzAEvWQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gfM51X |
@@ -203,7 +203,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Daniel Angelo Siqueiros Cruz |
 | **Edad**               | 21 |
-| **Departamento**       | Lima |
+| **Distrito**           | Los Olivos, Lima |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 06:29 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQCdgZwWmcdbRol75iM8cTHFASEn_WeKWpU6JDASO27sYzI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kQ2BIT |
@@ -216,7 +216,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Alessandro Gonzales |
 | **Edad**               | 21 |
-| **Departamento**       | Lima |
+| **Distrito**           | Santiago de Surco, Lima |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:25 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQBqEiboowHOQoOS2LbOXhPIARznCkH09uwTmQO6PiCjApo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=smKx0D|
@@ -229,7 +229,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Carlos Gutierrez |
 | **Edad**               | 20 |
-| **Departamento**       | Lima |
+| **Distrito**           | Ate, Lima |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 02:30 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQDF46DLEU4IToQ4AGTnklbCAZ0agzl-FG0yWztwR2suv3A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ywABmN|
@@ -245,8 +245,8 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Carlos Mendoza |
 | **Edad**               | 50 |
-| **Departamento**       | Lima |
-| **Fecha**              | No consignada |
+| **Distrito**           | Callao, Callao |
+| **Fecha**              | 2026-09-05 |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:41 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQAc_YdFgDxbSIN6wUPQrIZ-ARLL0hIcgJwoS9AJHEcnpD4?e=fdVXa8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
@@ -259,8 +259,8 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Lucia Fernandez |
 | **Edad**               | 21 |
-| **Departamento**       | Lima |
-| **Fecha**              | No consignada |
+| **Distrito**           | San Miguel, Lima |
+| **Fecha**              | 2026-09-06 |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:44 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQCxI6oUHNUeSrK3kLqxOqWuASqRIC7hVQ0GcfQOepRQXyY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5LRYMx |
@@ -274,7 +274,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 |-------------------------|---------|
 | **Nombre entrevistado** | Samuel Roca Rey |
 | **Edad**               | 48 |
-| **Departamento**       | Lima |
+| **Distrito**           | Chorrillos, Lima |
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 07:36 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQC2p2YWEIDGSIbGObwo0gYAAfz48MPf4PC9a2lIWsAQZVc |
@@ -428,7 +428,7 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
  <img src="../assets/chapter-2/empathyAndrea.png" alt="empathyMapping de Andrea"/>
 
 ## 2.4 Big Picture Event Storming
-Para comprender a profundidad el dominio del negocio de Prime Fuel y alinear la visión tecnológica con las operaciones reales de compraventa y distribución de combustible, el equipo llevó a cabo una sesión de Event Storming. Esta técnica colaborativa nos permitió identificar los hitos clave del sistema sin adelantarnos a detalles técnicos.
+Para comprender a profundidad el dominio del negocio de FuelPoint (FullTank) y alinear la visión tecnológica con las operaciones reales de compraventa y distribución de combustible, el equipo llevó a cabo una sesión de Event Storming. Esta técnica colaborativa nos permitió identificar los hitos clave del sistema sin adelantarnos a detalles técnicos.
 
 ### Step 1 – Free Exploration (Exploración Libre)
 En esta primera etapa, el equipo realizó una lluvia de ideas desestructurada para capturar todos los Eventos de Dominio relevantes de la operativa logística y comercial. Utilizando notas de color naranja (post-its), registramos hechos que ya ocurrieron en el negocio, redactados estrictamente en tiempo pasado (ej. Fuel request created, Fuel dispatched).
@@ -456,31 +456,35 @@ Esta estructura temporal nos ayudó a identificar claramente las áreas crítica
 </div>
 
 ## 2.5 Ubiquitous Language
-En este proyecto, cuyo objetivo principal es mejorar la eficiencia, la trazabilidad y la comunicación en la gestión y distribución de combustible mediante una plataforma web, se ha definido el siguiente lenguaje ubicuo para garantizar la claridad y la coherencia entre usuarios, desarrolladores y partes interesadas:
 
-| Término | Definición |
-| --- | --- |
-| Solicitud de Combustible | Pedido generado por una empresa cliente que especifica el tipo, la cantidad y los detalles de entrega de combustible. |
-| Empresa Cliente | Organización que requiere combustible para sus operaciones y utiliza la plataforma para realizar y rastrear pedidos. |
-| Proveedor de Combustible | Empresa responsable de recibir, validar y atender las solicitudes de combustible. |
-| Estado del Pedido | Etapa actual de una solicitud (ej. pendiente, validado, programado, en entrega, completado). |
-| Seguimiento del Pedido | Monitoreo en tiempo real del progreso y la ubicación de una entrega de combustible. |
-| Programación de Entrega | Proceso de asignación de fecha, hora y recursos logísticos para cumplir con una solicitud de combustible. |
-| Panel Centralizado | Interfaz principal donde los usuarios visualizan pedidos, métricas y el estado operacional. |
-| Notificación | Mensaje automatizado que informa a los usuarios sobre actualizaciones o cambios en sus solicitudes de combustible. |
-| Historial de Pedidos | Registro de solicitudes de combustible pasadas, incluyendo detalles y resultados. |
-| Planificación Logística | Organización y optimización de rutas, entregas y recursos operativos. |
-| Proceso de Validación | Paso en el que el proveedor confirma la disponibilidad, precisión y factibilidad de una solicitud. |
-| Comunicación Integrada | Sistema integrado de chat o mensajería que permite la interacción directa entre clientes y proveedores. |
-| Métricas Operativas | Indicadores como tiempo de entrega, eficiencia y tasas de error utilizados para la evaluación del desempeño. |
-| Reporte | Documento o panel generado que resume el consumo de combustible, las entregas y los datos de desempeño. |
-| Sesión | Período autenticado en el que un usuario accede a la plataforma con credenciales seguras. |
-| Roles y Permisos | Controles de acceso que definen qué acciones puede realizar cada tipo de usuario (cliente o proveedor). |
+Conforme a las directrices de Eric Evans (2003) en *Domain-Driven Design: Tackling Complexity in the Heart of Software* y las especificaciones del enunciado del curso, el glosario de términos se redacta con términos estrictamente pertenecientes al **dominio del negocio de abastecimiento y distribución de hidrocarburos**, sin ambigüedades y omitiendo términos técnicos propios de la ingeniería de software. Cada término se especifica en **inglés** como lenguaje principal, incluyendo su traducción equivalente en español entre paréntesis:
 
-Beneficios esperados del lenguaje ubicuo:
+| Término (Inglés / Español) | Definición en el Dominio del Negocio |
+|---|---|
+| **Fuel Request (Solicitud de Combustible)** | Requerimiento formal emitido por una empresa compradora en el que se especifica el tipo de combustible requerido, volumen en galones o litros, fecha deseada y punto de entrega. |
+| **Fuel Supplier / Distributor (Proveedor / Distribuidor de Combustible)** | Empresa formal comercializadora y distribuidora de derivados de hidrocarburos, autorizada mediante el Registro de Hidrocarburos ante OSINERGMIN. |
+| **Corporate Requester / Buyer (Empresa Solicitante / Compradora)** | Organización empresarial (construcción, minería, transporte, agroindustria) que demanda suministro continuo de combustible a granel para mantener la continuidad de su maquinaria y equipos. |
+| **Fuel Order (Orden de Combustible)** | Transacción comercial formalizada una vez que el proveedor aprueba una solicitud de combustible y valida la disponibilidad de inventario y el respaldo financiero. |
+| **Order Status (Estado del Pedido)** | Hito oficial dentro del ciclo de vida de la orden en el dominio (e.g., *Pending, Approved, Rejected, In Dispatch, Delivered, Closed*). |
+| **Real-Time Fuel Tracking (Seguimiento de Combustible en Tiempo Real)** | Monitoreo del progreso operativo y logístico de un pedido desde su validación hasta la confirmación física de descarga en el punto de destino. |
+| **Delivery Scheduling (Programación de Despacho y Entrega)** | Asignación de fecha, ventana horaria y recursos operativos para cumplir con el abastecimiento programado de un cliente. |
+| **Domain Notification (Notificación de Evento de Dominio)** | Aviso generado ante un cambio de estado significativo en la transacción (aprobación de orden, salida de cisterna a ruta o confirmación de entrega). |
+| **Transaction History (Historial Transaccional)** | Registro consolidado y auditable de todos los pedidos históricos, volúmenes despachados, precios facturados y fechas de cumplimiento. |
+| **Logistics Route Planning (Planificación de Rutas Logísticas)** | Estrategia de optimización de itinerarios y coordinación de transporte para abastecer a múltiples puntos de obra o plantas industriales minimizando tiempos de tránsito. |
+| **Order Validation (Validación de Orden)** | Procedimiento de verificación ejecutado por el proveedor para corroborar disponibilidad de stock, precios vigentes y consistencia de los datos del pedido. |
+| **Tanker / Fuel Truck (Camión Cisterna de Combustible)** | Vehículo de transporte especializado, calibrado y certificado para transportar hidrocarburos líquidos a granel en compartimentos herméticos y seguros. |
+| **Fuel Dispatch (Despacho de Combustible)** | Salida operativa y física del camión cisterna desde la planta de almacenamiento o refinería hacia las instalaciones del cliente solicitante. |
+| **Proof of Delivery / POD (Constancia de Entrega / Guía de Remisión)** | Documento formal firmado o validado en campo que certifica la recepción conforme del volumen de combustible descargado en destino. |
+| **Fuel Inventory / Stock (Inventario de Combustible)** | Volumen disponible de cada tipo de derivado de petróleo almacenado en tanques de planta por el proveedor para su comercialización inmediata. |
+| **Equipment / Machinery Fuel Tank (Tanque de Maquinaria o Equipo)** | Depósito receptor de combustible perteneciente a una maquinaria pesada, grupo electrógeno o tanque de autoconsumo registrado del cliente. |
+| **Fuel Level (Nivel de Combustible)** | Porcentaje o volumen remanente de carburante en el tanque de un equipo, utilizado para determinar la urgencia de reabastecimiento. |
+| **Payment Voucher (Comprobante de Pago / Depósito)** | Constancia de transferencia bancaria u operación de pago cargada por el cliente para sustentar la liquidación económica del pedido. |
+| **Bulk Fuel (Combustible a Granel)** | Suministro de grandes volúmenes de combustible transportado y descargado directamente en tanques receptores de empresas, sin fraccionamiento comercial minorista. |
+| **Osinergmin Hydrocarbon Registry (Registro de Hidrocarburos de Osinergmin)** | Acreditación regulatoria obligatoria emitida por el organismo supervisor en el Perú que certifica a una empresa para almacenar, comercializar o transportar combustibles. |
+| **Fuel Grade / Type (Tipo de Combustible)** | Especificación técnica y calidad del carburante (e.g., Diésel B5 S-50, Gasohol Regular, Gasohol Premium) requerida por la maquinaria del cliente. |
+| **Operational Lead Time (Tiempo de Ciclo Logístico)** | Intervalo temporal transcurrido desde la creación formal de la solicitud de combustible hasta la culminación de la descarga física en destino. |
 
-- Facilita la comunicación entre desarrolladores, usuarios y las partes interesadas del sistema.
-- Mejora la comprensión de los procesos y funcionalidades fundamentales del sistema.
-- Reduce la ambigüedad y las interpretaciones erróneas durante el diseño y el desarrollo.
-- Garantiza la coherencia entre la documentación, las interfaces y la implementación.
-  
+**Beneficios de la aplicación del Ubiquitous Language en el proyecto:**
+- Elimina discrepancias léxicas y ambigüedades entre los expertos de dominio, los stakeholders y el equipo de desarrollo.
+- Asegura que los nombres de agregados, entidades, comandos y eventos en el código y en la base de datos reflejen con fidelidad las operaciones de negocio.
+- Garantiza la coherencia semántica en la documentación técnica, las interfaces de usuario y los mensajes de dominio expuestos en la plataforma FullTank.
