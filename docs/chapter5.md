@@ -1182,6 +1182,27 @@ La coincidencia del bundle principal respalda la referencia al código probado; 
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
+Resumen:
+Durante el Sprint 2, el equipo colaboró activamente en el repositorio oficial de la aplicación web ([Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)) para la implementación modular de los Bounded Contexts en Vue 3 y PrimeVue, la ejecución de pruebas unitarias con Vitest y el despliegue funcional en Firebase Hosting.
+
+Evidencia de Colaboración:
+
+Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
+
+##### Insights
+![Insights](../assets/chapter-5/insishts-2.png)
+
+##### Contributors
+![Contributors](../assets/chapter-5/contribuitors-2.png)
+
+##### Network graph
+![Network graph](../assets/chapter-5/network-2.png)
+
+Principales Herramientas de Comunicación:
+- GitHub (control de versiones, pull requests y code review cruzado)
+- WhatsApp (coordinación técnica inmediata y sincronización diaria)
+- Google Meet (reuniones de planificación y retrospectiva del sprint)
+
 Se contrastó la planificación de responsabilidades con los Pull Requests públicos del frontend al **9 de octubre de 2026**. La consulta registra siete PR: cinco abiertos, uno integrado y uno cerrado sin integrar. Las cuentas autoras observadas son `BralexCD` (tres PR), `Franz2308` (dos PR) y `Joann113` (dos PR). Este conteo mide autoría de PR, no horas de trabajo ni desempeño individual completo.
 
 | Contexto / aporte | Evidencia | Estado |
