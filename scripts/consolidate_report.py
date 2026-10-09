@@ -1,28 +1,35 @@
 #!/usr/bin/env python3
 """
 Script de consolidación y exportación del Informe Final TB1 para FuelPoint / FullTank.
-1. Concatena README.md y docs/chapter1.md hasta chapter5.md en:
-   upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md
-2. Compila el documento a HTML autocontenido con estilos académicos y reglas de impresión:
-   upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html
+Genera los archivos directamente en la carpeta 'entregables/':
+1. entregables/upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md
+2. entregables/upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html
 """
 
 import os
 import re
+import shutil
 import subprocess
 
 def consolidate():
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     readme_path = os.path.join(root_dir, "README.md")
     docs_dir = os.path.join(root_dir, "docs")
-    md_output = os.path.join(root_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md")
-    html_output = os.path.join(root_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html")
+    entregables_dir = os.path.join(root_dir, "entregables")
+    os.makedirs(entregables_dir, exist_ok=True)
+
+    md_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md")
+    html_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html")
 
     with open(readme_path, "r", encoding="utf-8") as f:
         readme = f.read()
 
+    # Ajustar rutas de imagen de la carátula y assets para entregables/
+    readme_adjusted = readme.replace('src="logo_upc.PNG"', 'src="../logo_upc.PNG"')
+    readme_adjusted = readme_adjusted.replace('(assets/', '(../assets/')
+
     # Reemplazar enlaces internos del TOC: (docs/chapterX.md#ancla) -> (#ancla)
-    readme_adjusted = re.sub(r'\(docs/chapter\d+\.md(#.*?)\)', r'(\1)', readme)
+    readme_adjusted = re.sub(r'\(docs/chapter\d+\.md(#.*?)\)', r'(\1)', readme_adjusted)
 
     # Separar Front Matter (hasta antes de Conclusiones) y Back Matter (desde Conclusiones)
     conclusiones_marker = "\n## Conclusiones\n"
@@ -46,9 +53,8 @@ def consolidate():
         with open(ch_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # Ajustar rutas de imágenes relativas para que apunten desde la raíz
-        content = content.replace("../assets/", "assets/")
-        content = content.replace("../assets-chapter-5/", "assets-chapter-5/")
+        # Las imágenes en docs/chapter*.md ya apuntan a ../assets/ y ../assets-chapter-5/
+        # lo cual es exactamente la ruta correcta desde entregables/
 
         # Ajustar enlaces cruzados entre capítulos
         content = re.sub(r'\(docs/chapter\d+\.md(#.*?)\)', r'(\1)', content)
@@ -68,7 +74,7 @@ def consolidate():
     with open(md_output, "w", encoding="utf-8") as f:
         f.write(consolidated_md)
 
-    print(f"✅ [1/2] Archivo Markdown consolidado generado:")
+    print(f"✅ [1/2] Archivo Markdown consolidado generado en entregables:")
     print(f"   Ruta: {md_output}")
     print(f"   Líneas: {len(consolidated_md.splitlines())} | Tamaño: {len(consolidated_md.encode('utf-8')) / 1024:.1f} KB")
 
@@ -288,9 +294,17 @@ def consolidate():
     with open(html_output, "w", encoding="utf-8") as f:
         f.write(html_template)
 
-    print(f"✅ [2/2] Archivo HTML listo para exportar generado:")
+    print(f"✅ [2/2] Archivo HTML listo para exportar generado en entregables:")
     print(f"   Ruta: {html_output}")
     print(f"   Tamaño: {len(html_template.encode('utf-8')) / 1024:.1f} KB")
+
+    # Copiar también a /home/bryan/code/Proyectos/FullTank/entregables/
+    parent_entregables = "/home/bryan/code/Proyectos/FullTank/entregables"
+    if os.path.exists(parent_entregables):
+        shutil.copy2(md_output, parent_entregables)
+        shutil.copy2(html_output, parent_entregables)
+        print(f"✅ Copia sincronizada en carpeta general de entregables:")
+        print(f"   Ruta: {parent_entregables}/")
 
 if __name__ == "__main__":
     consolidate()

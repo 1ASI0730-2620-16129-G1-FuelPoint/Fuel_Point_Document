@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo_upc.PNG" alt="Logo UPC" width="180">
+  <img src="../logo_upc.PNG" alt="Logo UPC" width="180">
   <p><strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong></p>
   <p>FACULTAD DE INGENIERÍA</p>
   <p>CARRERA DE INGENIERÍA DE SOFTWARE</p>
@@ -225,11 +225,11 @@ FuelPoint desarrolla **FullTank**, una solución web B2B que centraliza las soli
 
 | Foto | Apellidos y nombres | Código | Carrera | Perfil y habilidades |
 |---|---|---|---|---|
-| <img src="assets/chapter1/Integrantes/Brayan.png" alt="Brayan Alexis Corvacho Damian" width="80"> | Brayan Alexis Corvacho Damian | U20231a257 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC. Poseo conocimientos sólidos en Python, JavaScript y desarrollo web. Me apasiona la resolución de problemas algorítmicos y el trabajo en equipo para crear soluciones innovadoras. |
-| <img src="assets/chapter1/Integrantes/Frank.jpg" alt="Frank Anthony Huingo Tello" width="80"> | Frank Anthony Huingo Tello | U202319057 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC. Poseo conocimientos sólidos en HTML, CSS y JavaScript. Me apasiona aprender cosas nuevas y aplicarlas en el desarrollo de mis cursos de carrera.|
-| <img src="assets/chapter1/Integrantes/JoanFT.png" alt="Joan Fabricio Payano Puchuri" width="80"> | Joan Fabricio Payano Puchuri | U202318620 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en C++, Python, JavaScript, HTML y CSS. Me apasiona el desarrollo de software y la búsqueda constante de nuevas formas de mejorar mis habilidades. Destaco por mi capacidad para trabajar en equipo, asumir nuevos retos y adaptarme a diferentes situaciones, siempre con la disposición de aprender, aportar soluciones y dar lo mejor de mí en cada proyecto.|
-| <img src="assets/chapter1/Integrantes/Enrique.jpg" alt="Enrique Manuel Mantilla Maldonado" width="80"> | Enrique Manuel Mantilla Maldonado | U20231B842 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en Python, C++ y JavaScript. Me apasiona la tecnología y el desarrollo de software, y busco aprender cosas nuevas en el camino.|
-| <img src="assets/chapter1/Integrantes/JoanCS.jpeg" alt="Joan Salvador Carhuayal Suarez" width="80"> | Joan Salvador Carhuayal Suarez | U202219040 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación de Python, C++, HTLM, CSS y JavaScript. Me gusta el mundo de la tecnología y el desarrollo de software, espero seguir mejorando mis habilidades y conocimientos para formarme como profesional.|
+| <img src="../assets/chapter1/Integrantes/Brayan.png" alt="Brayan Alexis Corvacho Damian" width="80"> | Brayan Alexis Corvacho Damian | U20231a257 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC. Poseo conocimientos sólidos en Python, JavaScript y desarrollo web. Me apasiona la resolución de problemas algorítmicos y el trabajo en equipo para crear soluciones innovadoras. |
+| <img src="../assets/chapter1/Integrantes/Frank.jpg" alt="Frank Anthony Huingo Tello" width="80"> | Frank Anthony Huingo Tello | U202319057 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC. Poseo conocimientos sólidos en HTML, CSS y JavaScript. Me apasiona aprender cosas nuevas y aplicarlas en el desarrollo de mis cursos de carrera.|
+| <img src="../assets/chapter1/Integrantes/JoanFT.png" alt="Joan Fabricio Payano Puchuri" width="80"> | Joan Fabricio Payano Puchuri | U202318620 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en C++, Python, JavaScript, HTML y CSS. Me apasiona el desarrollo de software y la búsqueda constante de nuevas formas de mejorar mis habilidades. Destaco por mi capacidad para trabajar en equipo, asumir nuevos retos y adaptarme a diferentes situaciones, siempre con la disposición de aprender, aportar soluciones y dar lo mejor de mí en cada proyecto.|
+| <img src="../assets/chapter1/Integrantes/Enrique.jpg" alt="Enrique Manuel Mantilla Maldonado" width="80"> | Enrique Manuel Mantilla Maldonado | U20231B842 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, con sólidos conocimientos en Python, C++ y JavaScript. Me apasiona la tecnología y el desarrollo de software, y busco aprender cosas nuevas en el camino.|
+| <img src="../assets/chapter1/Integrantes/JoanCS.jpeg" alt="Joan Salvador Carhuayal Suarez" width="80"> | Joan Salvador Carhuayal Suarez | U202219040 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación de Python, C++, HTLM, CSS y JavaScript. Me gusta el mundo de la tecnología y el desarrollo de software, espero seguir mejorando mis habilidades y conocimientos para formarme como profesional.|
 
 ## 1.2 Solution Profile
 
@@ -407,7 +407,7 @@ Conforme a las especificaciones del enunciado, se formula un **Hypothesis Statem
 
 #### 1.2.2.4 Lean UX Canvas
 
-<img src="assets/chapter1/Lean UX/lean-ux-canvas.png" alt="Lean UX Canvas">
+<img src="../assets/chapter1/Lean UX/lean-ux-canvas.png" alt="Lean UX Canvas">
 
 ## 1.3 Segmentos objetivo
 
@@ -455,10 +455,10 @@ En el mercado existen diversas soluciones digitales enfocadas en la gestión de 
   </tr>
   <tr>
     <td colspan="2"><strong></strong></td>
-    <td><strong>FullTank</strong><br><img src="./assets/chapter-2/logo-FullTank.png" height="100"/></td>
-    <td><strong>Zavgar</strong><br><img src="./assets/chapter-2/logo-zavgar.jpg" height="100"/></td>
-    <td><strong>FuelCloud</strong><br><img src="./assets/chapter-2/logo-fuelcloud.jpg" height="100"/></td>
-    <td><strong>Wialon</strong><br><img src="./assets/chapter-2/logo-wialon.jpg" height="100"/></td>
+    <td><strong>FullTank</strong><br><img src="./../assets/chapter-2/logo-FullTank.png" height="100"/></td>
+    <td><strong>Zavgar</strong><br><img src="./../assets/chapter-2/logo-zavgar.jpg" height="100"/></td>
+    <td><strong>FuelCloud</strong><br><img src="./../assets/chapter-2/logo-fuelcloud.jpg" height="100"/></td>
+    <td><strong>Wialon</strong><br><img src="./../assets/chapter-2/logo-wialon.jpg" height="100"/></td>
   </tr>
 
   <tr>
@@ -633,7 +633,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 03:45 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQCkouwLUL7JT7ks3UohUtfUAeA0xot3mF3G4dxzBzAEvWQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=gfM51X |
-| **Foto entrevista**    | <img src="assets/chapter-2/Betsabe.png" alt="Captura entrevistada Betsabe Maldonado Estrella" width="150"/> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/Betsabe.png" alt="Captura entrevistada Betsabe Maldonado Estrella" width="150"/> |
 | **Resumen**           | <p>La señora Betsabe Maldonado Estrella se desempeña como parte del área de logística y abastecimiento de la empresa. Su personalidad se caracteriza por ser <strong>organizada, cautelosa y enfocada en la seguridad operativa</strong>, valorando mucho la consistencia en los procesos. En su toma de decisiones influyen de manera directa las regulaciones vigentes del sector y los reportes de entidades supervisoras como <strong>Osinergmin</strong>.</p><p>La coordinación actual con los proveedores la realiza a través de <strong>llamadas de voz por teléfono celular y correos electrónicos tradicionales</strong>. Sus actividades operativas las realiza a través de una <strong>computadora de escritorio de torre HP</strong>, recurriendo de manera constante al navegador <strong>Microsoft Edge</strong> y herramientas de <strong>Office (Excel y Word)</strong>.</p><p>En la operativa actual, Betsabe señala deficiencias críticas por la falta de trazabilidad en los procesos de despacho de los proveedores, lo que le genera desconfianza y le imposibilita predecir con exactitud los abastecimientos del día. Cree que una planificación digital óptima reduciría la incertidumbre actual. Finalmente, resalta que los factores determinantes para seleccionar un proveedor son el cumplimiento de tiempos, el precio justo y la confiabilidad del servicio, mostrando un gran interés en una solución integral que automatice el tracking de pedidos y centralice la información histórica de consumos.</p> |
 
 - Entrevista 2:
@@ -646,7 +646,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 06:29 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQCdgZwWmcdbRol75iM8cTHFASEn_WeKWpU6JDASO27sYzI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kQ2BIT |
-| **Foto entrevista**    | <img src="assets/chapter-2/angeloEntrevista.png" alt="Captura entrevistado Daniel Angelo Siqueiros Cruz" style="width: 30%; max-width: 150;"> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/angeloEntrevista.png" alt="Captura entrevistado Daniel Angelo Siqueiros Cruz" style="width: 30%; max-width: 150;"> |
 | **Resumen**           | El entrevistado se desempeña como asistente de logística y almacén en una empresa constructora mediana de Lima Norte, con un año y medio de experiencia, y se encarga de revisar el nivel de combustible de la maquinaria y del tanque de obra, solicitar el combustible a los proveedores y registrar cada entrega. La empresa consume entre 15,000 y 20,000 litros de diésel al mes, con dos o tres pedidos por semana de 3,000 a 6,000 litros cada uno, según el avance de las obras. Actualmente, la gestión es manual: los pedidos se coordinan por WhatsApp, el jefe de logística realiza la transferencia, el comprobante se envía como foto por el mismo chat y los datos se registran después en un Excel compartido; las llamadas se usan en casos urgentes y el correo solo para recibir la factura, ya que el sistema contable de la empresa no registra los pedidos. Entre los principales problemas destacan la falta de visibilidad sobre la hora real de llegada del pedido, lo que provoca paralizaciones de maquinaria cuando el camión se retrasa; la información dispersa entre el chat, la galería del celular, el correo y el Excel, que le hace perder tiempo al preparar el resumen mensual; y los errores al digitar cantidades, como un pedido registrado por 4,000 litros en lugar de 1,400. Considera que conocer en tiempo real si el pedido salió, está en camino o cuándo llega le ahorraría varias llamadas diarias y le permitiría avisar a tiempo en la obra. Usa la computadora en la oficina, pero realiza la mayoría de tareas desde el celular cuando está en campo. Al comprar, prioriza el tiempo de entrega, luego el precio y el cumplimiento del proveedor, además de su formalidad. La falta de transparencia en los precios lo obliga a consultar a varios proveedores y a comprar al que responde primero, sin saber si le cobran de más. Le interesan las notificaciones sobre el estado del pedido, siempre que se limiten a las importantes para no terminar ignorándolas. Finalmente, identifica como barreras para adoptar una solución digital que el proveedor también la utilice, la costumbre de su jefe de coordinar por teléfono con proveedores de confianza, la mala señal de internet en obra y la aprobación del costo por parte de gerencia. |
 
 - Entrevista 3:
@@ -659,7 +659,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:25 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQBqEiboowHOQoOS2LbOXhPIARznCkH09uwTmQO6PiCjApo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=smKx0D|
-| **Foto entrevista**    | <img src="assets/chapter-2/foto_entrevista_alessandro.png" alt="Captura entrevistado Alessadro Gonzales" style="width: 30%; max-width: 150;"> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/foto_entrevista_alessandro.png" alt="Captura entrevistado Alessadro Gonzales" style="width: 30%; max-width: 150;"> |
 | **Resumen**           |El entrevistado se encarga de la gestión de abastecimiento y coordinación logística de combustible, con aproximadamente cinco años de experiencia en el sector energético y logístico. La empresa gestiona un volumen aproximado de 500,000 litros de combustible al mes. Actualmente, las compras se coordinan directamente con los proveedores y el seguimiento de pedidos, entregas y consumo se realiza mediante procesos internos, utilizando principalmente Excel, llamadas telefónicas, correos y algunos sistemas propios. Entre los principales problemas se encuentran la información dispersa, los errores de coordinación y la dificultad para conocer en tiempo real el estado de los pedidos, lo que puede complicar la reacción ante retrasos o inconvenientes. Considera que la trazabilidad en tiempo real es muy importante, ya que permitiría conocer el estado de cada pedido y actuar rápidamente ante cualquier incidencia. Para gestionar estas actividades utiliza principalmente una PC y un celular, dependiendo de si se encuentra en la oficina o supervisando operaciones. Al momento de comprar combustible, considera especialmente importante contar con el precio actualizado, el tiempo de entrega, la disponibilidad del proveedor y su historial de cumplimiento. La falta de transparencia en los precios dificulta la comparación entre proveedores y puede generar sobrecostos. También muestra interés en recibir notificaciones en tiempo real sobre cambios de precio y estado de los pedidos, ya que le permitirían anticipar cambios y supervisar mejor las entregas. Finalmente, identifica como principales barreras para implementar una solución digital como FullTank la resistencia al cambio, la necesidad de capacitar al personal, la integración con los sistemas existentes y la preocupación por los costos iniciales.|
 
 - Entrevista 4:
@@ -672,7 +672,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 02:30 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQDF46DLEU4IToQ4AGTnklbCAZ0agzl-FG0yWztwR2suv3A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ywABmN|
-| **Foto entrevista**    | <img src="assets/chapter-2/entrevista_Carlos.png" alt="Captura entrevistado Carlos Gutierrez" style="width: 30%; max-width: 150;"> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/entrevista_Carlos.png" alt="Captura entrevistado Carlos Gutierrez" style="width: 30%; max-width: 150;"> |
 | **Resumen**           | El entrevistado se desempeña como coordinador de compras y abastecimiento en una empresa dedicada a operaciones de transporte y distribución, con aproximadamente tres años de experiencia en el sector energético y logístico. La empresa gestiona alrededor de 280,000 litros de combustible al mes, principalmente para mantener operativa su flota. Actualmente, la compra se realiza según la planificación de consumo y las necesidades de cada sede, coordinando con distintos proveedores y registrando las operaciones en Excel. Para estas actividades utilizan principalmente Excel, correo electrónico, llamadas telefónicas y un sistema interno para registrar parte de la información, aunque no todas las herramientas están conectadas entre sí. Entre las principales dificultades menciona la duplicidad de registros, la demora en recibir información de los proveedores y la falta de un seguimiento centralizado de los pedidos, lo que dificulta saber rápidamente qué compras están pendientes o cuándo llegará cada entrega. Considera que la trazabilidad en tiempo real sería importante para mejorar la planificación y reducir la necesidad de realizar llamadas para confirmar el estado de los pedidos. Utiliza principalmente la PC durante la jornada de oficina y el celular cuando necesita supervisar operaciones fuera de ella. Al momento de seleccionar un proveedor, considera especialmente relevantes el precio, la disponibilidad del combustible, los tiempos de entrega y el cumplimiento de entregas anteriores, ya que un retraso puede afectar directamente las operaciones de transporte. La falta de transparencia en los precios dificulta identificar cuándo una cotización es realmente conveniente y obliga a solicitar información a varios proveedores antes de realizar una compra. También estaría interesado en recibir alertas sobre variaciones de precios, confirmación de pedidos y posibles retrasos, siempre que las notificaciones sean claras y realmente relevantes. Finalmente, considera que las principales barreras para implementar FullTank serían la adaptación de los trabajadores a una nueva herramienta, la compatibilidad con los sistemas que ya utiliza la empresa, la capacitación inicial y la disposición de los proveedores para integrarse a la plataforma.|
 
 
@@ -689,7 +689,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:41 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQAc_YdFgDxbSIN6wUPQrIZ-ARLL0hIcgJwoS9AJHEcnpD4?e=fdVXa8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
-| **Foto entrevista**    | <img src="assets/chapter-2/CarlosEntrevista.png" alt="Captura entrevistado Carlos Mendoza" width="150"/> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/CarlosEntrevista.png" alt="Captura entrevistado Carlos Mendoza" width="150"/> |
 | **Resumen**           | El entrevistado se desempeña como jefe de logística y operaciones comerciales, con responsabilidad sobre todo el flujo desde la solicitud del cliente hasta la entrega final del combustible, atendiendo principalmente a clientes de gran volumen en sectores como minería y agroindustria, que representan cerca del 90% de su cartera. Maneja un volumen mensual de entre 40,000 y 60,000 galones, operando bajo contratos marco anuales donde los pedidos se reciben mediante órdenes de compra enviadas por correo electrónico. El proceso incluye validaciones internas como revisión de crédito en sistemas ERP y posterior programación de la flota, lo que introduce múltiples puntos de fricción. Entre los principales problemas destacan la falta de trazabilidad en tiempo real, retrasos por burocracia interna, dependencia de correos que pueden quedar sin atención, y la necesidad constante de coordinar manualmente información con choferes para responder a clientes, lo que genera ineficiencia y sobrecarga operativa. Aunque cuentan con sistemas para contabilidad y GPS para flota, estos no están integrados, lo que limita la visibilidad completa del proceso. El entrevistado valora altamente soluciones que integren automáticamente pedidos, validaciones y despachos, permitiendo al cliente subir órdenes, validar condiciones y rastrear entregas en tiempo real sin intermediación. Asimismo, considera clave contar con reportes dinámicos para análisis de desempeño, consumo por zonas y tiempos de entrega. Señala que una plataforma centralizada representaría un salto importante en la madurez digital de la empresa, permitiendo escalar operaciones sin incrementar significativamente el personal. Finalmente, destaca que la fidelización en su sector depende del cumplimiento estricto y la ausencia de fallas, y que una solución digital podría convertirse en una ventaja competitiva al ofrecer mayor transparencia, control y posicionamiento como socio tecnológico ante sus clientes. |
 
 - Entrevista 2:
@@ -703,7 +703,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 04:44 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQCxI6oUHNUeSrK3kLqxOqWuASqRIC7hVQ0GcfQOepRQXyY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5LRYMx |
-| **Foto entrevista**    | <img src="assets/chapter-2/LuciaEntrevista.png" alt="Captura entrevistada Lucia Fernandez" width="150"/> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/LuciaEntrevista.png" alt="Captura entrevistada Lucia Fernandez" width="150"/> |
 | **Resumen**           | La entrevistada se desempeña como gerenta de ventas en una empresa proveedora de combustible, asumiendo además funciones relacionadas con operaciones y cobranzas, atendiendo principalmente a clientes del sector transporte y logística, como flotas de camiones y talleres con tanques propios. Maneja un volumen mensual de entre 25,000 y 40,000 galones, con una gestión de pedidos altamente dependiente de canales informales como WhatsApp y llamadas telefónicas, mientras que la información se transfiere manualmente a hojas de Excel compartidas con el área de despacho. Los contratos de mayor escala se gestionan por correo, pero la operación diaria se basa principalmente en comunicación directa. Entre los principales problemas identificados destacan la pérdida de pedidos por saturación de mensajes, errores al transcribir información al sistema, y demoras en procesos como facturación y coordinación interna. Aunque cuentan con un sistema contable, no disponen de herramientas integradas para la gestión logística, dependiendo en gran medida de Excel y la memoria operativa del equipo. La entrevistada valora especialmente soluciones digitales que sean simples e intuitivas, adaptadas a usuarios no técnicos, permitiendo registrar pedidos de forma rápida y visualizar la información organizada por prioridad. Considera que una plataforma que centralice pedidos, contratos y entregas sería altamente beneficiosa, ya que reduciría errores y optimizaría el tiempo de gestión. Asimismo, destaca la importancia de contar con reportes históricos para mejorar la planificación y negociación con proveedores, y señala que la fidelización de clientes se basa en el trato directo y el acceso a crédito, pudiendo fortalecerse mediante herramientas que brinden mayor transparencia, visibilidad del estado de cuenta y seguimiento en tiempo real de los pedidos. |
 
 
@@ -717,7 +717,7 @@ Si bien **FuelPoint** está inicialmente orientada a empresas locales, el modelo
 | **Inicio del video**   | 00:00 |
 | **Fin del video**      | 07:36 |
 | **Link del video**     | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b842_upc_edu_pe/IQC2p2YWEIDGSIbGObwo0gYAAfz48MPf4PC9a2lIWsAQZVc |
-| **Foto entrevista**    | <img src="assets/chapter-2/Samuel.png" alt="Captura entrevistado Samuel" width="150"/> |
+| **Foto entrevista**    | <img src="../assets/chapter-2/Samuel.png" alt="Captura entrevistado Samuel" width="150"/> |
 | **Resumen**           | <p>El señor Samuel Roca Rey se desempeña como supervisor de logística y operaciones en la empresa. Cuenta con un perfil de personalidad <strong>metódico, pragmático y muy enfocado en la seguridad operativa</strong>. Su gestión diaria está fuertemente influenciada por las normas de seguridad de <strong>OSINERGMIN</strong> y buenas prácticas en distribución.</p><p>Indica que la comunicación operativa con los choferes y clientes se efectúa a través de <strong>llamadas de voz por teléfono celular y correo electrónico (Outlook)</strong>, usando <strong>Microsoft Excel</strong> para sus registros. Desarrolla su trabajo mediante una <strong>computadora de escritorio Lenovo y un teléfono móvil Motorola</strong>, navegando a través de <strong>Microsoft Edge</strong>.</p><p>Samuel describe problemas recurrentes de trazabilidad física del combustible y errores de tipeo manual que alteran la precisión. Señala la urgencia de implementar una solución digital que centralice todos los datos en un solo lugar seguro y accesible. Para finalizar, remarca que contar con el historial completo de transacciones en la plataforma es clave para optimizar la planificación de rutas y el control de inventarios.</p> |
 
 ### 2.2.3 Análisis de entrevistas
@@ -779,7 +779,7 @@ Los User Personas son perfiles arquetípicos que representan a los usuarios de c
 - **Tecnología:** usa laptop y computadora de escritorio con Windows y un celular Android; navega en Google Chrome.
 - **Cita:** «Necesito saber exactamente dónde está mi pedido sin tener que estar llamando todo el día».
 
-<img src="assets/chapter-2/userCarlos.png" alt="User Persona Carlos Ramírez Torres, encargado logístico de una empresa solicitante de combustible" width="600"/>
+<img src="../assets/chapter-2/userCarlos.png" alt="User Persona Carlos Ramírez Torres, encargado logístico de una empresa solicitante de combustible" width="600"/>
 
 **Segmento 2: empresas proveedoras de combustible**
 
@@ -791,7 +791,7 @@ Los User Personas son perfiles arquetípicos que representan a los usuarios de c
 - **Tecnología:** trabaja principalmente desde laptop y computadora de escritorio con Windows y usa un celular Android en campo; navega en Google Chrome.
 - **Cita:** «Si pudiera ver todos los pedidos organizados automáticamente, ahorraría horas de trabajo cada día».
 
-<img src="assets/chapter-2/userAndrea.png" alt="User Persona Andrea López Castillo, gestora de ventas regional de una empresa proveedora de combustible" width="600"/>
+<img src="../assets/chapter-2/userAndrea.png" alt="User Persona Andrea López Castillo, gestora de ventas regional de una empresa proveedora de combustible" width="600"/>
 
 Siguiendo el enfoque de Lean UX (Gothelf & Seiden, 2021), los User Personas priorizan metas, necesidades y comportamientos sobre los datos demográficos, y son documentos vivos: se actualizarán cada vez que las entrevistas o las pruebas de usabilidad aporten nueva evidencia sobre los usuarios.
 
@@ -839,7 +839,7 @@ En la situación As-Is, Carlos enfrenta un flujo de trabajo manual y poco estruc
 
 El Journey busca evidenciar los puntos críticos de su experiencia actual, identificando emociones, tareas, fricciones y oportunidades de mejora a lo largo de cada etapa (Awareness, Data Collection, Daily Management, Communication, Reporting y Evaluation). Este análisis servirá como base para diseñar una solución que centralice la información, automatice el registro de pedidos y permita el seguimiento en tiempo real.
 
- <img src="assets/chapter-2/journeyCarlos.png" alt="userJourney de Carlos"/>
+ <img src="../assets/chapter-2/journeyCarlos.png" alt="userJourney de Carlos"/>
 
 -Segmento 2: Proveedores de Combustible
 
@@ -850,7 +850,7 @@ En la situación As-Is, Andrea enfrenta un flujo de trabajo altamente demandante
 El Journey busca evidenciar los puntos críticos de su experiencia actual, identificando emociones, tareas, fricciones y oportunidades de mejora a lo largo de cada etapa (Awareness, Data Collection, Daily Management, Communication, Reporting y Evaluation). Este análisis servirá como base para diseñar una solución tecnológica que centralice pedidos, automatice la planificación logística y mejore la visibilidad operativa mediante indicadores y dashboards.
 
 
- <img src="assets/chapter-2/journeyAndrea.png" alt="UserJourney de Andrea"/>
+ <img src="../assets/chapter-2/journeyAndrea.png" alt="UserJourney de Andrea"/>
 
 ### 2.3.4 Empathy Mapping
 
@@ -859,12 +859,12 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 -Segmento 1: Empresas solicitantes de combustible
 
 
- <img src="assets/chapter-2/empathyCarlos.png" alt="empathyMapping de Carlos"/>
+ <img src="../assets/chapter-2/empathyCarlos.png" alt="empathyMapping de Carlos"/>
 
 
 -Segmento 2: Proveedores de Combustible
 
- <img src="assets/chapter-2/empathyAndrea.png" alt="empathyMapping de Andrea"/>
+ <img src="../assets/chapter-2/empathyAndrea.png" alt="empathyMapping de Andrea"/>
 
 ## 2.4 Big Picture Event Storming
 Para comprender a profundidad el dominio del negocio de FuelPoint (FullTank) y alinear la visión tecnológica con las operaciones reales de compraventa y distribución de combustible, el equipo llevó a cabo una sesión de Event Storming. Esta técnica colaborativa nos permitió identificar los hitos clave del sistema sin adelantarnos a detalles técnicos.
@@ -875,7 +875,7 @@ En esta primera etapa, el equipo realizó una lluvia de ideas desestructurada pa
 El objetivo principal fue plasmar sobre el lienzo la realidad del negocio, desde el registro de usuarios hasta el despacho físico en las cisternas, priorizando la cantidad de eventos sobre el orden cronológico o la jerarquía.
 
 <div align="center">
-  <img src="assets/chapter-2/step1.png" alt="Step 1 - Unstructured Exploration" width="100%"/>
+  <img src="../assets/chapter-2/step1.png" alt="Step 1 - Unstructured Exploration" width="100%"/>
   <p><em>Figura 2.1: Step 1 - Exploración libre de eventos de dominio.</em></p>
 </div>
 
@@ -890,7 +890,7 @@ Tras listar los eventos de dominio, procedimos a organizar el caos inicial estru
 Esta estructura temporal nos ayudó a identificar claramente las áreas críticas donde la digitalización eliminará los actuales cuellos de botella del sector.
 
 <div align="center">
-  <img src="assets/chapter-2/step2.png" alt="Step 2 - Structured Organization" width="100%"/>
+  <img src="../assets/chapter-2/step2.png" alt="Step 2 - Structured Organization" width="100%"/>
   <p><em>Figura 2.2: Step 2 - Organización temporal por flujos de negocio.</em></p>
 </div>
 
@@ -1927,7 +1927,7 @@ En el Impact Mapping del modelo de negocio digital de FullTank, desarrollado por
 A partir de estos impactos se definieron los Deliverables que la plataforma FullTank debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como [persona] deseo [acción] para [beneficio]” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
 
 
- <img src="assets/chapter-3/impactMapping.png" alt="ImpactMapping de los userPersona"/>
+ <img src="../assets/chapter-3/impactMapping.png" alt="ImpactMapping de los userPersona"/>
 
 ## 3.3 Product Backlog
 
@@ -1940,7 +1940,7 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
    - **Enlace público al tablero del Product Backlog:** [https://trello.com/b/6h5mZ8L6](https://trello.com/b/6h5mZ8L6)
 
 <div align="center">
-  <img src="assets-chapter-5/trello.png" alt="Captura de Trello con 17 historias en Product Backlog y 34 en Hecho bajo el escenario hipotético de TB1" width="850"/>
+  <img src="../assets-chapter-5/trello.png" alt="Captura de Trello con 17 historias en Product Backlog y 34 en Hecho bajo el escenario hipotético de TB1" width="850"/>
   <p><em>Figura: Captura del tablero FullTank · FuelPoint, escenario hipotético de cumplimiento del plan TB1, 8 de octubre de 2026.</em></p>
 </div>
 
@@ -2291,7 +2291,7 @@ En esta sección se presentan los esquemas estructurales (wireframes) de baja fi
 
 **Desktop Web Browser Wireframe**
 <div align="center">
-  <img src="./assets/chapter-4/Wireframe1.png" alt="Wireframe" width="100%"/>
+  <img src="./../assets/chapter-4/Wireframe1.png" alt="Wireframe" width="100%"/>
 </div>
 
 * **Header (Navegación):** Se utiliza una organización horizontal fija con el logotipo a la izquierda, los enlaces de navegación centralizados (*Home, How it works, Benefits, Pricing, Testimonials, Contact) y el botón principal de *Call to Action (*"Request a Demo"*) resaltado a la derecha para incentivar la conversión inmediata.
@@ -2306,23 +2306,23 @@ En esta sección se presentan los esquemas estructurales (wireframes) de baja fi
 
 **Hero de nuestra landing:** El hero de nuestra plataforma FullTank presenta una grafica principal relacionada con la gestión eficiente de combustible en entornos industriales, transmitiendo control, tecnología y optimización. Incluye un título claro: "Leave the chaos. behind. Manage fuel like a pro". Una breve descripción resume la propuesta de valor, destacando la automatización del proceso de compra y distribución. Un botón de llamado a la acción "Comenzar ahora" invita a los usuarios a iniciar su experiencia. En la parte superior, una barra de navegación permite acceder fácilmente a todas las secciones, garantizando una experiencia fluida e intuitiva.
 
-![alt text](assets/chapter-4/landing1.png)
+![alt text](../assets/chapter-4/landing1.png)
 
 
 **Features:** La sección de "Features" muestra las funcionalidades clave de FullTank. El diseño sigue una forma de cards para la facil lectura
 
-![alt text](assets/chapter-4/landing2.png)
+![alt text](../assets/chapter-4/landing2.png)
 
 **About Us:** La sección "About Us" presenta a FuelPoint, la empresa detrás de FullTank. Aquí compartimos nuestra misión de digitalizar la gestión de combustible y nuestros valores de innovación, eficiencia y confiabilidad.
-![alt text](assets/chapter-4/landing3.png)
+![alt text](../assets/chapter-4/landing3.png)
 
 **Plans:** En la sección "Plans", detallamos los planes de suscripción disponibles. Las tarjetas incluyen opciones como "Plan Starter" y "Plan Pro", mostrando precios, características y beneficios. También se ofrece la opción de visualizar precios mensuales o anuales, facilitando la elección según las necesidades del cliente.
 
-![alt text](assets/chapter-4/landing4.png)
+![alt text](../assets/chapter-4/landing4.png)
 
 **Footer:** El Footer de la landing page contiene enlaces útiles y recursos adicionales.
 
-![alt text](assets/chapter-4/landing5.png)
+![alt text](../assets/chapter-4/landing5.png)
 ---
 
 ## 4.4 Web Applications UX/UI Design
@@ -2343,7 +2343,7 @@ En el cuerpo de la página, la información se desglosa siguiendo una secuencia 
 Hacia el final de la navegación, se presenta una sección de planes y suscripciones que utiliza el principio de jerarquía visual para destacar la opción más equilibrada, facilitando la toma de decisiones del usuario. El diseño concluye con un pie de página (footer) que centraliza los datos de contacto y redes sociales, asegurando que el usuario tenga siempre una vía de comunicación abierta con FuelPoint. Todo el conjunto ha sido diseñado bajo criterios de diseño inclusivo, empleando dimensiones de botones generosas y una organización de elementos que prioriza la legibilidad y la facilidad de interacción en dispositivos móviles.
 
 <div align="center">
-  <img src="./assets/chapter-4/Wireframe1.png" alt="Estilos" width="310"/>
+  <img src="./../assets/chapter-4/Wireframe1.png" alt="Estilos" width="310"/>
 </div>
 
 **Wireframe 2**
@@ -2351,7 +2351,7 @@ Hacia el final de la navegación, se presenta una sección de planes y suscripci
 Este diseño presenta un layout de pantalla dividida (dos columnas). En el lado izquierdo, se observa el logotipo o texto de la marca ("Fulltank") en la esquina superior. En el centro geométrico de esta columna, hay un contenedor de inicio de sesión ("Login") que aloja dos campos de entrada de texto (representados por rectángulos gris claro) y un botón de acción primaria (rectángulo gris oscuro). El lado derecho está dominado por un gran marcador de posición gráfico (indicado por la equis).
 
 <div align="center">
-  <img src="assets/chapter-4/Login.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Login.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 3**
@@ -2359,7 +2359,7 @@ Este diseño presenta un layout de pantalla dividida (dos columnas). En el lado 
 Mantiene la misma estructura de pantalla dividida y contenedor gráfico a la derecha. El contenedor izquierdo, titulado "Create corporate Account", expande el formulario a tres campos de entrada de texto horizontales y un botón de acción primaria inferior.
 
 <div align="center">
-  <img src="assets/chapter-4/Create account.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Create account.png" alt="Estilos" width="700"/>
 </div>
 
 
@@ -2368,7 +2368,7 @@ Mantiene la misma estructura de pantalla dividida y contenedor gráfico a la der
 Esta es la vista principal (Home) de la aplicación tras el inicio de sesión. Presenta un sistema de navegación lateral izquierdo (Sidebar) con enlaces a diferentes módulos. En el área principal, emplea un patrón de diseño tipo Dashboard con una jerarquía clara: tarjetas de indicadores clave de rendimiento (KPIs) en la parte superior, gráficos centrales (tendencia de consumo y niveles de tanques con barras de progreso) y una tabla de datos (Data Table) inferior para órdenes de logística activas.
 
 <div align="center">
-  <img src="assets/chapter-4/Dashboard View.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Dashboard View.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 5**
@@ -2376,7 +2376,7 @@ Esta es la vista principal (Home) de la aplicación tras el inicio de sesión. P
 Vista dedicada a la gestión de solicitudes. Mantiene la barra lateral constante. Incorpora controles de búsqueda y acciones primarias en la esquina superior derecha. Utiliza tarjetas de resumen para el estado de las solicitudes (Totales, Pendientes, En tránsito, Completadas) y dedica la mayor parte del espacio a una tabla de datos extensa con opciones de ordenamiento (Sort), paginación y controles de acción por fila.
 
 <div align="center">
-  <img src="assets/chapter-4/Fuel Requests Management View.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Fuel Requests Management View.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 6**
@@ -2384,7 +2384,7 @@ Vista dedicada a la gestión de solicitudes. Mantiene la barra lateral constante
 Vista de reportería. Sigue la misma estructura base. Presenta KPIs financieros y de eficiencia en la parte superior. El centro visual es un gran gráfico de barras para visualizar las tendencias de consumo. En la parte inferior, una tabla de datos de "Gastos Recientes" que incluye un botón de filtrado explícito (Filter).
 
 <div align="center">
-  <img src="assets/chapter-4/Reports & Analytics View.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Reports & Analytics View.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 7**
@@ -2392,7 +2392,7 @@ Vista de reportería. Sigue la misma estructura base. Presenta KPIs financieros 
 Módulo de proveedores. Presenta un layout mixto. En la parte superior, integra un contenedor gráfico grande (posiblemente un mapa o imagen destacada) junto a una tarjeta de detalles del proveedor. Debajo, muestra tarjetas de información resumida con botones "View Details" (posiblemente para proveedores frecuentes), y finaliza con una tabla de datos paginada para listar a todos los proveedores recomendados.
 
 <div align="center">
-  <img src="assets/chapter-4/Suppliers Directory View.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/Suppliers Directory View.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 8**
@@ -2401,7 +2401,7 @@ Vista del directorio de proveedores verificados. Mantiene la barra de navegació
 
 
 <div align="center">
-  <img src="assets/chapter-4/Verified Suppliers Directory View.png" alt="Verified Suppliers Directory View" width="700"/>
+  <img src="../assets/chapter-4/Verified Suppliers Directory View.png" alt="Verified Suppliers Directory View" width="700"/>
 </div>
 
 **Wireframe 9**
@@ -2409,7 +2409,7 @@ Vista del directorio de proveedores verificados. Mantiene la barra de navegació
 Vista de detalles de seguimiento logístico o inspección. La pantalla presenta un layout complejo de paneles divisibles. En la columna izquierda, muestra tarjetas de resumen y un componente gráfico central destacado (probablemente un mapa de geolocalización o un visor de imágenes) con controles inferiores. En el panel derecho, se agrupa la información detallada del estado de la operación, barras de progreso y un botón de acción principal para gestionar el registro.
 
 <div align="center">
-  <img src="assets/chapter-4/Logistics Tracking Details View.png" alt="Add Equipment Form View" width="700"/>
+  <img src="../assets/chapter-4/Logistics Tracking Details View.png" alt="Add Equipment Form View" width="700"/>
 </div>
 
 **Wireframe 10**
@@ -2418,7 +2418,7 @@ Vista del formulario para la adición de nuevo equipamiento. Presenta un diseño
 
 HTML
 <div align="center">
-  <img src="assets/chapter-4/Add Equipment Form View.png" alt="Add Equipment Form View" width="700"/>
+  <img src="../assets/chapter-4/Add Equipment Form View.png" alt="Add Equipment Form View" width="700"/>
 </div>
 
 
@@ -2427,7 +2427,7 @@ HTML
 Vista de detalles de una solicitud de combustible específica. Mantiene la barra de navegación lateral. En la cabecera, muestra el identificador de la orden junto a espacios para botones de acción secundarios. El área de contenido adopta un diseño de cuadrícula (grid) asimétrico dividido en dos columnas. La columna principal (izquierda) agrupa las especificaciones de la orden, un amplio contenedor gráfico (diseñado para un mapa interactivo de seguimiento o tracking) y un componente de línea de tiempo (Timeline) para detallar los estados logísticos. La columna lateral (derecha) exhibe el perfil del proveedor con una llamada a la acción ("Contact Provider"), seguido de secciones para notas, instrucciones y documentos adjuntos.
 
 <div align="center">
-  <img src="assets/chapter-4/Request Details View.png" alt="Request Details View" width="700"/>
+  <img src="../assets/chapter-4/Request Details View.png" alt="Request Details View" width="700"/>
 </div>
 
 **Wireframe 12**
@@ -2435,7 +2435,7 @@ Vista de detalles de una solicitud de combustible específica. Mantiene la barra
 Este wireframe muestra una pantalla de gestión de inventario, cuyo propósito es visualizar y controlar los productos disponibles, permitiendo revisar existencias y realizar acciones sobre cada ítem de forma organizada.
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierInventory.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierInventory.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 13**
@@ -2443,7 +2443,7 @@ Este wireframe muestra una pantalla de gestión de inventario, cuyo propósito e
 Este wireframe muestra una pantalla de gestión de órdenes, enfocada en visualizar, organizar y dar seguimiento a pedidos, combinando una tabla principal con detalles y un panel lateral para información o acciones rápidas.
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierOrder.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierOrder.png" alt="Estilos" width="700"/>
 </div>
 
 Este wireframe muestra una pantalla de detalle de una orden, cuyo propósito es visualizar toda la información específica de un pedido, incluyendo su estado, datos relacionados y posibles acciones, en una vista más completa y organizada.
@@ -2451,7 +2451,7 @@ Este wireframe muestra una pantalla de detalle de una orden, cuyo propósito es 
 **Wireframe 14**
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierOrder2.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierOrder2.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 15**
@@ -2459,7 +2459,7 @@ Este wireframe muestra una pantalla de detalle de una orden, cuyo propósito es 
 Este wireframe muestra una pantalla para gestionar solicitudes entrantes de proveedores, donde el usuario puede revisar y tomar acciones sobre pedidos de forma rápida, usando filtros y una tabla con las solicitudes
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierRequest.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierRequest.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 16**
@@ -2467,7 +2467,7 @@ Este wireframe muestra una pantalla para gestionar solicitudes entrantes de prov
 El wireframe representa un dashboard para la gestión operativa de una plataforma logística o de suministro de combustible, cuyo propósito es centralizar información clave para la toma de decisiones.
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierDashboard.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierDashboard.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 17**
@@ -2475,7 +2475,7 @@ El wireframe representa un dashboard para la gestión operativa de una plataform
 El wireframe representa una pantalla de la cuenta, donde puede verificar los datos de su cuenta, su seguridad y ver las notificaciones
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierAccount.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierAccount.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 18**
@@ -2483,7 +2483,7 @@ El wireframe representa una pantalla de la cuenta, donde puede verificar los dat
 El wireframe representa una pantalla de fletes, donde se puede revisar el costo de los fletes y revisar que conductor será el más apropiado
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierFleet.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierFleet.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 19**
@@ -2491,7 +2491,7 @@ El wireframe representa una pantalla de fletes, donde se puede revisar el costo 
 El wireframe representa una pantalla para gestionar reportes, donde se puede revisar las ventas que fueron concluidas y las ventas actuales. Por otra parte, existen los filtos para este tipo de imagenes que les sera útil ya que permite buscar la informacion más rápido.
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierReport.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierReport.png" alt="Estilos" width="700"/>
 </div>
 
 **Wireframe 20**
@@ -2499,7 +2499,7 @@ El wireframe representa una pantalla para gestionar reportes, donde se puede rev
 El wireframe representa una pantalla de gestion de reportes, aqui se pueden revisar las estadisticas de la empresa como la cantidad de clientes o las órdenes activas. Además, se puede revisar que sector está invirtiendo más en combustible
 
 <div align="center">
-  <img src="assets/chapter-4/wireframe-supplierReport2.png" alt="Estilos" width="700"/>
+  <img src="../assets/chapter-4/wireframe-supplierReport2.png" alt="Estilos" width="700"/>
 </div>
 
 
@@ -2510,7 +2510,7 @@ El wireframe representa una pantalla de gestion de reportes, aqui se pueden revi
 La adaptación móvil de la página principal prioriza la jerarquía vertical para asegurar una navegación fluida en pantallas pequeñas. La arquitectura de información reorganiza el menú en un componente de "hamburguesa" y transforma las tarjetas de planes y beneficios en una disposición de columna única. Los botones de llamado a la acción se han redimensionado para ocupar el ancho de la pantalla, facilitando la interacción táctil y guiando al usuario directamente hacia el registro o inicio de sesión.
 
 <div align="center">
-  <img src="./assets/chapter-4/Prinicpial Mobile.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/Prinicpial Mobile.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 2**
@@ -2518,7 +2518,7 @@ La adaptación móvil de la página principal prioriza la jerarquía vertical pa
 Los wireframes de Inicio de Sesión y Recuperación de Contraseña se han simplificado al máximo para evitar la fatiga visual. En la versión móvil, los campos de entrada de datos son los protagonistas absolutos, utilizando etiquetas claras y botones de gran escala. El diseño inclusivo se evidencia en el espaciado entre elementos, optimizado para evitar errores de pulsación y garantizar un acceso rápido incluso para operarios en entornos de alta movilidad.
 
 <div align="center">
-  <img src="./assets/chapter-4/o Registro para Mobile.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/o Registro para Mobile.png" alt="Estilos" width="200"/>
 </div>
 
 ### Compradores
@@ -2528,7 +2528,7 @@ Los wireframes de Inicio de Sesión y Recuperación de Contraseña se han simpli
 Este wireframe de Búsqueda de Proveedores organiza el directorio mediante un diseño de tarjetas verticales que facilita la comparación rápida de opciones en pantallas móviles.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM1.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM1.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 4**
@@ -2536,7 +2536,7 @@ Este wireframe de Búsqueda de Proveedores organiza el directorio mediante un di
 Este wireframe del Dashboard Operativo para Compradores organiza la información crítica en una estructura vertical de cuatro niveles para un monitoreo rápido. Su arquitectura de información prioriza métricas inmediatas como órdenes activas y balance de combustible, seguidas de un gráfico de consumo semanal y el estado detallado de los tanques de almacenamiento.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM2.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM2.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 5**
@@ -2544,7 +2544,7 @@ Este wireframe del Dashboard Operativo para Compradores organiza la información
 Este wireframe de Monitoreo de Equipos utiliza un diseño de tarjetas individuales para gestionar el estado de los tanques y unidades de combustible de forma independiente. Su arquitectura de información destaca visualmente el porcentaje de llenado mediante gráficos circulares, permitiendo una lectura rápida de la capacidad y la fecha del último reabastecimiento.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM3.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM3.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 6**
@@ -2552,7 +2552,7 @@ Este wireframe de Monitoreo de Equipos utiliza un diseño de tarjetas individual
 Este wireframe de Reportes y Analítica presenta una estructura de auditoría móvil centrada en la síntesis de datos logísticos complejos. Su arquitectura de información se divide en módulos que incluyen un selector de rango de fechas, un gráfico detallado de consumo de combustible y un desglose de gastos por sede, facilitando el control financiero.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM4.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM4.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 7**
@@ -2560,7 +2560,7 @@ Este wireframe de Reportes y Analítica presenta una estructura de auditoría m�
 Este wireframe de Gestión de Solicitudes Activas organiza el flujo de pedidos mediante una lista de tarjetas de estado que permite el seguimiento en tiempo real.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM5.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM5.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 8**
@@ -2568,7 +2568,7 @@ Este wireframe de Gestión de Solicitudes Activas organiza el flujo de pedidos m
 Este wireframe de Seguimiento de Orden en Tiempo Real utiliza una arquitectura de información de alta visibilidad para reducir la incertidumbre del comprador. La interfaz prioriza un mapa geolocalizado en la parte superior, seguido de tarjetas con datos técnicos del combustible y la identificación del conductor.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM6.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM6.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 9**
@@ -2576,7 +2576,7 @@ Este wireframe de Seguimiento de Orden en Tiempo Real utiliza una arquitectura d
 Este wireframe de Recomendaciones de Proveedores implementa una arquitectura de información basada en algoritmos de confianza, priorizando a los socios con mayor puntaje de fiabilidad. La interfaz destaca una tarjeta principal para el proveedor "más confiable" con métricas de desempeño detalladas, seguida de un listado categorizado que diferencia entre proveedores contratados y bajo demanda.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM7.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM7.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 10**
@@ -2584,7 +2584,7 @@ Este wireframe de Recomendaciones de Proveedores implementa una arquitectura de 
 Este wireframe de Nueva Solicitud de Combustible implementa un flujo de formulario por pasos para guiar al comprador en la configuración de pedidos complejos. Su arquitectura de información segmenta el proceso en tres niveles lógicos: selección de producto, ubicación mediante mapa interactivo y programación de entrega, finalizando con un resumen de costos detallado.
 
 <div align="center">
-  <img src="./assets/chapter-4/WM8.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WM8.png" alt="Estilos" width="200"/>
 </div>
 
 
@@ -2595,7 +2595,7 @@ Este wireframe de Nueva Solicitud de Combustible implementa un flujo de formular
 Este wireframe organiza la gestión comercial mediante una estructura vertical de tres niveles. Su arquitectura de información prioriza el balance total y las métricas de ingresos mensuales en la parte superior, seguidas de un gráfico de desempeño de ventas y un listado de órdenes recientes para una validación rápida.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV1.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV1.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 12**
@@ -2603,7 +2603,7 @@ Este wireframe organiza la gestión comercial mediante una estructura vertical d
 Este wireframe centraliza la gestión operativa del proveedor mediante una estructura de monitoreo en tiempo real. Su arquitectura de información destaca métricas de órdenes activas y balance de combustible, seguidas de una gráfica de tendencias de venta semanal para facilitar la toma de decisiones.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV2.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV2.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 13**
@@ -2611,7 +2611,7 @@ Este wireframe centraliza la gestión operativa del proveedor mediante una estru
 Este wireframe de Gestión de Flota Activa organiza el monitoreo de vehículos mediante una lista de tarjetas de estado para un control logístico en tiempo real.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV4.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV4.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 14**
@@ -2619,7 +2619,7 @@ Este wireframe de Gestión de Flota Activa organiza el monitoreo de vehículos m
 Este wireframe de Órdenes en Progreso para proveedores centraliza el monitoreo logístico de los despachos activos mediante tarjetas con mapas integrados. Su arquitectura de información destaca el estado de tránsito, la ubicación geográfica en tiempo real y datos críticos como el tiempo estimado de llegada (ETA) y la identificación de la unidad de transporte.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV5.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV5.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 15**
@@ -2627,7 +2627,7 @@ Este wireframe de Órdenes en Progreso para proveedores centraliza el monitoreo 
 Este wireframe de Reportes de Clientes organiza la inteligencia de negocios del proveedor mediante un análisis segmentado de su cartera. Su arquitectura de información prioriza métricas generales (total de clientes y volumen) y la distribución del suministro por sectores mediante barras de progreso, facilitando la identificación de los mercados con mayor demanda.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV6.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV6.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 16**
@@ -2635,7 +2635,7 @@ Este wireframe de Reportes de Clientes organiza la inteligencia de negocios del 
 Este wireframe de Monitoreo de Inventario en Sedes organiza el estado de los depósitos mediante tarjetas de alerta que priorizan la urgencia operativa. Su arquitectura de información utiliza barras de estado y etiquetas de nivel (Critical, Optimal, Low Stock) para informar sobre el volumen de distintos combustibles en cada terminal.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV7.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV7.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 17**
@@ -2643,7 +2643,7 @@ Este wireframe de Monitoreo de Inventario en Sedes organiza el estado de los dep
 Este wireframe de Gestión de Solicitudes Entrantes permite a los proveedores procesar órdenes de logística mediante un sistema de validación rápida. Su arquitectura de información organiza las peticiones en tarjetas individuales que muestran el volumen solicitado y los ingresos proyectados, clasificando su prioridad mediante etiquetas de estado.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV8.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV8.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 18**
@@ -2651,7 +2651,7 @@ Este wireframe de Gestión de Solicitudes Entrantes permite a los proveedores pr
 Este wireframe de Manifiesto de Carga y Seguimiento del Conductor organiza la información logística detallada para una supervisión precisa de la entrega. Su arquitectura de información destaca un mapa de geolocalización superior, seguido del perfil del conductor con canales de comunicación directa y un desglose técnico de la carga.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV9.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV9.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 19**
@@ -2659,7 +2659,7 @@ Este wireframe de Manifiesto de Carga y Seguimiento del Conductor organiza la in
 Este wireframe de Perfil y Configuración de Cuenta organiza la gestión de identidad y seguridad del usuario en una estructura vertical de fácil navegación. Su arquitectura de información se divide en tres bloques lógicos: datos personales, seguridad y preferencias de notificaciones, permitiendo un control granular sobre la cuenta.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV3.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV3.png" alt="Estilos" width="200"/>
 </div>
 
 **Wireframe 20**
@@ -2667,7 +2667,7 @@ Este wireframe de Perfil y Configuración de Cuenta organiza la gestión de iden
 Este wireframe representa el Menú de Navegación Lateral (Sidebar), el componente central que articula la experiencia de usuario en ambas versiones de la aplicación.
 
 <div align="center">
-  <img src="./assets/chapter-4/WMV0.png" alt="Estilos" width="200"/>
+  <img src="./../assets/chapter-4/WMV0.png" alt="Estilos" width="200"/>
 </div>
 
 ### 4.4.2 Web Applications Wireflow Diagrams
@@ -2687,7 +2687,7 @@ Está pensado para registrar pedidos y seguirlos con la menor cantidad de pasos.
 - actualizar sus datos en **Account Settings**.
 
 <div align="center">
-  <img src="./assets/chapter-4/wireflow-buyer.png" alt="Wireflow de la aplicación web para el segmento de empresas solicitantes de combustible" width="1000"/>
+  <img src="./../assets/chapter-4/wireflow-buyer.png" alt="Wireflow de la aplicación web para el segmento de empresas solicitantes de combustible" width="1000"/>
 </div>
 
 **Wireflow del segmento proveedor (Andrea López)**
@@ -2702,7 +2702,7 @@ Prioriza la atención de muchos pedidos a la vez. Desde el Dashboard, Andrea pue
 - actualizar su **Account Settings**.
 
 <div align="center">
-  <img src="./assets/chapter-4/wireflow-supplier.png" alt="Wireflow de la aplicación web para el segmento de empresas proveedoras de combustible" width="1000"/>
+  <img src="./../assets/chapter-4/wireflow-supplier.png" alt="Wireflow de la aplicación web para el segmento de empresas proveedoras de combustible" width="1000"/>
 </div>
 
 **Transiciones principales**
@@ -2753,13 +2753,13 @@ Se presentan en versión desktop y mobile para ambos segmentos. Los componentes 
 - **Botón principal:** «Ingresar» usa el color de acento para destacar la acción.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-sign-in.png" alt="Mock-up de inicio de sesión de FullTank" width="700"/>
+  <img src="./../assets/chapter-4/mockup-sign-in.png" alt="Mock-up de inicio de sesión de FullTank" width="700"/>
 </div>
 
 **Registro de cuenta corporativa.** Mantiene la misma estructura y solicita el nombre de la empresa, el correo corporativo y la contraseña. Tras el registro, el usuario recibe un correo de validación y vuelve al inicio de sesión.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-sign-up.png" alt="Mock-up de registro de cuenta corporativa de FullTank" width="700"/>
+  <img src="./../assets/chapter-4/mockup-sign-up.png" alt="Mock-up de registro de cuenta corporativa de FullTank" width="700"/>
 </div>
 
 #### Segmento solicitante: versión desktop
@@ -2777,7 +2777,7 @@ Las pantallas del solicitante comparten:
 - **Pedidos activos:** tabla con destino, proveedor, volumen, hora estimada de llegada y estado.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mock-up desktop del dashboard del solicitante" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mock-up desktop del dashboard del solicitante" width="800"/>
 </div>
 
 **Directorio de proveedores verificados.**
@@ -2786,13 +2786,13 @@ Las pantallas del solicitante comparten:
 - **Acciones:** solicitar una cotización o marcar al proveedor como favorito.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-suppliers.png" alt="Mock-up desktop del directorio de proveedores verificados" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-suppliers.png" alt="Mock-up desktop del directorio de proveedores verificados" width="800"/>
 </div>
 
 **Recomendación de proveedores.** Destaca al proveedor más adecuado para los equipos del solicitante y compara alternativas por tipo de combustible, precio unitario, tiempo de entrega y cumplimiento.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-recommendations.png" alt="Mock-up desktop de recomendación de proveedores" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-recommendations.png" alt="Mock-up desktop de recomendación de proveedores" width="800"/>
 </div>
 
 **Nueva solicitud de combustible.** Guía el registro en tres pasos:
@@ -2804,13 +2804,13 @@ Las pantallas del solicitante comparten:
 Un panel lateral resume el pedido y su costo estimado antes de enviarlo o guardarlo como borrador.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-create-request.png" alt="Mock-up desktop del formulario de nueva solicitud de combustible" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-create-request.png" alt="Mock-up desktop del formulario de nueva solicitud de combustible" width="800"/>
 </div>
 
 **Lista de solicitudes.** Resume las solicitudes activas, las pendientes, el volumen en tránsito y las completadas en el día. La tabla permite ordenar, paginar y abrir el detalle de cada solicitud.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-requests.png" alt="Mock-up desktop de la lista de solicitudes del solicitante" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-requests.png" alt="Mock-up desktop de la lista de solicitudes del solicitante" width="800"/>
 </div>
 
 **Detalle de la solicitud.** Reúne:
@@ -2824,25 +2824,25 @@ Un panel lateral resume el pedido y su costo estimado antes de enviarlo o guarda
 Desde aquí el solicitante puede contactar al proveedor.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-request-detail.png" alt="Mock-up desktop del detalle de una solicitud" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-request-detail.png" alt="Mock-up desktop del detalle de una solicitud" width="800"/>
 </div>
 
 **Equipos.** Presenta los tanques y equipos del solicitante en tarjetas con su capacidad, su porcentaje restante y su fecha de última recarga. Cada tarjeta permite solicitar una recarga, y al pie se listan las últimas solicitudes de recarga.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-equipment.png" alt="Mock-up desktop de la gestión de equipos del solicitante" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-equipment.png" alt="Mock-up desktop de la gestión de equipos del solicitante" width="800"/>
 </div>
 
 **Reportes.** Resume el consumo total, el gasto y la eficiencia del periodo seleccionado. Muestra la tendencia semanal de consumo y la tabla de gastos recientes, y permite exportar a PDF.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-reports.png" alt="Mock-up desktop de reportes de consumo del solicitante" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-reports.png" alt="Mock-up desktop de reportes de consumo del solicitante" width="800"/>
 </div>
 
 **Configuración de la cuenta.** Permite editar los datos del perfil y el idioma, cambiar la contraseña, activar la autenticación en dos pasos y elegir qué notificaciones recibir.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-buyer-profile.png" alt="Mock-up desktop de la configuración de cuenta del solicitante" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-buyer-profile.png" alt="Mock-up desktop de la configuración de cuenta del solicitante" width="800"/>
 </div>
 
 #### Segmento proveedor: versión desktop
@@ -2857,7 +2857,7 @@ Las pantallas del proveedor comparten una barra lateral con los módulos Dashboa
 - **Órdenes activas:** tabla con destino, volumen, hora estimada y estado.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-dashboard.png" alt="Mock-up desktop del dashboard del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-dashboard.png" alt="Mock-up desktop del dashboard del proveedor" width="800"/>
 </div>
 
 **Solicitudes entrantes.** Es la bandeja de trabajo principal. Cada solicitud muestra:
@@ -2872,13 +2872,13 @@ Las pantallas del proveedor comparten una barra lateral con los módulos Dashboa
 Un registro inferior muestra las últimas acciones realizadas.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-incoming-requests.png" alt="Mock-up desktop de la bandeja de solicitudes entrantes del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-incoming-requests.png" alt="Mock-up desktop de la bandeja de solicitudes entrantes del proveedor" width="800"/>
 </div>
 
 **Órdenes en curso.** Muestra los despachos en tránsito, en carga, con retraso y entregados en el día. La tabla lista cada orden con su estado y su hora estimada, y un panel lateral agrupa las alertas prioritarias.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-orders.png" alt="Mock-up desktop de las órdenes en curso del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-orders.png" alt="Mock-up desktop de las órdenes en curso del proveedor" width="800"/>
 </div>
 
 **Detalle de la orden.** Combina:
@@ -2890,37 +2890,37 @@ Un registro inferior muestra las últimas acciones realizadas.
 - las notas y requisitos de entrega.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-order-detail.png" alt="Mock-up desktop del detalle de una orden del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-order-detail.png" alt="Mock-up desktop del detalle de una orden del proveedor" width="800"/>
 </div>
 
 **Inventario.** Muestra el stock total por tipo de combustible y las alertas activas. Una tabla lo distribuye por depósito con la capacidad ocupada y el tipo de producto, y el botón «Add Inventory» registra nuevos ingresos.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-inventory.png" alt="Mock-up desktop del inventario del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-inventory.png" alt="Mock-up desktop del inventario del proveedor" width="800"/>
 </div>
 
 **Flota.** Resume el tamaño de la flota, su disponibilidad, los mantenimientos y las alertas de seguridad. Muestra la disponibilidad de los conductores y las unidades con su estado y nivel de carga, y permite registrar un nuevo vehículo.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-fleet.png" alt="Mock-up desktop de la gestión de flota del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-fleet.png" alt="Mock-up desktop de la gestión de flota del proveedor" width="800"/>
 </div>
 
 **Reportes de ventas.** Presenta los ingresos del periodo con su tendencia mensual, la tasa de cumplimiento y el tiempo promedio de entrega. Incluye el desempeño por cliente y la exportación a PDF.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-reports.png" alt="Mock-up desktop de reportes de ventas del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-reports.png" alt="Mock-up desktop de reportes de ventas del proveedor" width="800"/>
 </div>
 
 **Reporte de clientes.** Muestra la cartera de clientes con su sector, volumen, última actividad y estado, junto con la distribución del volumen por sector industrial.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-client-reports.png" alt="Mock-up desktop del reporte de clientes del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-client-reports.png" alt="Mock-up desktop del reporte de clientes del proveedor" width="800"/>
 </div>
 
 **Configuración de la cuenta.** Ofrece las mismas opciones de perfil, seguridad y notificaciones que el solicitante, con alertas específicas de inventario.
 
 <div align="center">
-  <img src="./assets/chapter-4/mockup-desktop-supplier-profile.png" alt="Mock-up desktop de la configuración de cuenta del proveedor" width="800"/>
+  <img src="./../assets/chapter-4/mockup-desktop-supplier-profile.png" alt="Mock-up desktop de la configuración de cuenta del proveedor" width="800"/>
 </div>
 
 #### Segmento solicitante: versión mobile
@@ -2939,10 +2939,10 @@ Está pensada para un solicitante que suele estar en obra o en planta y necesita
 - **Nueva solicitud:** los tres pasos del formulario desktop en una sola columna, con el total estimado antes de enviar.
 
 <p align="center">
-  <img src="./assets/chapter-4/mockup-mobile-buyer-dashboard.png" alt="Mock-up mobile del dashboard del solicitante" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-suppliers.png" alt="Mock-up mobile del directorio de proveedores" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-recommendations.png" alt="Mock-up mobile de recomendación de proveedores" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-create-request.png" alt="Mock-up mobile de nueva solicitud de combustible" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-dashboard.png" alt="Mock-up mobile del dashboard del solicitante" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-suppliers.png" alt="Mock-up mobile del directorio de proveedores" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-recommendations.png" alt="Mock-up mobile de recomendación de proveedores" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-create-request.png" alt="Mock-up mobile de nueva solicitud de combustible" width="200"/>
 </p>
 
 - **Solicitudes:** buscador y tarjetas con el estado, el tipo de combustible, la cantidad y el acceso al detalle o al seguimiento.
@@ -2951,10 +2951,10 @@ Está pensada para un solicitante que suele estar en obra o en planta y necesita
 - **Reportes:** consumo del periodo, gasto por sede y exportación a PDF.
 
 <p align="center">
-  <img src="./assets/chapter-4/mockup-mobile-buyer-requests.png" alt="Mock-up mobile de la lista de solicitudes" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-request-detail.png" alt="Mock-up mobile del detalle de una solicitud" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-equipment.png" alt="Mock-up mobile de equipos del solicitante" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-buyer-reports.png" alt="Mock-up mobile de reportes del solicitante" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-requests.png" alt="Mock-up mobile de la lista de solicitudes" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-request-detail.png" alt="Mock-up mobile del detalle de una solicitud" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-equipment.png" alt="Mock-up mobile de equipos del solicitante" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-buyer-reports.png" alt="Mock-up mobile de reportes del solicitante" width="200"/>
 </p>
 
 #### Segmento proveedor: versión mobile
@@ -2967,10 +2967,10 @@ La versión mobile del proveedor permite supervisar la operación logística en 
 - **Seguimiento de la orden:** ubicación de la cisterna, datos del conductor con opciones de mensaje y llamada, y manifiesto de carga.
 
 <p align="center">
-  <img src="./assets/chapter-4/mockup-mobile-supplier-menu.png" alt="Mock-up mobile del menú de navegación del proveedor" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-dashboard.png" alt="Mock-up mobile del dashboard del proveedor" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-orders.png" alt="Mock-up mobile de órdenes en progreso" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-order-tracking.png" alt="Mock-up mobile del seguimiento de una orden" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-menu.png" alt="Mock-up mobile del menú de navegación del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-dashboard.png" alt="Mock-up mobile del dashboard del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-orders.png" alt="Mock-up mobile de órdenes en progreso" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-order-tracking.png" alt="Mock-up mobile del seguimiento de una orden" width="200"/>
 </p>
 
 - **Inventario:** tarjetas por depósito con el nivel de cada combustible y etiquetas de estado (crítico, óptimo o bajo).
@@ -2980,11 +2980,11 @@ La versión mobile del proveedor permite supervisar la operación logística en 
 - **Configuración de la cuenta:** perfil, seguridad y preferencias de notificación en una sola columna.
 
 <p align="center">
-  <img src="./assets/chapter-4/mockup-mobile-supplier-inventory.png" alt="Mock-up mobile del inventario del proveedor" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-fleet.png" alt="Mock-up mobile de la flota del proveedor" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-reports.png" alt="Mock-up mobile de reportes del proveedor" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-client-reports.png" alt="Mock-up mobile del reporte de clientes" width="200"/>
-  <img src="./assets/chapter-4/mockup-mobile-supplier-profile.png" alt="Mock-up mobile de la configuración de cuenta del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-inventory.png" alt="Mock-up mobile del inventario del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-fleet.png" alt="Mock-up mobile de la flota del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-reports.png" alt="Mock-up mobile de reportes del proveedor" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-client-reports.png" alt="Mock-up mobile del reporte de clientes" width="200"/>
+  <img src="./../assets/chapter-4/mockup-mobile-supplier-profile.png" alt="Mock-up mobile de la configuración de cuenta del proveedor" width="200"/>
 </p>
 
 ### 4.4.4 Web Applications User Flow Diagrams
@@ -3004,13 +3004,13 @@ Cada objetivo se relaciona con las historias de usuario del capítulo III y con 
 **Happy path.** El usuario ingresa su correo corporativo y su contraseña en la pantalla de inicio de sesión y presiona «Ingresar». El sistema valida sus credenciales y lo lleva al dashboard de su rol, desde donde puede gestionar sus pedidos.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-1-happy.png" alt="User flow del inicio de sesión: happy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-1-happy.png" alt="User flow del inicio de sesión: happy path" width="800"/>
 </div>
 
 **Unhappy path.** El usuario ingresa credenciales incorrectas. Al presionar «Ingresar», el sistema no permite el acceso y muestra el mensaje «Usuario y/o contraseña incorrectos». El usuario permanece en la misma pantalla para corregir los datos y volver a intentarlo.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-1-unhappy.png" alt="User flow del inicio de sesión: unhappy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-1-unhappy.png" alt="User flow del inicio de sesión: unhappy path" width="800"/>
 </div>
 
 #### User Goal 2: crear una cuenta corporativa
@@ -3021,7 +3021,7 @@ Cada objetivo se relaciona con las historias de usuario del capítulo III y con 
 **Happy path.** Desde el inicio de sesión, el visitante presiona «Regístrate aquí» y llega al formulario de registro. Completa el nombre de su empresa, su correo corporativo y una contraseña válida, y presiona «Registrarse». El sistema crea la cuenta y lo devuelve al inicio de sesión para que ingrese con sus nuevas credenciales.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-2-happy.png" alt="User flow del registro de cuenta: happy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-2-happy.png" alt="User flow del registro de cuenta: happy path" width="800"/>
 </div>
 
 **Unhappy paths.** Se contemplan dos errores:
@@ -3032,7 +3032,7 @@ Cada objetivo se relaciona con las historias de usuario del capítulo III y con 
 En ambos casos el sistema no crea la cuenta, se mantiene en el formulario y muestra en rojo el mensaje «Campos inválidos» o «Complete todos los campos».
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-2-unhappy.png" alt="User flow del registro de cuenta: unhappy paths" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-2-unhappy.png" alt="User flow del registro de cuenta: unhappy paths" width="800"/>
 </div>
 
 #### User Goal 3: recuperar el acceso a la cuenta
@@ -3048,13 +3048,13 @@ En ambos casos el sistema no crea la cuenta, se mantiene en el formulario y mues
 4. Presiona «Actualizar contraseña» y el proceso termina con éxito.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-3-happy.png" alt="User flow de recuperación de contraseña: happy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-3-happy.png" alt="User flow de recuperación de contraseña: happy path" width="800"/>
 </div>
 
 **Unhappy path.** El usuario ingresa un correo que no está registrado. Al presionar «Enviar código», el sistema no continúa y muestra el mensaje «Correo no registrado, ingrese un correo válido» hasta que el usuario corrija el dato.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-3-unhappy.png" alt="User flow de recuperación de contraseña: unhappy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-3-unhappy.png" alt="User flow de recuperación de contraseña: unhappy path" width="800"/>
 </div>
 
 #### User Goal 4: registrar un pedido de combustible
@@ -3070,7 +3070,7 @@ En ambos casos el sistema no crea la cuenta, se mantiene en el formulario y mues
 4. El sistema registra el pedido con estado «Pending» y lo lleva a la lista de solicitudes, donde el pedido aparece al inicio.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-4-happy.png" alt="User flow del registro de un pedido: happy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-4-happy.png" alt="User flow del registro de un pedido: happy path" width="800"/>
 </div>
 
 **Unhappy paths.** El pedido no se envía si Carlos:
@@ -3081,7 +3081,7 @@ En ambos casos el sistema no crea la cuenta, se mantiene en el formulario y mues
 El sistema se mantiene en el formulario, resalta los campos con error y explica qué debe corregirse.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-4-unhappy.png" alt="User flow del registro de un pedido: unhappy paths" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-4-unhappy.png" alt="User flow del registro de un pedido: unhappy paths" width="800"/>
 </div>
 
 #### User Goal 5: aprobar un pedido con pago validado
@@ -3097,7 +3097,7 @@ El sistema se mantiene en el formulario, resalta los campos con error y explica 
 4. El pedido cambia a «Approved», se muestra una confirmación y el solicitante recibe una notificación.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-5-happy.png" alt="User flow de la aprobación de un pedido: happy path" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-5-happy.png" alt="User flow de la aprobación de un pedido: happy path" width="800"/>
 </div>
 
 **Unhappy paths.** El pago del pedido está pendiente, es inválido o no cubre el total.
@@ -3106,7 +3106,7 @@ El sistema se mantiene en el formulario, resalta los campos con error y explica 
 - Andrea puede esperar a que el cliente regularice el pago o presionar «Reject»; en ese caso debe ingresar un motivo obligatorio antes de confirmar el rechazo.
 
 <div align="center">
-  <img src="./assets/chapter-4/user-flow-goal-5-unhappy.png" alt="User flow de la aprobación de un pedido: unhappy paths" width="800"/>
+  <img src="./../assets/chapter-4/user-flow-goal-5-unhappy.png" alt="User flow de la aprobación de un pedido: unhappy paths" width="800"/>
 </div>
 
 #### User Goal 6: despachar un pedido aprobado
@@ -3221,7 +3221,7 @@ Siguiendo a Gothelf y Seiden (2021), el tipo de prototipo se eligió según qui�
 - **Grabación de sustentación y recorrido en Microsoft Stream:** [FullTank - Sustentación y Recorrido del Prototipo Interactivo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD-Y375Tn-qTL4_5hJtuQ8QAbHWOzNnv9YkDF7B09hJdfw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i63Yxn)
 
 <div align="center">
-  <img src="assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mockup del dashboard del solicitante para el prototipo interactivo" width="750"/>
+  <img src="../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mockup del dashboard del solicitante para el prototipo interactivo" width="750"/>
   <p><em>Figura 4.28. Mockup del dashboard del solicitante utilizado en el prototipo de alta fidelidad. La grabación del recorrido se consulta en el enlace anterior.</em></p>
 </div>
 
@@ -3234,27 +3234,27 @@ Para identificar los eventos de dominio, es recomendable realizar una sesión de
 El desarrollo del proceso del Domain-Driven Design se realizó en la aplicación Miro: https://miro.com/app/board/uXjVGgOzeI4=/?share_link_id=421094077860
 
 <div align="center">
-  <img src="./assets/chapter-4/miro.jpg" alt="imagen de lo realizado en miro" width="500"/>
+  <img src="./../assets/chapter-4/miro.jpg" alt="imagen de lo realizado en miro" width="500"/>
 </div>
 
 1. Bounded Context IAM
    El bounded context IAM (Identity and Access Management) se encarga de la autenticación, autorización y gestión de credenciales dentro del sistema. Administra procesos como el registro de clientes y proveedores, inicio de sesión, recuperación de contraseñas y asignación de permisos según el rol. Su propósito es garantizar accesos seguros y controlados, asegurando que cada usuario interactúe únicamente con las funcionalidades que le corresponden dentro de la plataforma.
 <div align="center">
-  <img src="./assets/chapter-4/IAM.png" alt="Bounded context IAM" width="500"/>
+  <img src="./../assets/chapter-4/IAM.png" alt="Bounded context IAM" width="500"/>
 </div>
 
 2. Bounded Context Catalog
 El bounded context Catalog se encarga de gestionar la visualización y consulta de empresas proveedoras y los productos de combustible que ofrecen dentro del sistema. Su propósito es permitir que los solicitantes puedan explorar, comparar y evaluar diferentes opciones de combustible según disponibilidad, características y oferta de cada proveedor, facilitando así la toma de decisiones para seleccionar el producto más adecuado para sus equipos y operaciones.
 
 <div align="center">
-  <img src="./assets/chapter-4/Catalog.png" alt="Bounded context Catalog" width="500"/>
+  <img src="./../assets/chapter-4/Catalog.png" alt="Bounded context Catalog" width="500"/>
 </div>
 
 3. Bounded Context Ordering
 El bounded context Ordering se encarga de la gestión del ciclo de vida de las solicitudes y órdenes realizadas por los clientes. Administra procesos como la creación de solicitudes, validación, aceptación o rechazo por parte del proveedor, generación de órdenes, despacho, confirmación de entrega y cierre del pedido. Su propósito es orquestar el flujo principal del negocio, asegurando que cada pedido siga un proceso claro, trazable y consistente desde su inicio hasta su finalización.
 
 <div align="center">
-  <img src="./assets/chapter-4/Ordering.png" alt="Bounded context Ordering" width="500"/>
+  <img src="./../assets/chapter-4/Ordering.png" alt="Bounded context Ordering" width="500"/>
 </div>
 
 
@@ -3262,7 +3262,7 @@ El bounded context Ordering se encarga de la gestión del ciclo de vida de las s
 El bounded context Fulfillment se encarga de la gestión logística necesaria para cumplir con las órdenes generadas. Administra procesos como el registro de transportes y conductores, asignación de recursos a pedidos y ejecución del despacho. Su propósito es garantizar que la entrega del combustible se realice de manera eficiente, coordinando los recursos logísticos involucrados en la distribución.
 
 <div align="center">
-  <img src="./assets/chapter-4/Fullfillment.png" alt="Bounded context Fullfilment" width="500"/>
+  <img src="./../assets/chapter-4/Fullfillment.png" alt="Bounded context Fullfilment" width="500"/>
 </div>
 
 
@@ -3270,35 +3270,35 @@ El bounded context Fulfillment se encarga de la gestión logística necesaria pa
 El bounded context Payment se encarga de la gestión de los pagos asociados a las órdenes. Administra procesos como la solicitud de pago, registro de transacciones y aprobación del pago. Su propósito es asegurar que las operaciones económicas se realicen de manera confiable, validando que los pedidos cuenten con el respaldo financiero necesario antes de su ejecución o finalización.
 
 <div align="center">
-  <img src="./assets/chapter-4/Payment.png" alt="Bounded context Payment" width="500"/>
+  <img src="./../assets/chapter-4/Payment.png" alt="Bounded context Payment" width="500"/>
 </div>
 
 6. Bounded Context Notification
 El bounded context Notification se encarga de la generación y gestión de notificaciones dentro del sistema. Administra procesos como la creación de notificaciones y el seguimiento de su estado (leídas o no leídas). Su propósito es mantener informados a los usuarios sobre eventos relevantes, como cambios en el estado de pedidos, pagos o entregas, mejorando la comunicación dentro de la plataforma.
 
 <div align="center">
-  <img src="./assets/chapter-4/Notification.png" alt="Bounded context Notification" width="500"/>
+  <img src="./../assets/chapter-4/Notification.png" alt="Bounded context Notification" width="500"/>
 </div>
 
 7. Bounded Context Reporting & Analytics
 El bounded context Reporting & Analytics se encarga de la generación y visualización de reportes basados en la información del sistema. Administra procesos como la elaboración de reportes de ventas, consumo y métricas operativas. Su propósito es proporcionar información clave para la toma de decisiones, permitiendo analizar el comportamiento del negocio y optimizar sus procesos.
 
 <div align="center">
-  <img src="./assets/chapter-4/Reporting.png" alt="Bounded context Reporting and Analytics" width="500"/>
+  <img src="./../assets/chapter-4/Reporting.png" alt="Bounded context Reporting and Analytics" width="500"/>
 </div>
 
 8. Bounded Context Inventory
 El bounded context Inventory se encarga de la gestión de los productos de combustible ofrecidos por los proveedores dentro del sistema. Administra procesos como el registro, actualización y eliminación de productos, así como la modificación de información relacionada con precios, disponibilidad y características del combustible. Su propósito es permitir que los proveedores mantengan actualizado su inventario, asegurando que los solicitantes puedan consultar ofertas vigentes y seleccionar el producto más adecuado para sus necesidades operativas.
 
 <div align="center">
-  <img src="./assets/chapter-4/Inventory.png" alt="Bounded context Inventory" width="500"/>
+  <img src="./../assets/chapter-4/Inventory.png" alt="Bounded context Inventory" width="500"/>
 </div>
 
 9. Bounded Context Equipment
 El bounded context Equipment se encarga de la gestión y monitoreo de los equipos pertenecientes a los clientes o solicitantes dentro del sistema. Administra procesos como el registro y actualización de equipos, así como la visualización de su estado operativo y el nivel de combustible disponible en cada uno. Su propósito es permitir a los solicitantes supervisar sus hornos, maquinarias, tanques y otros equipos relacionados, facilitando el control del consumo de combustible y la planificación eficiente de sus operaciones.
 
 <div align="center">
-  <img src="./assets/chapter-4/Equipment.png" alt="Bounded context Equipment" width="500"/>
+  <img src="./../assets/chapter-4/Equipment.png" alt="Bounded context Equipment" width="500"/>
 </div>
 
 ### 4.6.2 Software Architecture Context Diagram
@@ -3321,7 +3321,7 @@ PDF Generator Service: sistema externo encargado de generar reportes en formato 
 En el diagrama se representan las relaciones entre estos elementos, destacando que los usuarios (Visitor, Client y Provider) interactúan directamente con FullTank, mientras que el sistema se encarga de orquestar la comunicación con los servicios externos (correo, almacenamiento y generación de reportes). Esta vista permite comprender el alcance del sistema, sus límites de responsabilidad y el ecosistema en el que opera antes de entrar en detalles internos.
 
 <div align="center">
-  <img src="./assets/chapter-4/SystemContextDiagram.png" alt="Context diagram" width="500"/>
+  <img src="./../assets/chapter-4/SystemContextDiagram.png" alt="Context diagram" width="500"/>
 </div>
 
 ### 4.6.3 Software Architecture Container Diagrams
@@ -3343,7 +3343,7 @@ En el diagrama se observa que los usuarios acceden inicialmente a la Landing Pag
 Esta vista permite entender la distribución de responsabilidades entre la capa de presentación (Landing Page y SPA), la capa de lógica de negocio (API) y la capa de persistencia (Database), así como las principales decisiones tecnológicas adoptadas.
 
 <div align="center">
-  <img src="./assets/chapter-4/Containers-dark.png" alt="Container diagram" width="500"/>
+  <img src="./../assets/chapter-4/Containers-dark.png" alt="Container diagram" width="500"/>
 </div>
 
 ### 4.6.4 Software Architecture Components Diagrams
@@ -3374,7 +3374,7 @@ En el diagrama se refleja cómo la Web Application consume los servicios de cada
 De esta manera, los component diagrams permiten entender cómo la arquitectura se organiza internamente en módulos coherentes con el dominio, cómo se relacionan entre sí y cómo colaboran para implementar la funcionalidad completa de FullTank.
 
 <div align="center">
-  <img src="./assets/chapter-4/BackendComponents-dark.png" alt="Component diagram" width="500"/>
+  <img src="./../assets/chapter-4/BackendComponents-dark.png" alt="Component diagram" width="500"/>
 </div>
 
 ## 4.7 Software Object-Oriented Design
@@ -3404,7 +3404,7 @@ A nivel de frontend, se modelan las clases en función de los módulos y vistas 
 **Diagrama del Frontend completo:**
 
 <div align="center">
-  <img src="assets/chapter-4/frontend.png" alt="frontend classes"/>
+  <img src="../assets/chapter-4/frontend.png" alt="frontend classes"/>
 </div>
 
 El diagrama completo del frontend muestra la organización general de la capa de presentación, incluyendo todos los bounded contexts agrupados en packages independientes, los mecanismos de gestión de estado global, el cliente HTTP centralizado con manejo de autenticación, y los componentes encargados de la protección de rutas según el rol del usuario autenticado. Cada vista se conecta a su servicio correspondiente, el cual interactúa con la capa de infraestructura para consumir los servicios REST del backend.
@@ -3415,49 +3415,49 @@ El diagrama completo del frontend muestra la organización general de la capa de
   Responsabilidad: Maneja las vistas de registro, inicio de sesión, recuperación de contraseña y edición de perfil de usuario.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_iam.png" alt="frontend iam"/>
+  <img src="../assets/chapter-4/frontend_iam.png" alt="frontend iam"/>
 </div>
 
 - **Catalog Frontend**  
   Responsabilidad: Maneja las vistas de gestión del inventario de recursos ofrecidos por el proveedor.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_catalog.png" alt="frontend catalog"/>
+  <img src="../assets/chapter-4/frontend_catalog.png" alt="frontend catalog"/>
 </div>
 
 - **Ordering Frontend**  
   Responsabilidad: Maneja las vistas del ciclo de vida completo de pedidos: creación de solicitudes, aprobación, rechazo, despacho, confirmación de entrega y cierre.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_ordering.png" alt="frontend ordering"/>
+  <img src="../assets/chapter-4/frontend_ordering.png" alt="frontend ordering"/>
 </div>
 
 - **Payment Frontend**  
   Responsabilidad: Maneja las vistas para que el cliente registre comprobantes de pago vinculados a una orden.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_payment.png" alt="frontend payment"/>
+  <img src="../assets/chapter-4/frontend_payment.png" alt="frontend payment"/>
 </div>
 
 - **Fulfillment Frontend**  
   Responsabilidad: Maneja las vistas de gestión de recursos logísticos (por ejemplo, vehículos y operadores) y la asignación de despacho a órdenes aprobadas.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_fullfillment.png" alt="frontend fullfillment"/>
+  <img src="../assets/chapter-4/frontend_fullfillment.png" alt="frontend fullfillment"/>
 </div>
 
 - **Notification Frontend**  
   Responsabilidad: Maneja el panel de notificaciones dentro de la aplicación para informar a los usuarios sobre cambios en el estado de los pedidos.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_notification.png" alt="frontend notification"/>
+  <img src="../assets/chapter-4/frontend_notification.png" alt="frontend notification"/>
 </div>
 
 - **Reporting & Analytics Frontend**  
   Responsabilidad: Maneja las vistas de visualización de métricas, gráficos de consumo o ventas, y la descarga de reportes.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_reporting.png" alt="frontend analysis"/>
+  <img src="../assets/chapter-4/frontend_reporting.png" alt="frontend analysis"/>
 </div>
 
 
@@ -3465,14 +3465,14 @@ El diagrama completo del frontend muestra la organización general de la capa de
   Responsabilidad: Maneja las vistas para que el cliente registre, actualice, elimine y visualice sus equipos (vehículos, generadores, maquinaria), incluyendo el tipo de combustible requerido y el estado operativo de cada uno.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_equipment.png" alt="frontend equipment"/>
+  <img src="../assets/chapter-4/frontend_equipment.png" alt="frontend equipment"/>
 </div>
 
 - **Inventory Frontend**  
   Responsabilidad: Maneja las vistas de gestión del inventario de combustible por parte del proveedor, incluyendo el registro, actualización y eliminación de ítems, así como la visualización de niveles de stock y precio por litro.
 
 <div align="center">
-  <img src="assets/chapter-4/frontend_inventory.png" alt="frontend inventory"/>
+  <img src="../assets/chapter-4/frontend_inventory.png" alt="frontend inventory"/>
 </div>
 
 ### Diagramas de clases del Backend
@@ -3487,7 +3487,7 @@ A nivel de backend, los diagramas de clases reflejan la implementación detallad
 **Diagrama del Backend completo:**
 
 <div align="center">
-  <img src="assets/chapter-4/backend.png" alt="backend"/>
+  <img src="../assets/chapter-4/backend.png" alt="backend"/>
 </div>
 
 El diagrama completo del backend muestra la organización de todos los bounded contexts como módulos independientes dentro del sistema. Se visualizan las dependencias entre contextos, donde el bounded context de Ordering actúa como núcleo del sistema y coordina a los demás contextos mediante interfaces.
@@ -3507,21 +3507,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
   Responsabilidad: Gestiona el registro de usuarios, autenticación, autorización y control de acceso.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_iam.png" alt="backend iam"/>
+  <img src="../assets/chapter-4/backend_iam.png" alt="backend iam"/>
 </div>
 
 - **Catalog Backend**  
   Responsabilidad: Gestiona el inventario de recursos disponibles, incluyendo stock y características relevantes.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_catalog.png" alt="backend catalog"/>
+  <img src="../assets/chapter-4/backend_catalog.png" alt="backend catalog"/>
 </div>
 
 - **Ordering Backend**  
   Responsabilidad: Orquesta el ciclo de vida completo del pedido. Es el bounded context central que coordina la interacción con los demás contextos.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_ordering.png" alt="backend ordering"/>
+  <img src="../assets/chapter-4/backend_ordering.png" alt="backend ordering"/>
 </div>
 
 
@@ -3529,21 +3529,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
   Responsabilidad: Gestiona el registro y validación de pagos asociados a órdenes.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_payment.png" alt="backend payment"/>
+  <img src="../assets/chapter-4/backend_payment.png" alt="backend payment"/>
 </div>
 
 - **Fulfillment Backend**  
   Responsabilidad: Gestiona los recursos necesarios para la ejecución de entregas y su asignación a órdenes.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_fulfillment.png" alt="backend fullfilment"/>
+  <img src="../assets/chapter-4/backend_fulfillment.png" alt="backend fullfilment"/>
 </div>
 
 - **Notification Backend**  
   Responsabilidad: Genera y gestiona notificaciones ante eventos relevantes del sistema.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_notification.png" alt="backend notification"/>
+  <img src="../assets/chapter-4/backend_notification.png" alt="backend notification"/>
 </div>
 
 
@@ -3551,21 +3551,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
   Responsabilidad: Agrega información histórica para generar métricas, análisis y reportes.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_reporting.png" alt="backend analysis"/>
+  <img src="../assets/chapter-4/backend_reporting.png" alt="backend analysis"/>
 </div>
 
 - **Equipment Backend**  
   Responsabilidad: Gestiona el registro, actualización, eliminación y consulta de los equipos del cliente, así como la asignación del tipo de combustible requerido por cada equipo.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_equipment.png" alt="backend equipment"/>
+  <img src="../assets/chapter-4/backend_equipment.png" alt="backend equipment"/>
 </div>
 
 - **Inventory Backend**  
   Responsabilidad: Gestiona el registro, actualización y eliminación de los productos de combustible del proveedor, validando la información del ítem y controlando los niveles de stock disponible y precio por litro.
 
 <div align="center">
-  <img src="assets/chapter-4/backend_inventory.png" alt="backend inventory"/>
+  <img src="../assets/chapter-4/backend_inventory.png" alt="backend inventory"/>
 </div>
 
 ## 4.8 Database Design
@@ -3574,7 +3574,7 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 La base de datos relacional almacena todos los datos del dominio del sistema. Las tablas se organizan en correspondencia directa con los bounded contexts definidos en el diseño orientado a objetos. A continuación, se detalla qué tablas pertenecen a cada contexto y cuál es su responsabilidad dentro del modelo de datos.
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos.png" alt="backend analysis"/>
+  <img src="../assets/chapter-4/baseDatos.png" alt="backend analysis"/>
 </div>
 
 
@@ -3586,7 +3586,7 @@ Responsabilidad: Almacena la información de usuarios, sesiones y las extensione
 - PROVIDER: extensión del perfil para empresas proveedoras (id_provider, id_user FK, company_name, company_ruc, description, created_at).
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_identity.png" alt="tablas de identity"/>
+  <img src="../assets/chapter-4/baseDatos_identity.png" alt="tablas de identity"/>
 </div>
 
 
@@ -3597,7 +3597,7 @@ Responsabilidad: Almacena el inventario disponible de cada proveedor, incluyendo
 
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_catalogo.png" alt="tablas de catalogo"/>
+  <img src="../assets/chapter-4/baseDatos_catalogo.png" alt="tablas de catalogo"/>
 </div>
 
 
@@ -3610,7 +3610,7 @@ Responsabilidad: Almacena el ciclo de vida completo de solicitudes y órdenes, i
 
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_ordering.png" alt="tablas de orders"/>
+  <img src="../assets/chapter-4/baseDatos_ordering.png" alt="tablas de orders"/>
 </div>
 
 
@@ -3620,7 +3620,7 @@ Responsabilidad: Almacena los registros de pago asociados a las órdenes.
 - PAYMENT: comprobante de pago vinculado a una orden (id_payment, id_order FK, operation_code, amount, bank_name, voucher_url, payment_date, status, registered_at).
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
+  <img src="../assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
 </div>
 
 
@@ -3632,7 +3632,7 @@ Responsabilidad: Almacena los recursos logísticos y su asignación a órdenes.
 - DISPATCH: asignación de recursos a una orden (id_dispatch, id_order FK, id_transport FK, id_driver FK, assigned_at, status).
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_fullfillment.png" alt="tablas de fullfilment"/>
+  <img src="../assets/chapter-4/baseDatos_fullfillment.png" alt="tablas de fullfilment"/>
 </div>
 
 Notification — Base de datos
@@ -3641,7 +3641,7 @@ Responsabilidad: Almacena las notificaciones generadas por eventos del sistema.
 - NOTIFICATION: notificación asociada a un usuario (id_notification, id_user FK, id_order FK, type, message, is_read, created_at).
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_notification.png" alt="tablas de fullfilment"/>
+  <img src="../assets/chapter-4/baseDatos_notification.png" alt="tablas de fullfilment"/>
 </div>
 
 
@@ -3651,7 +3651,7 @@ Responsabilidad: Almacena la información de reportes generados a partir de dato
 - REPORT: reporte generado por un usuario (id_report, id_user FK, type, pdf_url, generated_at).
 
 <div align="center">
-  <img src="assets/chapter-4/baseDatos_analysis.png" alt="tablas de analysis"/>
+  <img src="../assets/chapter-4/baseDatos_analysis.png" alt="tablas de analysis"/>
 </div>
 
 
@@ -4302,26 +4302,26 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
 
 En el sprint 1 se diseñó el primer modelo de la landing page. Esta cuenta con diferentes secciones para acceso de los usuarios. Algunas evidencias son:
 - **Home:** Presenta de manera rápida el propósito y valor de FullTank para captar la atención del visitante.
-![Home](assets-chapter-5/HomeLandingPage.png)
+![Home](../assets-chapter-5/HomeLandingPage.png)
 
 - **About Us:** Explica quiénes somos y nuestra misión para generar confianza.
-![About Us 1](assets-chapter-5/AboutUs1LandingPage.png)
-![About Us 2](assets-chapter-5/AboutUs2LandingPage2.png)
+![About Us 1](../assets-chapter-5/AboutUs1LandingPage.png)
+![About Us 2](../assets-chapter-5/AboutUs2LandingPage2.png)
 
 - **Benefits:** Explica los beneficios de implementar FullTank en el área logística de la empresa.
-![Benefits](assets-chapter-5/BenefitsLandingPage.png)
+![Benefits](../assets-chapter-5/BenefitsLandingPage.png)
 
 - **How it works?:** Describe de forma sencilla y visual el funcionamiento de FullTank paso a paso.
-![How it works?](assets-chapter-5/HowItWorksLandingPage.png)
+![How it works?](../assets-chapter-5/HowItWorksLandingPage.png)
 
 - **Testimonials:** Muestra algunas de las empresas o usuarios que confían en FullTank como referencia de credibilidad.
-![Testimonials](assets-chapter-5/TestimonialsLandingPage.png)
+![Testimonials](../assets-chapter-5/TestimonialsLandingPage.png)
 
 - **Pricing:** Propone planes y precios que puedan acomodarse a las necesidades del usuario.
-![Pricing](assets-chapter-5/PricingLandingPage.png)
+![Pricing](../assets-chapter-5/PricingLandingPage.png)
 
 - **Contact Us:** Ofrece un formulario y datos de contacto directo para resolver dudas o solicitar soporte.
-![Contact Us](assets-chapter-5/ContactUsLandingPage.png)
+![Contact Us](../assets-chapter-5/ContactUsLandingPage.png)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -4349,13 +4349,13 @@ Evidencia de Colaboración:
 Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
 
 ##### Insights
-![Insights](assets-chapter-5/insights.png)
+![Insights](../assets-chapter-5/insights.png)
 
 ##### Contributors
-![Contributors](assets-chapter-5/Contributors.png)
+![Contributors](../assets-chapter-5/Contributors.png)
 
 ##### Network graph
-![Network graph](assets-chapter-5/network.png)
+![Network graph](../assets-chapter-5/network.png)
 
 Principales Herramientas de Comunicación:
 - GitHub (control de versiones y manejo de issues)
@@ -4644,7 +4644,7 @@ Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cad
 
 **Relación con el despliegue:** la demo integrada está disponible en Firebase Hosting y fue recorrida para las capturas de 5.2.2.5. El repositorio oficial cuenta con un pipeline de CI/CD automatizado en GitHub Actions que ejecuta pruebas unitarias y despliega a producción en cada push.
 
-**Evidencia conservada:** [consulta de Pull Requests](assets/chapter-5/ejecucion-tb1/github-pull-requests.json) y [registro de verificación](assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md).
+**Evidencia conservada:** [consulta de Pull Requests](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json) y [registro de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md).
 
 ---
 
@@ -4665,15 +4665,15 @@ La captura del reproductor confirma el nombre del archivo y la duración de la e
 Se comprobó el ingreso de las dos cuentas demo y el cierre de sesión. El registro muestra la selección entre comprador y proveedor. La recuperación de contraseña (US-16) sigue pendiente. El texto de marca «PrimeFuel» aún visible en el login/registro proviene de la versión desplegada y debe actualizarse a FuelPoint en una siguiente publicación.
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Acceso real a FullTank y credenciales de demostración, vista de escritorio." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Acceso real a FullTank y credenciales de demostración, vista de escritorio." width="850"/>
   <p><em>Acceso real a FullTank y credenciales de demostración, vista de escritorio.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/login-mobile.png" alt="Inicio de sesión en el despliegue, vista móvil." width="300"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/login-mobile.png" alt="Inicio de sesión en el despliegue, vista móvil." width="300"/>
   <p><em>Inicio de sesión en el despliegue, vista móvil.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/registro-mobile.png" alt="Formulario real de registro, vista móvil; no se creó una cuenta durante la revisión." width="300"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/registro-mobile.png" alt="Formulario real de registro, vista móvil; no se creó una cuenta durante la revisión." width="300"/>
   <p><em>Formulario real de registro, vista móvil; no se creó una cuenta durante la revisión.</em></p>
 </div>
 
@@ -4682,32 +4682,32 @@ Se comprobó el ingreso de las dos cuentas demo y el cierre de sesión. El regis
 Se consultaron el dashboard, catálogo de proveedores, equipos y solicitudes. La creación de una nueva solicitud comienza desde el catálogo. Se capturaron los estados de las solicitudes precargadas y las alertas de los equipos.
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/buyer-dashboard-desktop.png" alt="Dashboard del comprador con indicadores y órdenes precargadas." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-desktop.png" alt="Dashboard del comprador con indicadores y órdenes precargadas." width="850"/>
   <p><em>Dashboard del comprador con indicadores y órdenes precargadas.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo real de proveedores y combustibles de la demo." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo real de proveedores y combustibles de la demo." width="850"/>
   <p><em>Catálogo real de proveedores y combustibles de la demo.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/equipos-desktop.png" alt="Equipos del comprador con capacidad y nivel de combustible." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/equipos-desktop.png" alt="Equipos del comprador con capacidad y nivel de combustible." width="850"/>
   <p><em>Equipos del comprador con capacidad y nivel de combustible.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario real de solicitud desde el detalle del proveedor" width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario real de solicitud desde el detalle del proveedor" width="850"/>
   <p><em>Formulario de solicitud del proveedor con selección de combustible, equipo, cantidad, dirección y fecha. No se envió una solicitud durante la revisión.</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Listado real de solicitudes y sus estados." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Listado real de solicitudes y sus estados." width="850"/>
   <p><em>Listado real de solicitudes y sus estados.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/buyer-dashboard-mobile.png" alt="Dashboard del comprador en móvil con la barra lateral contraída." width="300"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-mobile.png" alt="Dashboard del comprador en móvil con la barra lateral contraída." width="300"/>
   <p><em>Dashboard del comprador en móvil con la barra lateral contraída.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/equipos-mobile.png" alt="Consulta de equipos en móvil con navegación contraída." width="300"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/equipos-mobile.png" alt="Consulta de equipos en móvil con navegación contraída." width="300"/>
   <p><em>Consulta de equipos en móvil con navegación contraída.</em></p>
 </div>
 
@@ -4716,27 +4716,27 @@ Se consultaron el dashboard, catálogo de proveedores, equipos y solicitudes. La
 Se accedió con `dispatch@petroandes.com` y se consultaron el dashboard, las solicitudes pendientes con acciones de aceptar/rechazar, inventario, flota y conductores. Estas capturas registran la consulta; no se efectuó un despacho durante esta revisión.
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/provider-dashboard-desktop.png" alt="Dashboard del proveedor con solicitudes y órdenes de la demo." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-desktop.png" alt="Dashboard del proveedor con solicitudes y órdenes de la demo." width="850"/>
   <p><em>Dashboard del proveedor con solicitudes y órdenes de la demo.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/pendientes-proveedor-desktop.png" alt="Solicitudes pendientes visibles para el proveedor." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/pendientes-proveedor-desktop.png" alt="Solicitudes pendientes visibles para el proveedor." width="850"/>
   <p><em>Solicitudes pendientes visibles para el proveedor.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/inventario-desktop.png" alt="Inventario del proveedor con stock físico, reservado y disponible." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/inventario-desktop.png" alt="Inventario del proveedor con stock físico, reservado y disponible." width="850"/>
   <p><em>Inventario del proveedor con stock físico, reservado y disponible.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/flota-desktop.png" alt="Flota registrada y estados de los vehículos." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/flota-desktop.png" alt="Flota registrada y estados de los vehículos." width="850"/>
   <p><em>Flota registrada y estados de los vehículos.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/conductores-desktop.png" alt="Registro de conductores y disponibilidad." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/conductores-desktop.png" alt="Registro de conductores y disponibilidad." width="850"/>
   <p><em>Registro de conductores y disponibilidad.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/provider-dashboard-mobile.png" alt="Dashboard del proveedor en móvil con navegación contraída." width="300"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-mobile.png" alt="Dashboard del proveedor en móvil con navegación contraída." width="300"/>
   <p><em>Dashboard del proveedor en móvil con navegación contraída.</em></p>
 </div>
 
@@ -4745,11 +4745,11 @@ Se accedió con `dispatch@petroandes.com` y se consultaron el dashboard, las sol
 La vista muestra órdenes pendientes y permite abrir el formulario de pago demo con opciones Card/Yape. Se verificó la apertura del formulario, sin confirmar un pago ni ingresar datos financieros reales. La versión observada no corresponde al flujo de carga de comprobante bancario descrito en la planificación de US-08; ese criterio debe revisarse con el equipo antes de cerrar la historia.
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Órdenes pendientes de pago en la demo académica." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Órdenes pendientes de pago en la demo académica." width="850"/>
   <p><em>Órdenes pendientes de pago en la demo académica.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/pago-demo-desktop.png" alt="Formulario de pago simulado abierto desde la aplicación desplegada." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/pago-demo-desktop.png" alt="Formulario de pago simulado abierto desde la aplicación desplegada." width="850"/>
   <p><em>Formulario de pago simulado abierto desde la aplicación desplegada.</em></p>
 </div>
 
@@ -4758,15 +4758,15 @@ La vista muestra órdenes pendientes y permite abrir el formulario de pago demo 
 Se consultaron los reportes del comprador y proveedor, sus filtros de periodo y los gráficos de gasto/ingreso. Se visualizó el historial de notificaciones precargadas. No se encontró una acción de exportación PDF en estas pantallas; **US-35 y TSK-221 siguen pendientes**.
 
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Reporte del comprador con gráficos de gasto y desglose por equipo." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Reporte del comprador con gráficos de gasto y desglose por equipo." width="850"/>
   <p><em>Reporte del comprador con gráficos de gasto y desglose por equipo.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/reportes-proveedor-desktop.png" alt="Reporte del proveedor con ingresos, órdenes y clientes." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/reportes-proveedor-desktop.png" alt="Reporte del proveedor con ingresos, órdenes y clientes." width="850"/>
   <p><em>Reporte del proveedor con ingresos, órdenes y clientes.</em></p>
 </div>
 <div align="center">
-  <img src="assets/chapter-5/ejecucion-tb1/notificaciones-desktop.png" alt="Centro de notificaciones con eventos precargados de la demo." width="850"/>
+  <img src="../assets/chapter-5/ejecucion-tb1/notificaciones-desktop.png" alt="Centro de notificaciones con eventos precargados de la demo." width="850"/>
   <p><em>Centro de notificaciones con eventos precargados de la demo.</em></p>
 </div>
 
@@ -4849,7 +4849,7 @@ Tanto en el entorno de desarrollo local como en los runners de GitHub Actions:
 - Despliegue verificado en producción: [https://full-tank-964e2.web.app](https://full-tank-964e2.web.app), retornando código HTTP 200 y título `FullTank`.
 - Release oficial: tag `v1.0.0` generado y sincronizado en `origin/main`.
 
-Véanse [resultados de verificación](assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md) y [salida de build](assets/chapter-5/ejecucion-tb1/build-demo.txt).
+Véanse [resultados de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md) y [salida de build](../assets/chapter-5/ejecucion-tb1/build-demo.txt).
 
 ---
 
@@ -4863,13 +4863,13 @@ Evidencia de Colaboración:
 Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
 
 ##### Insights
-![Insights](assets/chapter-5/insishts-2.png)
+![Insights](../assets/chapter-5/insishts-2.png)
 
 ##### Contributors
-![Contributors](assets/chapter-5/contribuitors-2.png)
+![Contributors](../assets/chapter-5/contribuitors-2.png)
 
 ##### Network graph
-![Network graph](assets/chapter-5/network-2.png)
+![Network graph](../assets/chapter-5/network-2.png)
 
 Principales Herramientas de Comunicación:
 - GitHub (control de versiones, pull requests y code review cruzado)
@@ -4891,7 +4891,7 @@ Se contrastó la planificación de responsabilidades con los Pull Requests integ
 | Payment | Joan Palomino (`joanfpp2-ai`) | PR #10 (`feat/payment`) | Integrado en `develop` y `main`. |
 | Reporting | Joan Palomino (`joanfpp2-ai`) | PR #11 (`feat/reporting`) | Integrado en `develop` y `main`. |
 
-Fuentes: [Pull Requests del frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pulls), [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/graphs/contributors), [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/network) y [consulta conservada de la API](assets/chapter-5/ejecucion-tb1/github-pull-requests.json).
+Fuentes: [Pull Requests del frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pulls), [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/graphs/contributors), [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/network) y [consulta conservada de la API](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json).
 
 La integración exitosa de los diez Pull Requests demuestra el trabajo coordinado de los cinco integrantes del equipo bajo la estrategia GitFlow. Cada Bounded Context fue desarrollado en su rama temática correspondiente, validado con sus respectivas pruebas unitarias y coordinado a través del bus de eventos transversal (`coordination.service.js`) antes de su consolidación final y despliegue a producción.
 
