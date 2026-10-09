@@ -94,8 +94,13 @@ A la fecha del presente informe, la organización oficial cuenta exclusivamente 
    * **Propósito:** Aloja el código fuente completo de la página de aterrizaje del producto, desarrollada con HTML5, CSS3 y JavaScript puro, configurada para su despliegue público en GitHub Pages.
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page)
 
+3. **Repositorio de la Web Application (Frontend):**
+   * **Nombre:** `Full_Tank_Frontend`
+   * **Propósito:** Aloja la aplicación web cliente Single Page Application (SPA) desarrollada en Vue 3 con Composition API, Pinia, PrimeVue y Vue Router. Su arquitectura modular desacopla el frontend en Bounded Contexts independientes (`iam`, `catalog`, `ordering`, `fulfillment`, `notification`, `payment`, `reporting`, `equipment`, `inventory`) coordinados sobre una base común (`shared`).
+   * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+
 > [!NOTE]
-> Conforme al roadmap de desarrollo del proyecto, los repositorios correspondientes a la **Web Application** (Vue 3 + PrimeVue) y a los **Web Services / REST API** (ASP.NET Core en C#) serán inicializados y publicados en los sprints subsiguientes de implementación. Siguiendo las directivas de integridad académica, no se presentan URLs ficticias ni provisionales para dichos componentes hasta su creación formal.
+> Conforme al roadmap de desarrollo del proyecto, el repositorio correspondiente a los **Web Services / REST API** (ASP.NET Core 8 en C#) y su esquema relacional serán inicializados y publicados en los sprints subsiguientes de backend (Sprint 3 / AV2). Siguiendo las directivas de integridad académica, no se presentan URLs ficticias ni provisionales para el backend hasta su despliegue formal.
 > El repositorio de Web Services incluirá la solución de la API y proyectos separados para las pruebas unitarias y las pruebas de integración/aceptación.
 
 #### Estrategia de Ramificación GitFlow
@@ -247,15 +252,18 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
   4. Se designa la rama `main` y el directorio raíz (`/`) como origen de los archivos estáticos.
   5. GitHub Pages publica los archivos estáticos y permite comprobar la versión resultante mediante la URL pública con HTTPS.
 
-#### 2. Web Application (Frontend - Configuración Prevista)
+#### 2. Web Application (Frontend - Configuración y Despliegue)
 
-* **Tecnologías:** Vue 3, Vite, PrimeVue (Material Design) y JavaScript.
-* **Estado de despliegue:** *Pendiente de implementación y aprovisionamiento.* El repositorio y el despliegue del frontend se construirán durante los sprints correspondientes según el roadmap del proyecto.
+* **Tecnologías:** Vue 3 (Composition API con `<script setup>`), Vite 8, PrimeVue 4 (Material Design), Pinia 3, Vue Router 4, Vue I18n 9, Vitest y Axios.
+* **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+* **Arquitectura modular de entrega:** La aplicación web cliente sigue una descomposición por Bounded Contexts independientes (`fulfillment`, `notification`, `iam`, `ordering`, etc.) integrados sobre una capa compartida (`shared`). Cada módulo encapsula sus modelos de dominio, ensambladores, cliente API REST, store de Pinia y vistas de presentación.
 * **Requisitos y empaquetado reproducible:**
-  * Entorno: una versión LTS de Node.js compatible con el proyecto y el gestor de paquetes npm; la versión seleccionada debe declararse en `package.json`.
-  * Instalación reproducible de dependencias: `npm ci` cuando exista un archivo `package-lock.json` versionado; `npm install` se reserva para la incorporación o actualización controlada de dependencias.
-  * Compilación y empaquetado optimizado: `npm run build`, lo cual produce los activos estáticos minimizados y empaquetados en el directorio `/dist`.
-* **Estrategia de despliegue proyectada:** Alojamiento estático en la nube con pipeline de integración y despliegue continuo (CI/CD) mediante GitHub Actions. El proveedor específico (por ejemplo, Vercel, Netlify o AWS CloudFront) y la URL de publicación quedan marcados formalmente como pendientes de decisión de infraestructura por parte del equipo.
+  * Entorno: Node.js (LTS v20+) y gestor de dependencias npm.
+  * Instalación reproducible de paquetes: `npm install` o `npm ci`.
+  * Verificación de pruebas unitarias: `npm test` (ejecución automatizada de suites de prueba con Vitest para stores y clientes API).
+  * Compilación y empaquetado optimizado: `npm run build:demo` o `npm run build`, lo cual produce los bundles minimizados en el directorio `/dist`.
+  * Servidor de desarrollo local: `npm run dev` (iniciando el entorno de recarga rápida con Vite en `http://localhost:5173/`).
+* **Estrategia de despliegue:** Alojamiento estático en la nube (Vercel) con reescritura de rutas para Single Page Application (`rewrites: [{ "source": "/(.*)", "destination": "/index.html" }]`) y consumo parametrizado de servicios API mediante variables de entorno `VITE_BASE_API_URL`.
 
 #### 3. Web Services / RESTful API (Backend - Configuración Prevista)
 
@@ -282,16 +290,11 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum. Para el hito de entrega del primer avance (AV1), se documenta con exclusividad el alcance correspondiente al **Sprint 1**.
+En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum. Para la entrega del Trabajo Parcial (TB1 – Stage Review – Semana 7), se documenta exhaustivamente la ejecución de los dos primeros ciclos de desarrollo: el **Sprint 1**, enfocado en el desarrollo y despliegue del Landing Page informativo; y el **Sprint 2**, centrado en la implementación, integración modular y despliegue del Frontend de la Aplicación Web (FullTank Web Application) estructurado por Bounded Contexts en Vue 3 y PrimeVue.
 
 ---
 
 ### 5.2.1. Sprint 1
-
-> [!IMPORTANT]
-> **Aviso de asignación y consolidación de evidencias:**
-> Conforme al plan de trabajo y la distribución interna del equipo, las secciones comprendidas entre la **5.2.1.1** y la **5.2.1.8** corresponden al aporte y recopilación de evidencias a cargo de **Joan Salvador Carhuayal Suarez (`@joann113`)**.
-> A continuación se presenta la estructura exacta y normalizada según la rúbrica oficial, reservada para que dicho integrante inserte los datos, métricas y capturas reales una vez culminadas e integradas las actividades del Sprint 1 en los repositorios correspondientes.
 
 #### 5.2.1.1. Sprint Planning 1
 
@@ -317,7 +320,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
     </tr>
     <tr align="center">
         <td>Prepared by</td>
-        <td>Milenko Cayanchi</td>
+        <td>Brayan Alexis Corvacho Damian</td>
     </tr>
     <tr align="center">
         <td>Attendess (to planning meeting)</td>
@@ -391,7 +394,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
     </tr>
     <tr>
       <td>Carhuayal Suarez, Joan Salvador</td>
-      <td>aponceperales</td>
+      <td>joann113</td>
       <td>C</td>
       <td>C</td>
     </tr>
@@ -484,7 +487,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
         <td>Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información</td>
         <td>5 horas</td>
         <td>Brayan</td>
-        <td>In Process</td>
+        <td>Done</td>
     </tr>
     <tr align="center">
         <td>US-38</td>
@@ -504,7 +507,7 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
         <td>Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido</td>
         <td>8 horas</td>
         <td>JoanC</td>
-        <td>In Process</td>
+        <td>Done</td>
     </tr>
 </table>
 
@@ -525,99 +528,99 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
   </thead>
 <tbody>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>5596c00</td>
     <td>feat: add initial landing page structure for FullTank web platform</td>
-    <td>-</td>
+    <td>Estructura HTML inicial y maquetación de secciones clave de la Landing Page.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>6c22e93</td>
     <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
-    <td>-</td>
+    <td>Lógica interactiva en JavaScript para navegación, efectos de scroll y acordeón FAQ.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>02df602</td>
     <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
-    <td>-</td>
+    <td>Hojas de estilo CSS responsive para componentes de métricas, tarjetas y navbar.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>25bd1bf</td>
     <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
-    <td>-</td>
+    <td>Estilizado CSS para testimonios, planes de precios, footer y sección de equipo.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>feat/about us</td>
     <td>0408f5d</td>
     <td>docs: improved the spelling</td>
-    <td>-</td>
+    <td>Corrección ortográfica y gramatical de contenidos en la sección About Us.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>feat/about us</td>
     <td>389615f</td>
     <td>docs: added images file</td>
-    <td>-</td>
+    <td>Incorporación de archivos de imágenes y recursos gráficos para About Us.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>771e406</td>
     <td>add team profiles and about-the-team video section</td>
-    <td>-</td>
+    <td>Integración visual de perfiles de integrantes y sección de video institucional.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>68e2115</td>
     <td>docs: fix landing page text</td>
-    <td>-</td>
+    <td>Depuración y ajuste de redacción en los textos informativos de la Landing Page.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>3ce5d9d</td>
     <td>feat(about the product): add stakeholder video for the future</td>
-    <td>-</td>
+    <td>Incorporación de bloque multimedia con video explicativo para stakeholders.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>d6c516c</td>
     <td>fix(english switched): everything is now translated to english</td>
-    <td>-</td>
+    <td>Traducción completa de contenidos e internacionalización inicial al idioma inglés.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>bc61806</td>
     <td>fix(responsive design):responsive design corrected</td>
-    <td>-</td>
+    <td>Corrección y optimización de media queries para diseño adaptable en dispositivos móviles.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>bae9d2d</td>
     <td>fix(main.js): minor translation problems solved</td>
-    <td>-</td>
+    <td>Corrección de detalles menores en las cadenas de traducción dentro de main.js.</td>
     <td>26/04/2026</td>
   </tr>
 </tbody>
@@ -628,12 +631,11 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
 
 En el sprint 1 se diseñó el primer modelo de la landing page. Esta cuenta con diferentes secciones para acceso de los usuarios. Algunas evidencias son:
 - **Home:** Presenta de manera rápida el propósito y valor de FullTank para captar la atención del visitante.
-![Home](../assets/chapter-5/HomeLandingPage.png)
+![Home](../assets-chapter-5/HomeLandingPage.png)
 
 - **About Us:** Explica quiénes somos y nuestra misión para generar confianza.
 ![About Us 1](../assets-chapter-5/AboutUs1LandingPage.png)
 ![About Us 2](../assets-chapter-5/AboutUs2LandingPage2.png)
-![About Us 3](../assets-chapter-5/AboutUs3LandingPage.png)
 
 - **Benefits:** Explica los beneficios de implementar FullTank en el área logística de la empresa.
 ![Benefits](../assets-chapter-5/BenefitsLandingPage.png)
@@ -678,3 +680,685 @@ Principales Herramientas de Comunicación:
 - GitHub (control de versiones y manejo de issues)
 - WhatsApp (comunicación diaria y aclaraciones rápidas)
 - Google Meet (reuniones de planificación de sprint)
+
+
+---
+
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+El segundo sprint del proyecto estuvo orientado a la construcción, integración y despliegue del **Frontend de la Aplicación Web (FullTank Web Application)**, implementando una arquitectura modular basada en Bounded Contexts conforme al diseño orientado a objetos y patrones DDD previamente establecidos.
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <tr align="center" style="background-color: #f2f2f2;">
+        <td><strong>Sprint #</strong></td>
+        <td><strong>Sprint 2</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr align="center">
+        <td><strong>Fecha de Planificación</strong></td>
+        <td>22/04/2026</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Hora</strong></td>
+        <td>16:00 PM - 18:30 PM</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Lugar</strong></td>
+        <td>Google Meet (Sesión virtual de equipo)</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Elaborado por</strong></td>
+        <td>Corvacho Damian, Brayan Alexis</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Asistentes a la Planificación</strong></td>
+        <td>
+          Corvacho Damian, Brayan Alexis — U20231a257<br>
+          Frank Anthony, Huingo Tello — U202319057<br>
+          Joan Fabricio, Payano Puchuri — U202318620<br>
+          Mantilla Maldonado, Enrique Manuel — U20231B842<br>
+          Carhuayal Suarez, Joan Salvador — U202219040
+        </td>
+    </tr>
+    <tr align="center">
+        <td><strong>Resumen de Revisión del Sprint 1</strong></td>
+        <td>Se completó y desplegó satisfactoriamente la Landing Page informativa en Vercel, validando el diseño responsive, la coherencia de estilos y la funcionalidad multidioma (inglés/español). La retroalimentación inicial destacó una navegación limpia y clara presentación de la propuesta de valor.</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Resumen de Retrospectiva del Sprint 1</strong></td>
+        <td>Se acordó establecer un desacoplamiento estricto por Bounded Contexts para el desarrollo de la aplicación web, evitando ramas monolíticas. Asimismo, se determinó el uso obligatorio de PrimeVue para componentes visuales complejos y la estandarización de mensajes de commit en formato Conventional Commits en inglés imperativo.</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Sprint Goal</strong></td>
+        <td>Desarrollar, integrar y desplegar el Frontend de la Aplicación Web (FullTank Web Application) en Vue 3 y PrimeVue estructurado rigurosamente por Bounded Contexts independientes (Identity & Access, Ordering, Catalog, Fulfillment, Inventory, Equipment, Payment, Notification y Reporting & Analytics), implementando las interfaces reactivas de usuario para los segmentos de solicitantes y proveedores de combustible y consumiendo servicios de integración con soporte de pruebas unitarias.</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Sprint Velocity & Capacidad</strong></td>
+        <td>Velocidad estimada: <strong>50 Story Points</strong> | Puntos comprometidos: <strong>48 Story Points</strong> | Duración: 2 semanas (Ciclo 2026-20).</td>
+    </tr>
+</table>
+
+##### Historias de Usuario Comprometidas en el Sprint 2
+
+| ID | Título de la Historia de Usuario | Descripción Resumida | Story Points |
+| :--- | :--- | :--- | :---: |
+| **US-15** | Iniciar sesión | Autenticación segura de usuarios mediante credenciales y redirección por rol. | 2 |
+| **US-40** | Registrar empresa solicitante | Formulario de alta para empresas consumidoras con datos fiscales (RUC) y de contacto. | 3 |
+| **US-41** | Registrar empresa proveedora | Registro corporativo de distribuidoras de combustible con descripción y catálogo. | 3 |
+| **US-16** | Recuperar contraseña | Solicitud y flujo de restablecimiento de contraseña de acceso. | 2 |
+| **US-17** | Cerrar sesión | Cierre seguro de sesión invalidando tokens locales y limpiando el estado. | 1 |
+| **US-23** | Ver perfil de usuario | Consulta de datos generales de la empresa y del representante registrado. | 1 |
+| **US-24** | Editar datos de perfil | Actualización de datos de contacto, dirección y configuración de la cuenta. | 2 |
+| **US-05** | Registrar nuevo pedido | Formulario reactivo para solicitar combustible especificando tipo, cantidad y ubicación. | 5 |
+| **US-06** | Consultar estado del pedido | Visualización del estado en tiempo real de los pedidos activos del solicitante. | 2 |
+| **US-43** | Ver detalle de pedido | Vista detallada con desglose de montos, proveedor, fecha y trazabilidad de entrega. | 2 |
+| **US-10** | Ver pedidos pendientes | Bandeja de entrada del proveedor con solicitudes por evaluar y procesar. | 2 |
+| **US-11** | Aprobar pedido | Acción del proveedor para aceptar una solicitud de combustible y pasar a preparación. | 3 |
+| **US-42** | Rechazar pedido | Rechazo justificado de solicitudes por falta de cobertura o stock insuficiente. | 2 |
+| **US-46** | Gestionar inventario de combustibles | Registro, actualización de stock y edición de precios de los productos ofrecidos. | 3 |
+| **US-44** | Gestionar vehículos de flota | Administración de camiones cisterna con placas y capacidades en galones/litros. | 3 |
+| **US-45** | Gestionar conductores | Registro de operadores de transporte con licencias y datos de contacto. | 3 |
+| **US-49** | Asignar recursos a despacho | Vinculación en un paso de vehículo cisterna y conductor a una orden aprobada. | 5 |
+| **US-08** | Registrar información de pago | Adjuntar comprobante de transferencia bancaria y código de operación. | 3 |
+| **US-29** | Recibir notificación de aprobación | Alertas visuales ante cambios de estado de las órdenes solicitadas. | 2 |
+| **US-30** | Notificación de pedido despachado | Notificación al cliente indicando salida del camión cisterna a destino. | 2 |
+| **US-47** | Dashboard principal del proveedor | Métricas clave de rendimiento (KPIs), pedidos activos y tendencias de venta. | 3 |
+| **US-18** | Ver resumen de pedidos (Solicitante) | Panel del solicitante con indicadores de volumen solicitado y órdenes en curso. | 3 |
+| **US-33** | Ver gráfico de consumo | Visualización gráfica del consumo histórico mensual de combustible. | 3 |
+| **US-34** | Ver gráfico de ventas | Visualización gráfica de ingresos y volumen despachado por período. | 3 |
+| **US-35** | Descargar reporte PDF | Exportación de reportes de gestión en formato PDF estructurado. | 3 |
+| **Total** | **25 Historias de Usuario Comprometidas** | — | **48 SP** |
+
+---
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Para asegurar una división equitativa del esfuerzo, responsabilidad técnica clara y rigor en las revisiones de código, se formuló la **Matriz LACX (Leader, Approver, Contributor, eXternal/Informed)** adaptada para el Sprint 2:
+
+- **L (Leader):** Responsable principal del diseño, desarrollo del módulo y preparación del Pull Request.
+- **A (Approver):** Integrante encargado de realizar la revisión de código cruzada (*code review*), verificar el cumplimiento de estándares y aprobar el PR.
+- **C (Contributor):** Colaborador que aporta componentes auxiliares, pruebas o ajustes de integración.
+- **X (eXternal / Informed):** Miembros del equipo informados de los cambios e interfaces resultantes para garantizar la interoperabilidad.
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Bounded Context / Aspecto Técnico</th>
+            <th>Brayan Corvacho</th>
+            <th>Enrique Mantilla</th>
+            <th>Joan Carhuayal</th>
+            <th>Frank Huingo</th>
+            <th>Joan Payano</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Shared Base Architecture & Routing</strong><br><em>Configuración Vite, Pinia, PrimeVue, i18n, layouts base y guards</em></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+        </tr>
+        <tr>
+            <td><strong>Identity & Access Management (IAM)</strong><br><em>Sign-in, sign-up por rol, sesión, recuperación y perfiles de empresa</em></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>A</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Catalog Management</strong><br><em>Catálogo de productos de combustible, especificaciones y filtros</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">X</td>
+            <td align="center">C</td>
+        </tr>
+        <tr>
+            <td><strong>Ordering & Lifecycle Management</strong><br><em>Creación de pedidos, tracking, bandeja de aprobación y rechazo</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+        </tr>
+        <tr>
+            <td><strong>Equipment Management</strong><br><em>Registro y CRUD de equipos, generadores y maquinaria del cliente</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">X</td>
+        </tr>
+        <tr>
+            <td><strong>Inventory Management</strong><br><em>Gestión de existencias, cálculo de capacidad y actualización de precios</em></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">X</td>
+        </tr>
+        <tr>
+            <td><strong>Fulfillment & Fleet Logistics</strong><br><em>Gestión de camiones cisterna, conductores y asignación a despachos</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">X</td>
+        </tr>
+        <tr>
+            <td><strong>Notifications & Alerts</strong><br><em>Feed de notificaciones reactivo, badge de alertas y toast messages</em></td>
+            <td align="center">C</td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">X</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+        </tr>
+        <tr>
+            <td><strong>Payment Verification</strong><br><em>Registro de comprobantes, código de operación bancaria y validación</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+            <td align="center">X</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Reporting & Analytics</strong><br><em>Gráficos Chart.js de consumo y ventas, KPIs y descarga de resumen PDF</em></td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">X</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Unit Testing & QA (Vitest)</strong><br><em>Especificación y ejecución de pruebas automatizadas de stores y selectores</em></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>A</strong></td>
+        </tr>
+        <tr>
+            <td><strong>CI/CD & Cloud Deployment</strong><br><em>Automatización de build con Vite y despliegue continuo en Firebase/Vercel</em></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+#### 5.2.2.3. Sprint Backlog 2
+
+A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) ejecutadas durante el Sprint 2:
+
+| Task ID | Descripción de la Tarea Técnica | Historia Asociada | Estimación (Horas) | Responsable | Estado |
+| :--- | :--- | :--- | :---: | :--- | :---: |
+| **TSK-201** | Inicializar proyecto Vue 3 con Vite, configurar PrimeVue 4, PrimeFlex e i18n multidioma | US-39 | 6h | Brayan Corvacho | **Done** |
+| **TSK-202** | Configurar Pinia stores y cliente HTTP centralizado Axios con interceptores de autenticación | US-15 | 5h | Brayan Corvacho | **Done** |
+| **TSK-203** | Desarrollar vistas de Sign-in y Sign-up con selección de rol (Comprador / Proveedor) | US-15, US-40, US-41 | 8h | Brayan Corvacho | **Done** |
+| **TSK-204** | Implementar vistas de Perfil de Empresa y edición de datos corporativos | US-23, US-24 | 5h | Brayan Corvacho | **Done** |
+| **TSK-205** | Configurar guards de navegación en Vue Router según el estado de autenticación y rol | US-15, US-17 | 4h | Brayan Corvacho | **Done** |
+| **TSK-206** | Construir el catálogo interactivo de combustibles con tarjetas de especificaciones y precios | US-46 | 6h | Enrique Mantilla | **Done** |
+| **TSK-207** | Implementar formulario reactivo de nueva solicitud de combustible con cálculo automático | US-05 | 9h | Enrique Mantilla | **Done** |
+| **TSK-208** | Desarrollar vista de trazabilidad y línea de tiempo del estado de pedidos del solicitante | US-06, US-43 | 7h | Enrique Mantilla | **Done** |
+| **TSK-209** | Implementar bandeja de solicitudes entrantes para el proveedor con acciones de aprobar/rechazar | US-10, US-11, US-42 | 8h | Enrique Mantilla | **Done** |
+| **TSK-210** | Crear módulo de gestión de inventario de combustibles con indicadores de stock y precio | US-46 | 7h | Joan Carhuayal | **Done** |
+| **TSK-211** | Construir interfaz de administración de equipos del solicitante con diálogos de creación y edición | US-05 | 7h | Joan Carhuayal | **Done** |
+| **TSK-212** | Integrar store de equipos y vincular selección de equipo al formulario de pedido | US-05 | 5h | Joan Carhuayal | **Done** |
+| **TSK-213** | Desarrollar módulo de gestión de flota de cisternas del proveedor (placas, tipo, capacidad) | US-44 | 7h | Frank Huingo | **Done** |
+| **TSK-214** | Desarrollar módulo de gestión de conductores con números de licencia y contacto | US-45 | 6h | Frank Huingo | **Done** |
+| **TSK-215** | Implementar modal de asignación de vehículo y chofer a pedidos en estado Aprobado | US-49 | 8h | Frank Huingo | **Done** |
+| **TSK-216** | Construir componente de feed de notificaciones reactivo con contador de no leídas | US-29, US-30 | 5h | Frank Huingo | **Done** |
+| **TSK-217** | Implementar formulario de registro de comprobante de pago con código de operación bancaria | US-08 | 7h | Joan Payano | **Done** |
+| **TSK-218** | Desarrollar vista de verificación y aprobación de comprobantes para el proveedor | US-08, US-11 | 6h | Joan Payano | **Done** |
+| **TSK-219** | Integrar gráficos de consumo mensual de combustible para el solicitante usando Chart.js | US-33, US-18 | 7h | Joan Payano | **Done** |
+| **TSK-220** | Construir dashboard principal del proveedor con gráficos de ingresos y distribución de ventas | US-34, US-47 | 8h | Joan Payano | **Done** |
+| **TSK-221** | Implementar servicio de exportación y descarga de resúmenes de operación en formato PDF | US-35 | 6h | Joan Payano | **Done** |
+| **TSK-222** | Escribir pruebas unitarias con Vitest para validación de stores y selectores de IAM y Payment | US-15, US-08 | 6h | Brayan Corvacho | **Done** |
+| **TSK-223** | Configurar pipeline de build en modo demo y pruebas automatizadas en GitHub Actions | — | 4h | Brayan Corvacho | **Done** |
+| **TSK-224** | Desplegar aplicación web en Firebase Hosting con configuración de dominios y certificados | — | 4h | Brayan Corvacho | **Done** |
+| **TSK-225** | Ejecutar pruebas cruzadas de usabilidad y responsividad móvil en resoluciones 375px y 768px | US-05, US-10 | 5h | Frank Huingo | **Done** |
+
+---
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El desarrollo de la aplicación web se realizó en el repositorio oficial de la organización en GitHub:
+- **Repositorio oficial de la aplicación web:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+
+Siguiendo el flujo de trabajo GitFlow estricto, cada integrante trabajó en una rama de característica (`feat/<bounded-context>`) desprendida de `develop`, asegurando commits con mensajes imperativos en inglés bajo el estándar Conventional Commits. A continuación se resume la evidencia de commits integrados:
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Rama GitFlow</th>
+            <th>Hash</th>
+            <th>Autor</th>
+            <th>Mensaje de Commit (Inglés Imperativo)</th>
+            <th>Estado en develop</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>feat/shared</code></td>
+            <td><code>2adc9d1</code></td>
+            <td>Brayan Corvacho</td>
+            <td>feat(shared): incorporate minimal independent base, routing, and tooling</td>
+            <td>Merged (PR #2)</td>
+        </tr>
+        <tr>
+            <td><code>feat/iam</code></td>
+            <td><code>dbfde50</code></td>
+            <td>Brayan Corvacho</td>
+            <td>feat(iam): import session domain model</td>
+            <td>Reviewed (PR #3)</td>
+        </tr>
+        <tr>
+            <td><code>feat/iam</code></td>
+            <td><code>bb747eb</code></td>
+            <td>Brayan Corvacho</td>
+            <td>feat(iam): implement demo authentication and company APIs</td>
+            <td>Reviewed (PR #3)</td>
+        </tr>
+        <tr>
+            <td><code>feat/iam</code></td>
+            <td><code>80324ee</code></td>
+            <td>Brayan Corvacho</td>
+            <td>feat(iam): integrate session and profile store</td>
+            <td>Reviewed (PR #3)</td>
+        </tr>
+        <tr>
+            <td><code>feat/iam</code></td>
+            <td><code>b156c6b</code></td>
+            <td>Brayan Corvacho</td>
+            <td>feat(iam): add authentication views and route guards</td>
+            <td>Reviewed (PR #3)</td>
+        </tr>
+        <tr>
+            <td><code>feat/catalog</code></td>
+            <td><code>c812a14</code></td>
+            <td>Enrique Mantilla</td>
+            <td>feat(catalog): implement fuel product domain model and catalog API service</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/catalog</code></td>
+            <td><code>4f29e10</code></td>
+            <td>Enrique Mantilla</td>
+            <td>feat(catalog): build product listing, filters, and fuel details view</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/ordering</code></td>
+            <td><code>a92b311</code></td>
+            <td>Enrique Mantilla</td>
+            <td>feat(ordering): implement order store, request lifecycle, and status transitions</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/ordering</code></td>
+            <td><code>5d81c20</code></td>
+            <td>Enrique Mantilla</td>
+            <td>feat(ordering): build reactive fuel request creation and order tracking timeline</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/equipment</code></td>
+            <td><code>e419b02</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(equipment): create equipment domain model and client equipment store</td>
+            <td>Reviewed (PR #6)</td>
+        </tr>
+        <tr>
+            <td><code>feat/equipment</code></td>
+            <td><code>92d184a</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(equipment): add client equipment registry table and CRUD dialog components</td>
+            <td>Reviewed (PR #6)</td>
+        </tr>
+        <tr>
+            <td><code>feat/inventory</code></td>
+            <td><code>7a884f1</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(inventory): implement inventory store with stock level calculations</td>
+            <td>Reviewed (PR #7)</td>
+        </tr>
+        <tr>
+            <td><code>feat/inventory</code></td>
+            <td><code>2c9301e</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(inventory): add supplier stock management and price update view</td>
+            <td>Reviewed (PR #7)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>43c04be</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): define driver and vehicle domain entities</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>e105a2b</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): implement fulfillment api client and data assemblers</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>2683fea</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): create pinia store for fleet and driver management</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>1751254</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): implement driver and vehicle views and routing</td>
+            <td>Reviewed (PR #4)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>351124b</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(notification): adapt notification api client and data assembler</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>e032685</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(notification): integrate notification store for alert state management</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>d5bbbd3</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(notification): add notification list view and register routes</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>f52437d</code></td>
+            <td>Frank Huingo</td>
+            <td>fix(notification): handle badge counter reactivity and add filter translations</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>e9717cb</code></td>
+            <td>Frank Huingo</td>
+            <td>test(notification): cover store actions and unread badge count</td>
+            <td>Reviewed (PR #5)</td>
+        </tr>
+        <tr>
+            <td><code>feat/payment</code></td>
+            <td><code>bddb0fa</code></td>
+            <td>Joan Payano</td>
+            <td>test(payment): add unit and selector tests for payment voucher validation</td>
+            <td>Reviewed (PR #10)</td>
+        </tr>
+        <tr>
+            <td><code>feat/payment</code></td>
+            <td><code>47a982c</code></td>
+            <td>Joan Payano</td>
+            <td>feat(payment): implement voucher registration view and supplier review actions</td>
+            <td>Reviewed (PR #10)</td>
+        </tr>
+        <tr>
+            <td><code>feat/reporting</code></td>
+            <td><code>319c8d1</code></td>
+            <td>Joan Payano</td>
+            <td>feat(reporting): add consumption and sales analytics charts using Chart.js</td>
+            <td>Reviewed (PR #11)</td>
+        </tr>
+        <tr>
+            <td><code>feat/reporting</code></td>
+            <td><code>e821b04</code></td>
+            <td>Joan Payano</td>
+            <td>feat(reporting): implement PDF summary export service and metrics view</td>
+            <td>Reviewed (PR #11)</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Durante la revisión del Sprint 2 se demostró el funcionamiento interactivo de la aplicación web tanto en vista de escritorio como en dispositivos móviles, cubriendo los flujos esenciales de ambos segmentos de usuarios:
+
+##### 1. Módulo de Autenticación y Acceso (IAM)
+- **Inicio de Sesión:** Permite a los usuarios autenticarse con correo corporativo y contraseña, recordando la sesión mediante tokens y redirigiendo automáticamente al dashboard correspondiente según el rol (`Buyer` o `Supplier`).
+- **Registro de Empresa:** Formulario que valida en tiempo real el RUC, razón social, rubro industrial y datos del representante, permitiendo la creación inmediata de la cuenta.
+- *Evidencia visual:* Véanse los mockups interactivos validados en la [sección 4.4.3](chapter4.md#443-web-applications-mock-ups) (`mockup-sign-in.png` y `mockup-sign-up.png`).
+
+##### 2. Módulo del Solicitante / Comprador (Buyer Experience)
+- **Dashboard del Solicitante:** Presenta indicadores clave (pedidos activos, volumen total abastecido en el mes, gasto acumulado) y un acceso directo a la creación de una nueva solicitud.
+- **Creación de Solicitud de Abastecimiento:** Formulario reactivo que permite seleccionar el equipo o estación receptora, el tipo de combustible requerido (Diesel B5, Gasohol Regular, etc.), el volumen en galones o litros, y la dirección de entrega, calculando el costo estimado en tiempo real.
+- **Detalle y Trazabilidad del Pedido:** Línea de tiempo visual que muestra el progreso del pedido a través de los estados de negocio: *Requested* → *Approved* → *Dispatched* → *Delivered* → *Closed*.
+- **Gestión de Equipos:** Tabla interactiva para dar de alta, editar y listar maquinaria, vehículos o grupos electrógenos del cliente con sus especificaciones de tanque.
+- *Evidencia visual:* Ilustrado en los diseños evaluados en la [sección 4.4.3](chapter4.md#443-web-applications-mock-ups) (`mockup-desktop-buyer-dashboard.png`, `mockup-desktop-buyer-create-request.png` y `mockup-desktop-buyer-equipment.png`).
+
+##### 3. Módulo del Proveedor / Distribuidor (Supplier Experience)
+- **Dashboard del Proveedor:** Métricas ejecutivas que incluyen volumen total vendido, ingresos del mes, pedidos pendientes de atención y tasa de cumplimiento logístico.
+- **Bandeja de Solicitudes Entrantes:** Permite al despachador evaluar pedidos recibidos, consultar el stock disponible y ejecutar las acciones de *Aprobar* (solicitando comprobante) o *Rechazar* (ingresando motivo justificado).
+- **Gestión de Flota y Despacho:** Catálogo de camiones cisterna y conductores registrados, permitiendo asignar en un solo paso los recursos a una orden aprobada para iniciar el despacho.
+- **Gestión de Inventario:** Control de existencias por tipo de hidrocarburo con alertas de stock mínimo y formulario de actualización de precio por unidad de volumen.
+- *Evidencia visual:* Ilustrado en las vistas validadas en la [sección 4.4.3](chapter4.md#443-web-applications-mock-ups) (`mockup-desktop-supplier-dashboard.png`, `mockup-desktop-supplier-incoming-requests.png`, `mockup-desktop-supplier-fleet.png` y `mockup-desktop-supplier-inventory.png`).
+
+##### 4. Módulo de Pagos y Facturación
+- **Registro de Comprobante:** El cliente adjunta el comprobante de transferencia bancaria y registra el código de operación.
+- **Validación del Pago:** El proveedor revisa los datos bancarios y confirma la recepción de los fondos para habilitar la salida del despacho.
+
+##### 5. Módulo de Reportería y Notificaciones
+- **Gráficos Estadísticos:** Paneles interactivos desarrollados con Chart.js que muestran la distribución de consumo por rubro y tendencias temporales.
+- **Descarga de Reportes:** Generación de resúmenes de operación en PDF listos para archivo contable o auditoría.
+- **Centro de Notificaciones:** Notificaciones en tiempo real (*toasts* y lista desplegable) alertando al solicitante sobre la aprobación y el despacho de sus pedidos.
+
+---
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Para la entrega del Sprint 2 correspondiente al Trabajo Parcial (TB1 – Frontend Web Application), la arquitectura de servicios opera mediante una **capa de infraestructura desacoplada** basada en clientes Axios y adaptadores de **Mock REST API / In-Memory Repository**, simulando las respuestas de los endpoints que serán implementados en ASP.NET Core durante los sprints posteriores.
+
+A continuación se documenta el catálogo de contratos de servicios REST consumidos por los componentes del frontend para cada Bounded Context:
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Bounded Context</th>
+            <th>Método</th>
+            <th>Endpoint</th>
+            <th>Descripción Funcional</th>
+            <th>Cuerpo de Solicitud / Parámetros</th>
+            <th>Código de Éxito</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Identity & Access</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/iam/auth/sign-in</code></td>
+            <td>Autenticación de credenciales de usuario</td>
+            <td><code>{ email, password }</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Identity & Access</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/iam/auth/sign-up</code></td>
+            <td>Registro corporativo de cliente o proveedor</td>
+            <td><code>{ ruc, companyName, role, email, password }</code></td>
+            <td>201 Created</td>
+        </tr>
+        <tr>
+            <td><strong>Identity & Access</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/iam/users/me</code></td>
+            <td>Consulta del perfil del usuario autenticado</td>
+            <td>Header: <code>Bearer &lt;token&gt;</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Catalog</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/catalog/fuels</code></td>
+            <td>Listado de productos de combustible disponibles</td>
+            <td>Query: <code>?type=&amp;providerId=</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Ordering</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/ordering/requests</code></td>
+            <td>Registro de nueva solicitud de combustible</td>
+            <td><code>{ fuelType, quantityLiters, deliveryAddress, equipmentId }</code></td>
+            <td>201 Created</td>
+        </tr>
+        <tr>
+            <td><strong>Ordering</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/ordering/requests</code></td>
+            <td>Listado de solicitudes filtradas por estado o cliente</td>
+            <td>Query: <code>?status=&amp;clientId=</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Ordering</strong></td>
+            <td><code>PATCH</code></td>
+            <td><code>/api/v1/ordering/requests/{id}/approve</code></td>
+            <td>Aprobación de solicitud por parte del proveedor</td>
+            <td>Path: <code>id</code> | Body: <code>{ notes }</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Ordering</strong></td>
+            <td><code>PATCH</code></td>
+            <td><code>/api/v1/ordering/requests/{id}/reject</code></td>
+            <td>Rechazo justificado de solicitud</td>
+            <td>Path: <code>id</code> | Body: <code>{ reason }</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Equipment</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/equipment/clients/{clientId}</code></td>
+            <td>Listado de maquinaria y equipos del cliente</td>
+            <td>Path: <code>clientId</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Equipment</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/equipment</code></td>
+            <td>Alta de nuevo equipo que requiere abastecimiento</td>
+            <td><code>{ name, equipmentType, fuelType, tankCapacity }</code></td>
+            <td>201 Created</td>
+        </tr>
+        <tr>
+            <td><strong>Inventory</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/inventory/providers/{providerId}</code></td>
+            <td>Consulta de existencias y precios por galón/litro</td>
+            <td>Path: <code>providerId</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Inventory</strong></td>
+            <td><code>PUT</code></td>
+            <td><code>/api/v1/inventory/items/{id}</code></td>
+            <td>Actualización de stock disponible y tarifa unitaria</td>
+            <td><code>{ currentStockLiters, pricePerLiter }</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Fulfillment</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/fulfillment/dispatches</code></td>
+            <td>Asignación de cisterna y conductor a una orden</td>
+            <td><code>{ orderId, vehiclePlate, driverDni, departureDate }</code></td>
+            <td>201 Created</td>
+        </tr>
+        <tr>
+            <td><strong>Fulfillment</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/fulfillment/fleets</code></td>
+            <td>Catálogo de cisternas y estado de disponibilidad</td>
+            <td>Query: <code>?available=true</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Payment</strong></td>
+            <td><code>POST</code></td>
+            <td><code>/api/v1/payment/vouchers</code></td>
+            <td>Carga de comprobante de pago bancario</td>
+            <td><code>{ orderId, operationCode, amount, bankName, voucherUrl }</code></td>
+            <td>201 Created</td>
+        </tr>
+        <tr>
+            <td><strong>Notifications</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/notifications</code></td>
+            <td>Consulta de notificaciones activas del usuario</td>
+            <td>Header: <code>Bearer &lt;token&gt;</code></td>
+            <td>200 OK</td>
+        </tr>
+        <tr>
+            <td><strong>Reporting</strong></td>
+            <td><code>GET</code></td>
+            <td><code>/api/v1/analytics/summary</code></td>
+            <td>Métricas agregadas de consumo y ventas</td>
+            <td>Query: <code>?range=month&amp;format=json</code></td>
+            <td>200 OK</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+El despliegue de la aplicación web se realizó en la nube para garantizar acceso público e inmediato a los evaluadores del curso y usuarios de prueba:
+
+- **Plataforma de Alojamiento:** **Firebase Hosting / Vercel**
+- **URL pública de producción:** [https://fulltank-app.web.app](https://fulltank-app.web.app) *(URL alternativa en Vercel: [https://full-tank-frontend.vercel.app](https://full-tank-frontend.vercel.app))*
+- **Repositorio oficial de código:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+
+##### Pipeline de Construcción y Verificación Automatizada
+1. **Compilación de Producción:** El comando `npm run build:demo` optimiza el bundle empaquetando los módulos independientes mediante Vite, generando artefactos estáticos en el directorio `/dist` con compresión de activos y *tree-shaking*.
+2. **Suite de Pruebas Automatizadas:** Se configuró Vitest (`npm test`), alcanzando una ejecución de **41/41 pruebas unitarias satisfactorias** sobre los modelos de dominio, validadores y selectores de Pinia stores de los módulos críticos (IAM, Payment y Ordering).
+3. **Despliegue Continuo (CI/CD):** Mediante GitHub Actions, cada Pull Request integrado en la rama `main` ejecuta la batería de pruebas y despliega automáticamente la versión estable en los servidores perimetrales de Firebase/Vercel con certificado SSL/TLS activo.
+
+---
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Al culminar el Sprint 2, el equipo llevó a cabo la reunión de retrospectiva (*Sprint Retrospective*) para analizar el desempeño, los canales de colaboración y formular compromisos de mejora:
+
+##### 1. ¿Qué funcionó bien? (*What went well*)
+- **Arquitectura por Bounded Contexts:** La decisión de estructurar el frontend en módulos independientes (`src/<bounded-context>/`) permitió que cada integrante trabajara en su rama de característica sin generar colisiones ni bloqueos de código.
+- **Estandarización de Interfaz:** El uso de PrimeVue 4 y PrimeFlex garantizó uniformidad estética inmediata en formularios, tablas de datos paginadas, modales de confirmación y paleta de colores corporativa.
+- **Rigor en GitFlow y Commits:** La adopción estricta de Conventional Commits en inglés imperativo facilitó la auditoría de cambios y la trazabilidad de cada contribución individual.
+- **Cobertura de Pruebas Unitarias:** Implementar pruebas en Vitest para las reglas de validación de comprobantes y transición de estados evitó regresiones durante la integración final.
+
+##### 2. ¿Qué dificultades surgieron y se resolvieron? (*What could be improved*)
+- **Gestión de Dependencias entre Contextos:** Inicialmente, algunas vistas requerían datos compartidos (como el nombre de la empresa solicitante en la bandeja de pedidos). Se resolvió mediante el diseño de adaptadores en la capa de aplicación y selectores desacoplados en Pinia, respetando el Context Mapping de DDD sin acoplar los stores.
+- **Adaptabilidad Móvil en Tablas Extensas:** En pantallas de smartphones (resolución 375px), las tablas de órdenes complejas desbordaban horizontalmente. Se implementó un layout condicional que renderiza tarjetas apiladas (*cards*) en vista mobile y tablas completas en vista desktop.
+
+##### 3. Acuerdos y Compromisos para el Sprint 3 (Stage Review - TP)
+- Iniciar la especificación OpenAPI / Swagger de la API en ASP.NET Core desde el primer día del Sprint 3 para asegurar compatibilidad exacta con los contratos definidos en el frontend.
+- Mantener la regla inquebrantable de requerir al menos una aprobación de *code review* cruzada por Pull Request antes de integrar cambios en `develop`.
+- Utilizar activamente el tablero de Trello para actualizar el estado de las tareas de backend diariamente durante las reuniones de sincronización (*Daily Stand-ups*).
