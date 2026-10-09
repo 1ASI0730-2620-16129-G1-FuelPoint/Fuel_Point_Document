@@ -1149,7 +1149,12 @@ Siguiendo el flujo de trabajo GitFlow estricto, cada integrante trabajó en una 
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Durante la revisión del Sprint 2 se demostró el funcionamiento interactivo de la aplicación web tanto en vista de escritorio como en dispositivos móviles, cubriendo los flujos esenciales de ambos segmentos de usuarios:
+Durante la revisión del Sprint 2 se demostró el funcionamiento interactivo de la aplicación web tanto en vista de escritorio como en dispositivos móviles, cubriendo los flujos esenciales de ambos segmentos de usuarios.
+
+> **Grabación de Sustentación y Recorrido de la Aplicación Web (TB1):**  
+> [Ver Video de Sustentación en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBpJTQmQ-GCSLqgcJMMXiKDAdbkbObBQoDbAiynOSheS8E?e=mgfoOP&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)  
+> *(Video oficial: `2026-10-08 23-55-15.mp4` alojado en SharePoint institucional UPC).*
+
 
 ##### 1. Módulo de Autenticación y Acceso (IAM)
 - **Inicio de Sesión:** Permite a los usuarios autenticarse con correo corporativo y contraseña, recordando la sesión mediante tokens y redirigiendo automáticamente al dashboard correspondiente según el rol (`Buyer` o `Supplier`).
