@@ -1005,7 +1005,7 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
 1. **Priorización por valor de negocio:** El orden del backlog está estrictamente determinado por el impacto directo en la propuesta de valor. Se incluyen desde las primeras posiciones las Historias de Usuario correspondientes a la presencia digital del producto (Landing Page para el Sprint 1) y al núcleo transaccional de abastecimiento (gestión de solicitudes, catálogo y trazabilidad de pedidos para el Sprint 2). Las historias de soporte y seguridad se introducen de manera coherente con el valor del flujo de usuario, evitando colocarlas al inicio como un fin aislado.
 2. **Estimación en Story Points:** Cada historia cuenta con su estimación de esfuerzo relativo utilizando la secuencia de Fibonacci adaptada (1, 2, 3, 5, 8).
 3. **Herramienta de gestión oficial:** El control y priorización del Product Backlog se gestiona en la plataforma **Trello** mediante un tablero ágil público accesible para todo el equipo y evaluadores:
-   - **Enlace público al tablero del Product Backlog:** [https://trello.com/b/fulltank-project-board](https://trello.com/b/fulltank-project-board)
+   - **Enlace público al tablero del Product Backlog:** [https://trello.com/b/6h5mZ8L6](https://trello.com/b/6h5mZ8L6)
 
 <div align="center">
   <img src="../assets/chapter-3/product-backlog-trello.png" alt="Captura del tablero Product Backlog en Trello" width="850"/>
