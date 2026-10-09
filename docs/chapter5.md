@@ -1045,63 +1045,63 @@ Siguiendo el flujo de trabajo GitFlow estricto, cada integrante trabajó en una 
             <td><code>43c04be</code></td>
             <td>Frank Huingo</td>
             <td>feat(fulfillment): define driver and vehicle domain entities</td>
-            <td>Reviewed (PR #8)</td>
+            <td>Reviewed (PR #4)</td>
         </tr>
         <tr>
             <td><code>feat/fulfillment</code></td>
             <td><code>e105a2b</code></td>
             <td>Frank Huingo</td>
             <td>feat(fulfillment): implement fulfillment api client and data assemblers</td>
-            <td>Reviewed (PR #8)</td>
+            <td>Reviewed (PR #4)</td>
         </tr>
         <tr>
             <td><code>feat/fulfillment</code></td>
             <td><code>2683fea</code></td>
             <td>Frank Huingo</td>
             <td>feat(fulfillment): create pinia store for fleet and driver management</td>
-            <td>Reviewed (PR #8)</td>
+            <td>Reviewed (PR #4)</td>
         </tr>
         <tr>
             <td><code>feat/fulfillment</code></td>
             <td><code>1751254</code></td>
             <td>Frank Huingo</td>
             <td>feat(fulfillment): implement driver and vehicle views and routing</td>
-            <td>Reviewed (PR #8)</td>
+            <td>Reviewed (PR #4)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
             <td><code>351124b</code></td>
             <td>Frank Huingo</td>
             <td>feat(notification): adapt notification api client and data assembler</td>
-            <td>Reviewed (PR #9)</td>
+            <td>Reviewed (PR #5)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
             <td><code>e032685</code></td>
             <td>Frank Huingo</td>
             <td>feat(notification): integrate notification store for alert state management</td>
-            <td>Reviewed (PR #9)</td>
+            <td>Reviewed (PR #5)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
             <td><code>d5bbbd3</code></td>
             <td>Frank Huingo</td>
             <td>feat(notification): add notification list view and register routes</td>
-            <td>Reviewed (PR #9)</td>
+            <td>Reviewed (PR #5)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
             <td><code>f52437d</code></td>
             <td>Frank Huingo</td>
             <td>fix(notification): handle badge counter reactivity and add filter translations</td>
-            <td>Reviewed (PR #9)</td>
+            <td>Reviewed (PR #5)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
             <td><code>e9717cb</code></td>
             <td>Frank Huingo</td>
             <td>test(notification): cover store actions and unread badge count</td>
-            <td>Reviewed (PR #9)</td>
+            <td>Reviewed (PR #5)</td>
         </tr>
         <tr>
             <td><code>feat/payment</code></td>
