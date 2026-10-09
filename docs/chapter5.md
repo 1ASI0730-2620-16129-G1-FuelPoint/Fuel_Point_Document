@@ -1035,30 +1035,58 @@ Siguiendo el flujo de trabajo GitFlow estricto, cada integrante trabajó en una 
         </tr>
         <tr>
             <td><code>feat/equipment</code></td>
-            <td><code>e419b02</code></td>
+            <td><code>0e6ce9e</code></td>
             <td>Joan Carhuayal</td>
-            <td>feat(equipment): create equipment domain model and client equipment store</td>
+            <td>feat(equipment): import equipment domain model and entity</td>
             <td>Reviewed (PR #6)</td>
         </tr>
         <tr>
             <td><code>feat/equipment</code></td>
-            <td><code>92d184a</code></td>
+            <td><code>b85bd78</code></td>
             <td>Joan Carhuayal</td>
-            <td>feat(equipment): add client equipment registry table and CRUD dialog components</td>
+            <td>feat(equipment): adapt equipment api client and data assembler</td>
+            <td>Reviewed (PR #6)</td>
+        </tr>
+        <tr>
+            <td><code>feat/equipment</code></td>
+            <td><code>7cbbedf</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(equipment): integrate equipment pinia store and unit test</td>
+            <td>Reviewed (PR #6)</td>
+        </tr>
+        <tr>
+            <td><code>feat/equipment</code></td>
+            <td><code>b1f8e9c</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(equipment): add client equipment views and register routes</td>
             <td>Reviewed (PR #6)</td>
         </tr>
         <tr>
             <td><code>feat/inventory</code></td>
-            <td><code>7a884f1</code></td>
+            <td><code>f983a3a</code></td>
             <td>Joan Carhuayal</td>
-            <td>feat(inventory): implement inventory store with stock level calculations</td>
+            <td>feat(inventory): import product domain model and entity</td>
             <td>Reviewed (PR #7)</td>
         </tr>
         <tr>
             <td><code>feat/inventory</code></td>
-            <td><code>2c9301e</code></td>
+            <td><code>48cb9c1</code></td>
             <td>Joan Carhuayal</td>
-            <td>feat(inventory): add supplier stock management and price update view</td>
+            <td>feat(inventory): adapt inventory api client and product assembler</td>
+            <td>Reviewed (PR #7)</td>
+        </tr>
+        <tr>
+            <td><code>feat/inventory</code></td>
+            <td><code>c3c058f</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(inventory): integrate inventory store and stock calculations</td>
+            <td>Reviewed (PR #7)</td>
+        </tr>
+        <tr>
+            <td><code>feat/inventory</code></td>
+            <td><code>4561913</code></td>
+            <td>Joan Carhuayal</td>
+            <td>feat(inventory): add stock management views and register routes</td>
             <td>Reviewed (PR #7)</td>
         </tr>
         <tr>
