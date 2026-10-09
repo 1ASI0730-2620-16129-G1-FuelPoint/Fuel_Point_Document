@@ -4,6 +4,7 @@ Script de consolidación y exportación del Informe Final TB1 para FuelPoint / F
 Genera los archivos directamente en la carpeta 'entregables/':
 1. entregables/upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md
 2. entregables/upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html
+3. entregables/upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.pdf (mediante render_pdf.mjs)
 """
 
 import os
@@ -11,6 +12,8 @@ import re
 import shutil
 import subprocess
 import tempfile
+from pathlib import Path
+from bs4 import BeautifulSoup
 
 def consolidate():
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +24,7 @@ def consolidate():
 
     md_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.md")
     html_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.html")
+    pdf_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.pdf")
 
     with open(readme_path, "r", encoding="utf-8") as f:
         readme = f.read()
@@ -54,9 +58,6 @@ def consolidate():
         with open(ch_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # Las imágenes en docs/chapter*.md ya apuntan a ../assets/ y ../assets-chapter-5/
-        # lo cual es exactamente la ruta correcta desde entregables/
-
         # Ajustar enlaces cruzados entre capítulos
         content = re.sub(r'\(docs/chapter\d+\.md(#.*?)\)', r'(\1)', content)
         content = re.sub(r'\(chapter\d+\.md(#.*?)\)', r'(\1)', content)
@@ -75,7 +76,7 @@ def consolidate():
     with open(md_output, "w", encoding="utf-8") as f:
         f.write(consolidated_md)
 
-    print(f"✅ [1/2] Archivo Markdown consolidado generado en entregables:")
+    print(f"✅ [1/3] Archivo Markdown consolidado generado en entregables:")
     print(f"   Ruta: {md_output}")
     print(f"   Líneas: {len(consolidated_md.splitlines())} | Tamaño: {len(consolidated_md.encode('utf-8')) / 1024:.1f} KB")
 
@@ -92,12 +93,50 @@ def consolidate():
             encoding="utf-8"
         )
         with open(tmp_html, "r", encoding="utf-8") as f:
-            html_body = f.read()
+            raw_html_body = f.read()
     except Exception as e:
         print(f"Error compilando con marked: {e}")
         return
 
-    # Plantilla HTML con estilo académico formal y soporte de impresión PDF
+    # Post-procesar HTML con BeautifulSoup para garantizar resolución exacta de imágenes y enlaces
+    soup = BeautifulSoup(raw_html_body, "html.parser")
+
+    # 1. Normalizar rutas de todas las imágenes a file:/// absolutas
+    img_count = 0
+    for img in soup.find_all("img"):
+        src = img.get("src")
+        if not src or src.startswith("http://") or src.startswith("https://") or src.startswith("data:"):
+            continue
+        clean_src = src.split("#")[0].split("?")[0].strip()
+        candidate1 = os.path.normpath(os.path.join(entregables_dir, clean_src))
+        candidate2 = os.path.normpath(os.path.join(root_dir, clean_src))
+        
+        target_path = None
+        if os.path.exists(candidate1):
+            target_path = candidate1
+        elif os.path.exists(candidate2):
+            target_path = candidate2
+        elif os.path.isabs(clean_src) and os.path.exists(clean_src):
+            target_path = clean_src
+
+        if target_path:
+            img["src"] = Path(target_path).as_uri()
+            img["loading"] = "eager"
+            img["decoding"] = "sync"
+            img_count += 1
+        else:
+            print(f"Advertencia: no se encontró archivo para imagen: {src}")
+
+    # 2. Configurar enlaces
+    for a in soup.find_all("a"):
+        href = a.get("href", "")
+        if href.startswith("http://") or href.startswith("https://"):
+            a["target"] = "_blank"
+            a["rel"] = "noopener noreferrer"
+
+    html_body = str(soup)
+
+    # Plantilla HTML Clásica en Blanco y Negro (con enlaces en azul)
     html_template = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -106,180 +145,263 @@ def consolidate():
   <title>FullTank — Informe de Trabajo Parcial (TB1)</title>
   <style>
     @page {{
-      size: A4;
+      size: A4 portrait;
       margin: 20mm 15mm 20mm 15mm;
     }}
+    *, *:before, *:after {{
+      box-sizing: border-box;
+    }}
     body {{
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 11pt;
-      line-height: 1.6;
-      color: #1f2937;
-      background-color: #f3f4f6;
+      font-family: Arial, 'Helvetica Neue', Helvetica, 'Liberation Sans', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: #000000;
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
+      -webkit-font-smoothing: antialiased;
     }}
     .print-bar {{
       position: sticky;
       top: 0;
-      background: #1e3a8a;
-      color: white;
-      padding: 12px 24px;
+      background: #222222;
+      color: #ffffff;
+      padding: 10px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      font-size: 13px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     }}
     .print-btn {{
-      background: #fbbf24;
-      color: #1e3a8a;
+      background: #ffffff;
+      color: #000000;
       font-weight: bold;
-      border: none;
-      padding: 10px 22px;
-      border-radius: 6px;
+      border: 1px solid #666666;
+      padding: 7px 18px;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 14px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      font-size: 13px;
       transition: all 0.2s;
     }}
     .print-btn:hover {{
-      background: #f59e0b;
-      transform: translateY(-1px);
+      background: #e5e5e5;
     }}
     .container {{
-      max-width: 960px;
-      margin: 24px auto;
+      max-width: 900px;
+      margin: 20px auto;
       background: #ffffff;
-      padding: 50px 70px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      padding: 40px 60px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }}
+    
+    /* Encabezados Académicos Clásicos en Blanco y Negro */
+    h1, h2, h3, h4, h5, h6 {{
+      color: #000000;
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: bold;
+      page-break-after: avoid;
+      break-after: avoid;
     }}
     h1 {{
-      font-size: 22pt;
-      color: #1e3a8a;
-      border-bottom: 2px solid #1e3a8a;
-      padding-bottom: 8px;
-      margin-top: 48px;
+      font-size: 18pt;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 6px;
+      margin-top: 40px;
+      margin-bottom: 18px;
       page-break-before: always;
+      break-before: page;
     }}
     h1:first-of-type {{
       page-break-before: avoid;
+      break-before: avoid;
+      margin-top: 0;
     }}
     h2 {{
-      font-size: 16pt;
-      color: #1e40af;
-      border-bottom: 1px solid #e5e7eb;
+      font-size: 14pt;
+      border-bottom: 1px solid #000000;
       padding-bottom: 4px;
-      margin-top: 36px;
+      margin-top: 28px;
+      margin-bottom: 12px;
     }}
     h3 {{
-      font-size: 13pt;
-      color: #1f2937;
-      margin-top: 24px;
+      font-size: 12pt;
+      margin-top: 22px;
+      margin-bottom: 8px;
     }}
     h4 {{
-      font-size: 11.5pt;
-      color: #374151;
+      font-size: 11pt;
       margin-top: 18px;
+      margin-bottom: 6px;
     }}
+    h5, h6 {{
+      font-size: 10pt;
+      margin-top: 14px;
+      margin-bottom: 4px;
+    }}
+    
     p, li {{
       text-align: justify;
+      color: #000000;
+      margin: 8px 0;
     }}
+    ul, ol {{
+      padding-left: 24px;
+      margin: 8px 0;
+    }}
+    li {{
+      margin-bottom: 4px;
+    }}
+    
+    /* Enlaces: Azules, subrayados y con ajuste de línea para no desbordar */
+    a {{
+      color: #0056b3;
+      text-decoration: underline;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }}
+    a:visited {{
+      color: #0056b3;
+    }}
+    
+    /* Tablas: Clásicas en Blanco y Negro alineadas */
     table {{
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 9.5pt;
+      margin: 18px 0;
+      font-size: 9pt;
+      line-height: 1.35;
       page-break-inside: auto;
+      table-layout: auto;
     }}
     tr {{
       page-break-inside: avoid;
-      page-break-after: auto;
+      break-inside: avoid;
     }}
     th {{
-      background-color: #1e3a8a;
-      color: #ffffff;
-      font-weight: 600;
+      background-color: #f2f2f2;
+      color: #000000;
+      font-weight: bold;
       text-align: left;
-      padding: 8px 10px;
-      border: 1px solid #1e3a8a;
+      padding: 6px 8px;
+      border: 1px solid #000000;
+      vertical-align: bottom;
     }}
     td {{
-      padding: 6px 10px;
-      border: 1px solid #d1d5db;
+      padding: 6px 8px;
+      border: 1px solid #000000;
       vertical-align: top;
+      color: #000000;
+      word-break: break-word;
     }}
     tbody tr:nth-child(even) {{
-      background-color: #f9fafb;
+      background-color: #fafafa;
     }}
+    
+    /* Imágenes alineadas y escaladas fielmente */
     img {{
-      max-width: 100%;
-      height: auto;
+      max-width: 100% !important;
+      height: auto !important;
       display: block;
-      margin: 16px auto;
-      border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      margin: 14px auto;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      image-rendering: -webkit-optimize-contrast;
     }}
+    div[align="center"] {{
+      text-align: center;
+      margin: 14px 0;
+    }}
+    div[align="center"] img {{
+      display: inline-block;
+      margin: 0 auto;
+    }}
+    figure {{
+      margin: 14px auto;
+      text-align: center;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }}
+    figcaption, p > em {{
+      color: #222222;
+    }}
+    
+    /* Citas y Bloques de Texto */
+    blockquote {{
+      border-left: 3px solid #000000;
+      margin: 14px 0;
+      padding: 8px 14px;
+      background: #f8f8f8;
+      color: #000000;
+      font-style: normal;
+    }}
+    
+    /* Código e Instrucciones */
     code {{
-      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-      font-size: 9pt;
-      background: #f3f4f6;
-      padding: 2px 5px;
-      border-radius: 4px;
-      color: #b91c1c;
+      font-family: Consolas, 'Courier New', Courier, monospace;
+      font-size: 8.5pt;
+      background: #f2f2f2;
+      color: #000000;
+      padding: 2px 4px;
+      border-radius: 2px;
+      border: 1px solid #dcdcdc;
     }}
     pre {{
-      background: #1f2937;
-      color: #f9fafb;
-      padding: 14px;
-      border-radius: 6px;
+      background: #f8f8f8;
+      color: #000000;
+      border: 1px solid #000000;
+      padding: 10px 12px;
+      border-radius: 4px;
       overflow-x: auto;
-      font-size: 9pt;
-      line-height: 1.45;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }}
     pre code {{
       background: transparent;
-      color: inherit;
+      border: none;
       padding: 0;
+      color: #000000;
     }}
-    blockquote {{
-      border-left: 4px solid #1e3a8a;
-      margin: 16px 0;
-      padding: 8px 16px;
-      background: #eff6ff;
-      color: #1e3a8a;
-    }}
+    
     hr {{
       border: none;
-      border-top: 1px solid #e5e7eb;
-      margin: 36px 0;
+      border-top: 1px solid #000000;
+      margin: 28px 0;
     }}
-    a {{
-      color: #2563eb;
-      text-decoration: none;
-    }}
-    a:hover {{
-      text-decoration: underline;
-    }}
+    
     @media print {{
       body {{
-        background: white;
+        background: #ffffff !important;
+        color: #000000 !important;
       }}
       .print-bar {{
         display: none !important;
       }}
       .container {{
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
-        max-width: 100%;
-        border-radius: 0;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
       }}
       h1 {{
         page-break-before: always;
+        break-before: page;
       }}
-      table, figure, img {{
+      h1:first-of-type {{
+        page-break-before: avoid;
+        break-before: avoid;
+      }}
+      table, figure, img, pre, blockquote {{
         page-break-inside: avoid;
+        break-inside: avoid;
+      }}
+      a {{
+        color: #0056b3 !important;
+        text-decoration: underline !important;
       }}
     }}
   </style>
@@ -287,7 +409,7 @@ def consolidate():
 <body>
   <div class="print-bar">
     <div><strong>FullTank — Informe TB1</strong> (Universidad Peruana de Ciencias Aplicadas · Sección 16129)</div>
-    <button class="print-btn" onclick="window.print()">🖨️ Imprimir / Guardar como PDF (Ctrl + P)</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir / Guardar como PDF</button>
   </div>
   <div class="container">
     {html_body}
@@ -298,53 +420,39 @@ def consolidate():
     with open(html_output, "w", encoding="utf-8") as f:
         f.write(html_template)
 
-    print(f"✅ [2/2] Archivo HTML listo para exportar generado en entregables:")
+    print(f"✅ [2/3] Archivo HTML clásico generado en entregables ({img_count} imágenes vinculadas):")
     print(f"   Ruta: {html_output}")
     print(f"   Tamaño: {len(html_template.encode('utf-8')) / 1024:.1f} KB")
 
-    # Generar archivo PDF automáticamente mediante navegador headless (Edge / Chrome)
-    pdf_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.pdf")
-    browser_candidates = [
-        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
-        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-        shutil.which("msedge"),
-        shutil.which("google-chrome"),
-        shutil.which("chromium"),
-        shutil.which("chromium-browser")
-    ]
-    browser_path = next((b for b in browser_candidates if b and os.path.exists(b)), None)
-    if browser_path:
-        print(f"⏳ Generando PDF con navegador headless...")
-        file_url = "file:///" + os.path.abspath(html_output).replace("\\", "/")
-        pdf_cmd = [
-            browser_path,
-            "--headless=new",
-            "--disable-gpu",
-            "--no-pdf-header-footer",
-            f"--print-to-pdf={pdf_output}",
-            file_url
-        ]
-        res = subprocess.run(pdf_cmd, capture_output=True, text=True)
+    # Generar PDF mediante Node.js y puppeteer-core
+    render_script = os.path.join(root_dir, "scripts", "render_pdf.mjs")
+    fulltank_dir = os.path.join(os.path.dirname(root_dir), "FullTank-trabajo")
+    
+    print(f"⏳ [3/3] Generando PDF de alta fidelidad con Puppeteer y Edge...")
+    try:
+        pdf_res = subprocess.run(
+            ["node", render_script, html_output, pdf_output],
+            cwd=fulltank_dir if os.path.exists(fulltank_dir) else root_dir,
+            capture_output=True,
+            text=True,
+            timeout=240,
+            encoding="utf-8"
+        )
+        print(pdf_res.stdout)
+        if pdf_res.returncode != 0:
+            print("Error en render_pdf:", pdf_res.stderr)
+        
         if os.path.exists(pdf_output) and os.path.getsize(pdf_output) > 0:
-            print(f"✅ [3/3] Archivo PDF consolidado generado en entregables:")
+            print(f"✅ PDF generado exitosamente en entregables:")
             print(f"   Ruta: {pdf_output}")
-            print(f"   Tamaño: {os.path.getsize(pdf_output) / 1024:.1f} KB")
-        else:
-            print("Advertencia: No se pudo generar el archivo PDF automáticamente.")
-    else:
-        print("Aviso: No se detectó navegador headless para generar PDF automático.")
-
-    # Copiar también a /home/bryan/code/Proyectos/FullTank/entregables/
-    parent_entregables = "/home/bryan/code/Proyectos/FullTank/entregables"
-    if os.path.exists(parent_entregables):
-        shutil.copy2(md_output, parent_entregables)
-        shutil.copy2(html_output, parent_entregables)
-        if os.path.exists(pdf_output):
-            shutil.copy2(pdf_output, parent_entregables)
-        print(f"✅ Copia sincronizada en carpeta general de entregables:")
-        print(f"   Ruta: {parent_entregables}/")
+            print(f"   Tamaño: {os.path.getsize(pdf_output) / (1024 * 1024):.2f} MB")
+            
+            # Copiar también al escritorio del usuario para acceso inmediato
+            desktop_path = os.path.join(os.path.expanduser("~"), "Desktop", "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.pdf")
+            shutil.copy2(pdf_output, desktop_path)
+            print(f"✅ Copia actualizada en el Escritorio: {desktop_path}")
+    except Exception as e:
+        print(f"Error generando PDF con Puppeteer: {e}")
 
 if __name__ == "__main__":
     consolidate()
