@@ -679,7 +679,17 @@ Resumen:
 El equipo colaboró mediante GitHub y WhatsApp durante el Sprint. Las actividades principales se centraron en el desarrollo y despliegue de la Landing Page.
 
 Evidencia de Colaboración:
-- Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
+
+Captura de pantalla de commits en GitHub mostrando contribuciones del equipo.
+
+##### Insights
+![Insights](../assets-chapter-5/insights.png)
+
+##### Contributors
+![Contributors](../assets-chapter-5/Contributors.png)
+
+##### Network graph
+![Network graph](../assets-chapter-5/network.png)
 
 Principales Herramientas de Comunicación:
 - GitHub (control de versiones y manejo de issues)
