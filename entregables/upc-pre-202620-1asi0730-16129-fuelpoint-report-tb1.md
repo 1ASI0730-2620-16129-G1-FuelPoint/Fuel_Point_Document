@@ -3753,7 +3753,7 @@ La gestión del código fuente del proyecto FuelPoint se realiza de forma centra
 
 #### Repositorios Oficiales Verificados
 
-A la fecha del presente informe, la organización oficial cuenta exclusivamente con dos repositorios creados y verificados:
+A la fecha del presente informe, la organización oficial cuenta con tres repositorios creados y verificados:
 
 1. **Repositorio de Documentación del Proyecto:**
    * **Nombre:** `Fuel_Point_Document`
@@ -3764,11 +3764,13 @@ A la fecha del presente informe, la organización oficial cuenta exclusivamente 
    * **Nombre:** `Full_Tank_Landing_Page`
    * **Propósito:** Aloja el código fuente completo de la página de aterrizaje del producto, desarrollada con HTML5, CSS3 y JavaScript puro, configurada para su despliegue público en GitHub Pages.
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page)
+   * **URL de despliegue en producción:** [https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/)
 
 3. **Repositorio de la Web Application (Frontend):**
    * **Nombre:** `Full_Tank_Frontend`
    * **Propósito:** Aloja la aplicación web cliente Single Page Application (SPA) desarrollada en Vue 3 con Composition API, Pinia, PrimeVue y Vue Router. Su arquitectura modular desacopla el frontend en Bounded Contexts independientes (`iam`, `catalog`, `ordering`, `fulfillment`, `notification`, `payment`, `reporting`, `equipment`, `inventory`) coordinados sobre una base común (`shared`).
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
+   * **URL de despliegue en producción:** [https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/)
 
 #### Estrategia de Ramificación GitFlow
 
@@ -4820,7 +4822,7 @@ Las respuestas, validaciones y casos de error de la simulación se verifican en 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
 - **Alojamiento:** Firebase Hosting, proyecto `full-tank-964e2`.
-- **Acceso público:** [FullTank — Iniciar sesión](https://full-tank-964e2.web.app/iam/login).
+- **Acceso público en producción:** [https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/) ([Iniciar sesión](https://full-tank-964e2.web.app/iam/login)).
 - **Repositorio de contribuciones:** [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend).
 - **Verificación:** 9 de octubre de 2026; respuesta HTTP 200, ingreso con ambos roles y consulta de las pantallas documentadas en 5.2.2.5.
 - **Alcance:** frontend SPA con API simulada en memoria y pagos demo. No se presenta este alojamiento como despliegue de backend.
@@ -4957,7 +4959,7 @@ Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y 
 | **Landing Page Repository** | Código fuente de la página de aterrizaje (HTML5/CSS3/JS) | [Full_Tank_Landing_Page en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page) |
 | **Landing Page Deployed** | Despliegue público en producción de la Landing Page | [FullTank Landing Page en GitHub Pages](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/) |
 | **Web Application Repository** | Código fuente del Frontend SPA (Vue 3, Pinia, PrimeVue) | [Full_Tank_Frontend en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend) |
-| **Web Application Deployed** | Frontend publicado en Firebase Hosting; demo académica TB1 | [FullTank Web App en Producción](https://full-tank-964e2.web.app/iam/login) |
+| **Web Application Deployed** | Frontend publicado en Firebase Hosting; demo académica TB1 | [FullTank Web App en Producción](https://full-tank-964e2.web.app/) |
 | **Tablero del Proyecto (Trello)** | Tableros Kanban de Product Backlog y Sprints | [Tablero Oficial FullTank en Trello](https://trello.com/b/6h5mZ8L6) |
 | **Diseño y Prototipo (Figma)** | Wireframes, Mockups y Prototipo Navegable | [FullTank en Figma](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1) |
 | **Sesión DDD EventStorming (Miro)** | Lienzo de modelado de Bounded Contexts y eventos | [EventStorming FullTank en Miro](https://miro.com/app/board/uXjVGgOzeI4=/) |
