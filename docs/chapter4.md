@@ -316,7 +316,7 @@ Hacia el final de la navegación, se presenta una sección de planes y suscripci
 
 **Wireframe 2**
 
-Este diseño presenta un layout de pantalla dividida (dos columnas). En el lado izquierdo, se observa el logotipo o texto de la marca ("Fulltank") en la esquina superior. En el centro geométrico de esta columna, hay un contenedor ("Login") que aloja dos campos de entrada de texto (representados por rectángulos gris claro) y un botón de acción primaria (rectángulo gris oscuro). El lado derecho está dominado por un gran marcador de posición gráfico (indicado por la equis).
+Este diseño presenta un layout de pantalla dividida (dos columnas). En el lado izquierdo, se observa el logotipo o texto de la marca ("Fulltank") en la esquina superior. En el centro geométrico de esta columna, hay un contenedor de inicio de sesión ("Login") que aloja dos campos de entrada de texto (representados por rectángulos gris claro) y un botón de acción primaria (rectángulo gris oscuro). El lado derecho está dominado por un gran marcador de posición gráfico (indicado por la equis).
 
 <div align="center">
   <img src="../assets/chapter-4/Login.png" alt="Estilos" width="700"/>
@@ -1183,10 +1183,15 @@ Siguiendo a Gothelf y Seiden (2021), el tipo de prototipo se eligió según qui�
 
 **Relación con los User Flow Diagrams.** Los flujos del prototipo recorren los happy paths de los User Goals de la sección 4.4.4, y los estados de error se muestran con los mensajes definidos en los unhappy paths.
 
-**Enlaces**
+**Enlaces y Evidencia de Prototipado Interactivo**
 
-- Diseño y prototipo en Figma: [FullTank en Figma](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1&t=I3nr2x0tcAinM7gE-1)
-- Video de recorrido del prototipo: [Prototype video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD-Y375Tn-qTL4_5hJtuQ8QAbHWOzNnv9YkDF7B09hJdfw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i63Yxn)
+- **Diseño y prototipo interactivo en Figma:** [FullTank en Figma (Desktop y Mobile)](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1&t=I3nr2x0tcAinM7gE-1)
+- **Grabación de sustentación y recorrido en Microsoft Stream:** [FullTank - Sustentación y Recorrido del Prototipo Interactivo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD-Y375Tn-qTL4_5hJtuQ8QAbHWOzNnv9YkDF7B09hJdfw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i63Yxn)
+
+<div align="center">
+  <img src="../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Captura del reproductor de video con la sustentación del prototipo interactivo" width="750"/>
+  <p><em>Figura 4.28. Evidencia del recorrido del prototipo interactivo en alta fidelidad sustentado en la grabación oficial de Microsoft Stream.</em></p>
+</div>
 
 
 ## 4.6 Domain-Driven Software Architecture
@@ -1283,7 +1288,7 @@ PDF Generator Service: sistema externo encargado de generar reportes en formato 
 
 En el diagrama se representan las relaciones entre estos elementos, destacando que los usuarios (Visitor, Client y Provider) interactúan directamente con FullTank, mientras que el sistema se encarga de orquestar la comunicación con los servicios externos (correo, almacenamiento y generación de reportes). Esta vista permite comprender el alcance del sistema, sus límites de responsabilidad y el ecosistema en el que opera antes de entrar en detalles internos.
 
-<div allign="center">
+<div align="center">
   <img src="./../assets/chapter-4/SystemContextDiagram.png" alt="Context diagram" width="500"/>
 </div>
 
@@ -1336,13 +1341,13 @@ En el diagrama se refleja cómo la Web Application consume los servicios de cada
 
 De esta manera, los component diagrams permiten entender cómo la arquitectura se organiza internamente en módulos coherentes con el dominio, cómo se relacionan entre sí y cómo colaboran para implementar la funcionalidad completa de FullTank.
 
-<div allign="center">
+<div align="center">
   <img src="./../assets/chapter-4/BackendComponents-dark.png" alt="Component diagram" width="500"/>
 </div>
 
 ## 4.7 Software Object-Oriented Design
 
-En esta sección se presenta el diseño orientado a objetos del sistema, el cual desarrolla con mayor detalle la implementación interna de los componentes identificados en los diagramas C4 del apartado 4.6. A partir de los contenedores y componentes definidos (Landing Page, Web Application, API y Database), se derivan diagramas de clases específicos para cada bounded context del dominio, con el objetivo de mostrar:
+En esta sección se presenta el diseño orientado a objetos del sistema, el cual desarrolla con mayor detalle la implementación interna de los componentes identificados en los diagramas C4 del sección 4.6. A partir de los contenedores y componentes definidos (Landing Page, Web Application, API y Database), se derivan diagramas de clases específicos para cada bounded context del dominio, con el objetivo de mostrar:
 
 - Cómo se modelan las entidades, agregados, servicios, repositorios y controladores en el backend para cada contexto.
 - Cómo se estructuran los componentes de presentación, lógica de aplicación y acceso a datos en el frontend.
@@ -1351,10 +1356,6 @@ En esta sección se presenta el diseño orientado a objetos del sistema, el cual
 De esta forma, el diseño orientado a objetos enlaza el nivel arquitectónico (C4 Model) con el nivel de implementación, permitiendo verificar la coherencia entre bounded contexts, responsabilidades de cada módulo y decisiones de diseño técnico, como el uso de interfaces de servicio, repositorios, ensambladores y value objects por contexto.
 
 ### 4.7.1 Class Diagrams
-*Sección reservada para los diagramas de clases orientados a objetos (frontend y backend) estructurados por Bounded Context, a ser incorporados por el integrante asignado según el reparto de trabajo del equipo.*
-
-En esta subsección se presentan los diagramas de clases que detallan la estructura interna de los principales componentes para cada bounded context. Estos diagramas complementan al Component Diagram de la API Application y a los contenedores definidos, proporcionando una vista centrada en clases, relaciones y responsabilidades.
-
 
 En esta subsección se presentan los diagramas de clases que detallan la estructura interna de los principales componentes para cada bounded context. Estos diagramas complementan al Component Diagram de la API Application y a los contenedores definidos, proporcionando una vista centrada en clases, relaciones y responsabilidades.
 
@@ -1370,7 +1371,7 @@ A nivel de frontend, se modelan las clases en función de los módulos y vistas 
 
 **Diagrama del Frontend completo:**
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend.png" alt="frontend classes"/>
 </div>
 
@@ -1381,49 +1382,49 @@ El diagrama completo del frontend muestra la organización general de la capa de
 - **Identity & Access Frontend**  
   Responsabilidad: Maneja las vistas de registro, inicio de sesión, recuperación de contraseña y edición de perfil de usuario.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_iam.png" alt="frontend iam"/>
 </div>
 
 - **Catalog Frontend**  
   Responsabilidad: Maneja las vistas de gestión del inventario de recursos ofrecidos por el proveedor.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_catalog.png" alt="frontend catalog"/>
 </div>
 
 - **Ordering Frontend**  
   Responsabilidad: Maneja las vistas del ciclo de vida completo de pedidos: creación de solicitudes, aprobación, rechazo, despacho, confirmación de entrega y cierre.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_ordering.png" alt="frontend ordering"/>
 </div>
 
 - **Payment Frontend**  
   Responsabilidad: Maneja las vistas para que el cliente registre comprobantes de pago vinculados a una orden.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_payment.png" alt="frontend payment"/>
 </div>
 
 - **Fulfillment Frontend**  
   Responsabilidad: Maneja las vistas de gestión de recursos logísticos (por ejemplo, vehículos y operadores) y la asignación de despacho a órdenes aprobadas.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_fullfillment.png" alt="frontend fullfillment"/>
 </div>
 
 - **Notification Frontend**  
   Responsabilidad: Maneja el panel de notificaciones dentro de la aplicación para informar a los usuarios sobre cambios en el estado de los pedidos.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_notification.png" alt="frontend notification"/>
 </div>
 
 - **Reporting & Analytics Frontend**  
   Responsabilidad: Maneja las vistas de visualización de métricas, gráficos de consumo o ventas, y la descarga de reportes.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_reporting.png" alt="frontend analysis"/>
 </div>
 
@@ -1431,14 +1432,14 @@ El diagrama completo del frontend muestra la organización general de la capa de
 - **Equipment Frontend**  
   Responsabilidad: Maneja las vistas para que el cliente registre, actualice, elimine y visualice sus equipos (vehículos, generadores, maquinaria), incluyendo el tipo de combustible requerido y el estado operativo de cada uno.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_equipment.png" alt="frontend equipment"/>
 </div>
 
 - **Inventory Frontend**  
   Responsabilidad: Maneja las vistas de gestión del inventario de combustible por parte del proveedor, incluyendo el registro, actualización y eliminación de ítems, así como la visualización de niveles de stock y precio por litro.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/frontend_inventory.png" alt="frontend inventory"/>
 </div>
 
@@ -1453,7 +1454,7 @@ A nivel de backend, los diagramas de clases reflejan la implementación detallad
 
 **Diagrama del Backend completo:**
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend.png" alt="backend"/>
 </div>
 
@@ -1473,21 +1474,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 - **Identity & Access Backend**  
   Responsabilidad: Gestiona el registro de usuarios, autenticación, autorización y control de acceso.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_iam.png" alt="backend iam"/>
 </div>
 
 - **Catalog Backend**  
   Responsabilidad: Gestiona el inventario de recursos disponibles, incluyendo stock y características relevantes.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_catalog.png" alt="backend catalog"/>
 </div>
 
 - **Ordering Backend**  
   Responsabilidad: Orquesta el ciclo de vida completo del pedido. Es el bounded context central que coordina la interacción con los demás contextos.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_ordering.png" alt="backend ordering"/>
 </div>
 
@@ -1495,21 +1496,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 - **Payment Backend**  
   Responsabilidad: Gestiona el registro y validación de pagos asociados a órdenes.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_payment.png" alt="backend payment"/>
 </div>
 
 - **Fulfillment Backend**  
   Responsabilidad: Gestiona los recursos necesarios para la ejecución de entregas y su asignación a órdenes.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_fulfillment.png" alt="backend fullfilment"/>
 </div>
 
 - **Notification Backend**  
   Responsabilidad: Genera y gestiona notificaciones ante eventos relevantes del sistema.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_notification.png" alt="backend notification"/>
 </div>
 
@@ -1517,21 +1518,21 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 - **Reporting & Analytics Backend**  
   Responsabilidad: Agrega información histórica para generar métricas, análisis y reportes.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_reporting.png" alt="backend analysis"/>
 </div>
 
 - **Equipment Backend**  
   Responsabilidad: Gestiona el registro, actualización, eliminación y consulta de los equipos del cliente, así como la asignación del tipo de combustible requerido por cada equipo.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_equipment.png" alt="backend equipment"/>
 </div>
 
 - **Inventory Backend**  
   Responsabilidad: Gestiona el registro, actualización y eliminación de los productos de combustible del proveedor, validando la información del ítem y controlando los niveles de stock disponible y precio por litro.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/backend_inventory.png" alt="backend inventory"/>
 </div>
 
@@ -1540,7 +1541,7 @@ Todas las interacciones entre bounded contexts se realizan a través de interfac
 ### 4.8.1 Database Diagrams
 La base de datos relacional almacena todos los datos del dominio del sistema. Las tablas se organizan en correspondencia directa con los bounded contexts definidos en el diseño orientado a objetos. A continuación, se detalla qué tablas pertenecen a cada contexto y cuál es su responsabilidad dentro del modelo de datos.
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos.png" alt="backend analysis"/>
 </div>
 
@@ -1552,7 +1553,7 @@ Responsabilidad: Almacena la información de usuarios, sesiones y las extensione
 - CLIENT: extensión del perfil para empresas solicitantes (id_client, id_user FK, company_name, company_ruc, industry, created_at).
 - PROVIDER: extensión del perfil para empresas proveedoras (id_provider, id_user FK, company_name, company_ruc, description, created_at).
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_identity.png" alt="tablas de identity"/>
 </div>
 
@@ -1563,7 +1564,7 @@ Responsabilidad: Almacena el inventario disponible de cada proveedor, incluyendo
 - INVENTORY: registro de stock por tipo de recurso (id_inventory, id_provider FK, fuel_type, quantity_liters, price_per_liter, updated_at).
 
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_catalogo.png" alt="tablas de catalogo"/>
 </div>
 
@@ -1576,7 +1577,7 @@ Responsabilidad: Almacena el ciclo de vida completo de solicitudes y órdenes, i
 - ORDER: orden generada a partir de una solicitud aprobada (id_order, id_request FK, status, approved_at, dispatched_at, delivered_at, closed_at, rejection_reason, created_at).
 
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_ordering.png" alt="tablas de orders"/>
 </div>
 
@@ -1586,9 +1587,7 @@ Responsabilidad: Almacena los registros de pago asociados a las órdenes.
 
 - PAYMENT: comprobante de pago vinculado a una orden (id_payment, id_order FK, operation_code, amount, bank_name, voucher_url, payment_date, status, registered_at).
 
-<div allign="center">
-  <img src="../assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
-</div><div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatosPayment.png" alt="tablas de payment"/>
 </div>
 
@@ -1600,7 +1599,7 @@ Responsabilidad: Almacena los recursos logísticos y su asignación a órdenes.
 - DRIVER: operador asignado al transporte (id_driver, id_provider FK, full_name, dni, license_number, phone_number, is_available, created_at).
 - DISPATCH: asignación de recursos a una orden (id_dispatch, id_order FK, id_transport FK, id_driver FK, assigned_at, status).
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_fullfillment.png" alt="tablas de fullfilment"/>
 </div>
 
@@ -1609,7 +1608,7 @@ Responsabilidad: Almacena las notificaciones generadas por eventos del sistema.
 
 - NOTIFICATION: notificación asociada a un usuario (id_notification, id_user FK, id_order FK, type, message, is_read, created_at).
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_notification.png" alt="tablas de fullfilment"/>
 </div>
 
@@ -1619,6 +1618,12 @@ Responsabilidad: Almacena la información de reportes generados a partir de dato
 
 - REPORT: reporte generado por un usuario (id_report, id_user FK, type, pdf_url, generated_at).
 
-<div allign="center">
+<div align="center">
   <img src="../assets/chapter-4/baseDatos_analysis.png" alt="tablas de analysis"/>
 </div>
+
+
+Equipment — Base de datos
+Responsabilidad: Almacena los equipos registrados por las empresas solicitantes que requieren abastecimiento de combustible (vehículos, maquinaria pesada, grupos electrógenos), permitiendo registrar sus características técnicas y capacidad de tanque.
+
+- EQUIPMENT: registro de equipos del cliente solicitante (id_equipment, id_client FK, name, equipment_type, fuel_type, tank_capacity, is_operational, created_at, updated_at).
