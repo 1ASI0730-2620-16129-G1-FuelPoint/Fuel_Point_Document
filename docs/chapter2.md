@@ -461,7 +461,7 @@ Conforme a las directrices de Eric Evans (2003) en *Domain-Driven Design: Tackli
 
 | Término (Inglés / Español) | Definición en el Dominio del Negocio |
 |---|---|
-| **Fuel Request (Solicitud de Combustible)** | Requerimiento formal emitido por una empresa compradora en el que se especifica el tipo de combustible requerido, volumen en galones o litros, fecha deseada y punto de entrega. |
+| **Fuel Request (Solicitud de Combustible)** | Solicitud formal emitida por una empresa compradora en el que se especifica el tipo de combustible requerido, volumen en galones o litros, fecha deseada y punto de entrega. |
 | **Fuel Supplier / Distributor (Proveedor / Distribuidor de Combustible)** | Empresa formal comercializadora y distribuidora de derivados de hidrocarburos, autorizada mediante el Registro de Hidrocarburos ante OSINERGMIN. |
 | **Corporate Requester / Buyer (Empresa Solicitante / Compradora)** | Organización empresarial (construcción, minería, transporte, agroindustria) que demanda suministro continuo de combustible a granel para mantener la continuidad de su maquinaria y equipos. |
 | **Fuel Order (Orden de Combustible)** | Transacción comercial formalizada una vez que el proveedor aprueba una solicitud de combustible y valida la disponibilidad de inventario y el respaldo financiero. |

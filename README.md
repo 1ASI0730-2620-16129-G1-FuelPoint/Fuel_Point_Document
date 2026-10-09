@@ -74,16 +74,12 @@ Durante el desarrollo de las entregas **AV1** y **TB1**, los cinco integrantes d
 A continuación se presentan las evidencias de participación activa y balanceada de todos los miembros del equipo en la evolución de este repositorio:
 
 #### Gráfico de Contribuciones y Commits por Integrante (`Insights -> Contributors`)
-*(Captura que evidencia la participación equitativa de todos los integrantes en el repositorio `Fuel_Point_Document`)*
-<div align="center">
-  <img src="assets/collaboration-insights-contributors.png" alt="GitHub Contributors Graph - Fuel_Point_Document" width="850">
-</div>
+El flujo de trabajo colaborativo y la participación equitativa de los integrantes del equipo se audita directamente en las métricas del repositorio oficial:
+- **Enlace a métricas de colaboradores en GitHub:** [GitHub Contributors Graph - Fuel_Point_Document](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Fuel_Point_Document/graphs/contributors)
 
 #### Historial de Ramas y Pull Requests (`Network Graph`)
-*(Captura del Network Graph de GitHub mostrando la ramificación GitFlow mediante branches `feat/chapter*`, `develop` y `release/v1.0.0`)*
-<div align="center">
-  <img src="assets/collaboration-insights-network.png" alt="GitHub Network Graph - Fuel_Point_Document" width="850">
-</div>
+La trazabilidad del modelo GitFlow mediante ramas de características independientes (`feat/*`), integración continua en `develop` y lanzamientos de versión se audita en el grafo de red oficial:
+- **Enlace al grafo de red de GitHub:** [GitHub Network Graph - Fuel_Point_Document](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Fuel_Point_Document/network)
 
 ---
 
