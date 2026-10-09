@@ -1042,30 +1042,65 @@ Siguiendo el flujo de trabajo GitFlow estricto, cada integrante trabajó en una 
         </tr>
         <tr>
             <td><code>feat/fulfillment</code></td>
-            <td><code>874e01a</code></td>
+            <td><code>43c04be</code></td>
             <td>Frank Huingo</td>
-            <td>feat(fulfillment): define transport and driver logistics models</td>
+            <td>feat(fulfillment): define driver and vehicle domain entities</td>
             <td>Reviewed (PR #8)</td>
         </tr>
         <tr>
             <td><code>feat/fulfillment</code></td>
-            <td><code>289d00c</code></td>
+            <td><code>e105a2b</code></td>
             <td>Frank Huingo</td>
-            <td>feat(fulfillment): implement dispatch resource assignment and tracking views</td>
+            <td>feat(fulfillment): implement fulfillment api client and data assemblers</td>
+            <td>Reviewed (PR #8)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>2683fea</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): create pinia store for fleet and driver management</td>
+            <td>Reviewed (PR #8)</td>
+        </tr>
+        <tr>
+            <td><code>feat/fulfillment</code></td>
+            <td><code>1751254</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(fulfillment): implement driver and vehicle views and routing</td>
             <td>Reviewed (PR #8)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
-            <td><code>e7b3b63</code></td>
+            <td><code>351124b</code></td>
             <td>Frank Huingo</td>
-            <td>feat(notification): define notification entity and alert badge component</td>
+            <td>feat(notification): adapt notification api client and data assembler</td>
             <td>Reviewed (PR #9)</td>
         </tr>
         <tr>
             <td><code>feat/notification</code></td>
-            <td><code>b49182a</code></td>
+            <td><code>e032685</code></td>
             <td>Frank Huingo</td>
-            <td>feat(notification): integrate real-time notification feed and toast triggers</td>
+            <td>feat(notification): integrate notification store for alert state management</td>
+            <td>Reviewed (PR #9)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>d5bbbd3</code></td>
+            <td>Frank Huingo</td>
+            <td>feat(notification): add notification list view and register routes</td>
+            <td>Reviewed (PR #9)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>f52437d</code></td>
+            <td>Frank Huingo</td>
+            <td>fix(notification): handle badge counter reactivity and add filter translations</td>
+            <td>Reviewed (PR #9)</td>
+        </tr>
+        <tr>
+            <td><code>feat/notification</code></td>
+            <td><code>e9717cb</code></td>
+            <td>Frank Huingo</td>
+            <td>test(notification): cover store actions and unread badge count</td>
             <td>Reviewed (PR #9)</td>
         </tr>
         <tr>
