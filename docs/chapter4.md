@@ -1189,8 +1189,8 @@ Siguiendo a Gothelf y Seiden (2021), el tipo de prototipo se eligió según qui�
 - **Grabación de sustentación y recorrido en Microsoft Stream:** [FullTank - Sustentación y Recorrido del Prototipo Interactivo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD-Y375Tn-qTL4_5hJtuQ8QAbHWOzNnv9YkDF7B09hJdfw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i63Yxn)
 
 <div align="center">
-  <img src="../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Captura del reproductor de video con la sustentación del prototipo interactivo" width="750"/>
-  <p><em>Figura 4.28. Evidencia del recorrido del prototipo interactivo en alta fidelidad sustentado en la grabación oficial de Microsoft Stream.</em></p>
+  <img src="../assets/chapter-4/mockup-desktop-buyer-dashboard.png" alt="Mockup del dashboard del solicitante para el prototipo interactivo" width="750"/>
+  <p><em>Figura 4.28. Mockup del dashboard del solicitante utilizado en el prototipo de alta fidelidad. La grabación del recorrido se consulta en el enlace anterior.</em></p>
 </div>
 
 

@@ -1,0 +1,97 @@
+
+> fulltank-frontend@1.0.0 build:demo
+> vite build --mode demo
+
+vite v8.2.2 building client environment for demo...
+transforming...
+✓ 505 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     1.51 kB │ gzip:   0.57 kB
+dist/assets/primeicons-C6QP2o4f.woff2              35.14 kB
+dist/assets/primeicons-MpK4pl85.ttf                84.98 kB
+dist/assets/primeicons-WjwUDZjB.woff               85.05 kB
+dist/assets/primeicons-DMOk5skT.eot                85.15 kB
+dist/assets/primeicons-Dr5RGzOO.svg               342.52 kB │ gzip: 108.35 kB
+dist/assets/product-form-ChNHbB_v.css               1.02 kB │ gzip:   0.44 kB
+dist/assets/equipment-form-DjOPGbHB.css             1.10 kB │ gzip:   0.45 kB
+dist/assets/my-requests-Bej3AN4V.css                1.32 kB │ gzip:   0.49 kB
+dist/assets/collections-QkPhr3zp.css                1.33 kB │ gzip:   0.54 kB
+dist/assets/login-view-D-Zn5VXF.css                 1.39 kB │ gzip:   0.55 kB
+dist/assets/terms-Wsq5OXjZ.css                      1.49 kB │ gzip:   0.60 kB
+dist/assets/provider-report-BSsC_AOs.css            1.70 kB │ gzip:   0.61 kB
+dist/assets/role-selection-BSTIgWYY.css             1.72 kB │ gzip:   0.64 kB
+dist/assets/profile-view-C9ysi6Tw.css               1.73 kB │ gzip:   0.59 kB
+dist/assets/notification-list-C729S5qY.css          1.84 kB │ gzip:   0.67 kB
+dist/assets/my-orders-C_52sWor.css                  1.96 kB │ gzip:   0.65 kB
+dist/assets/order-list-Cq1N8aJO.css                 1.97 kB │ gzip:   0.67 kB
+dist/assets/register-view-FArcUqfQ.css              2.05 kB │ gzip:   0.72 kB
+dist/assets/buyer-report-DOjFhTha.css               2.06 kB │ gzip:   0.73 kB
+dist/assets/provider-request-list-B4VKoFki.css      2.21 kB │ gzip:   0.72 kB
+dist/assets/driver-form-W5Lqxwec.css                2.26 kB │ gzip:   0.69 kB
+dist/assets/vehicle-form-DxwjWkYD.css               2.40 kB │ gzip:   0.71 kB
+dist/assets/buyer-order-detail-Cnt4ScCh.css         2.72 kB │ gzip:   0.82 kB
+dist/assets/driver-list-BPcD07BE.css                2.85 kB │ gzip:   0.87 kB
+dist/assets/vehicle-list-BUWj_kf2.css               2.85 kB │ gzip:   0.87 kB
+dist/assets/product-list-C2GDyNce.css               3.07 kB │ gzip:   0.93 kB
+dist/assets/equipment-list-DltAdpqo.css             3.17 kB │ gzip:   0.92 kB
+dist/assets/order-detail-An5ziwmO.css               3.17 kB │ gzip:   0.96 kB
+dist/assets/catalog-view-CCT0Ls8e.css               4.24 kB │ gzip:   1.25 kB
+dist/assets/provider-detail-BLfeVmGf.css            4.93 kB │ gzip:   1.32 kB
+dist/assets/dashboard-C_X6-itN.css                  6.14 kB │ gzip:   1.33 kB
+dist/assets/payment-list-CggUk0Nz.css               7.01 kB │ gzip:   1.69 kB
+dist/assets/index-BTCkFQ1z.css                      9.37 kB │ gzip:   2.59 kB
+dist/assets/vendor-C0LLzTXa.css                   349.97 kB │ gzip:  35.78 kB
+dist/assets/rolldown-runtime-DK3Fl9T5.js            0.15 kB │ gzip:   0.15 kB
+dist/assets/order-status-C_4DQeC8.js                0.30 kB │ gzip:   0.20 kB
+dist/assets/financial-period-DhGDJebl.js            0.39 kB │ gzip:   0.25 kB
+dist/assets/fuel-types-BHnRL9P_.js                  0.46 kB │ gzip:   0.25 kB
+dist/assets/about-CJjsxGId.js                       0.48 kB │ gzip:   0.34 kB
+dist/assets/page-not-found-xlJePp-Q.js              0.60 kB │ gzip:   0.37 kB
+dist/assets/helpers-ChcYazFJ.js                     0.82 kB │ gzip:   0.48 kB
+dist/assets/terms-B2O41c8q.js                       1.66 kB │ gzip:   0.72 kB
+dist/assets/role-selection-D9lZWCea.js              1.85 kB │ gzip:   0.88 kB
+dist/assets/analytics.store-D9GSaMCr.js             2.03 kB │ gzip:   0.73 kB
+dist/assets/login-view-CXlRTgxS.js                  2.38 kB │ gzip:   1.10 kB
+dist/assets/order-list-BdOtNvAX.js                  3.14 kB │ gzip:   1.45 kB
+dist/assets/driver-list-CTTlFDxJ.js                 3.36 kB │ gzip:   1.40 kB
+dist/assets/vehicle-list-Cv-Y00SH.js                3.47 kB │ gzip:   1.44 kB
+dist/assets/my-orders-Bd6XoCTm.js                   3.78 kB │ gzip:   1.63 kB
+dist/assets/my-requests-DVUZ1mr5.js                 4.05 kB │ gzip:   1.62 kB
+dist/assets/driver-form-DiEDfY8L.js                 4.05 kB │ gzip:   1.51 kB
+dist/assets/equipment.store-DGIJ1ErJ.js             4.54 kB │ gzip:   1.59 kB
+dist/assets/inventory.store-DBKMsZhU.js             4.67 kB │ gzip:   1.66 kB
+dist/assets/vehicle-form-DR1VMLUQ.js                4.72 kB │ gzip:   1.67 kB
+dist/assets/catalog.store-DJsFYpH1.js               4.94 kB │ gzip:   1.91 kB
+dist/assets/collections-VhkVOPMz.js                 5.04 kB │ gzip:   2.00 kB
+dist/assets/product-list-CLPBFsea.js                5.17 kB │ gzip:   2.05 kB
+dist/assets/product-form-BuvP54S6.js                5.18 kB │ gzip:   1.69 kB
+dist/assets/notification-list-Dj_htlB6.js           5.22 kB │ gzip:   2.03 kB
+dist/assets/provider-request-list-BSAQ89ns.js       5.34 kB │ gzip:   2.20 kB
+dist/assets/register-view-CEsaextN.js               5.50 kB │ gzip:   1.83 kB
+dist/assets/equipment-form-Co_lV5jc.js              5.75 kB │ gzip:   1.93 kB
+dist/assets/buyer-order-detail-DZ1UgiNC.js          6.06 kB │ gzip:   2.36 kB
+dist/assets/profile-view-BCcil8Xr.js                6.51 kB │ gzip:   2.00 kB
+dist/assets/equipment-list-CZ7bJ6dl.js              6.57 kB │ gzip:   2.56 kB
+dist/assets/buyer-report-bRngahnE.js                6.58 kB │ gzip:   2.39 kB
+dist/assets/fulfillment.store-DUXaYjwS.js           6.89 kB │ gzip:   2.04 kB
+dist/assets/catalog-view-D4sSyfqH.js                7.28 kB │ gzip:   2.75 kB
+dist/assets/provider-report-ccZ_IfMM.js             8.10 kB │ gzip:   2.76 kB
+dist/assets/ordering.store-DoVg4n1w.js              9.60 kB │ gzip:   2.60 kB
+dist/assets/coordination.service-Diprv9WF.js        9.67 kB │ gzip:   3.22 kB
+dist/assets/order-detail-DH6AhOmh.js               10.03 kB │ gzip:   3.24 kB
+dist/assets/provider-detail-YGorAMr3.js            12.62 kB │ gzip:   4.14 kB
+dist/assets/dashboard-CUOTpg0Q.js                  13.69 kB │ gzip:   4.13 kB
+dist/assets/payment-list-B3cTceUo.js               14.35 kB │ gzip:   4.67 kB
+dist/assets/vendor-http-CmWwTCwN.js                49.95 kB │ gzip:  18.75 kB
+dist/assets/vendor-vue-twktSgjU.js                 58.53 kB │ gzip:  21.39 kB
+dist/assets/vendor-primevue-overlays-DQizejzD.js   67.57 kB │ gzip:  16.47 kB
+dist/assets/vendor-primevue-forms-yC_Q6xjA.js      79.02 kB │ gzip:  20.95 kB
+dist/assets/vendor-theme-zvC0lVkS.js              135.64 kB │ gzip:  16.72 kB
+dist/assets/index-UtkwPuy7.js                     161.91 kB │ gzip:  38.25 kB
+dist/assets/vendor-charts-BAFICCjN.js             195.59 kB │ gzip:  66.03 kB
+dist/assets/vendor-primevue-data-DXLj7wFe.js      207.47 kB │ gzip:  44.43 kB
+dist/assets/vendor-C7wVFJqf.js                    209.46 kB │ gzip:  41.25 kB
+dist/assets/vendor-primevue-core-DgT8TWYA.js      339.16 kB │ gzip:  95.27 kB
+
+✓ built in 1.18s
