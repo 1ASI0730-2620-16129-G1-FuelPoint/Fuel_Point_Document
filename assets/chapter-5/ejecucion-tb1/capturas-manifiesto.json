@@ -1,0 +1,170 @@
+[
+  {
+    "archivo": "buyer-dashboard-desktop.png",
+    "url": "https://full-tank-964e2.web.app/dashboard",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "35f3fbb03dcc787da4b3878d336ec76306aa3eba2cbb28a77ca7d6de270873dc"
+  },
+  {
+    "archivo": "buyer-dashboard-mobile.png",
+    "url": "https://full-tank-964e2.web.app/dashboard",
+    "fecha_revision": "2026-10-09",
+    "ancho": 390,
+    "alto": 844,
+    "sha256": "c8d2a3fc19c4328afbd4f75c54b45bfc5954ae9e7280e46618a40e5002d959e9"
+  },
+  {
+    "archivo": "catalogo-desktop.png",
+    "url": "https://full-tank-964e2.web.app/catalog",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "8fd2f12bfa1c79a273a717de7266c78e54bc0a56ec401f0cae7f2fb7e89a0628"
+  },
+  {
+    "archivo": "conductores-desktop.png",
+    "url": "https://full-tank-964e2.web.app/fulfillment/drivers",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "7cb9f3401834fd202fa061b091a9aee5513deee4d340c3c71036f2370936b6f6"
+  },
+  {
+    "archivo": "equipos-desktop.png",
+    "url": "https://full-tank-964e2.web.app/equipment",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "2c4df28c683b8fd50e4d2aafe5df66546632b244a9b73da1fd5c756b18e9f3cb"
+  },
+  {
+    "archivo": "equipos-mobile.png",
+    "url": "https://full-tank-964e2.web.app/equipment",
+    "fecha_revision": "2026-10-09",
+    "ancho": 390,
+    "alto": 844,
+    "sha256": "60ef52b4470210fcc30d8ffc1ca44e3d384daa255bbfa504b7d2c5c66852939f"
+  },
+  {
+    "archivo": "flota-desktop.png",
+    "url": "https://full-tank-964e2.web.app/fulfillment/vehicles",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "e0c11fd3a5e69e124e18856914d3ed38c02554939906abbb0dc511f7e679b6e2"
+  },
+  {
+    "archivo": "inventario-desktop.png",
+    "url": "https://full-tank-964e2.web.app/inventory/products",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "3cbc8de8f7f9e86bc526424df4a4d3600bf83e0a95e09d9d9870efdefd770183"
+  },
+  {
+    "archivo": "login-desktop.png",
+    "url": "https://full-tank-964e2.web.app/iam/login",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "c10e5a1fd10ee2107a4dbcf6be9ce212a02b68884b7e13cede5eb44a534c420b"
+  },
+  {
+    "archivo": "login-mobile.png",
+    "url": "https://full-tank-964e2.web.app/iam/login",
+    "fecha_revision": "2026-10-09",
+    "ancho": 390,
+    "alto": 844,
+    "sha256": "a2d026e0554aba195ea6c8aadf36d07a5a08a8c413b10598333b57ef642dc236"
+  },
+  {
+    "archivo": "notificaciones-desktop.png",
+    "url": "https://full-tank-964e2.web.app/notification",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "19ddb01a20363b6ac376aa1affe13376e7e5fe78d8d9f3f604ed07681be827eb"
+  },
+  {
+    "archivo": "nueva-solicitud-desktop.png",
+    "url": "https://full-tank-964e2.web.app/catalog/providers/101",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "11e33cef8aca616dbee175652c760b2e49f80e5df945c0a95ea18fd8c2e584b3"
+  },
+  {
+    "archivo": "pago-demo-desktop.png",
+    "url": "https://full-tank-964e2.web.app/payment",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "8bf32e736298341d48f67c40cae0afc5e88941e6e6ed943f6e8ae66be136a908"
+  },
+  {
+    "archivo": "pagos-desktop.png",
+    "url": "https://full-tank-964e2.web.app/payment",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "a48be986eebfd3514b7cc28556e539f8ccd19a68df945473ee661571af60cffd"
+  },
+  {
+    "archivo": "pendientes-proveedor-desktop.png",
+    "url": "https://full-tank-964e2.web.app/ordering/pending",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "52d3d7cee10c6c9e247441b29979194c8001d47fd0b8d18a44c1483cdd81ffe6"
+  },
+  {
+    "archivo": "provider-dashboard-desktop.png",
+    "url": "https://full-tank-964e2.web.app/dashboard",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "69713eb0352d2116258c31c874897efbee37f013b0bced791f1c9b242e58120f"
+  },
+  {
+    "archivo": "provider-dashboard-mobile.png",
+    "url": "https://full-tank-964e2.web.app/dashboard",
+    "fecha_revision": "2026-10-09",
+    "ancho": 390,
+    "alto": 844,
+    "sha256": "13d0218d90c4e83b0570aec253d0232efa56a58db244b92afaca15ea359902b9"
+  },
+  {
+    "archivo": "registro-mobile.png",
+    "url": "https://full-tank-964e2.web.app/iam/register",
+    "fecha_revision": "2026-10-09",
+    "ancho": 390,
+    "alto": 844,
+    "sha256": "5915700f8a723d530605bf658829aea951a11d775ce48c6252895cd775a15084"
+  },
+  {
+    "archivo": "reportes-comprador-desktop.png",
+    "url": "https://full-tank-964e2.web.app/reporting/buyer",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "eda04a4df8db8e1cc4b246728b3a230abcffaadbea0310d9417694e0470292d5"
+  },
+  {
+    "archivo": "reportes-proveedor-desktop.png",
+    "url": "https://full-tank-964e2.web.app/reporting/provider",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "b33bf88043e86ec85c9d97efad21c3df12d69fc04a66d4a9cc5a1a0f0d0a09b3"
+  },
+  {
+    "archivo": "solicitudes-desktop.png",
+    "url": "https://full-tank-964e2.web.app/ordering/my-requests",
+    "fecha_revision": "2026-10-09",
+    "ancho": 1440,
+    "alto": 1000,
+    "sha256": "691f1e745bfa907daefaff8ddb537a0ce0b734b3a37ed7d15455de99f584d65d"
+  }
+]
