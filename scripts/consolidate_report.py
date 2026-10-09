@@ -10,6 +10,7 @@ import os
 import re
 import shutil
 import subprocess
+import tempfile
 
 def consolidate():
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,13 +80,16 @@ def consolidate():
     print(f"   Líneas: {len(consolidated_md.splitlines())} | Tamaño: {len(consolidated_md.encode('utf-8')) / 1024:.1f} KB")
 
     # Compilar a HTML mediante 'marked'
-    tmp_html = "/tmp/marked_report.html"
+    tmp_html = os.path.join(tempfile.gettempdir(), "marked_report.html")
     try:
+        marked_cmd = ["npx.cmd" if os.name == "nt" else "npx", "--yes", "marked", "-i", md_output, "-o", tmp_html]
         subprocess.run(
-            ["npx", "--yes", "marked", "-i", md_output, "-o", tmp_html],
+            marked_cmd,
+            shell=True if os.name == "nt" else False,
             check=True,
             capture_output=True,
-            text=True
+            text=True,
+            encoding="utf-8"
         )
         with open(tmp_html, "r", encoding="utf-8") as f:
             html_body = f.read()
@@ -298,11 +302,47 @@ def consolidate():
     print(f"   Ruta: {html_output}")
     print(f"   Tamaño: {len(html_template.encode('utf-8')) / 1024:.1f} KB")
 
+    # Generar archivo PDF automáticamente mediante navegador headless (Edge / Chrome)
+    pdf_output = os.path.join(entregables_dir, "upc-pre-202620-1asi0730-16129-fuelpoint-report-tb1.pdf")
+    browser_candidates = [
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+        shutil.which("msedge"),
+        shutil.which("google-chrome"),
+        shutil.which("chromium"),
+        shutil.which("chromium-browser")
+    ]
+    browser_path = next((b for b in browser_candidates if b and os.path.exists(b)), None)
+    if browser_path:
+        print(f"⏳ Generando PDF con navegador headless...")
+        file_url = "file:///" + os.path.abspath(html_output).replace("\\", "/")
+        pdf_cmd = [
+            browser_path,
+            "--headless=new",
+            "--disable-gpu",
+            "--no-pdf-header-footer",
+            f"--print-to-pdf={pdf_output}",
+            file_url
+        ]
+        res = subprocess.run(pdf_cmd, capture_output=True, text=True)
+        if os.path.exists(pdf_output) and os.path.getsize(pdf_output) > 0:
+            print(f"✅ [3/3] Archivo PDF consolidado generado en entregables:")
+            print(f"   Ruta: {pdf_output}")
+            print(f"   Tamaño: {os.path.getsize(pdf_output) / 1024:.1f} KB")
+        else:
+            print("Advertencia: No se pudo generar el archivo PDF automáticamente.")
+    else:
+        print("Aviso: No se detectó navegador headless para generar PDF automático.")
+
     # Copiar también a /home/bryan/code/Proyectos/FullTank/entregables/
     parent_entregables = "/home/bryan/code/Proyectos/FullTank/entregables"
     if os.path.exists(parent_entregables):
         shutil.copy2(md_output, parent_entregables)
         shutil.copy2(html_output, parent_entregables)
+        if os.path.exists(pdf_output):
+            shutil.copy2(pdf_output, parent_entregables)
         print(f"✅ Copia sincronizada en carpeta general de entregables:")
         print(f"   Ruta: {parent_entregables}/")
 
