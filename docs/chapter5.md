@@ -520,99 +520,99 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
   </thead>
 <tbody>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>5596c00</td>
     <td>feat: add initial landing page structure for FullTank web platform</td>
-    <td>-</td>
+    <td>Estructura HTML inicial y maquetación de secciones clave de la Landing Page.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>6c22e93</td>
     <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
-    <td>-</td>
+    <td>Lógica interactiva en JavaScript para navegación, efectos de scroll y acordeón FAQ.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>02df602</td>
     <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
-    <td>-</td>
+    <td>Hojas de estilo CSS responsive para componentes de métricas, tarjetas y navbar.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>25bd1bf</td>
     <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
-    <td>-</td>
+    <td>Estilizado CSS para testimonios, planes de precios, footer y sección de equipo.</td>
     <td>24/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>feat/about us</td>
     <td>0408f5d</td>
     <td>docs: improved the spelling</td>
-    <td>-</td>
+    <td>Corrección ortográfica y gramatical de contenidos en la sección About Us.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>feat/about us</td>
     <td>389615f</td>
     <td>docs: added images file</td>
-    <td>-</td>
+    <td>Incorporación de archivos de imágenes y recursos gráficos para About Us.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>771e406</td>
     <td>add team profiles and about-the-team video section</td>
-    <td>-</td>
+    <td>Integración visual de perfiles de integrantes y sección de video institucional.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>68e2115</td>
     <td>docs: fix landing page text</td>
-    <td>-</td>
+    <td>Depuración y ajuste de redacción en los textos informativos de la Landing Page.</td>
     <td>25/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>3ce5d9d</td>
     <td>feat(about the product): add stakeholder video for the future</td>
-    <td>-</td>
+    <td>Incorporación de bloque multimedia con video explicativo para stakeholders.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>d6c516c</td>
     <td>fix(english switched): everything is now translated to english</td>
-    <td>-</td>
+    <td>Traducción completa de contenidos e internacionalización inicial al idioma inglés.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>bc61806</td>
     <td>fix(responsive design):responsive design corrected</td>
-    <td>-</td>
+    <td>Corrección y optimización de media queries para diseño adaptable en dispositivos móviles.</td>
     <td>26/04/2026</td>
   </tr>
   <tr>
-    <td>PrimeFuel/FullTank_LandingPage</td>
+    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
     <td>main</td>
     <td>bae9d2d</td>
     <td>fix(main.js): minor translation problems solved</td>
-    <td>-</td>
+    <td>Corrección de detalles menores en las cadenas de traducción dentro de main.js.</td>
     <td>26/04/2026</td>
   </tr>
 </tbody>
