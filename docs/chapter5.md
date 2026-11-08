@@ -1239,3 +1239,40 @@ Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y 
 
 ---
 
+### 5.3. Validation Interviews
+
+#### 5.3.1. Validation Interviews
+
+Para el proceso de validación del incremento de software desarrollado durante los Sprints 1 y 2, se estructuró un conjunto de guías de entrevistas semiestructuradas orientadas a contrastar las hipótesis iniciales de Lean UX frente a la experiencia real de los usuarios al interactuar con el prototipo funcional desplegado en producción ([FullTank Web App](https://full-tank-964e2.web.app/)).
+
+El instrumento se organizó de manera diferenciada para cada uno de los dos segmentos objetivo del modelo de negocio de FullTank:
+1. **Segmento 1: Empresas solicitantes de combustible (Compradores)** — Centrado en la exploración de catálogo, cotización, vinculación de maquinaria/equipos, solicitud de abastecimiento y trazabilidad de pedidos.
+2. **Segmento 2: Empresas proveedoras de combustible (Proveedores)** — Centrado en la administración de inventario de hidrocarburos, evaluación y aprobación de solicitudes entrantes, asignación de flota (vehículos cisterna y conductores autorizados) y confirmación de entregas logísticas.
+
+A continuación, se detallan las guías metodológicas diseñadas para ambos segmentos:
+
+##### Guía de Validación — Segmento 1: Empresas Solicitantes de Combustible (Compradores)
+
+1. **Percepción de Valor y Usabilidad General:** Al interactuar con el flujo de compra (desde explorar el catálogo y tus equipos hasta emitir una solicitud), ¿cuáles consideras que fueron las pantallas o funciones más claras, intuitivas y que te aportaron mayor valor operativo?
+2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante el recorrido por la plataforma, ¿en qué momentos, campos o pantallas sentiste fricción, lentitud o falta de claridad sobre cuál era el siguiente paso a seguir?
+3. **Claridad del Modelo de Dominio:** En módulos como la gestión de 'Equipos' (maquinaria/tanques de obra) o los estados del pedido (aprobado, despachado, entregado), ¿identificaste algún término, métrica o componente cuya función dentro de la operativa de tu empresa no haya quedado del todo clara?
+4. **Completitud Funcional (Feature Completeness):** Considerando cómo compras combustible en tu empresa (volúmenes en galones/litros, combustible diésel B5 S-50, comprobantes fiscales, autorizaciones internas), ¿qué información crítica sentiste que le falta a la interfaz para cubrir tu ciclo de compra completo?
+5. **Confianza Transaccional y Seguridad Operativa:** Al tratarse de compras B2B de alto valor monetario e impacto en la continuidad de sus operaciones, ¿la plataforma te transmite la seguridad, formalidad y transparencia necesarias para autorizar un pedido real? ¿Qué te genera certeza y qué te genera desconfianza?
+6. **Eficiencia Operativa frente al Proceso Actual:** Frente a tu gestión actual (llamadas telefónicas, chats de WhatsApp, fotos de váuchers y cuadre manual en Excel), ¿en qué tareas puntuales consideras que FullTank reduce carga administrativa o previene errores humanos?
+7. **Intención de Adopción y Reemplazo de Herramientas:** Si tu empresa tuviera acceso operativo a FullTank a partir de mañana, ¿reemplazarías tus canales actuales de compra para abastecer tus obras o flotas mediante este sistema web? ¿Qué facilitaría o impediría esa transición en tu equipo?
+8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una condición indispensable o requisito no negociable para tu área de compras y logística, ¿cuál es esa característica que, de no estar presente o fallar, te obligaría a descartar por completo el uso de la aplicación?
+9. **Agilidad en la Generación de Pedidos:** Evaluando la cantidad de pasos, campos y pantallas desde que seleccionas el producto hasta que envías la solicitud, ¿sientes que el flujo es ágil o consideras que en una urgencia operativa en obra seguirías prefiriendo coordinar por llamada o mensaje directo?
+10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta solución web a colegas de logística o empresas contratistas que enfrentan los mismos desafíos de abastecimiento? ¿Cuál sería tu argumento principal?
+
+##### Guía de Validación — Segmento 2: Empresas Proveedoras de Combustible (Proveedores)
+
+1. **Percepción de Valor y Control Operativo:** Al interactuar con el panel de proveedor (actualizar precios y stock, atender solicitudes entrantes y asignar cisternas y conductores), ¿cuáles consideras que fueron las funciones más claras, ordenadas y de mayor utilidad para tu operación logística diaria?
+2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante la navegación y ejecución de tareas como proveedor, ¿en qué momentos, tablas o formularios sentiste confusión, pasos redundantes o falta de información crítica para tomar una decisión de despacho?
+3. **Claridad del Modelo de Dominio de Fulfillment e Inventario:** En secciones como la gestión de 'Fulfillment' (flota de vehículos, conductores, estados AVAILABLE / ASSIGNED) o las métricas de inventario, ¿identificaste algún término, estado o control cuya función dentro de la operativa de distribución mayorista no haya quedado clara?
+4. **Completitud Funcional Normativa y Operativa:** Considerando la operativa real de una distribuidora de combustible (límites de crédito, registro de guía de remisión física/electrónica, certificaciones de choferes, cubicaje de cisternas), ¿qué datos o funcionalidades críticas sentiste que faltan en la plataforma para gestionar tus entregas con total rigurosidad?
+5. **Confiabilidad Transaccional en Despachos:** Tratándose de despachos de miles de galones donde cualquier error en la asignación o retraso genera penalidades y reclamos de clientes, ¿el sistema te transmite la robustez y consistencia necesarias para coordinar tus despachos reales por este medio? ¿Qué aspectos te generan confianza o incertidumbre?
+6. **Eficiencia en la Programación Logística vs. Proceso Actual:** Frente a tu gestión cotidiana actual (hojas de cálculo de programación de ruta, cruce manual de llamadas con choferes, confirmaciones dispersas por WhatsApp), ¿en qué procesos específicos consideras que esta plataforma optimizaría tus tiempos de despacho y control de inventario?
+7. **Intención de Adopción e Integración Comercial:** Si los clientes contratistas y empresas comenzaran a emitir sus requerimientos por FullTank, ¿tu empresa adoptaría la plataforma como su canal oficial de recepción de pedidos y programación de flota? ¿Cuáles serían los principales factores impulsores o frenos para implementarla?
+8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una exigencia operativa o legal no negociable para una empresa distribuidora de combustible, ¿cuál es esa funcionalidad o salvaguarda que, de no estar resuelta en la plataforma, te impediría utilizarla comercialmente?
+9. **Impacto en la Organización y Trazabilidad:** Al centralizar en una sola plataforma la recepción de pedidos, la disponibilidad de inventario, la asignación de recursos logísticos y el histórico de entregas cerradas, ¿consideras que reduce significativamente el riesgo de desorden operativo y traspapeleo frente a tus métodos habituales?
+10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta herramienta a otras empresas distribuidoras o estaciones mayoristas del sector que buscan digitalizar su canal corporativo? ¿Cuál sería la ventaja clave que destacarías?
