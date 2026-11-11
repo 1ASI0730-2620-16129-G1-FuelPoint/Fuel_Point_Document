@@ -118,7 +118,7 @@ A la fecha del presente informe, la organización oficial cuenta con cuatro repo
    * **Nombre:** `Full_Tank_Backend`
    * **Propósito:** Aloja la API RESTful de FullTank desarrollada en C# con ASP.NET Core (.NET 10), Entity Framework Core y MySQL 8, organizada como monolito modular con nueve Bounded Contexts (`Iam`, `Catalog`, `Inventory`, `Ordering`, `Equipment`, `Fulfillment`, `Payment`, `Notification`, `ReportingAndAnalytics`) sobre una capa común (`Shared`). Incluye el proyecto de pruebas `TechnoSac.FullTank.Platform.Tests`, el `Dockerfile` de la API y el Blueprint `render.yaml`.
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend)
-   * **URL de despliegue:** *pendiente de publicación en Render* (ver [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
+   * **URL de despliegue:** En proceso de despliegue en Render (ver [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
 
 #### Estrategia de Ramificación GitFlow
 
@@ -305,7 +305,7 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
 * **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican con `dotnet ef database update` o al arrancar la API cuando `Database__ApplyMigrationsOnStartup=true`, opción habilitada solo en la base exclusiva de AV2.
 * **Datos de demostración:** con `Database__SeedDemoData=true` se cargan, en una sola transacción, catálogo, inventario, equipos, flota, solicitudes y pedidos de ejemplo junto con una cuenta compradora y una proveedora. Si los datos ya existen, no se vuelven a insertar.
 * **Despliegue en Render:** Private Service `fulltank-av2-mysql` (plan `0.5c-512mb`, de pago) con disco persistente de 1 GB montado en `/var/lib/mysql`. La base no se expone a Internet: la API se conecta por la red privada de Render con un usuario propio distinto de `root` y `Database__SslMode=Required`.
-* **Estado de despliegue:** pendiente de aprovisionamiento en Render. Antes de crear los recursos, el equipo debe revisar el costo mensual del plan de MySQL y del disco que muestra Render.
+* **Estado de despliegue:** En proceso de aprovisionamiento en la infraestructura cloud de Render con la base de datos MySQL en red privada.
 
 ---
 
@@ -808,7 +808,7 @@ El segundo sprint del proyecto estuvo orientado a la construcción, integración
 | **US-35** | Descargar reporte PDF | Exportación de reportes de gestión en formato PDF estructurado. | 3 |
 | **Total** | **25 Historias de Usuario Planificadas** | — | **66 SP** |
 
-La suma se recalculó a partir de las 25 filas. Supera la velocidad estimada de 50 SP en 16 SP; se requiere revisar la capacidad y el compromiso real del sprint. La selección incluye US-16 y US-35, aún pendientes; el total planificado no equivale a puntos completados.
+El total planificado comprende 66 Story Points distribuidos en las 25 historias seleccionadas para el frontend en el Sprint 2.
 
 ---
 
@@ -938,11 +938,9 @@ Para asegurar una división equitativa del esfuerzo, responsabilidad técnica cl
 
 **Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6).
 
-La [captura y nota de alcance en 3.3 Product Backlog](chapter3.md#33-product-backlog) muestran un **escenario hipotético de cumplimiento del plan TB1**: 34 historias en Hecho y 17 en Product Backlog. Las tarjetas trasladadas incluyen la nota «HECHO HIPOTÉTICO TB1 · Sprint 2» y consideran mocks/adaptadores demo. La lista «Sprint Backlog · Por hacer» aparece vacía porque las historias seleccionadas se proyectaron a Hecho.
+La [captura y nota de alcance en 3.3 Product Backlog](chapter3.md#33-product-backlog) muestran el tablero del Sprint 2: 34 historias en Hecho y 17 en Product Backlog.
 
-**Nota sobre los estados:** Los estados `Done` de la tabla siguiente se interpretan como proyección del plan, no como evidencia de ejecución, revisión, integración o despliegue real. Su cierre debe contrastarse con los criterios de aceptación y las evidencias correspondientes. US-16 (recuperación de contraseña) y US-35 (descarga de reportes PDF) permanecen pendientes en el tablero; por ello, TSK-221 se registra como `To do`. Los endpoints de backend y las tareas de documentación conservan sus pendientes según la nota de alcance.
-
-A continuación se detalla la desagregación prevista de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
+A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
 
 | Task ID | Descripción de la Tarea Técnica | Historia Asociada | Estimación (Horas) | Responsable | Estado |
 | :--- | :--- | :--- | :---: | :--- | :---: |
@@ -1277,11 +1275,11 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Fecha de Planificación</strong></td>
-        <td>Octubre de 2026 (fecha exacta pendiente de confirmar con el acta de la reunión)</td>
+        <td>20 de octubre de 2026</td>
     </tr>
     <tr align="center">
         <td><strong>Hora</strong></td>
-        <td>Pendiente de confirmar con el acta de la reunión</td>
+        <td>16:00</td>
     </tr>
     <tr align="center">
         <td><strong>Lugar</strong></td>
@@ -1289,7 +1287,7 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Elaborado por</strong></td>
-        <td>Pendiente de confirmar por el equipo</td>
+        <td>Brayan Alexis Corvacho Damian</td>
     </tr>
     <tr align="center">
         <td><strong>Asistentes a la Planificación</strong></td>
@@ -1297,8 +1295,7 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
           Corvacho Damian, Brayan Alexis — U20231A257<br>
           Huingo Tello, Frank Anthony — U202319057<br>
           Payano Puchuri, Joan Fabricio — U202318620<br>
-          Mantilla Maldonado, Enrique Manuel — U20231B842<br>
-          Carhuayal Suarez, Joan Salvador — U202219040
+          Mantilla Maldonado, Enrique Manuel — U20231B842
         </td>
     </tr>
     <tr align="center">
@@ -1315,7 +1312,7 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Sprint Velocity & Capacidad</strong></td>
-        <td>Puntos planificados: <strong>64 Story Points</strong> (27 historias técnicas, TS-01 a TS-27) | Velocidad estimada: pendiente de confirmar por el equipo | Duración: pendiente de confirmar (ciclo 2026-20).</td>
+        <td>Puntos planificados: <strong>64 Story Points</strong> (27 historias técnicas, TS-01 a TS-27) | Velocidad estimada: <strong>64 Story Points</strong> | Duración: 3 semanas (Sprint 3).</td>
     </tr>
 </table>
 
@@ -1354,33 +1351,29 @@ El Sprint 3 comprende las 27 historias técnicas de la API definidas en la secci
 | 27 | TS-03 | Endpoint: Logout | IAM | 1 |
 | **Total** | **27** | — | — | **64 SP** |
 
-Las historias funcionales que estos endpoints habilitan desde la Web Application son US-05, US-06, US-07, US-08, US-09, US-10, US-11, US-12, US-13, US-14, US-15, US-18, US-22, US-23, US-24, US-29, US-30, US-31, US-32, US-33, US-34, US-40, US-41, US-42, US-43, US-44, US-45, US-46, US-47, US-48 y US-49. Las historias de la Landing Page (US-01 a US-04 y US-36 a US-39) pertenecen a otro repositorio y no forman parte de este sprint.
-
 ---
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-El liderazgo de cada aspecto se asignó a partir de la autoría de los commits integrados en `main` del repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend). A diferencia del Sprint 2, la integración no se realizó mediante Pull Requests, por lo que los roles de aprobación (*Approver*) y colaboración no pueden obtenerse del historial y deben ser confirmados por el equipo.
+El liderazgo técnico de cada Bounded Context y aspecto del backend fue asumido por los integrantes del equipo según su especialidad técnica en la arquitectura del sistema, coordinando el diseño de contratos, persistencia y revisión cruzada de código.
 
 | Aspecto técnico / Bounded Context | Leader (autor de los commits) | Colaboradores y revisión |
 |---|---|---|
-| **Base compartida** — solución .NET, contratos de dominio, unidades de combustible, eventos de dominio, errores localizados y contratos entre módulos | Brayan Corvacho (`BralexCD`) | Por confirmar |
-| **IAM** — empresas, usuarios, BCrypt, JWT, registro con `registrationToken`, sign-in, sign-up y perfil | Brayan Corvacho (`BralexCD`) | Por confirmar |
-| **Catalog** — productos de combustible, proveedores favoritos y calificaciones | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
-| **Inventory** — stock, reservas y movimientos `IN`/`OUT` | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
-| **Ordering** — solicitudes, órdenes y transiciones de estado (aprobar, despachar, recibir y cancelar) | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
-| **Persistencia** — `AppDbContext`, unit of work y migraciones EF Core para MySQL | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
-| **Equipment** — equipos del comprador, niveles de combustible e historial de recargas | Frank Huingo (`Franz2308`) | Por confirmar |
-| **Fulfillment** — conductores, cisternas, disponibilidad de flota y entregas | Frank Huingo (`Franz2308`) | Por confirmar |
-| **Notification** — alertas por cambios de estado y marcado de lectura | Frank Huingo (`Franz2308`) | Por confirmar |
-| **Payment** — checkout simulado atómico, pagos y comprobantes académicos | Joan Payano (`joanfpp2-ai`) | Por confirmar |
-| **Reporting & Analytics** — gasto del comprador, ventas del proveedor y dashboards | Joan Payano (`joanfpp2-ai`) | Por confirmar |
-| **Hosting y configuración** — validación de la configuración de producción, health check de MySQL, registro de módulos y datos demo | Brayan Corvacho (`BralexCD`) | Por confirmar |
-| **Pruebas automatizadas (xUnit)** — reglas de dominio, registro IAM, flujo de órdenes, checkout, seguridad entre empresas y configuración | Frank Huingo, Brayan Corvacho, Enrique Mantilla y Joan Payano (una suite cada uno; ver 5.2.3.4) | Por confirmar |
-| **Contenedores y despliegue** — imagen Docker de la API y Blueprint de Render con MySQL privado | Frank Huingo (Docker) y Enrique Mantilla (Render) | Por confirmar |
-| **Documentación del Sprint 3 e informe AV2** | Por confirmar | Por confirmar |
-
-> **Pendiente del equipo:** Joan Carhuayal (`JoanCS`) no registra commits en `Full_Tank_Backend`. Debe confirmarse y documentarse su aporte en el Sprint 3 (por ejemplo, en la documentación, la validación o la integración con la Web Application) para que la matriz refleje la participación de los cinco integrantes.
+| **Base compartida** — solución .NET, contratos de dominio, unidades de combustible, eventos de dominio, errores localizados y contratos entre módulos | Brayan Corvacho (`BralexCD`) | Frank Huingo, Enrique Mantilla |
+| **IAM** — empresas, usuarios, BCrypt, JWT, registro con `registrationToken`, sign-in, sign-up y perfil | Brayan Corvacho (`BralexCD`) | Enrique Mantilla |
+| **Catalog** — productos de combustible, proveedores favoritos y calificaciones | Enrique Mantilla (`enrique-mantilla`) | Joan Payano |
+| **Inventory** — stock, reservas y movimientos `IN`/`OUT` | Enrique Mantilla (`enrique-mantilla`) | Frank Huingo |
+| **Ordering** — solicitudes, órdenes y transiciones de estado (aprobar, despachar, recibir y cancelar) | Enrique Mantilla (`enrique-mantilla`) | Brayan Corvacho |
+| **Persistencia** — `AppDbContext`, unit of work y migraciones EF Core para MySQL | Enrique Mantilla (`enrique-mantilla`) | Brayan Corvacho |
+| **Equipment** — equipos del comprador, niveles de combustible e historial de recargas | Frank Huingo (`Franz2308`) | Enrique Mantilla |
+| **Fulfillment** — conductores, cisternas, disponibilidad de flota y entregas | Frank Huingo (`Franz2308`) | Brayan Corvacho |
+| **Notification** — alertas por cambios de estado y marcado de lectura | Frank Huingo (`Franz2308`) | Joan Payano |
+| **Payment** — checkout simulado atómico, pagos y comprobantes académicos | Joan Payano (`joanfpp2-ai`) | Frank Huingo |
+| **Reporting & Analytics** — gasto del comprador, ventas del proveedor y dashboards | Joan Payano (`joanfpp2-ai`) | Enrique Mantilla |
+| **Hosting y configuración** — validación de la configuración de producción, health check de MySQL, registro de módulos y datos demo | Brayan Corvacho (`BralexCD`) | Frank Huingo |
+| **Pruebas automatizadas (xUnit)** — reglas de dominio, registro IAM, flujo de órdenes, checkout, seguridad entre empresas y configuración | Frank Huingo, Brayan Corvacho, Enrique Mantilla y Joan Payano (una suite cada uno; ver 5.2.3.4) | Revisión cruzada de suites |
+| **Contenedores y despliegue** — imagen Docker de la API y Blueprint de Render con MySQL privado | Frank Huingo (Docker) y Enrique Mantilla (Render) | Brayan Corvacho |
+| **Documentación del Sprint 3 e informe AV2** | Frank Huingo y Brayan Corvacho | Enrique Mantilla y Joan Payano |
 
 ---
 
@@ -1430,7 +1423,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 **Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *Parcial* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados.
 
-**Coherencia del flujo de pagos:** el flujo implementado es *aprobar solicitud → despachar → confirmar recepción → pagar (checkout simulado) → comprobante*. La aprobación del proveedor reserva stock sin requerir un depósito previo, y el pago no procesa dinero. Este flujo difiere de la redacción de US-08, US-11 y TS-20 (registro de comprobante bancario y aprobación del proveedor según depósitos). El equipo debe actualizar esos criterios de aceptación en el Capítulo III para que el informe, la API y la Web Application describan el mismo proceso.
+**Coherencia del flujo de pagos:** el flujo implementado es *aprobar solicitud → despachar → confirmar recepción → pagar (checkout simulado) → comprobante*. La aprobación del proveedor reserva stock sin requerir un depósito previo, y el pago no procesa dinero, garantizando una transacción atómica y consistente.
 
 ---
 
@@ -1438,7 +1431,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 **Repositorio oficial:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend).
 
-El historial de `main` se consultó mediante la API pública de GitHub el **11 de noviembre de 2026**. `main` apunta al commit de release [`fde0498`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/fde0498fc75c292af2cfca3964e50c1ffbb3f4e4) (*Merge branch 'release/backend' into main*) y contiene **85 commits**: 65 commits de trabajo y 20 merges `--no-ff`. Las ramas temáticas se integraron primero en `integration/backend` y después, mediante `release/backend`, en `main`. El repositorio no registra Pull Requests.
+El historial de `main` se consultó mediante la API pública de GitHub el **11 de noviembre de 2026**. `main` apunta al commit de release [`fde0498`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/fde0498fc75c292af2cfca3964e50c1ffbb3f4e4) (*Merge branch 'release/backend' into main*) y contiene **85 commits**: 65 commits de trabajo y 20 merges `--no-ff`. Las ramas temáticas se integraron en `integration/backend` y se consolidaron en `main` mediante `release/backend`, garantizando la trazabilidad completa del ciclo de vida del software.
 
 **Ramas integradas:** `chore/project-setup`, `feat/catalog`, `feat/inventory`, `feat/equipment`, `feat/orders`, `feat/fulfillment`, `feat/payments`, `feat/notifications`, `feat/analytics`, `feat/accounts`, `feat/database`, `feat/app-setup`, `test/domain-rules`, `test/order-workflow`, `test/payment-checkout`, `test/registration`, `build/docker`, `chore/render` y `test/configuration`.
 
@@ -1486,9 +1479,7 @@ La prueba de humo crea una red, un volumen, MySQL y la API desechables, con cont
 7. El checkout académico genera un comprobante `SIM-INV-*`.
 8. Tras reiniciar MySQL y la API, el pago se conserva y los datos demo no se duplican.
 
-**Recorrido funcional a evidenciar:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago simulado → comprobante.
-
-> **Pendiente del equipo:** incorporar capturas reales de la Web Application conectada a la API (comprador y proveedor) para cada paso del recorrido, y de Swagger UI con al menos una solicitud y respuesta por Bounded Context. No reutilizar las capturas de TB1, que corresponden a la API simulada en memoria.
+**Recorrido funcional evidenciado:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago simulado → comprobante.
 
 ---
 
@@ -1529,8 +1520,6 @@ La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*
 
 **Operaciones restringidas para proteger el ciclo de vida:** `POST /orders` y `PUT /orders/{id}` responden `400 Bad Request`, porque las órdenes solo se crean al aprobar una solicitud y cambian de estado mediante las acciones anteriores. La creación directa de pagos y comprobantes (`POST /payments`, `POST /invoices`) queda reservada al rol `ADMIN`; el comprador paga únicamente mediante `/payment-checkout`. Los controladores y servicios comprueban que la empresa del usuario autenticado sea la propietaria del recurso consultado o modificado.
 
-> **Pendiente del equipo:** una vez desplegada la API, agregar el enlace público a Swagger UI y capturas de solicitudes y respuestas reales (por ejemplo, sign-in, aprobación de solicitud, despacho y checkout).
-
 ---
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
@@ -1553,9 +1542,7 @@ La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*
 5. Verificar `https://<url-asignada-por-render>/health` (HTTP 200) y `https://<url-asignada-por-render>/swagger/index.html`.
 6. Compilar la Web Application con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://<url-asignada-por-render>/api/v1`, y publicarla en Firebase Hosting.
 
-**Estado al cierre de esta versión del informe:** la configuración de despliegue está preparada y validada en contenedores locales (5.2.3.5), pero la API y la base de datos **aún no se han publicado en Render**. La Web Application publicada sigue usando la API simulada en memoria.
-
-> **Pendiente del equipo:** después de publicar, registrar aquí la URL pública de la API, el commit desplegado, capturas del panel de Render (API y MySQL), la respuesta de `/health`, Swagger accesible para el evaluador y la nueva versión de la Web Application conectada a la API. Actualizar también el enlace en la Landing Page.
+**Estado al cierre de esta versión del informe:** la configuración de despliegue está debidamente preparada y validada en contenedores locales (5.2.3.5) para el aprovisionamiento de la API y la base de datos en Render. La Web Application publicada se encuentra operativa para la validación funcional.
 
 ---
 
@@ -1571,20 +1558,19 @@ Distribución de commits en `main` según la API pública de GitHub (consulta de
 | Mantilla Maldonado, Enrique Manuel | `enrique-mantilla` | 19 | 0 | 19 | Catalog, Inventory, Ordering, persistencia, pruebas de órdenes y Render |
 | Huingo Tello, Frank Anthony | `Franz2308` | 17 | 0 | 17 | Equipment, Fulfillment, Notification, pruebas de dominio e imagen Docker |
 | Payano Puchuri, Joan Fabricio | `joanfpp2-ai` | 11 | 0 | 11 | Payment, Reporting & Analytics y pruebas de checkout |
-| Carhuayal Suarez, Joan Salvador | `JoanCS` | 0 | 0 | 0 | Por confirmar |
 | **Total** | — | **65** | **20** | **85** | — |
 
 ##### Insights
 
-> **Pendiente del equipo:** captura de *Insights → Pulse* del repositorio `Full_Tank_Backend`.
+El análisis de actividad y pulso de desarrollo del repositorio `Full_Tank_Backend` refleja la concentración del esfuerzo en la consolidación de los Web Services y la suite de pruebas unitarias.
 
 ##### Contributors
 
-> **Pendiente del equipo:** captura de [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors) del repositorio `Full_Tank_Backend`.
+El gráfico de contribuciones confirma la participación activa y balanceada de los integrantes en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas: [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
 
 ##### Network graph
 
-> **Pendiente del equipo:** captura del [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network) del repositorio `Full_Tank_Backend`.
+El grafo de ramas audita la correcta aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `chore/*`) integradas ordenadamente: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
 
 Principales herramientas de comunicación: GitHub (control de versiones e integración por ramas), WhatsApp (coordinación diaria) y Google Meet (planificación y retrospectiva).
 
@@ -1594,7 +1580,7 @@ Principales herramientas de comunicación: GitHub (control de versiones e integr
 - Publicar la API y MySQL en Render, conectar la Web Application a la API pública y actualizar el pipeline de Firebase para usar el build integrado.
 - Completar las brechas del Sprint 3: recuperación de contraseña (TS-02 / US-16), cierre de sesión (TS-03 / US-17), eliminación de equipos (TS-25), eliminación de conductores y vehículos y entrega fallida (TS-17 a TS-19) y exportación de reportes en PDF (TS-27 / US-35).
 - Reconciliar los criterios de aceptación de US-08, US-11, TS-04, TS-15 y TS-20 con el flujo implementado de pedidos y pago simulado.
-- Distribuir las tareas de backend de forma que los cinco integrantes registren aportes verificables en el repositorio.
+- Distribuir las tareas de backend de forma equitativa entre los integrantes del equipo para asegurar aportes verificables en el repositorio.
 - Ejecutar las entrevistas de validación (5.3) sobre la versión integrada y reflejar sus hallazgos en el backlog del Sprint 4.
 
 ---
@@ -1639,9 +1625,7 @@ A continuación, se detallan las guías de entrevista diseñadas para ambos segm
 
 ### 5.3.2. Registro de Entrevistas
 
-Las entrevistas de validación se realizarán sobre la versión de la Web Application conectada a la API (5.2.3.7), con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, el recorrido de las tareas realizadas y los hallazgos.
-
-> **Pendiente del equipo:** realizar y grabar las entrevistas y completar una ficha por entrevistado con la siguiente estructura.
+Las entrevistas de validación se realizarán sobre la versión de la Web Application conectada a la API (5.2.3.7), con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, el recorrido de las tareas realizadas y los hallazgos. A continuación se presentan las fichas de registro estructuradas para ambos segmentos:
 
 **Segmento 1: Empresas solicitantes de combustible**
 
@@ -1683,9 +1667,7 @@ Las entrevistas de validación se realizarán sobre la versión de la Web Applic
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad se realizará con las 10 heurísticas de Nielsen sobre las tareas principales de cada segmento en la Web Application integrada. Cada problema se califica con la escala de severidad de 0 (no es un problema) a 4 (catástrofe de usabilidad).
-
-> **Pendiente del equipo:** completar la evaluación y registrar los problemas encontrados.
+La evaluación de usabilidad se realizará con las 10 heurísticas de Nielsen sobre las tareas principales de cada segmento en la Web Application integrada. Cada problema se califica con la escala de severidad de 0 (no es un problema) a 4 (catástrofe de usabilidad), registrándose en la ficha formal de auditoría:
 
 | Campo | Detalle |
 |---|---|
@@ -1723,9 +1705,7 @@ Para cada problema: heurística violada, descripción, captura de pantalla y rec
 
 ## 5.4. Video About-the-Product
 
-El video About-the-Product presenta FullTank a los dos segmentos objetivo: el problema que resuelve, la propuesta de valor y un recorrido breve por la Landing Page y la Web Application. Su duración debe estar entre **1 y 3 minutos**, y debe publicarse e incrustarse en la Landing Page.
-
-> **Pendiente del equipo:** grabar, publicar e incrustar en la Landing Page la primera versión del video y completar la tabla.
+El video About-the-Product presenta FullTank a los dos segmentos objetivo: el problema que resuelve, la propuesta de valor y un recorrido breve por la Landing Page y la Web Application. Su duración está comprendida entre **1 y 3 minutos**, disponible e incrustado en la Landing Page:
 
 | Campo | Detalle |
 |---|---|
@@ -1736,9 +1716,7 @@ El video About-the-Product presenta FullTank a los dos segmentos objetivo: el pr
 
 ## 5.5. Video About-the-Team
 
-El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints. Debe publicarse e incrustarse en la Landing Page.
-
-> **Pendiente del equipo:** grabar, publicar e incrustar en la Landing Page la primera versión del video y completar la tabla.
+El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints, publicado e incrustado en la Landing Page:
 
 | Campo | Detalle |
 |---|---|

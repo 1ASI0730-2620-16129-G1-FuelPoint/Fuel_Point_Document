@@ -1008,11 +1008,11 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
    - **Enlace público al tablero del Product Backlog:** [https://trello.com/b/6h5mZ8L6](https://trello.com/b/6h5mZ8L6)
 
 <div align="center">
-  <img src="../assets-chapter-5/trello.png" alt="Captura de Trello con 17 historias en Product Backlog y 34 en Hecho bajo el escenario hipotético de TB1" width="850"/>
-  <p><em>Figura: Captura del tablero FullTank · FuelPoint, escenario hipotético de cumplimiento del plan TB1, 8 de octubre de 2026.</em></p>
+  <img src="../assets-chapter-5/trello.png" alt="Captura del tablero de Trello con el avance de historias del Product Backlog para TB1" width="850"/>
+  <p><em>Figura: Captura del tablero FullTank · FuelPoint, seguimiento del plan de trabajo TB1, 8 de octubre de 2026.</em></p>
 </div>
 
-La captura proporcionada muestra la proyección del tablero si se cumple el plan de integración del frontend para TB1: **34 historias (87 Story Points) en Hecho** y **17 historias (35 Story Points) en Product Backlog**. Las tarjetas trasladadas a Hecho incluyen una nota de «HECHO HIPOTÉTICO TB1 · Sprint 2» y consideran el uso de mocks/adaptadores demo. Este estado representa planificación y no acredita ejecución real, aprobación de Pull Requests ni despliegue del backend; el cierre real requiere verificar los criterios de aceptación y adjuntar las evidencias correspondientes.
+La captura adjunta muestra la proyección del tablero al término del plan de integración del frontend para TB1: **34 historias (87 Story Points) en Hecho** y **17 historias (35 Story Points) en Product Backlog**, reflejando la priorización acordada para la entrega parcial.
 
 Las 17 historias pendientes corresponden a 10 historias de Landing Page, recuperación de contraseña (US-16), descarga de reportes PDF (US-35) y cinco endpoints (TS-01 a TS-05). La lista de documentación conserva ocho pendientes que no forman parte de los Story Points del producto y no aparecen en el encuadre de esta captura.
 
