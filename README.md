@@ -280,5 +280,6 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 | **Web Services Repository** | Código fuente de la API RESTful (ASP.NET Core .NET 10, EF Core, MySQL) | [Full_Tank_Backend en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) |
 | **Web Services Deployed** | API y documentación Swagger publicadas en Render | *Pendiente de publicación* ([5.2.3.7](docs/chapter5.md#5237-software-deployment-evidence-for-sprint-review)) |
 | **Tablero del Proyecto (Trello)** | Tableros Kanban de Product Backlog y Sprints | [Tablero Oficial FullTank en Trello](https://trello.com/b/6h5mZ8L6) |
+| **Tablero del Sprint 3 (Trello)** | Tablero Kanban oficial del Sprint 3 (Web Services API) | [Sprint 3 en Trello](https://trello.com/b/CBQSmZA1/sprint-3) |
 | **Diseño y Prototipo (Figma)** | Wireframes, Mockups y Prototipo Navegable | [FullTank en Figma](https://www.figma.com/design/ZMHB35H60u2eUhctevkVKc/Fullank-Completo?node-id=0-1) |
 | **Sesión DDD EventStorming (Miro)** | Lienzo de modelado de Bounded Contexts y eventos | [EventStorming FullTank en Miro](https://miro.com/app/board/uXjVGgOzeI4=/) |
