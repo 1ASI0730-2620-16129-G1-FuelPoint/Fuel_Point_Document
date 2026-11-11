@@ -63,7 +63,7 @@ Las assumptions de esta sección no son hechos confirmados. Se validarán median
 
 #### 1.2.2.1 Lean UX Problem Statements
 
-El Problem Statement sintetiza el problema de negocio identificado en el Lean UX Canvas. Siguiendo rigurosamente las directrices del enunciado oficial y la metodología de Gothelf y Seiden (2021), **se elabora un único Problem Statement para todo el proyecto**, considerando de manera articulada a ambos segmentos objetivo (empresas solicitantes y empresas proveedoras de combustible) bajo la plantilla de *Brand new initiative*.
+El Problem Statement sintetiza el problema de negocio identificado en el Lean UX Canvas. Siguiendo rigurosamente las directrices del enunciado oficial y el enfoque Lean UX de Gothelf y Seiden (2021), **se elabora un único Problem Statement para todo el proyecto**, considerando de manera articulada a ambos segmentos objetivo (empresas solicitantes y empresas proveedoras de combustible) bajo la plantilla de *Brand new initiative*.
 
 **Plantilla oficial de Lean UX (*Brand new initiative*):**
 
