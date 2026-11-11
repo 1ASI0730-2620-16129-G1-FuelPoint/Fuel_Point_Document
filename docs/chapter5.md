@@ -1238,12 +1238,12 @@ Se contrastó la planificación de responsabilidades con los Pull Requests integ
 | IAM & Session | Brayan Corvacho (`BralexCD`) | PR #3 (`feat/iam`) | Integrado en `develop` y `main`. |
 | Fulfillment | Frank Huingo (`Franz2308`) | PR #4 (`feat/fulfillment`) | Integrado en `develop` y `main`. |
 | Notification | Frank Huingo (`Franz2308`) | PR #5 (`feat/notification`) | Integrado en `develop` y `main`. |
-| Equipment | Joan Payano (`JoanCS`) | PR #6 (`feat/equipment`) | Integrado en `develop` y `main`. |
-| Inventory | Joan Payano (`JoanCS`) | PR #7 (`feat/inventory`) | Integrado en `develop` y `main`. |
+| Equipment | Joan Carhuayal (`JoanCS`) | PR #6 (`feat/equipment`) | Integrado en `develop` y `main`. |
+| Inventory | Joan Carhuayal (`JoanCS`) | PR #7 (`feat/inventory`) | Integrado en `develop` y `main`. |
 | Catalog | Enrique Mantilla (`enrique-mantilla`) | PR #8 (`feat/catalog`) | Integrado en `develop` y `main`. |
 | Ordering | Enrique Mantilla (`enrique-mantilla`) | PR #9 (`feat/ordering`) | Integrado en `develop` y `main`. |
-| Payment | Joan Palomino (`joanfpp2-ai`) | PR #10 (`feat/payment`) | Integrado en `develop` y `main`. |
-| Reporting | Joan Palomino (`joanfpp2-ai`) | PR #11 (`feat/reporting`) | Integrado en `develop` y `main`. |
+| Payment | Joan Payano (`joanfpp2-ai`) | PR #10 (`feat/payment`) | Integrado en `develop` y `main`. |
+| Reporting | Joan Payano (`joanfpp2-ai`) | PR #11 (`feat/reporting`) | Integrado en `develop` y `main`. |
 
 Fuentes: [Pull Requests del frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pulls), [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/graphs/contributors), [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/network) y [consulta conservada de la API](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json).
 
@@ -1261,40 +1261,174 @@ Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y 
 
 ---
 
-### 5.3. Validation Interviews
+### 5.2.3. Sprint 3
 
-#### 5.3.1. Validation Interviews
+#### 5.2.3.1. Sprint Planning 3
 
-Para el proceso de validación del incremento de software desarrollado durante los Sprints 1 y 2, se estructuró un conjunto de guías de entrevistas semiestructuradas orientadas a contrastar las hipótesis iniciales de Lean UX frente a la experiencia real de los usuarios al interactuar con el prototipo funcional desplegado en producción ([FullTank Web App](https://full-tank-964e2.web.app/)).
+El tercer sprint se orientó a la construcción de los **Web Services RESTful de FullTank** en C# con ASP.NET Core, su persistencia en MySQL mediante Entity Framework Core, la preparación del despliegue en la nube y la integración con la Web Application desarrollada en el Sprint 2.
 
-El instrumento se organizó de manera diferenciada para cada uno de los dos segmentos objetivo del modelo de negocio de FullTank:
-1. **Segmento 1: Empresas solicitantes de combustible (Compradores)** — Centrado en la exploración de catálogo, cotización, vinculación de maquinaria/equipos, solicitud de abastecimiento y trazabilidad de pedidos.
-2. **Segmento 2: Empresas proveedoras de combustible (Proveedores)** — Centrado en la administración de inventario de hidrocarburos, evaluación y aprobación de solicitudes entrantes, asignación de flota (vehículos cisterna y conductores autorizados) y confirmación de entregas logísticas.
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <tr align="center" style="background-color: #f2f2f2;">
+        <td><strong>Sprint #</strong></td>
+        <td><strong>Sprint 3</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr align="center">
+        <td><strong>Fecha de Planificación</strong></td>
+        <td>Octubre de 2026 (fecha exacta pendiente de confirmar con el acta de la reunión)</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Hora</strong></td>
+        <td>Pendiente de confirmar con el acta de la reunión</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Lugar</strong></td>
+        <td>Google Meet (sesión virtual de equipo)</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Elaborado por</strong></td>
+        <td>Pendiente de confirmar por el equipo</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Asistentes a la Planificación</strong></td>
+        <td>
+          Corvacho Damian, Brayan Alexis — U20231A257<br>
+          Huingo Tello, Frank Anthony — U202319057<br>
+          Payano Puchuri, Joan Fabricio — U202318620<br>
+          Mantilla Maldonado, Enrique Manuel — U20231B842<br>
+          Carhuayal Suarez, Joan Salvador — U202219040
+        </td>
+    </tr>
+    <tr align="center">
+        <td><strong>Resumen de Revisión del Sprint 2</strong></td>
+        <td>Se integraron los diez Pull Requests de la Web Application (#2 al #11) en <code>develop</code> y <code>main</code>, con 90/90 pruebas aprobadas en Vitest y despliegue automatizado en Firebase Hosting (release <code>v1.0.0</code>). La aplicación funcionaba con una API simulada en memoria, por lo que la persistencia real y los Web Services quedaron como objetivo del siguiente sprint. Quedaron pendientes la recuperación de contraseña (US-16) y la descarga de reportes en PDF (US-35).</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Resumen de Retrospectiva del Sprint 2</strong></td>
+        <td>Se acordó sustituir los adaptadores en memoria por una API RESTful propia, mantener la misma división por Bounded Contexts en el backend y ajustar el compromiso a la velocidad real del equipo. Para la persistencia se eligió MySQL 8 (en lugar de las alternativas PostgreSQL/SQL Server consideradas en TB1) por su soporte en Entity Framework Core y su despliegue en contenedor. El pago se mantiene como una simulación académica explícita: no se integra una pasarela bancaria real.</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Sprint Goal</strong></td>
+        <td>Implementar los Web Services RESTful de FullTank en ASP.NET Core con persistencia en MySQL para los nueve Bounded Contexts (IAM, Catalog, Inventory, Ordering, Equipment, Fulfillment, Payment, Notification y Reporting & Analytics), validados con pruebas automatizadas y preparados para su despliegue en Render, de modo que compradores y proveedores completen el flujo catálogo → solicitud → aprobación → despacho → recepción → pago simulado → comprobante desde la Web Application.</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Sprint Velocity & Capacidad</strong></td>
+        <td>Puntos planificados: <strong>64 Story Points</strong> (27 historias técnicas, TS-01 a TS-27) | Velocidad estimada: pendiente de confirmar por el equipo | Duración: pendiente de confirmar (ciclo 2026-20).</td>
+    </tr>
+</table>
 
-A continuación, se detallan las guías metodológicas diseñadas para ambos segmentos:
+##### Historias planificadas en el Sprint 3
 
-##### Guía de Validación — Segmento 1: Empresas Solicitantes de Combustible (Compradores)
+El Sprint 3 comprende las 27 historias técnicas de la API definidas en la sección [3.1.2](chapter3.md#312-historias-técnicas). Por indicación del docente, el orden de implementación priorizó las funcionalidades del MVP (catálogo, inventario, pedidos, logística y pagos) antes de IAM; por ello, la columna *Orden* no coincide con la posición de las historias en la tabla de la sección 3.3.
 
-1. **Percepción de Valor y Usabilidad General:** Al interactuar con el flujo de compra (desde explorar el catálogo y tus equipos hasta emitir una solicitud), ¿cuáles consideras que fueron las pantallas o funciones más claras, intuitivas y que te aportaron mayor valor operativo?
-2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante el recorrido por la plataforma, ¿en qué momentos, campos o pantallas sentiste fricción, lentitud o falta de claridad sobre cuál era el siguiente paso a seguir?
-3. **Claridad del Modelo de Dominio:** En módulos como la gestión de 'Equipos' (maquinaria/tanques de obra) o los estados del pedido (aprobado, despachado, entregado), ¿identificaste algún término, métrica o componente cuya función dentro de la operativa de tu empresa no haya quedado del todo clara?
-4. **Completitud Funcional (Feature Completeness):** Considerando cómo compras combustible en tu empresa (volúmenes en galones/litros, combustible diésel B5 S-50, comprobantes fiscales, autorizaciones internas), ¿qué información crítica sentiste que le falta a la interfaz para cubrir tu ciclo de compra completo?
-5. **Confianza Transaccional y Seguridad Operativa:** Al tratarse de compras B2B de alto valor monetario e impacto en la continuidad de sus operaciones, ¿la plataforma te transmite la seguridad, formalidad y transparencia necesarias para autorizar un pedido real? ¿Qué te genera certeza y qué te genera desconfianza?
-6. **Eficiencia Operativa frente al Proceso Actual:** Frente a tu gestión actual (llamadas telefónicas, chats de WhatsApp, fotos de váuchers y cuadre manual en Excel), ¿en qué tareas puntuales consideras que FullTank reduce carga administrativa o previene errores humanos?
-7. **Intención de Adopción y Reemplazo de Herramientas:** Si tu empresa tuviera acceso operativo a FullTank a partir de mañana, ¿reemplazarías tus canales actuales de compra para abastecer tus obras o flotas mediante este sistema web? ¿Qué facilitaría o impediría esa transición en tu equipo?
-8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una condición indispensable o requisito no negociable para tu área de compras y logística, ¿cuál es esa característica que, de no estar presente o fallar, te obligaría a descartar por completo el uso de la aplicación?
-9. **Agilidad en la Generación de Pedidos:** Evaluando la cantidad de pasos, campos y pantallas desde que seleccionas el producto hasta que envías la solicitud, ¿sientes que el flujo es ágil o consideras que en una urgencia operativa en obra seguirías prefiriendo coordinar por llamada o mensaje directo?
-10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta solución web a colegas de logística o empresas contratistas que enfrentan los mismos desafíos de abastecimiento? ¿Cuál sería tu argumento principal?
+| Orden | ID | Título | Bounded Context | Story Points |
+|:---:|:---:|---|---|:---:|
+| 1 | TS-11 | Endpoint: Gestionar productos de combustible | Catalog / Inventory | 3 |
+| 2 | TS-12 | Endpoint: Actualizar stock de producto | Inventory | 2 |
+| 3 | TS-22 | Endpoint: Calificar proveedores | Catalog | 2 |
+| 4 | TS-15 | Endpoint: Gestionar solicitudes de combustible | Ordering | 3 |
+| 5 | TS-16 | Endpoint: Consultar solicitud por identificador | Ordering | 2 |
+| 6 | TS-04 | Endpoint: Crear pedido | Ordering | 3 |
+| 7 | TS-05 | Endpoint: Consultar pedidos por usuario | Ordering | 2 |
+| 8 | TS-13 | Endpoint: Consultar pedidos | Ordering | 2 |
+| 9 | TS-14 | Endpoint: Confirmar o cancelar pedido | Ordering | 2 |
+| 10 | TS-23 | Endpoint: Gestionar equipos | Equipment | 3 |
+| 11 | TS-24 | Endpoint: Asignar proveedor favorito | Equipment / Catalog | 2 |
+| 12 | TS-25 | Endpoint: Eliminar equipo | Equipment | 1 |
+| 13 | TS-17 | Endpoint: Gestionar entregas | Fulfillment | 3 |
+| 14 | TS-18 | Endpoint: Gestionar conductores | Fulfillment | 3 |
+| 15 | TS-19 | Endpoint: Gestionar vehículos | Fulfillment | 3 |
+| 16 | TS-20 | Endpoint: Registrar y validar pagos | Payment | 3 |
+| 17 | TS-21 | Endpoint: Consultar pagos | Payment | 2 |
+| 18 | TS-26 | Endpoint: Gestionar notificaciones | Notification | 2 |
+| 19 | TS-27 | Endpoint: Reportes y analítica | Reporting & Analytics | 3 |
+| 20 | TS-08 | Endpoint: Gestionar empresas solicitantes | IAM | 3 |
+| 21 | TS-09 | Endpoint: Gestionar empresas proveedoras | IAM | 3 |
+| 22 | TS-01 | Endpoint: Login | IAM | 2 |
+| 23 | TS-06 | Endpoint: Registrar usuario | IAM | 3 |
+| 24 | TS-07 | Endpoint: Consultar usuarios | IAM | 2 |
+| 25 | TS-10 | Endpoint: Actualizar perfil de usuario | IAM | 2 |
+| 26 | TS-02 | Endpoint: Recuperar contraseña | IAM | 2 |
+| 27 | TS-03 | Endpoint: Logout | IAM | 1 |
+| **Total** | **27** | — | — | **64 SP** |
 
-##### Guía de Validación — Segmento 2: Empresas Proveedoras de Combustible (Proveedores)
+Las historias funcionales que estos endpoints habilitan desde la Web Application son US-05, US-06, US-07, US-08, US-09, US-10, US-11, US-12, US-13, US-14, US-15, US-18, US-22, US-23, US-24, US-29, US-30, US-31, US-32, US-33, US-34, US-40, US-41, US-42, US-43, US-44, US-45, US-46, US-47, US-48 y US-49. Las historias de la Landing Page (US-01 a US-04 y US-36 a US-39) pertenecen a otro repositorio y no forman parte de este sprint.
 
-1. **Percepción de Valor y Control Operativo:** Al interactuar con el panel de proveedor (actualizar precios y stock, atender solicitudes entrantes y asignar cisternas y conductores), ¿cuáles consideras que fueron las funciones más claras, ordenadas y de mayor utilidad para tu operación logística diaria?
-2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante la navegación y ejecución de tareas como proveedor, ¿en qué momentos, tablas o formularios sentiste confusión, pasos redundantes o falta de información crítica para tomar una decisión de despacho?
-3. **Claridad del Modelo de Dominio de Fulfillment e Inventario:** En secciones como la gestión de 'Fulfillment' (flota de vehículos, conductores, estados AVAILABLE / ASSIGNED) o las métricas de inventario, ¿identificaste algún término, estado o control cuya función dentro de la operativa de distribución mayorista no haya quedado clara?
-4. **Completitud Funcional Normativa y Operativa:** Considerando la operativa real de una distribuidora de combustible (límites de crédito, registro de guía de remisión física/electrónica, certificaciones de choferes, cubicaje de cisternas), ¿qué datos o funcionalidades críticas sentiste que faltan en la plataforma para gestionar tus entregas con total rigurosidad?
-5. **Confiabilidad Transaccional en Despachos:** Tratándose de despachos de miles de galones donde cualquier error en la asignación o retraso genera penalidades y reclamos de clientes, ¿el sistema te transmite la robustez y consistencia necesarias para coordinar tus despachos reales por este medio? ¿Qué aspectos te generan confianza o incertidumbre?
-6. **Eficiencia en la Programación Logística vs. Proceso Actual:** Frente a tu gestión cotidiana actual (hojas de cálculo de programación de ruta, cruce manual de llamadas con choferes, confirmaciones dispersas por WhatsApp), ¿en qué procesos específicos consideras que esta plataforma optimizaría tus tiempos de despacho y control de inventario?
-7. **Intención de Adopción e Integración Comercial:** Si los clientes contratistas y empresas comenzaran a emitir sus requerimientos por FullTank, ¿tu empresa adoptaría la plataforma como su canal oficial de recepción de pedidos y programación de flota? ¿Cuáles serían los principales factores impulsores o frenos para implementarla?
-8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una exigencia operativa o legal no negociable para una empresa distribuidora de combustible, ¿cuál es esa funcionalidad o salvaguarda que, de no estar resuelta en la plataforma, te impediría utilizarla comercialmente?
-9. **Impacto en la Organización y Trazabilidad:** Al centralizar en una sola plataforma la recepción de pedidos, la disponibilidad de inventario, la asignación de recursos logísticos y el histórico de entregas cerradas, ¿consideras que reduce significativamente el riesgo de desorden operativo y traspapeleo frente a tus métodos habituales?
-10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta herramienta a otras empresas distribuidoras o estaciones mayoristas del sector que buscan digitalizar su canal corporativo? ¿Cuál sería la ventaja clave que destacarías?
+---
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+El liderazgo de cada aspecto se asignó a partir de la autoría de los commits integrados en `main` del repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend). A diferencia del Sprint 2, la integración no se realizó mediante Pull Requests, por lo que los roles de aprobación (*Approver*) y colaboración no pueden obtenerse del historial y deben ser confirmados por el equipo.
+
+| Aspecto técnico / Bounded Context | Leader (autor de los commits) | Colaboradores y revisión |
+|---|---|---|
+| **Base compartida** — solución .NET, contratos de dominio, unidades de combustible, eventos de dominio, errores localizados y contratos entre módulos | Brayan Corvacho (`BralexCD`) | Por confirmar |
+| **IAM** — empresas, usuarios, BCrypt, JWT, registro con `registrationToken`, sign-in, sign-up y perfil | Brayan Corvacho (`BralexCD`) | Por confirmar |
+| **Catalog** — productos de combustible, proveedores favoritos y calificaciones | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
+| **Inventory** — stock, reservas y movimientos `IN`/`OUT` | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
+| **Ordering** — solicitudes, órdenes y transiciones de estado (aprobar, despachar, recibir y cancelar) | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
+| **Persistencia** — `AppDbContext`, unit of work y migraciones EF Core para MySQL | Enrique Mantilla (`enrique-mantilla`) | Por confirmar |
+| **Equipment** — equipos del comprador, niveles de combustible e historial de recargas | Frank Huingo (`Franz2308`) | Por confirmar |
+| **Fulfillment** — conductores, cisternas, disponibilidad de flota y entregas | Frank Huingo (`Franz2308`) | Por confirmar |
+| **Notification** — alertas por cambios de estado y marcado de lectura | Frank Huingo (`Franz2308`) | Por confirmar |
+| **Payment** — checkout simulado atómico, pagos y comprobantes académicos | Joan Payano (`joanfpp2-ai`) | Por confirmar |
+| **Reporting & Analytics** — gasto del comprador, ventas del proveedor y dashboards | Joan Payano (`joanfpp2-ai`) | Por confirmar |
+| **Hosting y configuración** — validación de la configuración de producción, health check de MySQL, registro de módulos y datos demo | Brayan Corvacho (`BralexCD`) | Por confirmar |
+| **Pruebas automatizadas (xUnit)** — reglas de dominio, registro IAM, flujo de órdenes, checkout, seguridad entre empresas y configuración | Frank Huingo, Brayan Corvacho, Enrique Mantilla y Joan Payano (una suite cada uno; ver 5.2.3.4) | Por confirmar |
+| **Contenedores y despliegue** — imagen Docker de la API y Blueprint de Render con MySQL privado | Frank Huingo (Docker) y Enrique Mantilla (Render) | Por confirmar |
+| **Documentación del Sprint 3 e informe AV2** | Por confirmar | Por confirmar |
+
+> **Pendiente del equipo:** Joan Carhuayal (`JoanCS`) no registra commits en `Full_Tank_Backend`. Debe confirmarse y documentarse su aporte en el Sprint 3 (por ejemplo, en la documentación, la validación o la integración con la Web Application) para que la matriz refleje la participación de los cinco integrantes.
+
+---
+
+#### 5.2.3.3. Sprint Backlog 3
+
+**Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints](https://trello.com/b/6h5mZ8L6).
+
+> **Pendiente del equipo:** agregar la captura del tablero de Trello con la lista del Sprint 3 y las 27 historias técnicas. En TB1 el tablero contenía 51 tarjetas de producto y no incluía 22 de las historias técnicas de la tabla 3.3.
+
+Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `fde0498`) con los criterios de cada historia técnica. **Done** indica que el endpoint existe y su comportamiento principal está cubierto por pruebas o por la validación local; **Parcial** indica que falta una operación o que el contrato implementado difiere del descrito en la historia; **To do** indica que no se identificó implementación.
+
+| Task ID | Descripción de la tarea técnica | Historias asociadas | Responsable | Estado |
+| :--- | :--- | :--- | :--- | :---: |
+| **TSK-301** | Configurar la solución .NET, los contratos de dominio compartidos, el despacho de eventos de dominio y el manejo localizado de errores | Soporte | Brayan Corvacho | **Done** |
+| **TSK-302** | Modelar empresas compradoras, empresas proveedoras y propietarios de cuenta | TS-08, TS-09 | Brayan Corvacho | **Done** |
+| **TSK-303** | Implementar Catalog: productos de combustible, proveedores favoritos y calificaciones | TS-11, TS-22 | Enrique Mantilla | **Done** |
+| **TSK-304** | Implementar Inventory: stock con control de concurrencia, reservas y movimientos | TS-11, TS-12 | Enrique Mantilla | **Done** |
+| **TSK-305** | Implementar Ordering: solicitudes, órdenes y transiciones aprobar → despachar → recibir → pagar, y cancelación | TS-05, TS-13, TS-14, TS-16 | Enrique Mantilla | **Done** |
+| **TSK-306** | Reconciliar la creación de pedidos (`POST /orders` está deshabilitado; la orden se crea al aprobar la solicitud) y el rechazo de solicitudes con TS-04 y TS-15 | TS-04, TS-15 | Enrique Mantilla | **Parcial** |
+| **TSK-307** | Implementar Equipment: equipos, niveles de combustible e historial de recargas | TS-23 | Frank Huingo | **Done** |
+| **TSK-308** | Verificar la asignación de proveedor favorito a un equipo concreto | TS-24 | Por asignar | **Parcial** |
+| **TSK-309** | Implementar Fulfillment: conductores, vehículos, disponibilidad y entregas | TS-17, TS-18, TS-19 | Frank Huingo | **Parcial** |
+| **TSK-310** | Implementar Notification: alertas ante cambios de estado de las órdenes y marcado de lectura individual y masivo | TS-26 | Frank Huingo | **Done** |
+| **TSK-311** | Implementar Payment: checkout simulado atómico con cálculo de IGV, pagos y comprobantes `SIM-INV-*` | TS-20, TS-21 | Joan Payano | **Done** (alcance simulado) |
+| **TSK-312** | Implementar Reporting & Analytics: indicadores de gasto del comprador y de ventas del proveedor | TS-27 | Joan Payano | **Parcial** |
+| **TSK-313** | Implementar IAM: hashing BCrypt, emisión de JWT, registro con `registrationToken`, sign-in, sign-up y perfil | TS-01, TS-06, TS-07, TS-10 | Brayan Corvacho | **Done** |
+| **TSK-314** | Configurar `AppDbContext`, unit of work y migraciones EF Core para MySQL | Soporte | Enrique Mantilla | **Done** |
+| **TSK-315** | Validar la configuración de producción, el health check de MySQL, el registro de módulos y la carga de datos demo | Soporte | Brayan Corvacho | **Done** |
+| **TSK-316** | Escribir pruebas de reglas de dominio y conversión de unidades | Soporte | Frank Huingo | **Done** |
+| **TSK-317** | Escribir pruebas de registro IAM y propiedad de empresas | TS-06 | Brayan Corvacho | **Done** |
+| **TSK-318** | Escribir pruebas del flujo de aprobación, despacho y recepción | TS-14, TS-15 | Enrique Mantilla | **Done** |
+| **TSK-319** | Escribir pruebas de totales del checkout y datos del comprobante | TS-20 | Joan Payano | **Done** |
+| **TSK-320** | Escribir pruebas de acceso entre empresas y de configuración insegura en producción | Soporte | Brayan Corvacho | **Done** |
+| **TSK-321** | Publicar la API en una imagen Docker .NET | Soporte | Frank Huingo | **Done** |
+| **TSK-322** | Conectar la API con MySQL privado mediante el Blueprint de Render | Soporte | Enrique Mantilla | **Done** (configuración) |
+| **TSK-323** | Implementar la recuperación de contraseña por correo | TS-02 (US-16) | Por asignar | **To do** |
+| **TSK-324** | Definir e implementar el cierre de sesión en el backend JWT | TS-03 (US-17) | Por asignar | **To do** |
+| **TSK-325** | Implementar la eliminación de equipos sin pedidos en curso | TS-25 | Por asignar | **To do** |
+| **TSK-326** | Implementar `DELETE` de conductores y vehículos y el registro de entrega fallida | TS-17, TS-18, TS-19 | Por asignar | **To do** |
+| **TSK-327** | Implementar la exportación de reportes en PDF | TS-27 (US-35) | Por asignar | **To do** |
+| **TSK-328** | Aplicar el Blueprint en Render y verificar `/health` y Swagger públicos | — | Por asignar | **To do** |
+| **TSK-329** | Conectar la Web Application con la API pública y publicar la nueva versión en Firebase Hosting | — | Por asignar | **To do** |
+| **TSK-330** | Documentar el Sprint 3 en el informe del proyecto | — | Por asignar | **In progress** |
+
+**Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *Parcial* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados.
+
+**Coherencia del flujo de pagos:** el flujo implementado es *aprobar solicitud → despachar → confirmar recepción → pagar (checkout simulado) → comprobante*. La aprobación del proveedor reserva stock sin requerir un depósito previo, y el pago no procesa dinero. Este flujo difiere de la redacción de US-08, US-11 y TS-20 (registro de comprobante bancario y aprobación del proveedor según depósitos). El equipo debe actualizar esos criterios de aceptación en el Capítulo III para que el informe, la API y la Web Application describan el mismo proceso.
+
+---
+
+---
