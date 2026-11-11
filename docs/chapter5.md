@@ -1386,9 +1386,12 @@ El liderazgo de cada aspecto se asignó a partir de la autoría de los commits i
 
 #### 5.2.3.3. Sprint Backlog 3
 
-**Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints](https://trello.com/b/6h5mZ8L6).
+**Tablero del Sprint Backlog:** [FullTank · FuelPoint | Sprint 3 en Trello](https://trello.com/b/CBQSmZA1/sprint-3).
 
-> **Pendiente del equipo:** agregar la captura del tablero de Trello con la lista del Sprint 3 y las 27 historias técnicas. En TB1 el tablero contenía 51 tarjetas de producto y no incluía 22 de las historias técnicas de la tabla 3.3.
+<div align="center">
+  <img src="../assets/chapter-5/trello-sprint-3.png" alt="Tablero de Trello oficial de FullTank para el Sprint 3 con las 27 historias técnicas" width="850"/>
+  <p><em>Figura: Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
+</div>
 
 Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `fde0498`) con los criterios de cada historia técnica. **Done** indica que el endpoint existe y su comportamiento principal está cubierto por pruebas o por la validación local; **Parcial** indica que falta una operación o que el contrato implementado difiere del descrito en la historia; **To do** indica que no se identificó implementación.
 
