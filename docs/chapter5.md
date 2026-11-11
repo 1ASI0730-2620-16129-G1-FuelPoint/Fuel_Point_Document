@@ -1431,4 +1431,62 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 ---
 
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+**Repositorio oficial:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend).
+
+El historial de `main` se consultó mediante la API pública de GitHub el **11 de noviembre de 2026**. `main` apunta al commit de release [`fde0498`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/fde0498fc75c292af2cfca3964e50c1ffbb3f4e4) (*Merge branch 'release/backend' into main*) y contiene **85 commits**: 65 commits de trabajo y 20 merges `--no-ff`. Las ramas temáticas se integraron primero en `integration/backend` y después, mediante `release/backend`, en `main`. El repositorio no registra Pull Requests.
+
+**Ramas integradas:** `chore/project-setup`, `feat/catalog`, `feat/inventory`, `feat/equipment`, `feat/orders`, `feat/fulfillment`, `feat/payments`, `feat/notifications`, `feat/analytics`, `feat/accounts`, `feat/database`, `feat/app-setup`, `test/domain-rules`, `test/order-workflow`, `test/payment-checkout`, `test/registration`, `build/docker`, `chore/render` y `test/configuration`.
+
+| Aspecto / Bounded Context | Commits | Cuenta autora | Descripción de los commits |
+|---|---|---|---|
+| Configuración y base compartida | `97f61a1`, `a4e85c0`, `556c036`, `bfd1454`, `57375e2`, `163efdd` | `BralexCD` | Solución .NET; contratos de dominio y unidades de combustible; despacho de eventos de dominio; errores localizados; contratos entre módulos; modelo de empresas y propietarios de cuenta. |
+| Catalog | `74c3ab8`, `83147d6`, `e1e5757`, `1769f62`, `00a79a3` | `enrique-mantilla` | Modelo de productos, favoritos y calificaciones; servicios, persistencia, recursos y endpoints. |
+| Inventory | `5deb465`, `35d98cb`, `ee76621`, `67d2839`, `ba94c15` | `enrique-mantilla` | Niveles de stock y movimientos; reservas; persistencia; recursos y endpoints de stock y movimientos. |
+| Ordering | `00ce34f`, `006601f`, `1ee49cf`, `f02b3a0`, `0be20bc` | `enrique-mantilla` | Solicitudes, órdenes y reglas de ciclo de vida; persistencia; acciones de aprobación, despacho y recepción. |
+| Equipment | `9f60900`, `8324685`, `e211525`, `d9b65d1`, `527a288` | `Franz2308` | Equipos e historial de recargas; niveles de combustible; persistencia y endpoints. |
+| Fulfillment | `19223f5`, `38a1242`, `d222f8c`, `786a988`, `349a01b` | `Franz2308` | Conductores, vehículos y entregas; asignación de flota; persistencia; disponibilidad y endpoints. |
+| Notification | `7523521`, `fb5a9bc`, `1789186`, `83edec9`, `de3b052` | `Franz2308` | Alertas y estado de lectura; envío ante cambios de estado; persistencia y endpoints. |
+| Payment | `b1e8f3c`, `7e19e95`, `8ca166b`, `d023117`, `5b21a43` | `joanfpp2-ai` | Pagos y comprobantes académicos; checkout simulado; persistencia; endpoints de checkout e historial. |
+| Reporting & Analytics | `8735ec5`, `82996c3`, `c6b4d31`, `30371f2`, `f7f4e52` | `joanfpp2-ai` | Resúmenes de gasto y ventas; consultas de órdenes; dashboards del comprador y del proveedor. |
+| IAM | `08d206c`, `fb390fc`, `b040146`, `dfd9e6d`, `13adaa6`, `01696ec` | `BralexCD` | Consultas y contratos; registro y perfil; BCrypt y JWT; persistencia; endpoints de sign-in, sign-up y perfil. |
+| Persistencia | `28dc91a`, `c6acfaf` | `enrique-mantilla` | Contexto de datos y unit of work; migraciones EF Core del esquema MySQL. |
+| Hosting | `a551f0f`, `4a0ab19` | `BralexCD` | Validación de la configuración de producción y comprobación de MySQL; registro de módulos y datos demo. |
+| Pruebas | `ed2ba5e` · `61c128c` · `ffc5804` · `4eef681` · `ff11306` · `277b258` | `Franz2308` · `BralexCD` · `enrique-mantilla` · `joanfpp2-ai` · `BralexCD` · `BralexCD` | Reglas de dominio; registro IAM; flujo de órdenes; checkout; seguridad entre empresas; configuración de producción. |
+| Contenedores y Render | `b32aa3e` · `b526de2` | `Franz2308` · `enrique-mantilla` | Imagen Docker de la API; conexión de la API con MySQL privado en Render. |
+
+**Observación de proceso:** la política de 5.1.2 exige integrar mediante Pull Request con revisión por pares. En el backend la integración se hizo con merges locales, por lo que no existe evidencia de revisión en GitHub. Se registra como acción de mejora para el Sprint 4 (ver 5.2.3.8).
+
+---
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+La API se ejecutó y validó en un entorno local de contenedores el **7 de noviembre de 2026**. Esta validación comprueba la imagen de la API y su comunicación privada con MySQL; **no acredita el despliegue público en Render**, cuyas evidencias se registran en 5.2.3.7.
+
+| Comprobación | Resultado |
+|---|---|
+| `dotnet test full-tank-platform.sln` | **82/82 pruebas aprobadas**, sin fallos |
+| Construcción de la imagen de la API (`Dockerfile`, Release .NET 10) | Correcta |
+| Construcción de la imagen de MySQL (`deploy/mysql/Dockerfile`, MySQL 8.0.46) | Correcta |
+| Validación de `render.yaml` contra el esquema público de Render | Válido |
+| Prueba de humo en contenedores (`deploy/smoke_render.py`) | **Aprobada** |
+
+La prueba de humo crea una red, un volumen, MySQL y la API desechables, con contraseñas aleatorias, `ASPNETCORE_ENVIRONMENT=Production` y un límite de 512 MB por contenedor, y verifica:
+
+1. La API escucha en todas las interfaces con un puerto distinto del predeterminado.
+2. El proceso está activo, pero `/health` responde HTTP 503 mientras faltan las migraciones.
+3. Las migraciones y los datos demo se aplican sobre una base vacía y `/health` pasa a HTTP 200.
+4. Swagger es accesible e identifica el alcance simulado de los pagos.
+5. CORS admite los orígenes de Firebase y rechaza un origen distinto.
+6. El JWT es obligatorio para consultar órdenes; se inicia sesión con la cuenta compradora y con la proveedora.
+7. El checkout académico genera un comprobante `SIM-INV-*`.
+8. Tras reiniciar MySQL y la API, el pago se conserva y los datos demo no se duplican.
+
+**Recorrido funcional a evidenciar:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago simulado → comprobante.
+
+> **Pendiente del equipo:** incorporar capturas reales de la Web Application conectada a la API (comprador y proveedor) para cada paso del recorrido, y de Swagger UI con al menos una solicitud y respuesta por Bounded Context. No reutilizar las capturas de TB1, que corresponden a la API simulada en memoria.
+
+---
+
 ---
