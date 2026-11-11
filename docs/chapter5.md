@@ -38,8 +38,12 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://code.visualstudio.com](https://code.visualstudio.com)
 * **Visual Studio 2022**: Entorno de desarrollo integrado (IDE) robusto para la plataforma .NET. Se utiliza para la arquitectura, implementación y prueba del backend de servicios web RESTful con ASP.NET Core y Entity Framework Core en lenguaje C#, proporcionando capacidades avanzadas de refactorización, depuración y administración de soluciones.
   * *Ruta oficial:* [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
-* **.NET 8 SDK**: Kit de desarrollo de software que provee las bibliotecas de clases base, compiladores y herramientas de línea de comandos de .NET para compilar, probar y ejecutar la API RESTful de FullTank.
+* **.NET 10 SDK**: Kit de desarrollo de software que provee las bibliotecas de clases base, compiladores y herramientas de línea de comandos de .NET para compilar, probar y ejecutar la API RESTful de FullTank (`net10.0`).
   * *Ruta oficial:* [https://dotnet.microsoft.com](https://dotnet.microsoft.com)
+* **Entity Framework Core CLI (`dotnet-ef`)**: Herramienta de línea de comandos de EF Core 10 empleada para generar y aplicar las migraciones del esquema relacional de MySQL a partir del modelo de dominio.
+  * *Ruta oficial:* [https://learn.microsoft.com/ef/core/cli/dotnet](https://learn.microsoft.com/ef/core/cli/dotnet)
+* **MySQL Server 8**: Sistema gestor de base de datos relacional utilizado como almacenamiento persistente de la API en los entornos local y de despliegue (imagen MySQL 8.0.46 en contenedor).
+  * *Ruta oficial:* [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 * **Node.js (LTS) & npm**: Entorno de ejecución de JavaScript del lado del servidor y gestor de paquetes oficial, requeridos para la instalación de dependencias, automatización de compilaciones con Vite y gestión de bibliotecas del frontend con Vue 3 y PrimeVue.
   * *Ruta oficial:* [https://nodejs.org](https://nodejs.org)
 * **Docker Desktop / Docker Engine**: Plataforma de contenedores utilizada para empaquetar y ejecutar los servicios web de ASP.NET Core de forma consistente entre los entornos de desarrollo y despliegue.
@@ -53,6 +57,10 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
 
 * **Postman**: Plataforma integral para el diseño, depuración, consumo y prueba automatizada de APIs RESTful. Se utiliza para validar los contratos de endpoints, códigos de estado HTTP, encabezados y payloads JSON emitidos por los controladores ASP.NET Core de FullTank.
   * *Ruta oficial:* [https://www.postman.com](https://www.postman.com)
+* **xUnit (`dotnet test`)**: Framework de pruebas unitarias para .NET. El proyecto `TechnoSac.FullTank.Platform.Tests` agrupa las pruebas de reglas de dominio, flujo de órdenes, checkout, registro de IAM, límites de seguridad entre empresas y configuración de despliegue.
+  * *Ruta oficial:* [https://xunit.net](https://xunit.net)
+* **Vitest**: Framework de pruebas unitarias para proyectos Vite, utilizado en la Web Application para validar stores, servicios y clientes API.
+  * *Ruta oficial:* [https://vitest.dev](https://vitest.dev)
 * **Lighthouse (Google Chrome DevTools)**: Herramienta de auditoría automatizada de código abierto integrada en el navegador para evaluar el rendimiento (*Performance*), accesibilidad (*Accessibility* bajo normas WCAG y roles ARIA), mejores prácticas (*Best Practices*) y optimización para motores de búsqueda (*SEO*) en las páginas de la aplicación.
   * *Ruta oficial:* [https://developer.chrome.com/docs/lighthouse](https://developer.chrome.com/docs/lighthouse)
 * **W3C Markup Validation Service & Nu HTML Checker**: Servicios de validación técnica provistos por el consorcio W3C para verificar la conformidad sintáctica de los documentos HTML5 y las hojas de estilo CSS3 frente a los estándares internacionales.
@@ -62,7 +70,11 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
 
 * **GitHub Pages**: Plataforma de alojamiento estático integrada en GitHub. Se utiliza para el alojamiento y despliegue de la Landing Page de FullTank de manera pública, con soporte nativo para HTTPS y enlace al repositorio de código fuente.
   * *Ruta oficial:* [https://pages.github.com](https://pages.github.com)
-* **Infraestructura Cloud (Pendiente de Selección)**: Para el aprovisionamiento y despliegue en producción de la Web Application (Vue 3/PrimeVue), los Web Services (ASP.NET Core en contenedores) y la base de datos relacional (MySQL o PostgreSQL), el equipo evaluará proveedores de nube (como Microsoft Azure, Render o AWS) en los sprints de arquitectura técnica, manteniendo la configuración mediante contenedores Docker portables.
+* **Firebase Hosting**: Servicio de alojamiento estático de Google utilizado para publicar la Web Application (Vue 3 / PrimeVue) en el proyecto `full-tank-964e2`, con despliegue automatizado desde GitHub Actions.
+  * *Ruta oficial:* [https://firebase.google.com/docs/hosting](https://firebase.google.com/docs/hosting)
+* **Render**: Plataforma cloud seleccionada para el despliegue de los Web Services. El repositorio del backend define un *Blueprint* (`render.yaml`) con un Web Service Docker para la API ASP.NET Core y un Private Service Docker para MySQL 8 con disco persistente, ambos en la misma región y red privada.
+  * *Ruta oficial:* [https://render.com/docs](https://render.com/docs)
+* **Docker**: Las imágenes de la API (`Dockerfile`) y de MySQL (`deploy/mysql/Dockerfile`) son las unidades de despliegue en Render y se validan localmente antes de publicarse.
 
 #### Software Documentation
 
@@ -83,7 +95,7 @@ La gestión del código fuente del proyecto FuelPoint se realiza de forma centra
 
 #### Repositorios Oficiales Verificados
 
-A la fecha del presente informe, la organización oficial cuenta con tres repositorios creados y verificados:
+A la fecha del presente informe, la organización oficial cuenta con cuatro repositorios creados y verificados:
 
 1. **Repositorio de Documentación del Proyecto:**
    * **Nombre:** `Fuel_Point_Document`
@@ -101,6 +113,12 @@ A la fecha del presente informe, la organización oficial cuenta con tres reposi
    * **Propósito:** Aloja la aplicación web cliente Single Page Application (SPA) desarrollada en Vue 3 con Composition API, Pinia, PrimeVue y Vue Router. Su arquitectura modular desacopla el frontend en Bounded Contexts independientes (`iam`, `catalog`, `ordering`, `fulfillment`, `notification`, `payment`, `reporting`, `equipment`, `inventory`) coordinados sobre una base común (`shared`).
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend)
    * **URL de despliegue en producción:** [https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/)
+
+4. **Repositorio de los Web Services (Backend):**
+   * **Nombre:** `Full_Tank_Backend`
+   * **Propósito:** Aloja la API RESTful de FullTank desarrollada en C# con ASP.NET Core (.NET 10), Entity Framework Core y MySQL 8, organizada como monolito modular con nueve Bounded Contexts (`Iam`, `Catalog`, `Inventory`, `Ordering`, `Equipment`, `Fulfillment`, `Payment`, `Notification`, `ReportingAndAnalytics`) sobre una capa común (`Shared`). Incluye el proyecto de pruebas `TechnoSac.FullTank.Platform.Tests`, el `Dockerfile` de la API y el Blueprint `render.yaml`.
+   * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend)
+   * **URL de despliegue:** *pendiente de publicación en Render* (ver [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
 
 #### Estrategia de Ramificación GitFlow
 
@@ -263,33 +281,37 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
   * Compilación y empaquetado optimizado: `npm run build:demo` o `npm run build`, lo cual produce los bundles minimizados en el directorio `/dist`.
   * Servidor de desarrollo local: `npm run dev` (iniciando el entorno de recarga rápida con Vite en `http://localhost:5173/`).
 * **Estrategia de despliegue y CI/CD:** Firebase Hosting, proyecto `full-tank-964e2`, con publicación del directorio `dist` y reescritura de rutas SPA (`source: "**"`, `destination: "/index.html"`). El despliegue se encuentra 100% automatizado mediante GitHub Actions (`.github/workflows/ci-cd.yml`), ejecutando instalación determinista (`npm ci`), la suite completa de pruebas unitarias con Vitest (90 pruebas automatizadas), build optimizado (`npm run build:demo`) y publicación automática ante cada push a `develop` y `main`. Acceso público en producción: [FullTank Web Application](https://full-tank-964e2.web.app/iam/login).
+* **Integración con los Web Services (Sprint 3):** la versión publicada en TB1 utiliza la API simulada en memoria (`VITE_USE_FAKE_API=true`). Para conectarla con la API desplegada se compila con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://<url-pública-de-la-api>/api/v1`, mediante `npm run build` (no `build:demo`), y se publica el nuevo `dist` en Firebase Hosting. El workflow de GitHub Actions debe actualizarse para usar ese build antes de encargarle la publicación integrada.
 
-#### 3. Web Services / RESTful API (Backend - Configuración Prevista)
+#### 3. Web Services / RESTful API (Backend)
 
-* **Tecnologías:** ASP.NET Core 8, Entity Framework Core y C#.
-* **Estado de despliegue:** *Pendiente de implementación y aprovisionamiento.* El desarrollo del backend y la publicación de endpoints están programados para los sprints técnicos posteriores.
+* **Tecnologías:** C# con ASP.NET Core (.NET 10), Entity Framework Core 10, MySQL Connector para EF Core, Swashbuckle (OpenAPI / Swagger UI), BCrypt.Net y JWT (`System.IdentityModel.Tokens.Jwt`), Cortex.Mediator para comandos y eventos internos, y xUnit/Moq para pruebas.
+* **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (rama `main`, commit de release `fde0498`).
+* **Arquitectura de entrega:** monolito modular con nueve Bounded Contexts. Cada contexto separa las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` (REST y ACL). La comunicación entre contextos se realiza mediante *facades* de Anti-Corruption Layer y eventos de dominio dentro del mismo proceso.
 * **Requisitos y empaquetado reproducible:**
-  * Entorno: .NET 8 SDK.
-  * Compilación y publicación: `dotnet publish -c Release -o ./publish`.
-  * Contenedorización: Definición de una imagen multiplataforma Dockerfile con etapas separadas de compilación (`mcr.microsoft.com/dotnet/sdk:8.0`) y ejecución (`mcr.microsoft.com/dotnet/aspnet:8.0`) para maximizar la portabilidad y seguridad.
-  * Variables de entorno: Inyección segura de la cadena de conexión a la base de datos (`ConnectionStrings:DefaultConnection`) y claves secretas en tiempo de ejecución, evitando la exposición de credenciales en el código fuente.
-  * Documentación OpenAPI: Exposición de la interfaz interactiva Swagger UI en el entorno de pruebas (`/swagger`).
-* **Estrategia de despliegue proyectada:** Despliegue en contenedor sobre un servicio en la nube (proveedor cloud como Azure App Services, Render o AWS ECS pendiente de selección y presupuesto técnico del equipo). No se presenta ninguna URL ficticia antes de su despliegue real.
+  * Entorno: .NET 10 SDK y MySQL 8.0 o superior.
+  * Restauración y pruebas: `dotnet restore full-tank-platform.sln` y `dotnet test full-tank-platform.sln`.
+  * Ejecución local: `dotnet run --project TechnoSac.FullTank.Platform --launch-profile http`; Swagger UI en `http://localhost:5204/swagger`.
+  * Contenedorización: `Dockerfile` multietapa con compilación en `mcr.microsoft.com/dotnet/sdk:10.0` y ejecución en `mcr.microsoft.com/dotnet/aspnet:10.0`, usuario sin privilegios (`app`) y puerto `10000`.
+  * Configuración por capas: `appsettings.json` (valores base sin secretos), `appsettings.Development.json`, `appsettings.Local.json` (solo en Development y excluido del repositorio y de la publicación) y variables de entorno, que tienen prioridad final. En Production el arranque se detiene si quedan marcadores sin resolver para la base de datos o la clave JWT.
+  * Salud del servicio: `/health` (comprueba MySQL y migraciones; responde 503 si no están disponibles) y `/health/live` (proceso activo).
+* **Estrategia de despliegue:** Blueprint de Render (`render.yaml`, proyecto `fulltank-av2`, entorno `av2`) con un Web Service Docker `fulltank-av2-api` (plan gratuito, región Oregon, health check `/health`, despliegue automático desactivado para fijar la versión del hito). Las variables sensibles (contraseña de MySQL, clave JWT y contraseña de las cuentas demo) las genera Render o se ingresan al aplicar el Blueprint; no se guardan en el repositorio. CORS solo admite los orígenes HTTPS de Firebase Hosting.
+* **Estado de despliegue:** configuración preparada y validada en contenedores locales (ver [5.2.3.5](#5235-execution-evidence-for-sprint-review)). La URL pública se registrará en [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review) una vez aplicado el Blueprint; no se presenta ninguna URL antes de su despliegue real.
+* **Alcance académico:** el checkout de pagos es una simulación explícita (`AcademicDemo:Enabled=true` y `PaymentSettings:EnableSimulation=true`). No procesa dinero ni emite comprobantes electrónicos SUNAT; genera comprobantes académicos `SIM-INV-*`.
 
-#### 4. Database Server (Configuración Prevista)
+#### 4. Database Server
 
-* **Tecnologías:** MySQL Server 8.0 o PostgreSQL 16.
-* **Estado de despliegue:** *Pendiente de aprovisionamiento en la nube.*
-* **Procedimiento reproducible previsto:**
-  * Gestión de esquema: Migraciones automáticas administradas mediante Entity Framework Core CLI (`dotnet ef database update`).
-  * Conectividad: Acceso seguro mediante SSL y restricción de IPs hacia los contenedores de la API RESTful.
-  * Proveedor y credenciales: El servicio administrado (DBaaS) y la URL de conexión se encuentran pendientes de contratación técnica en los sprints respectivos.
+* **Tecnologías:** MySQL 8.0.46 en contenedor Docker (`deploy/mysql/Dockerfile`).
+* **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican con `dotnet ef database update` o al arrancar la API cuando `Database__ApplyMigrationsOnStartup=true`, opción habilitada solo en la base exclusiva de AV2.
+* **Datos de demostración:** con `Database__SeedDemoData=true` se cargan, en una sola transacción, catálogo, inventario, equipos, flota, solicitudes y pedidos de ejemplo junto con una cuenta compradora y una proveedora. Si los datos ya existen, no se vuelven a insertar.
+* **Despliegue en Render:** Private Service `fulltank-av2-mysql` (plan `0.5c-512mb`, de pago) con disco persistente de 1 GB montado en `/var/lib/mysql`. La base no se expone a Internet: la API se conecta por la red privada de Render con un usuario propio distinto de `root` y `Database__SslMode=Required`.
+* **Estado de despliegue:** pendiente de aprovisionamiento en Render. Antes de crear los recursos, el equipo debe revisar el costo mensual del plan de MySQL y del disco que muestra Render.
 
 ---
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum. Para la entrega del Trabajo Parcial (TB1 – Stage Review – Semana 7), se documenta exhaustivamente la ejecución de los dos primeros ciclos de desarrollo: el **Sprint 1**, enfocado en el desarrollo y despliegue del Landing Page informativo; y el **Sprint 2**, centrado en la implementación, integración modular y despliegue del Frontend de la Aplicación Web (FullTank Web Application) estructurado por Bounded Contexts en Vue 3 y PrimeVue.
+En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum. Para la entrega del Trabajo Parcial (TB1 – Stage Review – Semana 7) se documentaron los dos primeros ciclos de desarrollo: el **Sprint 1**, enfocado en el desarrollo y despliegue del Landing Page informativo; y el **Sprint 2**, centrado en la implementación, integración modular y despliegue del Frontend de la Aplicación Web (FullTank Web Application) estructurado por Bounded Contexts en Vue 3 y PrimeVue. Para la entrega AV2 se incorpora el **Sprint 3**, dedicado a los Web Services RESTful en ASP.NET Core, su persistencia en MySQL, la preparación del despliegue en Render y la integración con la Web Application.
 
 ---
 
