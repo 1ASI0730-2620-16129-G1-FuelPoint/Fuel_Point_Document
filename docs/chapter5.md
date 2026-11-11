@@ -1489,4 +1489,71 @@ La prueba de humo crea una red, un volumen, MySQL y la API desechables, con cont
 
 ---
 
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*, versión `v1`), disponible localmente en `http://localhost:5204/swagger`. Los endpoints protegidos requieren el encabezado `Authorization: Bearer <token>` obtenido en el inicio de sesión. Las rutas siguientes se obtuvieron de los controladores del commit `fde0498`; todas son relativas a `/api/v1` y usan la convención *kebab-case*.
+
+| Contexto | Método | Ruta | Rol | Operación |
+|---|---|---|---|---|
+| IAM | POST | `/authentication/sign-in` | Público | Inicio de sesión: `{ email, password }` → `{ id, name, email, username, role, companyId, token }`. |
+| IAM | POST | `/authentication/sign-up` | Público | Registro: `{ name, email, password, role, companyId, username, registrationToken }`. |
+| IAM | GET / POST / PUT | `/buyer-companies`, `/buyer-companies/{id}` | Público (POST) / BUYER, PROVIDER | Registro, consulta y actualización de empresas compradoras; el POST devuelve el `registrationToken` (vigencia de 24 horas). |
+| IAM | GET / POST / PUT | `/provider-companies`, `/provider-companies/{id}` | Público (POST) / BUYER, PROVIDER | Registro, consulta y actualización de empresas proveedoras. |
+| IAM | GET / PUT | `/users/{id}`, `/users/{id}/profile`, `/users/{id}/password` | Usuario autenticado | Consulta del usuario, actualización del perfil propio y cambio de contraseña. |
+| Catalog | GET / POST / PUT / DELETE | `/provider-products`, `/provider-products/{id}` | BUYER, PROVIDER (escritura: PROVIDER) | Productos de combustible del proveedor. |
+| Catalog | GET / POST / DELETE | `/favorite-providers`, `/favorite-providers/{id}` | BUYER | Proveedores favoritos del comprador. |
+| Catalog | GET / POST / PUT | `/provider-ratings`, `/provider-ratings/{id}` | BUYER | Calificaciones de proveedores. |
+| Inventory | GET / POST / PUT / DELETE | `/inventory-items`, `/inventory-items/{id}` | BUYER, PROVIDER (escritura: PROVIDER) | Existencias, reservas y precios. |
+| Inventory | GET / POST | `/inventory-movements`, `/inventory-movements/{id}` | PROVIDER | Movimientos de stock `IN`/`OUT`. |
+| Ordering | GET / POST / PUT / DELETE | `/fuel-requests`, `/fuel-requests/{id}` | BUYER, PROVIDER (creación: BUYER) | Solicitudes de combustible. |
+| Ordering | POST | `/fuel-requests/{id}/approve` | PROVIDER | Aprueba la solicitud, toma el precio del inventario, reserva stock y crea la orden en `ACCEPTED`. |
+| Ordering | GET | `/orders`, `/orders/{id}` | BUYER, PROVIDER | Órdenes de la empresa autenticada. |
+| Ordering | POST | `/orders/{id}/dispatch` | PROVIDER | `{ driverId, vehicleId }`; descuenta el stock reservado y pasa a `DISPATCHED`. |
+| Ordering | POST | `/orders/{id}/receive` | BUYER | Confirma la recepción, libera conductor y vehículo, recarga el equipo y pasa a `PENDING_PAYMENT`. |
+| Ordering | POST | `/orders/{id}/cancel` | PROVIDER | Cancela una orden `ACCEPTED` no despachada y libera el stock reservado. |
+| Equipment | GET / POST / PUT | `/equipment`, `/equipment/{id}` | BUYER | Equipos del comprador. |
+| Equipment | GET / POST | `/refill-history`, `/refill-history/{id}` | BUYER | Historial de recargas. |
+| Fulfillment | GET / POST / PUT | `/drivers`, `/drivers/{id}`, `/drivers/provider/{providerId}` | PROVIDER | Conductores. |
+| Fulfillment | GET / POST / PUT | `/vehicles`, `/vehicles/{id}`, `/vehicles/provider/{providerId}`, `/vehicles/provider/{providerId}/available` | PROVIDER | Vehículos cisterna y su disponibilidad. |
+| Fulfillment | GET / POST | `/deliveries`, `/deliveries/{id}`, `/deliveries/order/{orderId}`, `/deliveries/{id}/complete` | BUYER, PROVIDER | Consulta, registro y cierre de entregas. |
+| Payment | POST | `/payment-checkout` | BUYER | Checkout simulado atómico: calcula importes e IGV (18 %) en el servidor, marca la orden como `PAID` y genera el comprobante `SIM-INV-{orderId}`. |
+| Payment | GET | `/payments`, `/payments/{id}`, `/payments/order/{orderId}` | BUYER | Historial de pagos. |
+| Payment | GET | `/invoices`, `/invoices/{id}`, `/invoices/order/{orderId}` | BUYER | Comprobantes académicos. |
+| Notification | GET / POST / PUT / DELETE | `/notifications`, `/notifications/{id}`, `/notifications/buyer/{id}`, `/notifications/provider/{id}` | BUYER, PROVIDER | Notificaciones por segmento. |
+| Notification | POST | `/notifications/{id}/read`, `/notifications/buyer/{id}/read-all`, `/notifications/provider/{id}/read-all` | BUYER, PROVIDER | Marcado de lectura individual y masivo. |
+| Reporting | GET | `/analytics/buyer-dashboard/{buyerCompanyId}`, `/analytics/buyer/{buyerCompanyId}/{recurso}` | BUYER, PROVIDER | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetro `year`. |
+| Reporting | GET | `/analytics/provider-dashboard/{providerId}`, `/analytics/provider/{providerId}/{recurso}` | BUYER, PROVIDER | `sales-summary`, `revenue-over-time`, `revenue-by-fuel-type`, `orders-by-status`, `customers-by-sector`, `top-customers`; parámetro `year`. |
+
+**Operaciones restringidas para proteger el ciclo de vida:** `POST /orders` y `PUT /orders/{id}` responden `400 Bad Request`, porque las órdenes solo se crean al aprobar una solicitud y cambian de estado mediante las acciones anteriores. La creación directa de pagos y comprobantes (`POST /payments`, `POST /invoices`) queda reservada al rol `ADMIN`; el comprador paga únicamente mediante `/payment-checkout`. Los controladores y servicios comprueban que la empresa del usuario autenticado sea la propietaria del recurso consultado o modificado.
+
+> **Pendiente del equipo:** una vez desplegada la API, agregar el enlace público a Swagger UI y capturas de solicitudes y respuestas reales (por ejemplo, sign-in, aprobación de solicitud, despacho y checkout).
+
+---
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+**Configuración preparada en el repositorio:** Blueprint `render.yaml` (proyecto `fulltank-av2`, entorno `av2`).
+
+| Recurso | Configuración |
+|---|---|
+| `fulltank-av2-api` | Web Service Docker, plan gratuito, región Oregon, puerto `10000`, health check `/health`, despliegue automático desactivado |
+| `fulltank-av2-mysql` | Private Service Docker con MySQL 8.0.46, plan `0.5c-512mb` (de pago), sin acceso desde Internet |
+| Disco de datos | 1 GB persistente en `/var/lib/mysql` (de pago) |
+| Variables de la API | `ASPNETCORE_ENVIRONMENT=Production`; conexión a MySQL por `fromService`; `TokenSettings__Secret` generado por Render; `Cors__AllowedOrigins` con los orígenes de Firebase; migraciones y datos demo al arrancar; `AcademicDemo__Enabled` y `PaymentSettings__EnableSimulation` en `true`; Swagger habilitado |
+
+**Procedimiento de despliegue:**
+
+1. Confirmar que la rama de entrega del repositorio backend contiene `Dockerfile`, `deploy/` y `render.yaml`, sin archivos de configuración local ni secretos.
+2. En Render, crear un **Blueprint** conectado al repositorio y a la rama de entrega.
+3. Revisar los servicios, la región y el costo; ingresar `Database__DemoPassword` (contraseña privada de al menos 12 caracteres para las cuentas demo).
+4. Aplicar el Blueprint. Si la API arranca antes de que MySQL termine su primera inicialización, volver a desplegar solo la API.
+5. Verificar `https://<url-asignada-por-render>/health` (HTTP 200) y `https://<url-asignada-por-render>/swagger/index.html`.
+6. Compilar la Web Application con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://<url-asignada-por-render>/api/v1`, y publicarla en Firebase Hosting.
+
+**Estado al cierre de esta versión del informe:** la configuración de despliegue está preparada y validada en contenedores locales (5.2.3.5), pero la API y la base de datos **aún no se han publicado en Render**. La Web Application publicada sigue usando la API simulada en memoria.
+
+> **Pendiente del equipo:** después de publicar, registrar aquí la URL pública de la API, el commit desplegado, capturas del panel de Render (API y MySQL), la respuesta de `/health`, Swagger accesible para el evaluador y la nueva versión de la Web Application conectada a la API. Actualizar también el enlace en la Landing Page.
+
+---
+
 ---
