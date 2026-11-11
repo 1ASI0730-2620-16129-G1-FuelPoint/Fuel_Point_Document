@@ -1596,4 +1596,150 @@ Principales herramientas de comunicación: GitHub (control de versiones e integr
 
 ---
 
----
+## 5.3. Validation Interviews
+
+### 5.3.1. Diseño de Entrevistas
+
+Para el proceso de validación del incremento de software desarrollado durante los Sprints 1, 2 y 3, se estructuró un conjunto de guías de entrevistas semiestructuradas orientadas a contrastar las hipótesis iniciales de Lean UX frente a la experiencia real de los usuarios al interactuar con el prototipo funcional desplegado en producción ([FullTank Web App](https://full-tank-964e2.web.app/)).
+
+El instrumento se organizó de manera diferenciada para cada uno de los dos segmentos objetivo del modelo de negocio de FullTank:
+1. **Segmento 1: Empresas solicitantes de combustible (Compradores)** — Centrado en la exploración de catálogo, cotización, vinculación de maquinaria/equipos, solicitud de abastecimiento y trazabilidad de pedidos.
+2. **Segmento 2: Empresas proveedoras de combustible (Proveedores)** — Centrado en la administración de inventario de hidrocarburos, evaluación y aprobación de solicitudes entrantes, asignación de flota (vehículos cisterna y conductores autorizados) y confirmación de entregas logísticas.
+
+A continuación, se detallan las guías de entrevista diseñadas para ambos segmentos:
+
+#### Guía de Validación — Segmento 1: Empresas Solicitantes de Combustible (Compradores)
+
+1. **Percepción de Valor y Usabilidad General:** Al interactuar con el flujo de compra (desde explorar el catálogo y tus equipos hasta emitir una solicitud), ¿cuáles consideras que fueron las pantallas o funciones más claras, intuitivas y que te aportaron mayor valor operativo?
+2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante el recorrido por la plataforma, ¿en qué momentos, campos o pantallas sentiste fricción, lentitud o falta de claridad sobre cuál era el siguiente paso a seguir?
+3. **Claridad del Modelo de Dominio:** En módulos como la gestión de 'Equipos' (maquinaria/tanques de obra) o los estados del pedido (aprobado, despachado, entregado), ¿identificaste algún término, métrica o componente cuya función dentro de la operativa de tu empresa no haya quedado del todo clara?
+4. **Completitud Funcional (Feature Completeness):** Considerando cómo compras combustible en tu empresa (volúmenes en galones/litros, combustible diésel B5 S-50, comprobantes fiscales, autorizaciones internas), ¿qué información crítica sentiste que le falta a la interfaz para cubrir tu ciclo de compra completo?
+5. **Confianza Transaccional y Seguridad Operativa:** Al tratarse de compras B2B de alto valor monetario e impacto en la continuidad de sus operaciones, ¿la plataforma te transmite la seguridad, formalidad y transparencia necesarias para autorizar un pedido real? ¿Qué te genera certeza y qué te genera desconfianza?
+6. **Eficiencia Operativa frente al Proceso Actual:** Frente a tu gestión actual (llamadas telefónicas, chats de WhatsApp, fotos de váuchers y cuadre manual en Excel), ¿en qué tareas puntuales consideras que FullTank reduce carga administrativa o previene errores humanos?
+7. **Intención de Adopción y Reemplazo de Herramientas:** Si tu empresa tuviera acceso operativo a FullTank a partir de mañana, ¿reemplazarías tus canales actuales de compra para abastecer tus obras o flotas mediante este sistema web? ¿Qué facilitaría o impediría esa transición en tu equipo?
+8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una condición indispensable o requisito no negociable para tu área de compras y logística, ¿cuál es esa característica que, de no estar presente o fallar, te obligaría a descartar por completo el uso de la aplicación?
+9. **Agilidad en la Generación de Pedidos:** Evaluando la cantidad de pasos, campos y pantallas desde que seleccionas el producto hasta que envías la solicitud, ¿sientes que el flujo es ágil o consideras que en una urgencia operativa en obra seguirías prefiriendo coordinar por llamada o mensaje directo?
+10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta solución web a colegas de logística o empresas contratistas que enfrentan los mismos desafíos de abastecimiento? ¿Cuál sería tu argumento principal?
+
+#### Guía de Validación — Segmento 2: Empresas Proveedoras de Combustible (Proveedores)
+
+1. **Percepción de Valor y Control Operativo:** Al interactuar con el panel de proveedor (actualizar precios y stock, atender solicitudes entrantes y asignar cisternas y conductores), ¿cuáles consideras que fueron las funciones más claras, ordenadas y de mayor utilidad para tu operación logística diaria?
+2. **Fricciones y Puntos de Dolor en la Interfaz:** Durante la navegación y ejecución de tareas como proveedor, ¿en qué momentos, tablas o formularios sentiste confusión, pasos redundantes o falta de información crítica para tomar una decisión de despacho?
+3. **Claridad del Modelo de Dominio de Fulfillment e Inventario:** En secciones como la gestión de 'Fulfillment' (flota de vehículos, conductores, estados AVAILABLE / ASSIGNED) o las métricas de inventario, ¿identificaste algún término, estado o control cuya función dentro de la operativa de distribución mayorista no haya quedado clara?
+4. **Completitud Funcional Normativa y Operativa:** Considerando la operativa real de una distribuidora de combustible (límites de crédito, registro de guía de remisión física/electrónica, certificaciones de choferes, cubicaje de cisternas), ¿qué datos o funcionalidades críticas sentiste que faltan en la plataforma para gestionar tus entregas con total rigurosidad?
+5. **Confiabilidad Transaccional en Despachos:** Tratándose de despachos de miles de galones donde cualquier error en la asignación o retraso genera penalidades y reclamos de clientes, ¿el sistema te transmite la robustez y consistencia necesarias para coordinar tus despachos reales por este medio? ¿Qué aspectos te generan confianza o incertidumbre?
+6. **Eficiencia en la Programación Logística vs. Proceso Actual:** Frente a tu gestión cotidiana actual (hojas de cálculo de programación de ruta, cruce manual de llamadas con choferes, confirmaciones dispersas por WhatsApp), ¿en qué procesos específicos consideras que esta plataforma optimizaría tus tiempos de despacho y control de inventario?
+7. **Intención de Adopción e Integración Comercial:** Si los clientes contratistas y empresas comenzaran a emitir sus requerimientos por FullTank, ¿tu empresa adoptaría la plataforma como su canal oficial de recepción de pedidos y programación de flota? ¿Cuáles serían los principales factores impulsores o frenos para implementarla?
+8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una exigencia operativa o legal no negociable para una empresa distribuidora de combustible, ¿cuál es esa funcionalidad o salvaguarda que, de no estar resuelta en la plataforma, te impediría utilizarla comercialmente?
+9. **Impacto en la Organización y Trazabilidad:** Al centralizar en una sola plataforma la recepción de pedidos, la disponibilidad de inventario, la asignación de recursos logísticos y el histórico de entregas cerradas, ¿consideras que reduce significativamente el riesgo de desorden operativo y traspapeleo frente a tus métodos habituales?
+10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta herramienta a otras empresas distribuidoras o estaciones mayoristas del sector que buscan digitalizar su canal corporativo? ¿Cuál sería la ventaja clave que destacarías?
+
+### 5.3.2. Registro de Entrevistas
+
+Las entrevistas de validación se realizarán sobre la versión de la Web Application conectada a la API (5.2.3.7), con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, el recorrido de las tareas realizadas y los hallazgos.
+
+> **Pendiente del equipo:** realizar y grabar las entrevistas y completar una ficha por entrevistado con la siguiente estructura.
+
+**Segmento 1: Empresas solicitantes de combustible**
+
+| Campo | Detalle |
+|---|---|
+| **Nombre entrevistado** | |
+| **Edad** | |
+| **Distrito** | |
+| **Cargo y empresa** | |
+| **Fecha** | |
+| **Inicio del video** | |
+| **Fin del video** | |
+| **Link del video** | |
+| **Foto entrevista** | |
+| **Tareas realizadas** | Por ejemplo: iniciar sesión, consultar el catálogo, registrar una solicitud, seguir el estado del pedido, confirmar la recepción y pagar. |
+| **Resumen** | |
+
+**Segmento 2: Empresas proveedoras de combustible**
+
+| Campo | Detalle |
+|---|---|
+| **Nombre entrevistado** | |
+| **Edad** | |
+| **Distrito** | |
+| **Cargo y empresa** | |
+| **Fecha** | |
+| **Inicio del video** | |
+| **Fin del video** | |
+| **Link del video** | |
+| **Foto entrevista** | |
+| **Tareas realizadas** | Por ejemplo: iniciar sesión, actualizar inventario y precios, aprobar una solicitud, asignar vehículo y conductor, despachar y revisar reportes. |
+| **Resumen** | |
+
+**Síntesis de hallazgos**
+
+| Hallazgo | Segmento | Frecuencia (n.º de entrevistados) | Historia o artefacto afectado | Acción propuesta para el Sprint 4 |
+|---|---|:---:|---|---|
+| | | | | |
+
+### 5.3.3. Evaluaciones según heurísticas
+
+La evaluación de usabilidad se realizará con las 10 heurísticas de Nielsen sobre las tareas principales de cada segmento en la Web Application integrada. Cada problema se califica con la escala de severidad de 0 (no es un problema) a 4 (catástrofe de usabilidad).
+
+> **Pendiente del equipo:** completar la evaluación y registrar los problemas encontrados.
+
+| Campo | Detalle |
+|---|---|
+| **Carrera** | Ingeniería de Software |
+| **Curso** | 1ASI0730 Aplicaciones Web |
+| **Sección** | 16129 |
+| **Profesor** | Sánchez Seña, Alberto Wilmer |
+| **Auditor** | |
+| **Cliente(s)** | |
+| **Sitio o aplicación evaluada** | FullTank Web Application |
+
+**Tareas evaluadas**
+
+| # | Tarea | Segmento |
+|:---:|---|---|
+| 1 | Iniciar sesión y registrar una empresa | Ambos |
+| 2 | Registrar una solicitud de combustible para un equipo | Solicitante |
+| 3 | Consultar el estado y el detalle de un pedido | Solicitante |
+| 4 | Confirmar la recepción y pagar un pedido (checkout simulado) | Solicitante |
+| 5 | Actualizar inventario y precios | Proveedor |
+| 6 | Aprobar una solicitud y asignar vehículo y conductor | Proveedor |
+| 7 | Revisar notificaciones y reportes | Ambos |
+
+**Escala de severidad:** 0 = no es un problema; 1 = problema cosmético; 2 = problema menor; 3 = problema mayor; 4 = catástrofe de usabilidad.
+
+**Tabla resumen**
+
+| # | Problema | Escala de severidad | Heurística o principio violado |
+|:---:|---|:---:|---|
+| 1 | | | |
+
+**Descripción de problemas**
+
+Para cada problema: heurística violada, descripción, captura de pantalla y recomendación.
+
+## 5.4. Video About-the-Product
+
+El video About-the-Product presenta FullTank a los dos segmentos objetivo: el problema que resuelve, la propuesta de valor y un recorrido breve por la Landing Page y la Web Application. Su duración debe estar entre **1 y 3 minutos**, y debe publicarse e incrustarse en la Landing Page.
+
+> **Pendiente del equipo:** grabar, publicar e incrustar en la Landing Page la primera versión del video y completar la tabla.
+
+| Campo | Detalle |
+|---|---|
+| **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-product.mp4` |
+| **Duración** | |
+| **Enlace de publicación** | |
+| **Ubicación en la Landing Page** | |
+
+## 5.5. Video About-the-Team
+
+El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints. Debe publicarse e incrustarse en la Landing Page.
+
+> **Pendiente del equipo:** grabar, publicar e incrustar en la Landing Page la primera versión del video y completar la tabla.
+
+| Campo | Detalle |
+|---|---|
+| **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
+| **Duración** | |
+| **Enlace de publicación** | |
+| **Ubicación en la Landing Page** | |
