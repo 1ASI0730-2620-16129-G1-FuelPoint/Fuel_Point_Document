@@ -1556,4 +1556,44 @@ La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*
 
 ---
 
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3 el equipo trabajó en el repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) siguiendo GitFlow con ramas temáticas por Bounded Context (`feat/*`), pruebas (`test/*`) e infraestructura (`build/*`, `chore/*`), integradas en `integration/backend` y liberadas en `main` mediante `release/backend`.
+
+Distribución de commits en `main` según la API pública de GitHub (consulta del 11 de noviembre de 2026):
+
+| Integrante | Cuenta | Commits de trabajo | Merges de integración | Total | Áreas |
+|---|---|:---:|:---:|:---:|---|
+| Corvacho Damian, Brayan Alexis | `BralexCD` | 18 | 20 | 38 | Base compartida, IAM, hosting, pruebas de registro, seguridad y configuración, integración de ramas |
+| Mantilla Maldonado, Enrique Manuel | `enrique-mantilla` | 19 | 0 | 19 | Catalog, Inventory, Ordering, persistencia, pruebas de órdenes y Render |
+| Huingo Tello, Frank Anthony | `Franz2308` | 17 | 0 | 17 | Equipment, Fulfillment, Notification, pruebas de dominio e imagen Docker |
+| Payano Puchuri, Joan Fabricio | `joanfpp2-ai` | 11 | 0 | 11 | Payment, Reporting & Analytics y pruebas de checkout |
+| Carhuayal Suarez, Joan Salvador | `JoanCS` | 0 | 0 | 0 | Por confirmar |
+| **Total** | — | **65** | **20** | **85** | — |
+
+##### Insights
+
+> **Pendiente del equipo:** captura de *Insights → Pulse* del repositorio `Full_Tank_Backend`.
+
+##### Contributors
+
+> **Pendiente del equipo:** captura de [Contributors](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors) del repositorio `Full_Tank_Backend`.
+
+##### Network graph
+
+> **Pendiente del equipo:** captura del [Network Graph](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network) del repositorio `Full_Tank_Backend`.
+
+Principales herramientas de comunicación: GitHub (control de versiones e integración por ramas), WhatsApp (coordinación diaria) y Google Meet (planificación y retrospectiva).
+
+##### Acciones de mejora y compromisos para el Sprint 4 (TB2)
+
+- Integrar cada rama mediante Pull Request con al menos una revisión, como establece la política de 5.1.2, para dejar evidencia de la revisión por pares.
+- Publicar la API y MySQL en Render, conectar la Web Application a la API pública y actualizar el pipeline de Firebase para usar el build integrado.
+- Completar las brechas del Sprint 3: recuperación de contraseña (TS-02 / US-16), cierre de sesión (TS-03 / US-17), eliminación de equipos (TS-25), eliminación de conductores y vehículos y entrega fallida (TS-17 a TS-19) y exportación de reportes en PDF (TS-27 / US-35).
+- Reconciliar los criterios de aceptación de US-08, US-11, TS-04, TS-15 y TS-20 con el flujo implementado de pedidos y pago simulado.
+- Distribuir las tareas de backend de forma que los cinco integrantes registren aportes verificables en el repositorio.
+- Ejecutar las entrevistas de validación (5.3) sobre la versión integrada y reflejar sus hallazgos en el backlog del Sprint 4.
+
+---
+
 ---
