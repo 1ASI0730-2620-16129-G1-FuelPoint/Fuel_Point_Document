@@ -1625,23 +1625,27 @@ A continuación, se detallan las guías de entrevista diseñadas para ambos segm
 
 ### 5.3.2. Registro de Entrevistas
 
-Las entrevistas de validación se realizarán sobre la versión de la Web Application conectada a la API (5.2.3.7), con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, el recorrido de las tareas realizadas y los hallazgos. A continuación se presentan las fichas de registro estructuradas para ambos segmentos:
+Las entrevistas de validación se realizan con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada entrevistado usa la Web Application con una cuenta demo de su segmento, ejecuta un conjunto de tareas mientras piensa en voz alta y, al final, responde las preguntas de la guía de 5.3.1. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, las tareas realizadas y los hallazgos.
 
 **Segmento 1: Empresas solicitantes de combustible**
 
+- Entrevista 1:
+
 | Campo | Detalle |
 |---|---|
-| **Nombre entrevistado** | |
-| **Edad** | |
-| **Distrito** | |
-| **Cargo y empresa** | |
-| **Fecha** | |
-| **Inicio del video** | |
-| **Fin del video** | |
-| **Link del video** | |
-| **Foto entrevista** | |
-| **Tareas realizadas** | Por ejemplo: iniciar sesión, consultar el catálogo, registrar una solicitud, seguir el estado del pedido, confirmar la recepción y pagar. |
-| **Resumen** | |
+| **Nombre entrevistado** | Daniel Angelo Siqueiros Cruz |
+| **Edad** | 21 |
+| **Distrito** | Los Olivos, Lima |
+| **Cargo y empresa** | Asistente de logística y almacén en una empresa constructora mediana de Lima Norte (comprador). Fue entrevistado también en la etapa de Needfinding ([2.2.2](chapter2.md#222-registro-de-entrevistas)). |
+| **Fecha** | Pendiente de confirmar |
+| **Modalidad** | Google Meet, con la pantalla del entrevistado compartida |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 20:06 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD0d-oI1gIDTZiCz0JJZ-RtAa51OEsD6ojaPZxYjaDgspY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oKir2m |
+| **Foto entrevista** | Pendiente de agregar |
+| **Tareas realizadas** | 1) Iniciar sesión con la cuenta demo de comprador (02:22). 2) Identificar en el dashboard los pedidos en curso (03:11). 3) Ubicar el equipo con menor nivel de combustible y solicitar su recarga desde el catálogo (03:39). 4) Registrar un pedido para ese equipo (04:41). 5) Consultar el estado del pedido (06:36). 6) Pagar una orden pendiente con el pago simulado y descargar la factura (07:13). 7) Revisar las notificaciones (11:38). 8) Obtener el resumen mensual de gasto por equipo (12:26). Preguntas de validación desde 13:09 y cierre desde 19:12. |
+| **Puntuación de facilidad de uso** | 8 de 10 |
+| **Resumen** | <p>Daniel mantiene el mismo proceso descrito en Needfinding: coordina los pedidos por un grupo de WhatsApp con el proveedor, su jefe transfiere desde la banca móvil y envía la captura del voucher al chat, y él pasa esas imágenes a un Excel compartido con el almacén. A fin de mes tardó cerca de dos horas en cuadrar facturas con capturas borrosas, y sigue llamando al chofer para saber si el camión ya salió de la planta.</p><p>Completó las ocho tareas. Necesitó ayuda para elegir la cuenta demo en el inicio de sesión. Encontró sin dificultad las órdenes activas y el equipo con menor nivel, y valoró que el catálogo solo le permitiera comprar el combustible compatible con su máquina. Al registrar el pedido, el sistema rechazó los 1,400 litros porque superaban la capacidad restante del equipo; entendió el motivo solo cuando el entrevistador le explicó que faltaban 20 litros. En el estado del pedido solo vio «Pendiente» y no pudo saber si el camión había salido ni cuándo llegaría. Pagó con el formulario simulado y descargó la factura en PDF, que salió en dos hojas; el pago recién hecho no apareció en el historial de pagos. Las notificaciones le resultaron claras, pero el reporte de gasto no se puede imprimir, algo que su jefe necesita.</p><p>Considera las notificaciones la función más útil y el reporte de analítica el mayor ahorro de tiempo frente a ordenar capturas de transferencias. El límite de compra según la capacidad del equipo le da confianza para no pedir de más. Señaló textos en inglés en la interfaz en español. Haría por la aplicación incluso un pedido urgente y la recomendaría a otras constructoras por ser intuitiva, aunque al inicio seguiría usando WhatsApp. Dejaría de usarla si los envíos llegan retrasados sin explicación, por lo que lo primero que pide mejorar es ver la ubicación y el tiempo estimado del pedido, y que las facturas aparezcan en el historial apenas se paga.</p> |
 
 **Segmento 2: Empresas proveedoras de combustible**
 
@@ -1661,9 +1665,20 @@ Las entrevistas de validación se realizarán sobre la versión de la Web Applic
 
 **Síntesis de hallazgos**
 
-| Hallazgo | Segmento | Frecuencia (n.º de entrevistados) | Historia o artefacto afectado | Acción propuesta para el Sprint 4 |
-|---|---|:---:|---|---|
-| | | | | |
+La tabla se actualiza a medida que se registran nuevas entrevistas. La frecuencia indica cuántos entrevistados mencionaron u ocasionaron el hallazgo; el número entre paréntesis es el minuto del video de la Entrevista 1 del Segmento 1.
+
+| # | Hallazgo | Segmento | Frecuencia | Historia o artefacto afectado | Acción propuesta para el Sprint 4 |
+|:---:|---|---|:---:|---|---|
+| 1 | El estado del pedido solo muestra «Pendiente»; no indica si el despacho salió ni cuándo llegará (06:39, 17:45, 19:20). Es la condición que haría abandonar la aplicación. | Solicitante | 1 | US-06, US-43, US-12 | Mostrar la línea de tiempo de estados con fecha y hora de cada cambio y la hora estimada de llegada; evaluar el seguimiento de la ubicación del despacho para TB2. |
+| 2 | El pago recién realizado no aparece en el historial de pagos ni su factura (11:17, 13:46). | Solicitante | 1 | US-08, TS-21 | Actualizar el historial con el pago y el comprobante apenas termina el checkout, usando los datos persistidos por la API. |
+| 3 | La factura descargada en PDF ocupa dos hojas (10:41). | Solicitante | 1 | US-08 | Ajustar el formato de impresión del comprobante a una sola hoja. |
+| 4 | El reporte de gasto no se puede imprimir ni exportar; el jefe necesita verlo en físico (12:45). | Solicitante | 1 | US-35, TS-27 | Implementar la exportación del reporte a PDF con sus gráficos. |
+| 5 | Hay textos en inglés cuando la interfaz está en español (14:12). | Solicitante | 1 | US-39 | Completar las traducciones de i18n en las vistas afectadas. |
+| 6 | El mensaje de cantidad mayor a la capacidad restante se entendió solo tras la explicación del entrevistador (05:51). | Solicitante | 1 | US-05 | Mostrar la capacidad restante junto al campo de cantidad y ofrecer completar el tanque con un clic. |
+| 7 | No quedó claro qué cuenta demo usar ni qué parte del texto copiar al iniciar sesión (02:29). | Solicitante | 1 | US-15 | Presentar las cuentas demo con botones «Usar cuenta de comprador / proveedor». |
+| 8 | Preguntó si puede guardar la tarjeta para no ingresarla en cada compra (08:33). | Solicitante | 1 | US-08 | Fuera del alcance actual: el pago es simulado y no se almacenan datos de tarjetas. Se registra para una futura integración real. |
+
+**Aspectos validados positivamente:** las notificaciones (función más útil), el filtro del catálogo por compatibilidad con el equipo, el límite de compra según la capacidad del tanque, el reporte de analítica como ahorro de tiempo frente a las capturas de vouchers y la facilidad general de uso (8/10; «lo llegué a entender casi todo a la primera»).
 
 ### 5.3.3. Evaluaciones según heurísticas
 
