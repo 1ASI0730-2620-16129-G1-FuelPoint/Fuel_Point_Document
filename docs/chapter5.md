@@ -281,7 +281,7 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
   * Compilación y empaquetado optimizado: `npm run build:demo` o `npm run build`, lo cual produce los bundles minimizados en el directorio `/dist`.
   * Servidor de desarrollo local: `npm run dev` (iniciando el entorno de recarga rápida con Vite en `http://localhost:5173/`).
 * **Estrategia de despliegue y CI/CD:** Firebase Hosting, proyecto `full-tank-964e2`, con publicación del directorio `dist` y reescritura de rutas SPA (`source: "**"`, `destination: "/index.html"`). El despliegue se encuentra 100% automatizado mediante GitHub Actions (`.github/workflows/ci-cd.yml`), ejecutando instalación determinista (`npm ci`), la suite completa de pruebas unitarias con Vitest (90 pruebas automatizadas), build optimizado (`npm run build:demo`) y publicación automática ante cada push a `develop` y `main`. Acceso público en producción: [FullTank Web Application](https://full-tank-964e2.web.app/iam/login).
-* **Integración con los Web Services (Sprint 3):** la versión publicada en TB1 utiliza la API simulada en memoria (`VITE_USE_FAKE_API=true`). Para conectarla con la API desplegada se compila con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://<url-pública-de-la-api>/api/v1`, mediante `npm run build` (no `build:demo`), y se publica el nuevo `dist` en Firebase Hosting. El workflow de GitHub Actions debe actualizarse para usar ese build antes de encargarle la publicación integrada.
+* **Integración con los Web Services (Sprint 3):** Despliegue completado y operativo. La Web Application en producción ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) fue compilada y desplegada conectada a la API real en producción con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://fulltank-av2-api-hqhk.onrender.com/api/v1` (commit `503ecd5`), validado públicamente en `deployment.json`.
 
 #### 3. Web Services / RESTful API (Backend)
 
@@ -295,8 +295,8 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
   * Contenedorización: `Dockerfile` multietapa con compilación en `mcr.microsoft.com/dotnet/sdk:10.0` y ejecución en `mcr.microsoft.com/dotnet/aspnet:10.0`, usuario sin privilegios (`app`) y puerto `10000`.
   * Configuración por capas: `appsettings.json` (valores base sin secretos), `appsettings.Development.json`, `appsettings.Local.json` (solo en Development y excluido del repositorio y de la publicación) y variables de entorno, que tienen prioridad final. En Production el arranque se detiene si quedan marcadores sin resolver para la base de datos o la clave JWT.
   * Salud del servicio: `/health` (comprueba MySQL y migraciones; responde 503 si no están disponibles) y `/health/live` (proceso activo).
-* **Estrategia de despliegue:** Blueprint de Render (`render.yaml`, proyecto `fulltank-av2`, entorno `av2`) con un Web Service Docker `fulltank-av2-api` (plan gratuito, región Oregon, health check `/health`, despliegue automático desactivado para fijar la versión del hito). Las variables sensibles (contraseña de MySQL, clave JWT y contraseña de las cuentas demo) las genera Render o se ingresan al aplicar el Blueprint; no se guardan en el repositorio. CORS solo admite los orígenes HTTPS de Firebase Hosting.
-* **Estado de despliegue:** configuración preparada y validada en contenedores locales (ver [5.2.3.5](#5235-execution-evidence-for-sprint-review)). La URL pública se registrará en [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review) una vez aplicado el Blueprint; no se presenta ninguna URL antes de su despliegue real.
+* **Estrategia de despliegue:** Blueprint de Render (`render.yaml`, proyecto `fulltank-av2`, entorno `av2`) con un Web Service Docker `fulltank-av2-api` (plan gratuito, región Oregon, health check `/health`, desplegado y operativo). Las variables sensibles (credenciales de base de datos, clave JWT y contraseña de cuentas demo) las gestiona Render de forma segura. CORS admite exclusivamente los orígenes HTTPS autorizados de Firebase Hosting.
+* **Estado de despliegue:** Web Service desplegado y operativo en Render en `https://fulltank-av2-api-hqhk.onrender.com`, con health check verificado en `/health` (HTTP 200 Healthy) y documentación interactiva OpenAPI en `/swagger/index.html` (ver evidencias completas en [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
 * **Alcance académico:** el checkout de pagos es una simulación explícita (`AcademicDemo:Enabled=true` y `PaymentSettings:EnableSimulation=true`). No procesa dinero ni emite comprobantes electrónicos SUNAT; genera comprobantes académicos `SIM-INV-*`.
 
 #### 4. Database Server
@@ -304,8 +304,8 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
 * **Tecnologías:** MySQL 8.0.46 en contenedor Docker (`deploy/mysql/Dockerfile`).
 * **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican con `dotnet ef database update` o al arrancar la API cuando `Database__ApplyMigrationsOnStartup=true`, opción habilitada solo en la base exclusiva de AV2.
 * **Datos de demostración:** con `Database__SeedDemoData=true` se cargan, en una sola transacción, catálogo, inventario, equipos, flota, solicitudes y pedidos de ejemplo junto con una cuenta compradora y una proveedora. Si los datos ya existen, no se vuelven a insertar.
-* **Despliegue en Render:** Private Service `fulltank-av2-mysql` (plan `0.5c-512mb`, de pago) con disco persistente de 1 GB montado en `/var/lib/mysql`. La base no se expone a Internet: la API se conecta por la red privada de Render con un usuario propio distinto de `root` y `Database__SslMode=Required`.
-* **Estado de despliegue:** En proceso de aprovisionamiento en la infraestructura cloud de Render con la base de datos MySQL en red privada.
+* **Despliegue en Render:** Para garantizar la sostenibilidad del entorno dentro de los límites del nivel gratuito (Render Free) sin incurrir en costos de almacenamiento persistente de pago, se migró el motor de persistencia a PostgreSQL 18 gestionado en Render (`fulltank-av2-postgres`, commit `daee12a`). La API se conecta por la red interna privada de Render con cifrado SSL (`fromService`).
+* **Estado de despliegue:** Base de datos aprovisionada y en operación activa en Render junto con la API RESTful.
 
 ---
 
@@ -1485,7 +1485,31 @@ La prueba de humo crea una red, un volumen, MySQL y la API desechables, con cont
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*, versión `v1`), disponible localmente en `http://localhost:5204/swagger`. Los endpoints protegidos requieren el encabezado `Authorization: Bearer <token>` obtenido en el inicio de sesión. Las rutas siguientes se obtuvieron de los controladores del commit `fde0498`; todas son relativas a `/api/v1` y usan la convención *kebab-case*.
+La API expone documentación interactiva OpenAPI 3.0 mediante Swagger UI (título *FullTank API*, versión `v1`), disponible y operativa públicamente en la nube en `https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html` (así como en el entorno local en `http://localhost:5204/swagger`). Los endpoints protegidos requieren el encabezado `Authorization: Bearer <token>` obtenido tras autenticarse mediante `/api/v1/authentication/sign-in`.
+
+A continuación, se presentan las evidencias visuales de la interfaz Swagger UI en producción, organizada según los Bounded Contexts de la arquitectura del sistema:
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/swagger-overview-analytics.png" alt="Documentación Swagger UI en Render - Visión general y Bounded Context Analytics (Reporting)" width="850"/>
+  <p><em>Figura 5.2.3.6.1: Documentación Swagger UI en producción (Render) — Cabecera FullTank API v1 (OAS 3.0), autenticación JWT Bearer y endpoints analíticos de gastos y ventas (Reporting).</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/swagger-iam-fulfillment.png" alt="Documentación Swagger UI en Render - Bounded Contexts IAM (BuyerCompanies) y Fulfillment (Deliveries y Drivers)" width="850"/>
+  <p><em>Figura 5.2.3.6.2: Documentación Swagger UI en producción — Endpoints de empresas compradoras (IAM) y gestión logística de despachos, entregas y conductores (Fulfillment).</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/swagger-equipment-catalog-inventory.png" alt="Documentación Swagger UI en Render - Bounded Contexts Equipment, Catalog (FavoriteProviders) e Inventory" width="850"/>
+  <p><em>Figura 5.2.3.6.3: Documentación Swagger UI en producción — Endpoints de equipos industriales (Equipment), proveedores favoritos (Catalog) y existencias y movimientos de combustible (Inventory).</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/swagger-notifications-orders.png" alt="Documentación Swagger UI en Render - Bounded Contexts Notifications y Orders" width="850"/>
+  <p><em>Figura 5.2.3.6.4: Documentación Swagger UI en producción — Endpoints de notificaciones y ciclo de vida de órdenes (Ordering), con protección del dominio ante creación directa.</em></p>
+</div>
+
+Las rutas siguientes corresponden a los endpoints RESTful implementados y operativos en la API; todas son relativas a `/api/v1` y utilizan la convención *kebab-case*:
 
 | Contexto | Método | Ruta | Rol | Operación |
 |---|---|---|---|---|
@@ -1524,25 +1548,43 @@ La API expone documentación OpenAPI mediante Swagger UI (título *FullTank API*
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-**Configuración preparada en el repositorio:** Blueprint `render.yaml` (proyecto `fulltank-av2`, entorno `av2`).
+El despliegue de los Web Services RESTful de FullTank se encuentra **completado, verificado y en operación pública** en la plataforma en la nube **Render**, conectado de forma continua y validada con la Web Application alojada en **Firebase Hosting**.
 
-| Recurso | Configuración |
-|---|---|
-| `fulltank-av2-api` | Web Service Docker, plan gratuito, región Oregon, puerto `10000`, health check `/health`, despliegue automático desactivado |
-| `fulltank-av2-mysql` | Private Service Docker con MySQL 8.0.46, plan `0.5c-512mb` (de pago), sin acceso desde Internet |
-| Disco de datos | 1 GB persistente en `/var/lib/mysql` (de pago) |
-| Variables de la API | `ASPNETCORE_ENVIRONMENT=Production`; conexión a MySQL por `fromService`; `TokenSettings__Secret` generado por Render; `Cors__AllowedOrigins` con los orígenes de Firebase; migraciones y datos demo al arrancar; `AcademicDemo__Enabled` y `PaymentSettings__EnableSimulation` en `true`; Swagger habilitado |
+Para garantizar la sostenibilidad del entorno dentro de los límites del nivel gratuito (Render Free) sin incurrir en costos de almacenamiento persistente de pago, se migró el motor de persistencia a **PostgreSQL 18** gestionado en Render (`fulltank-av2-postgres`, commit `daee12a`). El aprovisionamiento automatizado se rige mediante el Blueprint `render.yaml` (proyecto `fulltank-av2`, entorno `av2`).
 
-**Procedimiento de despliegue:**
+**Configuración desplegada y operativa en Render:**
 
-1. Confirmar que la rama de entrega del repositorio backend contiene `Dockerfile`, `deploy/` y `render.yaml`, sin archivos de configuración local ni secretos.
-2. En Render, crear un **Blueprint** conectado al repositorio y a la rama de entrega.
-3. Revisar los servicios, la región y el costo; ingresar `Database__DemoPassword` (contraseña privada de al menos 12 caracteres para las cuentas demo).
-4. Aplicar el Blueprint. Si la API arranca antes de que MySQL termine su primera inicialización, volver a desplegar solo la API.
-5. Verificar `https://<url-asignada-por-render>/health` (HTTP 200) y `https://<url-asignada-por-render>/swagger/index.html`.
-6. Compilar la Web Application con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://<url-asignada-por-render>/api/v1`, y publicarla en Firebase Hosting.
+| Recurso | Configuración y Especificaciones de Producción | Estado |
+|---|---|:---:|
+| `fulltank-av2-api` | Web Service Docker en Linux, región Oregon, puerto interno `10000`, runtime .NET 10 Release, health check configurado en `/health`. **URL pública:** `https://fulltank-av2-api-hqhk.onrender.com` | **Live** (Activo) |
+| `fulltank-av2-postgres` | Base de datos relacional PostgreSQL 18 gestionada en Render Free tier, base de datos `fulltank_av2`, usuario `fulltank`. Conexión interna cifrada por SSL (`fromService`). | **Available** (Activo) |
+| Variables de Entorno de la API | `ASPNETCORE_ENVIRONMENT=Production`; credenciales de PostgreSQL inyectadas dinámicamente; `TokenSettings__Secret` criptográfico generado por Render; `Cors__AllowedOrigins` configurado para `https://full-tank-964e2.web.app` y `https://full-tank-964e2.firebaseapp.com`; `Database__ApplyMigrationsOnStartup=true`; `Database__SeedDemoData=true`; `AcademicDemo__Enabled=true`; `PaymentSettings__EnableSimulation=true`; `Swagger__Enabled=true`. | **Configurado** |
 
-**Estado al cierre de esta versión del informe:** la configuración de despliegue está debidamente preparada y validada en contenedores locales (5.2.3.5) para el aprovisionamiento de la API y la base de datos en Render. La Web Application publicada se encuentra operativa para la validación funcional.
+**Verificación y Evidencias de Despliegue en Producción:**
+
+1. **Health Check verificado en Render (`/health`):**
+   La API responde exitosamente con código `HTTP 200` y cuerpo de respuesta `Healthy`, acreditando que el proceso del backend .NET se encuentra en ejecución estable y la conexión con la base de datos PostgreSQL en la nube está activa y migrada:
+   - **Endpoint verificado:** `https://fulltank-av2-api-hqhk.onrender.com/health`
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/health-production.png" alt="Verificación de Health Check HTTP 200 en Render" width="850"/>
+  <p><em>Figura 5.2.3.7.1: Verificación del endpoint de salud (/health) de la API RESTful en Render — Respuesta HTTP 200 Healthy en el entorno de producción.</em></p>
+</div>
+
+2. **Documentación Swagger UI operativa:**
+   La especificación interactiva OpenAPI 3.0 está disponible públicamente en la nube, permitiendo la exploración y prueba en tiempo real de los endpoints:
+   - **URL pública de Swagger:** `https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html`
+
+3. **Integración Extremo a Extremo con la Web Application (Firebase Hosting):**
+   La aplicación web publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) fue compilada y desplegada automáticamente mediante el pipeline de CI/CD de GitHub Actions con las variables `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://fulltank-av2-api-hqhk.onrender.com/api/v1`.
+   El manifiesto de despliegue público `deployment.json` acredita que la aplicación en producción consume de forma efectiva la API real:
+
+<div align="center">
+  <img src="../assets/chapter-5/despliegue/deployment-firebase.png" alt="Manifiesto de despliegue en producción deployment.json en Firebase Hosting" width="850"/>
+  <p><em>Figura 5.2.3.7.2: Manifiesto de despliegue en producción (deployment.json) en Firebase Hosting — Confirmación de integración con la API de Render (simulatedApi: false).</em></p>
+</div>
+
+**Estado de culminación del despliegue:** La totalidad de los Web Services RESTful del Sprint 3 y la base de datos relacional se encuentran plenamente desplegados en Render y sincronizados con el frontend en Firebase Hosting, permitiendo la ejecución integral de las transacciones de compra, despacho y facturación simulada en el entorno de producción.
 
 ---
 
