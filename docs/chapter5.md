@@ -1767,7 +1767,7 @@ La tabla se actualiza a medida que se registran nuevas entrevistas. La frecuenci
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad se realizará con las 10 heurísticas de Nielsen sobre las tareas principales de cada segmento en la Web Application integrada. Cada problema se califica con la escala de severidad de 0 (no es un problema) a 4 (catástrofe de usabilidad), registrándose en la ficha formal de auditoría:
+La evaluación de usabilidad se realizó aplicando las **10 heurísticas de usabilidad de Jakob Nielsen** sobre los recorridos guiados de la Web Application integrada ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) a partir de las tres entrevistas de validación registradas del Segmento 1 (`Daniel Angelo Siqueiros Cruz`, `Carlos Gutierrez` y `Alessandro Gonzales`). Las tareas 5 y 6 (flujo exclusivo de proveedor) quedan previstas para ampliarse una vez registradas las entrevistas del Segmento 2. Cada problema se califica en la escala de severidad de `0` (no es un problema) a `4` (catástrofe de usabilidad):
 
 | Campo | Detalle |
 |---|---|
@@ -1775,33 +1775,128 @@ La evaluación de usabilidad se realizará con las 10 heurísticas de Nielsen so
 | **Curso** | 1ASI0730 Aplicaciones Web |
 | **Sección** | 16129 |
 | **Profesor** | Sánchez Seña, Alberto Wilmer |
-| **Auditor** | |
-| **Cliente(s)** | |
-| **Sitio o aplicación evaluada** | FullTank Web Application |
+| **Auditor** | Equipo FuelPoint — Frank Anthony Huingo Tello, Brayan Alexis Corvacho Damian, Enrique Manuel Mantilla Maldonado y Joan Fabricio Payano Puchuri |
+| **Cliente(s)** | Daniel Angelo Siqueiros Cruz, Carlos Gutierrez y Alessandro Gonzales *(Segmento 1: Empresas solicitantes de combustible — corte al 14/11/2026)* |
+| **Sitio o aplicación evaluada** | FullTank Web Application ([https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/)) |
 
 **Tareas evaluadas**
 
-| # | Tarea | Segmento |
-|:---:|---|---|
-| 1 | Iniciar sesión y registrar una empresa | Ambos |
-| 2 | Registrar una solicitud de combustible para un equipo | Solicitante |
-| 3 | Consultar el estado y el detalle de un pedido | Solicitante |
-| 4 | Confirmar la recepción y pagar un pedido (checkout simulado) | Solicitante |
-| 5 | Actualizar inventario y precios | Proveedor |
-| 6 | Aprobar una solicitud y asignar vehículo y conductor | Proveedor |
-| 7 | Revisar notificaciones y reportes | Ambos |
+| # | Tarea | Segmento | Estado de auditoría |
+|:---:|---|---|:---:|
+| 1 | Iniciar sesión y registrar una empresa | Ambos | Evaluada (Solicitante) |
+| 2 | Registrar una solicitud de combustible para un equipo | Solicitante | Evaluada |
+| 3 | Consultar el estado y el detalle de un pedido | Solicitante | Evaluada |
+| 4 | Confirmar la recepción y pagar un pedido (checkout simulado) | Solicitante | Evaluada |
+| 5 | Actualizar inventario y precios | Proveedor | Pendiente de entrevistas Seg. 2 |
+| 6 | Aprobar una solicitud y asignar vehículo y conductor | Proveedor | Pendiente de entrevistas Seg. 2 |
+| 7 | Revisar notificaciones y reportes | Ambos | Evaluada (Solicitante) |
 
-**Escala de severidad:** 0 = no es un problema; 1 = problema cosmético; 2 = problema menor; 3 = problema mayor; 4 = catástrofe de usabilidad.
+**Escala de severidad:** `0` = no es un problema; `1` = problema cosmético; `2` = problema menor; `3` = problema mayor; `4` = catástrofe de usabilidad.
 
 **Tabla resumen**
 
 | # | Problema | Escala de severidad | Heurística o principio violado |
 |:---:|---|:---:|---|
-| 1 | | | |
+| 1 | Ausencia de línea de tiempo de despacho, ETA y botón de contacto directo con el conductor en pedidos activos | 3 | H1: Visibilidad del estado del sistema |
+| 2 | Reportes analíticos sin exportación a PDF/Excel ni impresión directa, y comprobante de pago dividido en dos páginas | 3 | H7: Flexibilidad y eficiencia de uso |
+| 3 | Falta de alerta prioritaria ante quiebre de stock/cancelación y retardo en reflejar pagos recién confirmados en el historial | 3 | H1: Visibilidad del estado del sistema / H9: Reconocer, diagnosticar y recuperarse de errores |
+| 4 | Mezcla de etiquetas en inglés dentro de la interfaz en español y marca residual «PrimeFuel» en el inicio de sesión | 2 | H4: Consistencia y estándares |
+| 5 | Validación reactiva de capacidad restante del equipo y falta de filtros por placa o sede en el selector | 2 | H5: Prevención de errores |
+| 6 | Credenciales demo presentadas en texto plano sin botones de autocompletado de un clic | 2 | H7: Flexibilidad y eficiencia de uso |
+| 7 | Presencia de proveedores de prueba sin productos y ausencia de indicador de menor tiempo de entrega en el catálogo | 2 | H8: Diseño estético y minimalista / H2: Coincidencia entre el sistema y el mundo real |
 
 **Descripción de problemas**
 
-Para cada problema: heurística violada, descripción, captura de pantalla y recomendación.
+#### Problema 1 — Ausencia de línea de tiempo, ETA y contacto directo con el conductor en pedidos activos
+- **Heurística violada:** H1 — Visibilidad del estado del sistema.
+- **Severidad:** `3` (Problema mayor).
+- **Evidencia en entrevistas:** E1 (`06:39`), E2 (`08:15`), E3 (`04:45`).
+- **Descripción:** En el listado y detalle de órdenes (`My Fuel Requests`), la interfaz solo expone un estado genérico («Pendiente» / aprobado) y los datos básicos del conductor y placa sin mostrar la evolución temporal (aprobación, salida de planta, en ruta), el tiempo estimado de arribo (ETA) ni un acceso rápido al teléfono del chofer. Esto obliga a los compradores a recurrir nuevamente a llamadas o WhatsApp para confirmar si la cisterna llegará a obra y coordinar el ingreso, además de presentar recorte horizontal en columnas derechas de la tabla.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Vista de solicitudes y pedidos del comprador sin línea de tiempo ni contacto directo del conductor" width="750"/>
+  <p><em>Figura 5.3.3.1: Listado de solicitudes en Ordering sin línea de tiempo de despacho, ETA ni enlace directo al conductor asignado.</em></p>
+</div>
+
+- **Recomendación:** Incorporar en el detalle del pedido una línea de tiempo cronológica con marca horaria por hito, mostrar el ETA calculado y añadir junto al nombre del conductor asignado su número telefónico con acción directa de llamada/WhatsApp, ajustando además el ancho responsivo de la tabla.
+
+#### Problema 2 — Reportes sin exportación PDF/Excel ni impresión y factura PDF extendida en dos hojas
+- **Heurística violada:** H7 — Flexibilidad y eficiencia de uso (y H8 — Diseño estético y minimalista en formato de impresión).
+- **Severidad:** `3` (Problema mayor).
+- **Evidencia en entrevistas:** E1 (`10:41`, `12:45`), E2 (`15:10`).
+- **Descripción:** Aunque los entrevistados valoraron las métricas de **Reports & Analytics** y el desglose tributario de los comprobantes en **Payment**, el módulo de reportes carece de botones para imprimir o exportar el resumen mensual en PDF/Excel/CSV para conciliación contable y gerencial (mostrando además promedios con tres decimales como `S/ 4,788.633`). Adicionalmente, la factura generada tras pagar se extiende innecesariamente a dos páginas PDF.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Módulo Reports & Analytics del comprador sin botones de exportación PDF o Excel/CSV" width="750"/>
+  <p><em>Figura 5.3.3.2: Panel Reports & Analytics sin acciones de exportación ni impresión, y con promedios monetarios sin redondeo estándar a dos decimales.</em></p>
+</div>
+
+- **Recomendación:** Implementar botones de exportación en PDF (gráficos y resumen) y descarga en CSV/Excel para contabilidad, redondear todos los importes monetarios a dos decimales (`0.00`) y compactar la plantilla de impresión del comprobante `SIM-INV` a una única página.
+
+#### Problema 3 — Falta de alerta prioritaria por quiebre de stock/cancelación y desfase en historial tras pagar
+- **Heurística violada:** H1 — Visibilidad del estado del sistema y H9 — Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores.
+- **Severidad:** `3` (Problema mayor).
+- **Evidencia en entrevistas:** E1 (`11:17`, `13:46`), E3 (`07:31`).
+- **Descripción:** Tras confirmar un pago en el flujo de checkout simulado de **Payments**, la actualización hacia la pestaña *Payment History* y el listado de facturas no se refleja de inmediato sin recargar o navegar fuera de la vista. Asimismo, en el centro de notificaciones todos los avisos presentan el mismo peso visual sin diferenciar una alerta crítica (como falta de stock o cancelación del proveedor) que requiere reasignar el pedido de inmediato para no detener la operación en obra.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Módulo Payments mostrando órdenes pendientes y enlace a Payment History" width="750"/>
+  <p><em>Figura 5.3.3.3: Vista de Payments donde tras ejecutar el pago simulado el comprobante no se refresca de inmediato en Payment History.</em></p>
+</div>
+
+- **Recomendación:** Rehidratar el store y la vista de *Payment History* automáticamente al confirmar el pago desde la API, e introducir severidades visuales (alerta crítica en rojo/ámbar) en **Notifications** cuando un pedido sea rechazado o cancelado, incluyendo un enlace directo hacia proveedores alternativos compatibles.
+
+#### Problema 4 — Mezcla de idioma inglés/español en la interfaz y referencia residual «PrimeFuel»
+- **Heurística violada:** H4 — Consistencia y estándares.
+- **Severidad:** `2` (Problema menor).
+- **Evidencia en entrevistas:** E1 (`14:12`), E2 (`06:10`), y observación directa en las capturas de validación (E3).
+- **Descripción:** Pese a contar con el conmutador `EN | ES`, múltiples encabezados de navegación, botones de acción (`Switch segment`, `Request Refill`, `Pay now`), mensajes de advertencia y descripciones mantienen literales en inglés cuando el usuario navega con perfil hispanohablante, y la pantalla de inicio de sesión todavía muestra la leyenda «B2B Fuel Distribution Platform by PrimeFuel» en lugar de la identidad vigente **FuelPoint**.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Pantalla de inicio de sesión con texto en inglés y marca residual PrimeFuel" width="600"/>
+  <p><em>Figura 5.3.3.4: Pantalla de inicio de sesión con textos en inglés y referencia residual «PrimeFuel».</em></p>
+</div>
+
+- **Recomendación:** Completar los diccionarios i18n (`es.json` / `en.json`) en todos los módulos y fijar español como idioma predeterminado para usuarios locales, actualizando además el texto de marca de inicio de sesión y registro a **FuelPoint**.
+
+#### Problema 5 — Validación reactiva de capacidad restante del tanque y ausencia de filtros en flotas grandes
+- **Heurística violada:** H5 — Prevención de errores.
+- **Severidad:** `2` (Problema menor).
+- **Evidencia en entrevistas:** E1 (`05:51`), E2 (`04:30`).
+- **Descripción:** En el formulario lateral de nueva solicitud (`Fuel Catalog -> New Request`), el campo `Quantity` no muestra en línea los litros disponibles hasta completar la capacidad del equipo seleccionado ni ofrece un atajo para llenar el tanque. En consecuencia, el solicitante solo descubre que excedió el límite cuando el sistema rechaza el envío. Además, en flotas con numerosas unidades, el selector `Equipment (optional)` lista todos los equipos de forma plana sin filtros por placa vehicular o sede operativa.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario de nueva solicitud sin indicador de capacidad restante junto a Quantity ni filtro de flota" width="750"/>
+  <p><em>Figura 5.3.3.5: Panel de solicitud sin mostrar la capacidad restante junto al campo Quantity ni buscador por placa o sede.</em></p>
+</div>
+
+- **Recomendación:** Mostrar dinámicamente la capacidad restante disponible (por ejemplo, `Máximo disponible: 1,380 L`) debajo de `Quantity` junto con un botón «Completar tanque», e incorporar buscador predictivo y filtro por sede/placa en el selector de equipos.
+
+#### Problema 6 — Credenciales demo mostradas como texto plano sin botones de acceso directo
+- **Heurística violada:** H7 — Flexibilidad y eficiencia de uso.
+- **Severidad:** `2` (Problema menor).
+- **Evidencia en entrevistas:** E1 (`02:29`).
+- **Descripción:** En la pantalla de login (`Figura 5.3.3.4`), las credenciales de demostración se muestran dentro de una caja informativa en texto corrido (`buyer: logistics@transportesdelsur.com · provider: dispatch@petroandes.com (password: 123456)`), lo cual generó dudas al primer usuario sobre qué correo correspondía a su rol y obligó a copiar manualmente usuario y clave.
+- **Recomendación:** Reemplazar el bloque informativo de texto plano por dos botones claros de autocompletado de un clic («Usar cuenta demo de comprador» y «Usar cuenta demo de proveedor») o etiquetas copiables independientes.
+
+#### Problema 7 — Ruido visual por registros de prueba y falta de indicador de rapidez de entrega en el catálogo
+- **Heurística violada:** H8 — Diseño estético y minimalista y H2 — Coincidencia entre el sistema y el mundo real.
+- **Severidad:** `2` (Problema menor).
+- **Evidencia en entrevistas:** E3 (`03:51`) e inspección de catálogo en vivo.
+- **Descripción:** El módulo **Fuel Catalog** exhibe tarjetas de prueba con datos incompletos o informales (`ExaPe`, `eqe`, `pepe`, con `0 PRODUCTS` y `S/ 0.00`) mezcladas con proveedores reales, generando desconfianza visual y ruido en la comparación. Asimismo, las tarjetas no indican el tiempo estimado de despacho ni resaltan qué distribuidora ofrece la entrega más rápida, criterio señalado como prioritario para pedidos urgentes en obra.
+- **Captura de pantalla:**
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo de proveedores mostrando registros de prueba sin productos y sin indicador de tiempo de entrega" width="750"/>
+  <p><em>Figura 5.3.3.6: Vista del catálogo de combustible con registros de prueba (ExaPe, eqe, pepe) y sin etiqueta de tiempo estimado de entrega.</em></p>
+</div>
+
+- **Recomendación:** Filtrar o depurar de los entornos públicos de validación los proveedores sin productos activos (`0 PRODUCTS`) y añadir un indicador visible de tiempo estimado de entrega (SLA) con una insignia destacada para el proveedor de despacho más rápido.
 
 ## 5.4. Video About-the-Product
 
