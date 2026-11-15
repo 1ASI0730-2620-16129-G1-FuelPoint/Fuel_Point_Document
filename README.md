@@ -41,7 +41,7 @@
 | **1.0.0** | 2026-10-08 | Equipo FuelPoint | **Versión consolidada para la entrega del Trabajo Parcial (TB1 — Stage Review):** Incorporación de la sección 5.2.2 con la documentación del Sprint 2 para la primera versión de la Web Application (Vue 3 / PrimeVue), evidencias de desarrollo en GitFlow, ejecución de vistas, despliegue en producción, actualización de Student Outcome y conclusiones. |
 | **1.0.1** | 2026-10-09 | Equipo FuelPoint | Integración completa de los 10 Pull Requests del frontend en develop y main; configuración del pipeline CI/CD en GitHub Actions con 90/90 pruebas unitarias con Vitest y despliegue automático a producción en Firebase Hosting. |
 | **1.1.0** | 2026-11-11 | Equipo FuelPoint | **Versión inicial para la entrega AV2:** incorporación de la sección 5.2.3 con la documentación del Sprint 3 (Web Services RESTful en ASP.NET Core .NET 10, Entity Framework Core y configuración de despliegue en Render); actualización de 5.1 con el repositorio del backend; guías de Validation Interviews (5.3); estructura para su registro y evaluación heurística; secciones de videos About-the-Product y About-the-Team (5.4 y 5.5); actualización de Student Outcome, conclusiones y anexos; corrección de la atribución de cuentas en 5.2.2.8. |
-| **1.2.0** | 2026-11-15 | Equipo FuelPoint | **Consolidación de evidencias AV2:** migración y despliegue en producción de la API RESTful con PostgreSQL 18 en Render (`daee12a`), 89/89 pruebas automatizadas xUnit aprobadas, integración en producción con Firebase Hosting conectada a la API real (`503ecd5`), publicación e incrustación del video *About-the-Product* en la Landing Page (`20372c4`), registro de entrevistas de validación y evaluación heurística del segmento solicitante, y depuración general de marcadores y notas residuales. |
+| **1.2.0** | 2026-11-15 | Equipo FuelPoint | **Consolidación de evidencias AV2:** migración y despliegue en producción de la API RESTful con PostgreSQL 18 en Render (`daee12a`), 89/89 pruebas automatizadas xUnit aprobadas, integración en producción con Firebase Hosting conectada a la API real (`503ecd5`), publicación e incrustación de los videos *About-the-Product* (`20372c4`) y *About-the-Team*, publicación de la exposición AV2, evidencias visuales de los Sprints 1–3, registro de entrevistas de validación y evaluación heurística del segmento solicitante, actualización de ABET SO5 y depuración general de marcadores y notas residuales. |
 
 ---
 
@@ -227,24 +227,24 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 3. **Calidad de Software y Buenas Prácticas de Ingeniería:** La aplicación web integrada superó exitosamente 90/90 pruebas automatizadas con Vitest en catorce archivos de especificación (100% de aprobación). Se configuró un pipeline de CI/CD automatizado en GitHub Actions que ejecuta las pruebas, genera la compilación de producción optimizada y despliega continuamente en Firebase Hosting ante cada push a las ramas `develop` y `main`, publicado oficialmente bajo el tag de release `v1.0.0`.
 4. **Web Services y Persistencia en Producción (AV2):** Los nueve Bounded Contexts cuentan con Web Services RESTful en ASP.NET Core (.NET 10) y persistencia relacional con Entity Framework Core sobre PostgreSQL 18 gestionado en la nube de Render, documentados interactivamente con OpenAPI 3.0 / Swagger UI y respaldados por una cobertura exhaustiva de pruebas automatizadas xUnit (89 pruebas en backend) y Vitest en frontend (90 pruebas). La API aplica en el servidor las reglas críticas del negocio: validación de stock y precios desde inventario, transiciones de ciclo de vida de órdenes, cálculo del IGV (18%), emisión de comprobantes académicos y control de acceso seguro multi-inquilino por empresa compradora/proveedora mediante JWT y BCrypt. La solución se encuentra desplegada y operativa en producción en Render (`https://fulltank-av2-api-hqhk.onrender.com`), con health check verificado (`HTTP 200 Healthy`), e integrada extremo a extremo con la Web Application publicada en Firebase Hosting (`https://full-tank-964e2.web.app/`).
 5. **Recomendaciones y Roadmap hacia el Trabajo Final (TB2):**
-   - **Continuidad de validación:** Completar las sesiones de validación con empresas proveedoras junto con su evaluación heurística ([5.3.3](docs/chapter5.md#533-evaluaciones-según-heurísticas)), así como la publicación e incrustación del video *About-the-Team* ([Video About-the-Team](#video-about-the-team)) y la exposición del hito AV2 (estando ya publicado e incrustado en la Landing Page el video *About-the-Product* en [5.4](docs/chapter5.md#54-video-about-the-product)).
+   - **Continuidad de validación:** Completar las sesiones de validación con empresas proveedoras junto con su evaluación heurística ([5.3.3](docs/chapter5.md#533-evaluaciones-según-heurísticas)) —estando ya publicados los videos *About-the-Product* ([5.4](docs/chapter5.md#54-video-about-the-product)), *About-the-Team* ([Video About-the-Team](#video-about-the-team)) y la exposición del hito AV2 ([Anexo A](#anexo-a---videos-de-exposiciones))—.
    - **Fase TB2 (Sprint 4):** Completar la recuperación de contraseña, el cierre de sesión, la exportación de reportes en PDF y las operaciones de eliminación restantes; transicionar el flujo de integración de ramas hacia Pull Requests formales con revisión cruzada obligatoria en GitHub, e incorporar en el diseño iterativo las retroalimentaciones obtenidas durante las entrevistas de validación.
 
 ### Video About-the-Team
 
-El video *About-the-Team* presenta a los integrantes de FuelPoint, su rol en el proyecto, los logros alcanzados y el proceso colaborativo seguido durante los sprints mediante escenas de trabajo real y testimonios individuales, para su publicación en Microsoft Stream y YouTube e incrustación en la Landing Page:
+El video *About-the-Team* presenta a los integrantes de FuelPoint, su rol en el proyecto, los logros alcanzados y el proceso colaborativo seguido durante los sprints mediante escenas de trabajo real y testimonios individuales, publicado en YouTube e incrustado en la Landing Page:
 
 | Campo | Detalle |
 |---|---|
 | **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
-| **Duración** | En preparación |
-| **Enlace de publicación** | En edición para publicación en YouTube y Microsoft Stream |
-| **Ubicación en la Landing Page** | Sección sobre el equipo en la Landing Page (por incrustar tras su publicación) |
+| **Duración** | `08:00` |
+| **Enlace de publicación** | [YouTube (Público / Incrustado)](https://youtu.be/CChnA1qMiRI) |
+| **Ubicación en la Landing Page** | [FullTank Landing Page (`#equipo`)](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/#equipo) |
 
-| Secuencia | Tiempo de inicio (`hh:mm:ss`) | Contenido |
-|---|:---:|---|
-| Introducción y retrospectiva colaborativa del equipo | En preparación | Resumen del proceso de desarrollo e integración continua |
-| Testimonios individuales de integrantes | En preparación | Descripción de actividades, logros y competencias alcanzadas |
+| Secuencia | Contenido |
+|---|---|
+| Introducción y retrospectiva colaborativa del equipo | Resumen del proceso de desarrollo e integración continua |
+| Testimonios individuales de integrantes | Descripción de actividades, logros y competencias alcanzadas |
 
 ---
 
@@ -277,9 +277,9 @@ El video *About-the-Team* presenta a los integrantes de FuelPoint, su rol en el 
 |---|---|---|---|:---:|
 | **AV1** | Exposición de Avance 1 — Presentación de Proyecto y Landing Page | YouTube | [Ver Video en YouTube](https://youtu.be/slU0pE19KAY) | 21:27 |
 | **TB1** | Exposición de Trabajo Parcial — Sustentación ABET SO5 y Frontend Web Application | Microsoft Stream | [Ver exposición TB1 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBOLr6orh8kSYVocJuNA4awAZE_KVDNpkV2wqSCSsXiDLU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7koIIx) | 21:39 |
-| **AV2** | Exposición de Avance 2 — Web Services, integración y validación | YouTube / Microsoft Stream | En preparación para publicación | — |
+| **AV2** | Exposición de Avance 2 — Web Services, integración y validación | YouTube | [Ver exposición AV2 en YouTube](https://youtu.be/hCiBUy9RI-Y) | 09:01 |
 | **AV2** | About-the-Product (1–3 minutos) | YouTube / Microsoft Stream | [Ver en YouTube](https://www.youtube.com/watch?v=Pu_9CAwoQ9k) · [Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCPKLBLwm1dRqTXFocr_NDLAc-UL3_xtE5YgzoztbDQ6V4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dADcmL) ([5.4](docs/chapter5.md#54-video-about-the-product)) | 02:13 |
-| **AV2** | About-the-Team | YouTube / Microsoft Stream | En preparación para publicación ([Conclusiones](#video-about-the-team)) | — |
+| **AV2** | About-the-Team | YouTube | [Ver en YouTube](https://youtu.be/CChnA1qMiRI) ([Conclusiones](#video-about-the-team)) | 08:00 |
 
 ### Anexo B - Repositorios Oficiales y Artefactos Digitales
 

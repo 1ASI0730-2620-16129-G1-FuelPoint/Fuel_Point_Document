@@ -2674,6 +2674,9 @@ El historial integrado en la rama `main` del backend culmina en la versión de l
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
+> **Grabación de Sustentación y Recorrido del Sprint 3 (AV2):**
+> [Ver exposición AV2 en YouTube](https://youtu.be/hCiBUy9RI-Y) — *(Duración: **09:01**)*.
+
 Los Web Services RESTful fueron validados tanto en entorno aislado de contenedores (**7 de noviembre de 2026** y actualización a PostgreSQL 18 el **12 de noviembre de 2026**) como en el despliegue en producción conectado con la Web Application (**13–14 de noviembre de 2026**), comprobando la compilación Release en .NET 10, la suite de pruebas automatizadas y el flujo operativo completo de extremo a extremo.
 
 | Comprobación | Resultado |
