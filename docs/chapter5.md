@@ -2927,27 +2927,11 @@ Las entrevistas de validación se realizan con **3 a 5 representantes por segmen
 | **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/equipment)), versión integrada conectada a la API RESTful en Render con cuenta demo de comprador (`Transportes del Sur S.A.`) |
 | **Inicio del video** | 00:00 |
 | **Fin del video** | 09:43 |
-| **Link del video** | *Pendiente de publicación en Microsoft Stream (grabación local: `2026-11-14 22-20-13-editado.mp4`)* |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCn3_dnw0IbRJpRAhy0IW39AdJHxOHPYmFHquOsebuMltI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=xhnGAZ |
 | **Foto entrevista** | <img src="../assets/chapter-5/validacion/entrevista-alessandro-gonzales.webp" alt="Captura de la entrevista de validación con Alessandro Gonzales mostrando el módulo Equipment de FullTank" width="300"/> |
 | **Tareas realizadas** | 1) Revisión del módulo Equipment con generadores, excavadoras y barras de nivel de combustible (00:15). 2) Exploración del catálogo de distribuidoras y simulación de nueva solicitud seleccionando equipo, cantidad y fecha (00:30, 01:24, 03:13). 3) Revisión de solicitudes y detalle de orden aprobada con nombre del chofer y placa del cisterna en Ordering (04:08). 4) Verificación del centro de notificaciones ante cambios de estado (05:07). 5) Consulta del módulo de pagos y archivo de comprobantes digitales (06:09). 6) Revisión del panel principal del comprador (07:11). 7) Consulta del módulo de Reports & Analytics para consumo mensual por equipo (07:52). Preguntas de validación entre 00:39 y 09:27. |
 | **Puntuación de facilidad de uso** | 8 de 10 |
 | **Resumen** | <p>Alessandro evaluó el flujo completo desde la perspectiva de logística en obra civil y operación de maquinaria pesada (generadores y excavadoras). Destacó de inmediato la utilidad del módulo Equipment y sus barras de capacidad para evitar que las máquinas trabajen en reserva o queden paralizadas, así como la rapidez para generar un pedido directamente desde el Fuel Catalog. Consideró que el formulario de solicitud es corto, ágil y mucho más seguro que enviar audios por WhatsApp, los cuales el proveedor muchas veces no escucha a tiempo.</p><p>Durante el recorrido identificó mejoras puntuales para la operación en campo: en el catálogo con múltiples distribuidoras sugirió resaltar qué proveedor ofrece el menor tiempo de entrega (03:51); en el detalle de la orden consideró insuficiente mostrar solo el nombre del chofer y la placa del cisterna, solicitando un botón directo con el teléfono del conductor para coordinar el ingreso a obra y referencias de acceso (04:45). Asimismo, valoró positivamente las notificaciones en tiempo real porque brindan certeza de aprobación y ruta (05:48), y resaltó que archivar los comprobantes digitales en Payments elimina las pérdidas y daños habituales de los váuchers físicos (06:45).</p><p>Como condición crítica (*deal breaker*) señaló la obligatoriedad de recibir alertas inmediatas ante falta de stock o cancelación del proveedor para ubicar rápidamente otra distribuidora sin detener la producción en obra (07:31). Confirmó que su empresa adoptaría FullTank desde el primer día porque alivia la carga de almacén y permite a los supervisores consultar el consumo mensual por máquina desde laptop o celular sin pedir reportes por correo (08:29). Otorgó una puntuación global de 8/10 y recomendó la plataforma para contratistas y constructoras.</p> |
-
-**Segmento 2: Empresas proveedoras de combustible**
-
-| Campo | Detalle |
-|---|---|
-| **Nombre entrevistado** | |
-| **Edad** | |
-| **Distrito** | |
-| **Cargo y empresa** | |
-| **Fecha** | |
-| **Inicio del video** | |
-| **Fin del video** | |
-| **Link del video** | |
-| **Foto entrevista** | |
-| **Tareas realizadas** | Por ejemplo: iniciar sesión, actualizar inventario y precios, aprobar una solicitud, asignar vehículo y conductor, despachar y revisar reportes. |
-| **Resumen** | |
 
 **Síntesis de hallazgos**
 
