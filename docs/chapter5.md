@@ -319,6 +319,8 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
 
 #### 5.2.1.1. Sprint Planning 1
 
+En esta sección se documentan los acuerdos y resultados de la reunión de planificación correspondiente al **Sprint 1**, orientada a la construcción y publicación inicial de la Landing Page de FullTank para comunicar la propuesta de valor a ambos segmentos objetivo.
+
 <table border>
     <tr align="center">
         <td><strong>Sprint #</strong></td>
@@ -329,101 +331,98 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
     </tr>
     <tr align="center">
         <td>Date</td>
-        <td>09/04/2026</td>
+        <td>2026-04-09</td>
     </tr>
     <tr align="center">
         <td>Time</td>
-        <td>15:00 PM</td>
+        <td>03:00 PM</td>
     </tr>
     <tr align="center">
         <td>Location</td>
-        <td>Meet</td>
+        <td>Google Meet (Sesión virtual de equipo)</td>
     </tr>
     <tr align="center">
-        <td>Prepared by</td>
-        <td>Brayan Alexis Corvacho Damian</td>
+        <td>Prepared By</td>
+        <td>Corvacho Damian, Brayan Alexis</td>
     </tr>
     <tr align="center">
-        <td>Attendess (to planning meeting)</td>
+        <td>Attendees (to planning meeting)</td>
         <td>
-          Corvacho Damian, Brayan Alexis - U20231a257<br>
-          Frank Anthony, Huingo Tello - U202319057<br>
-          Joan Fabricio, Payano Puchuri - U202318620<br>
+          Corvacho Damian, Brayan Alexis - U20231A257<br>
+          Huingo Tello, Frank Anthony - U202319057<br>
+          Payano Puchuri, Joan Fabricio - U202318620<br>
           Mantilla Maldonado, Enrique Manuel - U20231B842<br>
           Carhuayal Suarez, Joan Salvador - U202219040
         </td>
     </tr>
     <tr align="center">
         <td>Sprint 0 Review Summary</td>
-        <td>No hubo sprint previo</td>
+        <td>No hubo sprint previo.</td>
     </tr>
     <tr align="center">
         <td>Sprint 0 Retrospective Summary</td>
-        <td>No hubo sprint previo</td>
+        <td>No hubo sprint previo.</td>
     </tr>
     <tr>
-        <td colspan="2" align="center"><strong>Sprint Goal & User Stories</strong></td>
+        <td colspan="2" align="center"><strong>Sprint Goal &amp; User Stories</strong></td>
     </tr>
     <tr>
         <td align="center">Sprint 1 Goal</td>
-        <td>Nuestro objetivo es comunicar la propuesta de valor de FullTank a clientes y proveedores potenciales
-            mediante una página de destino funcional. Creemos que esto genera conocimiento de la marca e interés en
-            la conversión entre las empresas que solicitan combustible y los proveedores. Esto se confirmará cuando 
-            los visitantes puedan navegar por todas las secciones, cambiar de idioma y acceder al formulario de registro
-            sin errores.
-        </td>
+        <td>Our focus is on communicating FullTank's value proposition to potential clients and fuel suppliers through a functional landing page. We believe it delivers brand awareness and conversion interest among fuel-requesting and fuel-supplying companies. This will be confirmed when visitors can navigate all sections, switch languages, and access the registration form without errors.</td>
     </tr>
     <tr align="center">
         <td>Sprint 1 Velocity</td>
         <td>17</td>
     </tr>
     <tr align="center">
-        <td>Sum of Story Point</td>
+        <td>Sum of Story Points</td>
         <td>17</td>
     </tr>
 </table>
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
+En el Sprint 1 se definieron dos aspectos principales de trabajo: el desarrollo de la **Landing Page** y la elaboración de la **Documentación** del proyecto, asignando un líder (`L`) y colaboradores (`C`) entre los cinco integrantes del equipo.
+
 <table border="1" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
-      <th>Team Member</th>
+      <th>Team Member (Last Name, First Name)</th>
       <th>GitHub Username</th>
-      <th>Landing Page</th>
-      <th>Documentation</th>
+      <th>Landing Page<br>Leader (L) / Collaborator (C)</th>
+      <th>Documentation<br>Leader (L) / Collaborator (C)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Frank Anthony, Huingo Tello</td>
+      <td>Huingo Tello, Frank Anthony</td>
       <td>MaxghZZ</td>
-      <td>L</td>
-      <td>L</td>
+      <td align="center">L</td>
+      <td align="center">L</td>
     </tr>
     <tr>
-      <td>Joan Fabricio, Payano Puchuri</td>
+      <td>Payano Puchuri, Joan Fabricio</td>
       <td>DhudsQ</td>
-      <td>C</td>
-      <td>C</td>
+      <td align="center">C</td>
+      <td align="center">C</td>
     </tr>
     <tr>
       <td>Mantilla Maldonado, Enrique Manuel</td>
       <td>DerDFHE</td>
-      <td>C</td>
-      <td>C</td>
+      <td align="center">C</td>
+      <td align="center">C</td>
     </tr>
     <tr>
       <td>Carhuayal Suarez, Joan Salvador</td>
       <td>joann113</td>
-      <td>C</td>
-      <td>C</td>
+      <td align="center">C</td>
+      <td align="center">C</td>
     </tr>
     <tr>
-      <td>Brayan Alexis Corvacho Damian</td>
+      <td>Corvacho Damian, Brayan Alexis</td>
       <td>BralexCD</td>
-      <td>C</td>
-      <td>C</td>
+      <td align="center">C</td>
+      <td align="center">C</td>
     </tr>
   </tbody>
 </table>
@@ -431,11 +430,13 @@ En esta sección se documenta la ejecución de los ciclos de desarrollo iterativ
 
 #### 5.2.1.3. Sprint Backlog 1
 
+El objetivo principal del Sprint 1 es diseñar, maquetar y publicar la primera versión operativa de la Landing Page de FullTank con soporte bilingüe (inglés y español) y secciones informativas completas para clientes solicitantes y proveedores de combustible.
+
 **Tablero de seguimiento:** [FullTank · FuelPoint en Trello](https://trello.com/b/6h5mZ8L6).
 
 La captura del tablero incluida en [3.3 Product Backlog](chapter3.md#33-product-backlog) corresponde al escenario hipotético de integración del frontend para TB1. Las historias de Landing Page permanecen en Product Backlog en esa proyección; sus posiciones no actualizan ni verifican los estados históricos del Sprint 1 documentados en la tabla siguiente.
 
-<table border>
+<table border="1" cellspacing="0" cellpadding="6">
     <tr align="center">
         <td colspan="2"><strong>Sprint #</strong></td>
         <td colspan="6"><strong>Sprint 1</strong></td>
@@ -445,211 +446,215 @@ La captura del tablero incluida en [3.3 Product Backlog](chapter3.md#33-product-
         <td colspan="6"><strong>Work-Item / Task</strong></td>
     </tr>
     <tr align="center">
-        <td><strong>Id</strong></td>
-        <td><strong>Title</strong></td>
-        <td><strong>Id</strong></td>
-        <td><strong>Title</strong></td>
-        <td><strong>Description</strong></td>
+        <td><strong>Story Id</strong></td>
+        <td><strong>Story Title</strong></td>
+        <td><strong>Task Id</strong></td>
+        <td><strong>Task Title</strong></td>
+        <td><strong>Task Description</strong></td>
         <td><strong>Estimation (Hours)</strong></td>
-        <td><strong>Assigned to</strong></td>
-        <td><strong>Status (To do / In process / To review / Done)</strong></td>
+        <td><strong>Assigned To</strong></td>
+        <td><strong>Status (To-do / In-Process / To-Review / Done)</strong></td>
     </tr>
-    <tr align="center">
-        <td>US-01</td>
+    <tr>
+        <td align="center">US-01</td>
         <td>Ver sección Home</td>
-        <td>W-01</td>
-        <td>Sección Home</td>
-        <td>Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FullTank para comprender rápidamente el objetivo del sistema</td>
-        <td>5 horas</td>
-        <td>Enrique</td>
-        <td>Done</td>
+        <td align="center">W-01</td>
+        <td>Maquetación de sección Home</td>
+        <td>Implementar cabecera hero con propuesta de valor, llamados a la acción y navegación principal responsive.</td>
+        <td align="center">5</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-02</td>
+    <tr>
+        <td align="center">US-02</td>
         <td>Ver sección About Us</td>
-        <td>W-02</td>
-        <td>Sección About Us</td>
-        <td>Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FullTank para confiar en el sistema</td>
-        <td>4 horas</td>
-        <td>Bryan</td>
-        <td>Done</td>
+        <td align="center">W-02</td>
+        <td>Implementación de sección About Us</td>
+        <td>Maquetar bloque institucional con misión, visión, perfiles del equipo FuelPoint y recursos gráficos.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-03</td>
+    <tr>
+        <td align="center">US-03</td>
         <td>Ver sección How it Works?</td>
-        <td>W-03</td>
-        <td>Sección How it works?</td>
-        <td>Como visitante de ambos segmentos, quiero entender cómo funciona FullTank paso a paso para evaluar si se ajusta a mis necesidades</td>
-        <td>5 horas</td>
-        <td>Enrique</td>
-        <td>Done</td>
+        <td align="center">W-03</td>
+        <td>Implementación de sección How it Works?</td>
+        <td>Diseñar tarjetas visuales paso a paso del flujo de abastecimiento para solicitantes y proveedores.</td>
+        <td align="center">5</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-36</td>
+    <tr>
+        <td align="center">US-36</td>
         <td>Ver sección Benefits</td>
-        <td>W-04</td>
-        <td>Sección Beneficios</td>
-        <td>Como visitante de ambos segmentos, quiero conocer las principales ventajas con las que puedo contar para evaluar la implementación de la plataforma</td>
-        <td>4 horas</td>
-        <td>JoanC</td>
-        <td>Done</td>
+        <td align="center">W-04</td>
+        <td>Maquetación de sección Benefits</td>
+        <td>Construir bloque comparativo de beneficios operativos y de trazabilidad para ambos segmentos.</td>
+        <td align="center">4</td>
+        <td>Joan Carhuayal</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-37</td>
+    <tr>
+        <td align="center">US-37</td>
         <td>Ver sección Lo que Dicen Nuestros Clientes</td>
-        <td>W-05</td>
-        <td>Sección Testimonios</td>
-        <td>Como visitante de ambos segmentos, quiero conocer los testimonios de los usuarios de FullTank para tener confianza en la plataforma y saber que otras empresas ya la están usando.</td>
-        <td>6 horas</td>
-        <td>Frank</td>
-        <td>Done</td>
+        <td align="center">W-05</td>
+        <td>Implementación de sección Testimonios</td>
+        <td>Maquetar tarjetas de testimonios de clientes y empresas piloto con estilos responsive.</td>
+        <td align="center">6</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-04</td>
+    <tr>
+        <td align="center">US-04</td>
         <td>Enviar mensaje de contacto</td>
-        <td>W-06</td>
-        <td>Contacto</td>
-        <td>Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información</td>
-        <td>5 horas</td>
-        <td>Brayan</td>
-        <td>Done</td>
+        <td align="center">W-06</td>
+        <td>Formulario y sección Contact Us</td>
+        <td>Implementar formulario de contacto con validación básica de campos, accesibilidad y mensajes de confirmación.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-38</td>
+    <tr>
+        <td align="center">US-38</td>
         <td>Ver sección Planes y Precios</td>
-        <td>W-07</td>
-        <td>Sección Planes y Precios</td>
-        <td>Como visitante (ambos segmentos), quiero saber que planes se adecuan a mis necesidades para poder iniciar un proceso de registro o solicitud.</td>
-        <td>6 horas</td>
-        <td>JoanP</td>
-        <td>Done</td>
+        <td align="center">W-07</td>
+        <td>Maquetación de Planes y Precios</td>
+        <td>Construir tabla comparativa de planes comerciales con detalles de cobertura y botones de acción.</td>
+        <td align="center">6</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
     </tr>
-    <tr align="center">
-        <td>US-39</td>
+    <tr>
+        <td align="center">US-39</td>
         <td>Cambiar idioma</td>
-        <td>W-08</td>
-        <td>Idioma</td>
-        <td>Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido</td>
-        <td>8 horas</td>
-        <td>JoanC</td>
-        <td>Done</td>
+        <td align="center">W-08</td>
+        <td>Soporte bilingüe EN/ES</td>
+        <td>Implementar selector de idioma y traducción dinámica de textos entre inglés (en_US) y español (es_419).</td>
+        <td align="center">8</td>
+        <td>Joan Carhuayal</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td colspan="5" align="right"><strong>Total Estimated Hours (Sprint 1)</strong></td>
+        <td align="center"><strong>43</strong></td>
+        <td colspan="2"></td>
     </tr>
 </table>
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Page de FullTank, cumpliendo con las User Stories priorizadas. Se trabajó en la maquetación de las secciones principales, implementación de estilos CSS, diseño responsive para diferentes dispositivos y subida de los cambios al repositorio grupal. Los commits fueron realizados en la rama main, cada uno agregando una sección de la Landing Page
+Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Page de FullTank, cumpliendo con las User Stories priorizadas. Se trabajó en la maquetación de las secciones principales, implementación de estilos CSS, diseño responsive para diferentes dispositivos y subida de los cambios al repositorio grupal.
 
-<table border>
+<table border="1" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
-      <th>Repositorio</th>
-      <th>Rama</th>
-      <th>ID de Commit</th>
-      <th>Mensaje de Commit</th>
-      <th>Descripción del Commit</th>
-      <th>Fecha de Commit</th>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
     </tr>
   </thead>
-<tbody>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>5596c00</td>
-    <td>feat: add initial landing page structure for FullTank web platform</td>
-    <td>Estructura HTML inicial y maquetación de secciones clave de la Landing Page.</td>
-    <td>24/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>6c22e93</td>
-    <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
-    <td>Lógica interactiva en JavaScript para navegación, efectos de scroll y acordeón FAQ.</td>
-    <td>24/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>02df602</td>
-    <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
-    <td>Hojas de estilo CSS responsive para componentes de métricas, tarjetas y navbar.</td>
-    <td>24/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>25bd1bf</td>
-    <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
-    <td>Estilizado CSS para testimonios, planes de precios, footer y sección de equipo.</td>
-    <td>24/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>feat/about us</td>
-    <td>0408f5d</td>
-    <td>docs: improved the spelling</td>
-    <td>Corrección ortográfica y gramatical de contenidos en la sección About Us.</td>
-    <td>25/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>feat/about us</td>
-    <td>389615f</td>
-    <td>docs: added images file</td>
-    <td>Incorporación de archivos de imágenes y recursos gráficos para About Us.</td>
-    <td>25/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>771e406</td>
-    <td>add team profiles and about-the-team video section</td>
-    <td>Integración visual de perfiles de integrantes y sección de video institucional.</td>
-    <td>25/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>68e2115</td>
-    <td>docs: fix landing page text</td>
-    <td>Depuración y ajuste de redacción en los textos informativos de la Landing Page.</td>
-    <td>25/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>3ce5d9d</td>
-    <td>feat(about the product): add stakeholder video for the future</td>
-    <td>Incorporación de bloque multimedia con video explicativo para stakeholders.</td>
-    <td>26/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>d6c516c</td>
-    <td>fix(english switched): everything is now translated to english</td>
-    <td>Traducción completa de contenidos e internacionalización inicial al idioma inglés.</td>
-    <td>26/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>bc61806</td>
-    <td>fix(responsive design):responsive design corrected</td>
-    <td>Corrección y optimización de media queries para diseño adaptable en dispositivos móviles.</td>
-    <td>26/04/2026</td>
-  </tr>
-  <tr>
-    <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-    <td>main</td>
-    <td>bae9d2d</td>
-    <td>fix(main.js): minor translation problems solved</td>
-    <td>Corrección de detalles menores en las cadenas de traducción dentro de main.js.</td>
-    <td>26/04/2026</td>
-  </tr>
-</tbody>
-
+  <tbody>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>5596c00</td>
+      <td>feat: add initial landing page structure for FullTank web platform</td>
+      <td>Estructura HTML inicial y maquetación de secciones clave de la Landing Page.</td>
+      <td>2026-04-24</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>6c22e93</td>
+      <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
+      <td>Lógica interactiva en JavaScript para navegación, efectos de scroll y acordeón FAQ.</td>
+      <td>2026-04-24</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>02df602</td>
+      <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
+      <td>Hojas de estilo CSS responsive para componentes de métricas, tarjetas y navbar.</td>
+      <td>2026-04-24</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>25bd1bf</td>
+      <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
+      <td>Estilizado CSS para testimonios, planes de precios, footer y sección de equipo.</td>
+      <td>2026-04-24</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>feat/about us</td>
+      <td>0408f5d</td>
+      <td>docs: improved the spelling</td>
+      <td>Corrección ortográfica y gramatical de contenidos en la sección About Us.</td>
+      <td>2026-04-25</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>feat/about us</td>
+      <td>389615f</td>
+      <td>docs: added images file</td>
+      <td>Incorporación de archivos de imágenes y recursos gráficos para About Us.</td>
+      <td>2026-04-25</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>771e406</td>
+      <td>add team profiles and about-the-team video section</td>
+      <td>Integración visual de perfiles de integrantes y sección de video institucional.</td>
+      <td>2026-04-25</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>68e2115</td>
+      <td>docs: fix landing page text</td>
+      <td>Depuración y ajuste de redacción en los textos informativos de la Landing Page.</td>
+      <td>2026-04-25</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>3ce5d9d</td>
+      <td>feat(about the product): add stakeholder video for the future</td>
+      <td>Incorporación de bloque multimedia con video explicativo para stakeholders.</td>
+      <td>2026-04-26</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>d6c516c</td>
+      <td>fix(english switched): everything is now translated to english</td>
+      <td>Traducción completa de contenidos e internacionalización inicial al idioma inglés.</td>
+      <td>2026-04-26</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>bc61806</td>
+      <td>fix(responsive design):responsive design corrected</td>
+      <td>Corrección y optimización de media queries para diseño adaptable en dispositivos móviles.</td>
+      <td>2026-04-26</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>bae9d2d</td>
+      <td>fix(main.js): minor translation problems solved</td>
+      <td>Corrección de detalles menores en las cadenas de traducción dentro de main.js.</td>
+      <td>2026-04-26</td>
+    </tr>
+  </tbody>
 </table>
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
@@ -734,46 +739,53 @@ El segundo sprint del proyecto estuvo orientado a la construcción, integración
         <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Planning Background</strong></td>
     </tr>
     <tr align="center">
-        <td><strong>Fecha de Planificación</strong></td>
-        <td>Septiembre–octubre de 2026 (fecha exacta de la reunión pendiente de confirmar con el acta)</td>
+        <td><strong>Date</strong></td>
+        <td>YYYY-MM-DD *(septiembre–octubre de 2026; fecha exacta pendiente de confirmar con acta)*</td>
     </tr>
     <tr align="center">
-        <td><strong>Hora</strong></td>
-        <td>16:00–18:30 (horario consignado en la planificación)</td>
+        <td><strong>Time</strong></td>
+        <td>04:00 PM *(sesión de planificación: 04:00 PM – 06:30 PM)*</td>
     </tr>
     <tr align="center">
-        <td><strong>Lugar</strong></td>
+        <td><strong>Location</strong></td>
         <td>Google Meet (Sesión virtual de equipo)</td>
     </tr>
     <tr align="center">
-        <td><strong>Elaborado por</strong></td>
+        <td><strong>Prepared By</strong></td>
         <td>Corvacho Damian, Brayan Alexis</td>
     </tr>
     <tr align="center">
-        <td><strong>Asistentes a la Planificación</strong></td>
+        <td><strong>Attendees (to planning meeting)</strong></td>
         <td>
-          Corvacho Damian, Brayan Alexis — U20231a257<br>
-          Frank Anthony, Huingo Tello — U202319057<br>
-          Joan Fabricio, Payano Puchuri — U202318620<br>
+          Corvacho Damian, Brayan Alexis — U20231A257<br>
+          Huingo Tello, Frank Anthony — U202319057<br>
+          Payano Puchuri, Joan Fabricio — U202318620<br>
           Mantilla Maldonado, Enrique Manuel — U20231B842<br>
           Carhuayal Suarez, Joan Salvador — U202219040
         </td>
     </tr>
     <tr align="center">
-        <td><strong>Resumen de Revisión del Sprint 1</strong></td>
+        <td><strong>Sprint 1 Review Summary</strong></td>
         <td>Se completó y desplegó satisfactoriamente la Landing Page informativa en GitHub Pages, validando el diseño responsive, la coherencia de estilos y la funcionalidad multidioma (inglés/español). La retroalimentación inicial destacó una navegación limpia y clara presentación de la propuesta de valor.</td>
     </tr>
     <tr align="center">
-        <td><strong>Resumen de Retrospectiva del Sprint 1</strong></td>
+        <td><strong>Sprint 1 Retrospective Summary</strong></td>
         <td>Se acordó establecer un desacoplamiento estricto por Bounded Contexts para el desarrollo de la aplicación web, evitando ramas monolíticas. Asimismo, se determinó el uso obligatorio de PrimeVue para componentes visuales complejos y la estandarización de mensajes de commit en formato Conventional Commits en inglés imperativo.</td>
     </tr>
-    <tr align="center">
-        <td><strong>Sprint Goal</strong></td>
-        <td>Desarrollar, integrar y desplegar el Frontend de la Aplicación Web (FullTank Web Application) en Vue 3 y PrimeVue estructurado rigurosamente por Bounded Contexts independientes (Identity & Access, Ordering, Catalog, Fulfillment, Inventory, Equipment, Payment, Notification y Reporting & Analytics), implementando las interfaces reactivas de usuario para los segmentos de solicitantes y proveedores de combustible y consumiendo servicios de integración con soporte de pruebas unitarias.</td>
+    <tr>
+        <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Goal &amp; User Stories</strong></td>
+    </tr>
+    <tr>
+        <td align="center"><strong>Sprint 2 Goal</strong></td>
+        <td>Our focus is on developing, integrating, and deploying the FullTank Web Application frontend in Vue 3 and PrimeVue structured by independent Bounded Contexts (IAM, Ordering, Catalog, Fulfillment, Inventory, Equipment, Payment, Notification, and Reporting &amp; Analytics). We believe it delivers reactive operational workflows for fuel-requesting companies and fuel suppliers supported by automated unit tests. This will be confirmed when both user segments can authenticate and execute the core demo workflows in production without console errors.</td>
     </tr>
     <tr align="center">
-        <td><strong>Sprint Velocity & Capacidad</strong></td>
-        <td>Velocidad estimada: <strong>50 Story Points</strong> | Puntos planificados: <strong>66 Story Points</strong> | Duración: 2 semanas (Ciclo 2026-20).</td>
+        <td><strong>Sprint 2 Velocity</strong></td>
+        <td>50</td>
+    </tr>
+    <tr align="center">
+        <td><strong>Sum of Story Points</strong></td>
+        <td>66 *(25 historias planificadas; supera la velocidad estimada en 16 SP)*</td>
     </tr>
 </table>
 
@@ -801,10 +813,10 @@ El segundo sprint del proyecto estuvo orientado a la construcción, integración
 | **US-08** | Registrar información de pago | Adjuntar comprobante de transferencia bancaria y código de operación. | 3 |
 | **US-29** | Recibir notificación de aprobación | Alertas visuales ante cambios de estado de las órdenes solicitadas. | 2 |
 | **US-30** | Notificación de pedido despachado | Notificación al cliente indicando salida del camión cisterna a destino. | 2 |
-| **US-47** | Dashboard principal del proveedor | Métricas clave de rendimiento (KPIs), pedidos activos y tendencias de venta. | 3 |
+| **US-47** | Ver Dashboard principal del proveedor | Métricas clave de rendimiento (KPIs), pedidos activos y tendencias de venta. | 3 |
 | **US-18** | Ver resumen de pedidos (Solicitante) | Panel del solicitante con indicadores de volumen solicitado y órdenes en curso. | 3 |
-| **US-33** | Ver gráfico de consumo | Visualización gráfica del consumo histórico mensual de combustible. | 3 |
-| **US-34** | Ver gráfico de ventas | Visualización gráfica de ingresos y volumen despachado por período. | 3 |
+| **US-33** | Ver gráfico de consumo (Solicitante) | Visualización gráfica del consumo histórico mensual de combustible. | 3 |
+| **US-34** | Ver gráfico de ventas (Proveedor) | Visualización gráfica de ingresos y volumen despachado por período. | 3 |
 | **US-35** | Descargar reporte PDF | Exportación de reportes de gestión en formato PDF estructurado. | 3 |
 | **Total** | **25 Historias de Usuario Planificadas** | — | **66 SP** |
 
@@ -814,127 +826,118 @@ El total planificado comprende 66 Story Points distribuidos en las 25 historias 
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-Para asegurar una división equitativa del esfuerzo, responsabilidad técnica clara y rigor en las revisiones de código, se formuló la **Matriz LACX (Leader, Approver, Contributor, eXternal/Informed)** adaptada para el Sprint 2:
-
-- **L (Leader):** Responsable principal del diseño, desarrollo del módulo y preparación del Pull Request.
-- **A (Approver):** Integrante encargado de realizar la revisión de código cruzada (*code review*), verificar el cumplimiento de estándares y aprobar el PR.
-- **C (Contributor):** Colaborador que aporta componentes auxiliares, pruebas o ajustes de integración.
-- **X (eXternal / Informed):** Miembros del equipo informados de los cambios e interfaces resultantes para garantizar la interoperabilidad.
+En el Sprint 2 el alcance funcional del frontend se dividió en doce aspectos técnicos correspondientes a la base compartida (`Shared`), los nueve Bounded Contexts de negocio (`IAM`, `Catalog`, `Ordering`, `Equipment`, `Inventory`, `Fulfillment`, `Notifications`, `Payment`, `Reporting & Analytics`), las pruebas unitarias (`Unit Testing & QA`) y el despliegue continuo (`CI/CD & Deployment`). Para cada aspecto se asignó un líder (`L`) responsable del diseño e integración del módulo y colaboradores (`C`) para soporte, pruebas y revisión cruzada de Pull Requests.
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
     <thead>
         <tr align="center" style="background-color: #f2f2f2;">
-            <th>Bounded Context / Aspecto Técnico</th>
-            <th>Brayan Corvacho</th>
-            <th>Enrique Mantilla</th>
-            <th>Joan Carhuayal</th>
-            <th>Frank Huingo</th>
-            <th>Joan Payano</th>
+            <th>Team Member<br>(Last Name, First Name)</th>
+            <th>GitHub Username</th>
+            <th>Shared Base<br>Leader (L) / Collaborator (C)</th>
+            <th>IAM<br>Leader (L) / Collaborator (C)</th>
+            <th>Catalog<br>Leader (L) / Collaborator (C)</th>
+            <th>Ordering<br>Leader (L) / Collaborator (C)</th>
+            <th>Equipment<br>Leader (L) / Collaborator (C)</th>
+            <th>Inventory<br>Leader (L) / Collaborator (C)</th>
+            <th>Fulfillment<br>Leader (L) / Collaborator (C)</th>
+            <th>Notifications<br>Leader (L) / Collaborator (C)</th>
+            <th>Payment<br>Leader (L) / Collaborator (C)</th>
+            <th>Reporting<br>Leader (L) / Collaborator (C)</th>
+            <th>Testing &amp; QA<br>Leader (L) / Collaborator (C)</th>
+            <th>CI/CD &amp; Deploy<br>Leader (L) / Collaborator (C)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>Shared Base Architecture & Routing</strong><br><em>Configuración Vite, Pinia, PrimeVue, i18n, layouts base y guards</em></td>
+            <td>Corvacho Damian, Brayan Alexis</td>
+            <td>BralexCD</td>
+            <td align="center"><strong>L</strong></td>
             <td align="center"><strong>L</strong></td>
             <td align="center">C</td>
-            <td align="center"><strong>A</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+        </tr>
+        <tr>
+            <td>Mantilla Maldonado, Enrique Manuel</td>
+            <td>enrique-mantilla</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
             <td align="center">C</td>
             <td align="center">C</td>
         </tr>
         <tr>
-            <td><strong>Identity & Access Management (IAM)</strong><br><em>Sign-in, sign-up por rol, sesión, recuperación y perfiles de empresa</em></td>
+            <td>Carhuayal Suarez, Joan Salvador</td>
+            <td>JoanCS</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
             <td align="center"><strong>L</strong></td>
             <td align="center">C</td>
             <td align="center">C</td>
             <td align="center">C</td>
-            <td align="center"><strong>A</strong></td>
-        </tr>
-        <tr>
-            <td><strong>Catalog Management</strong><br><em>Catálogo de productos de combustible, especificaciones y filtros</em></td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center"><strong>L</strong></td>
-            <td align="center">C</td>
-            <td align="center">X</td>
-            <td align="center">C</td>
-        </tr>
-        <tr>
-            <td><strong>Ordering & Lifecycle Management</strong><br><em>Creación de pedidos, tracking, bandeja de aprobación y rechazo</em></td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center"><strong>L</strong></td>
             <td align="center">C</td>
             <td align="center">C</td>
             <td align="center">C</td>
         </tr>
         <tr>
-            <td><strong>Equipment Management</strong><br><em>Registro y CRUD de equipos, generadores y maquinaria del cliente</em></td>
-            <td align="center"><strong>A</strong></td>
+            <td>Huingo Tello, Frank Anthony</td>
+            <td>Franz2308</td>
             <td align="center">C</td>
-            <td align="center"><strong>L</strong></td>
             <td align="center">C</td>
-            <td align="center">X</td>
-        </tr>
-        <tr>
-            <td><strong>Inventory Management</strong><br><em>Gestión de existencias, cálculo de capacidad y actualización de precios</em></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
             <td align="center">C</td>
             <td align="center">C</td>
             <td align="center"><strong>L</strong></td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center">X</td>
-        </tr>
-        <tr>
-            <td><strong>Fulfillment & Fleet Logistics</strong><br><em>Gestión de camiones cisterna, conductores y asignación a despachos</em></td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center">C</td>
-            <td align="center">C</td>
             <td align="center"><strong>L</strong></td>
-            <td align="center">X</td>
-        </tr>
-        <tr>
-            <td><strong>Notifications & Alerts</strong><br><em>Feed de notificaciones reactivo, badge de alertas y toast messages</em></td>
             <td align="center">C</td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center">X</td>
-            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
             <td align="center">C</td>
         </tr>
         <tr>
-            <td><strong>Payment Verification</strong><br><em>Registro de comprobantes, código de operación bancaria y validación</em></td>
-            <td align="center"><strong>A</strong></td>
+            <td>Payano Puchuri, Joan Fabricio</td>
+            <td>joanfpp2-ai</td>
             <td align="center">C</td>
-            <td align="center">X</td>
             <td align="center">C</td>
-            <td align="center"><strong>L</strong></td>
-        </tr>
-        <tr>
-            <td><strong>Reporting & Analytics</strong><br><em>Gráficos Chart.js de consumo y ventas, KPIs y descarga de resumen PDF</em></td>
-            <td align="center"><strong>A</strong></td>
-            <td align="center">X</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
             <td align="center">C</td>
             <td align="center">C</td>
             <td align="center"><strong>L</strong></td>
-        </tr>
-        <tr>
-            <td><strong>Unit Testing & QA (Vitest)</strong><br><em>Especificación y ejecución de pruebas automatizadas de stores y selectores</em></td>
             <td align="center"><strong>L</strong></td>
             <td align="center">C</td>
-            <td align="center">C</td>
-            <td align="center">C</td>
-            <td align="center"><strong>A</strong></td>
-        </tr>
-        <tr>
-            <td><strong>CI/CD & Cloud Deployment</strong><br><em>Build con Vite y publicación de la demo en Firebase Hosting</em></td>
-            <td align="center"><strong>L</strong></td>
-            <td align="center">C</td>
-            <td align="center">C</td>
-            <td align="center"><strong>A</strong></td>
             <td align="center">C</td>
         </tr>
     </tbody>
 </table>
 
+*Nota de revisión cruzada:* Las revisiones por pares de los Pull Requests se realizaron de forma cruzada entre los líderes de arquitectura (`BralexCD`), dominio (`enrique-mantilla`, `Franz2308`) y módulos de soporte (`JoanCS`, `joanfpp2-ai`).
+
 ---
 
 #### 5.2.2.3. Sprint Backlog 2
+
+El objetivo principal del Sprint 2 es implementar, integrar y desplegar la primera versión funcional de la Web Application de FullTank en Vue 3 y PrimeVue organizada por Bounded Contexts independientes, cubriendo los flujos operativos de compradores y proveedores de combustible mediante adaptadores demo y pruebas unitarias automatizadas.
 
 **Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6).
 
@@ -942,33 +945,291 @@ La [captura y nota de alcance en 3.3 Product Backlog](chapter3.md#33-product-bac
 
 A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
 
-| Task ID | Descripción de la Tarea Técnica | Historia Asociada | Estimación (Horas) | Responsable | Estado |
-| :--- | :--- | :--- | :---: | :--- | :---: |
-| **TSK-201** | Inicializar proyecto Vue 3 con Vite, configurar PrimeVue 4, PrimeFlex e i18n multidioma | US-39 | 6h | Brayan Corvacho | **Done** |
-| **TSK-202** | Configurar Pinia stores y cliente HTTP centralizado Axios con interceptores de autenticación | US-15 | 5h | Brayan Corvacho | **Done** |
-| **TSK-203** | Desarrollar vistas de Sign-in y Sign-up con selección de rol (Comprador / Proveedor) | US-15, US-40, US-41 | 8h | Brayan Corvacho | **Done** |
-| **TSK-204** | Implementar vistas de Perfil de Empresa y edición de datos corporativos | US-23, US-24 | 5h | Brayan Corvacho | **Done** |
-| **TSK-205** | Configurar guards de navegación en Vue Router según el estado de autenticación y rol | US-15, US-17 | 4h | Brayan Corvacho | **Done** |
-| **TSK-206** | Construir el catálogo interactivo de combustibles con tarjetas de especificaciones y precios | US-46 | 6h | Enrique Mantilla | **Done** |
-| **TSK-207** | Implementar formulario reactivo de nueva solicitud de combustible con cálculo automático | US-05 | 9h | Enrique Mantilla | **Done** |
-| **TSK-208** | Desarrollar vista de trazabilidad y línea de tiempo del estado de pedidos del solicitante | US-06, US-43 | 7h | Enrique Mantilla | **Done** |
-| **TSK-209** | Implementar bandeja de solicitudes entrantes para el proveedor con acciones de aprobar/rechazar | US-10, US-11, US-42 | 8h | Enrique Mantilla | **Done** |
-| **TSK-210** | Crear módulo de gestión de inventario de combustibles con indicadores de stock y precio | US-46 | 7h | Joan Carhuayal | **Done** |
-| **TSK-211** | Construir interfaz de administración de equipos del solicitante con diálogos de creación y edición | US-05 | 7h | Joan Carhuayal | **Done** |
-| **TSK-212** | Integrar store de equipos y vincular selección de equipo al formulario de pedido | US-05 | 5h | Joan Carhuayal | **Done** |
-| **TSK-213** | Desarrollar módulo de gestión de flota de cisternas del proveedor (placas, tipo, capacidad) | US-44 | 7h | Frank Huingo | **Done** |
-| **TSK-214** | Desarrollar módulo de gestión de conductores con números de licencia y contacto | US-45 | 6h | Frank Huingo | **Done** |
-| **TSK-215** | Implementar modal de asignación de vehículo y chofer a pedidos en estado Aprobado | US-49 | 8h | Frank Huingo | **Done** |
-| **TSK-216** | Construir componente de feed de notificaciones reactivo con contador de no leídas | US-29, US-30 | 5h | Frank Huingo | **Done** |
-| **TSK-217** | Implementar formulario de registro de comprobante de pago con código de operación bancaria | US-08 | 7h | Joan Payano | **Done** |
-| **TSK-218** | Desarrollar vista de verificación y aprobación de comprobantes para el proveedor | US-08, US-11 | 6h | Joan Payano | **Done** |
-| **TSK-219** | Integrar gráficos de consumo mensual de combustible para el solicitante usando Chart.js | US-33, US-18 | 7h | Joan Payano | **Done** |
-| **TSK-220** | Construir dashboard principal del proveedor con gráficos de ingresos y distribución de ventas | US-34, US-47 | 8h | Joan Payano | **Done** |
-| **TSK-221** | Implementar servicio de exportación y descarga de resúmenes de operación en formato PDF | US-35 | 6h | Joan Payano | **To do** |
-| **TSK-222** | Escribir pruebas unitarias con Vitest para validación de stores y selectores de IAM y Payment | US-15, US-08 | 6h | Brayan Corvacho | **Done** |
-| **TSK-223** | Configurar pipeline de build en modo demo y pruebas automatizadas en GitHub Actions | — | 4h | Brayan Corvacho | **Done: pipeline CI/CD activo en GitHub Actions** |
-| **TSK-224** | Desplegar aplicación web en Firebase Hosting con configuración de dominios y certificados | — | 4h | Brayan Corvacho | **Verificado: URL pública y capturas, 09/10/2026** |
-| **TSK-225** | Ejecutar pruebas cruzadas de usabilidad y responsividad móvil en resoluciones 375px y 768px | US-05, US-10 | 5h | Frank Huingo | **Done** |
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <tr align="center" style="background-color: #f2f2f2;">
+        <td colspan="2"><strong>Sprint #</strong></td>
+        <td colspan="6"><strong>Sprint 2</strong></td>
+    </tr>
+    <tr align="center" style="background-color: #eaeaea;">
+        <td colspan="2"><strong>User Story</strong></td>
+        <td colspan="6"><strong>Work-Item / Task</strong></td>
+    </tr>
+    <tr align="center" style="background-color: #f9f9f9;">
+        <td><strong>Story Id</strong></td>
+        <td><strong>Story Title</strong></td>
+        <td><strong>Task Id</strong></td>
+        <td><strong>Task Title</strong></td>
+        <td><strong>Task Description</strong></td>
+        <td><strong>Estimation (Hours)</strong></td>
+        <td><strong>Assigned To</strong></td>
+        <td><strong>Status (To-do / In-Process / To-Review / Done)</strong></td>
+    </tr>
+    <tr>
+        <td align="center">US-39</td>
+        <td>Cambiar idioma</td>
+        <td align="center">TSK-201</td>
+        <td>Base Vue 3, PrimeVue e i18n</td>
+        <td>Inicializar proyecto Vue 3 con Vite, configurar PrimeVue 4, PrimeFlex e i18n multidioma (en_US / es_419).</td>
+        <td align="center">6</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-15</td>
+        <td>Iniciar sesión</td>
+        <td align="center">TSK-202</td>
+        <td>Stores Pinia y cliente HTTP Axios</td>
+        <td>Configurar stores base e interceptores de autenticación sobre cliente HTTP centralizado Axios.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-15, US-40, US-41</td>
+        <td>Iniciar sesión / Registrar empresa solicitante y proveedora</td>
+        <td align="center">TSK-203</td>
+        <td>Vistas de Sign-in y Sign-up por rol</td>
+        <td>Desarrollar vistas de acceso y registro corporativo con selección de rol (Comprador / Proveedor).</td>
+        <td align="center">8</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-23, US-24</td>
+        <td>Ver y editar perfil de usuario</td>
+        <td align="center">TSK-204</td>
+        <td>Vistas de perfil corporativo</td>
+        <td>Implementar consulta y edición de datos generales, fiscales y de contacto de la empresa.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-15, US-17</td>
+        <td>Iniciar sesión / Cerrar sesión</td>
+        <td align="center">TSK-205</td>
+        <td>Guards de navegación por rol</td>
+        <td>Configurar guards en Vue Router para validar sesión activa, rol y cierre seguro de sesión.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-16</td>
+        <td>Recuperar contraseña</td>
+        <td align="center">TSK-226</td>
+        <td>Flujo de recuperación de contraseña</td>
+        <td>Implementar pantalla y validaciones de solicitud de restablecimiento de contraseña desde login.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">US-46</td>
+        <td>Gestionar inventario de combustibles</td>
+        <td align="center">TSK-206</td>
+        <td>Catálogo interactivo de combustibles</td>
+        <td>Construir catálogo de combustibles y proveedores con tarjetas de especificaciones, precios y filtros.</td>
+        <td align="center">6</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-05</td>
+        <td>Registrar nuevo pedido</td>
+        <td align="center">TSK-207</td>
+        <td>Formulario de solicitud de combustible</td>
+        <td>Implementar formulario reactivo de nueva solicitud con selección de combustible y cálculo automático.</td>
+        <td align="center">9</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-06, US-43</td>
+        <td>Consultar estado y ver detalle del pedido</td>
+        <td align="center">TSK-208</td>
+        <td>Trazabilidad y detalle de pedidos</td>
+        <td>Desarrollar vista de seguimiento de estado y desglose completo de pedidos del solicitante.</td>
+        <td align="center">7</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-10, US-11, US-42</td>
+        <td>Ver pedidos pendientes / Aprobar y rechazar pedido</td>
+        <td align="center">TSK-209</td>
+        <td>Bandeja de evaluación del proveedor</td>
+        <td>Implementar bandeja de solicitudes entrantes para el proveedor con acciones de aprobar y rechazar.</td>
+        <td align="center">8</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-46</td>
+        <td>Gestionar inventario de combustibles</td>
+        <td align="center">TSK-210</td>
+        <td>Módulo de inventario de proveedor</td>
+        <td>Crear gestión de existencias de tanques con indicadores de stock físico, reservado, disponible y precios.</td>
+        <td align="center">7</td>
+        <td>Joan Carhuayal</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-05</td>
+        <td>Registrar nuevo pedido</td>
+        <td align="center">TSK-211</td>
+        <td>CRUD de equipos del comprador</td>
+        <td>Construir interfaz de administración de equipos y maquinaria con diálogos de creación y edición.</td>
+        <td align="center">7</td>
+        <td>Joan Carhuayal</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-05</td>
+        <td>Registrar nuevo pedido</td>
+        <td align="center">TSK-212</td>
+        <td>Integración de equipos al pedido</td>
+        <td>Integrar store de equipos y vincular la selección de maquinaria al formulario de solicitud.</td>
+        <td align="center">5</td>
+        <td>Joan Carhuayal</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-44</td>
+        <td>Gestionar vehículos de flota</td>
+        <td align="center">TSK-213</td>
+        <td>Módulo de flota de cisternas</td>
+        <td>Desarrollar administración de camiones cisterna del proveedor (placas, tipo, capacidad y estado).</td>
+        <td align="center">7</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-45</td>
+        <td>Gestionar conductores</td>
+        <td align="center">TSK-214</td>
+        <td>Módulo de conductores</td>
+        <td>Desarrollar registro y gestión de operadores de transporte con licencias y datos de contacto.</td>
+        <td align="center">6</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-49</td>
+        <td>Asignar recursos a despacho</td>
+        <td align="center">TSK-215</td>
+        <td>Modal de asignación a despacho</td>
+        <td>Implementar asignación de vehículo cisterna y conductor a pedidos en estado aprobado.</td>
+        <td align="center">8</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-29, US-30</td>
+        <td>Notificaciones de aprobación y despacho</td>
+        <td align="center">TSK-216</td>
+        <td>Centro de notificaciones reactivo</td>
+        <td>Construir feed de alertas con contador de no leídas y disparadores ante cambios de estado.</td>
+        <td align="center">5</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-08</td>
+        <td>Registrar información de pago</td>
+        <td align="center">TSK-217</td>
+        <td>Formulario de pago y comprobante</td>
+        <td>Implementar interfaz de pago demo y generación de comprobante académico en el módulo Payment.</td>
+        <td align="center">7</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-08, US-11</td>
+        <td>Registrar pago / Aprobar pedido</td>
+        <td align="center">TSK-218</td>
+        <td>Historial y verificación de comprobantes</td>
+        <td>Desarrollar vista de historial y consulta de comprobantes asociados a órdenes pagadas.</td>
+        <td align="center">6</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-33, US-18</td>
+        <td>Ver gráfico de consumo y resumen de pedidos</td>
+        <td align="center">TSK-219</td>
+        <td>Analítica de consumo del comprador</td>
+        <td>Integrar dashboard y gráficos de consumo mensual por combustible y equipo usando Chart.js.</td>
+        <td align="center">7</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-34, US-47</td>
+        <td>Ver gráfico de ventas y Dashboard del proveedor</td>
+        <td align="center">TSK-220</td>
+        <td>Dashboard y analítica del proveedor</td>
+        <td>Construir panel principal del proveedor con KPIs, ingresos mensuales y distribución de ventas.</td>
+        <td align="center">8</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-35</td>
+        <td>Descargar reporte PDF</td>
+        <td align="center">TSK-221</td>
+        <td>Exportación de reportes PDF</td>
+        <td>Implementar servicio de exportación y descarga de resúmenes de operación analítica en formato PDF.</td>
+        <td align="center">6</td>
+        <td>Joan Payano</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">US-15, US-08</td>
+        <td>Iniciar sesión / Registrar pago</td>
+        <td align="center">TSK-222</td>
+        <td>Pruebas unitarias con Vitest</td>
+        <td>Escribir suite de pruebas automatizadas con Vitest para stores, validaciones y adaptadores API.</td>
+        <td align="center">6</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Integración continua (CI/CD)</td>
+        <td align="center">TSK-223</td>
+        <td>Pipeline CI/CD en GitHub Actions</td>
+        <td>Configurar workflow automatizado de instalación, ejecución de pruebas Vitest y compilación demo.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Despliegue en la nube</td>
+        <td align="center">TSK-224</td>
+        <td>Publicación en Firebase Hosting</td>
+        <td>Desplegar Web Application en Firebase Hosting (`full-tank-964e2.web.app`) con reescritura SPA verificada.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">US-05, US-10</td>
+        <td>Registrar pedido / Ver pedidos pendientes</td>
+        <td align="center">TSK-225</td>
+        <td>Pruebas de responsividad móvil</td>
+        <td>Ejecutar pruebas visuales de usabilidad y diseño adaptable en resoluciones móvil y escritorio.</td>
+        <td align="center">5</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td colspan="5" align="right"><strong>Total Estimated Hours (Sprint 2)</strong></td>
+        <td align="center"><strong>160</strong></td>
+        <td colspan="2"></td>
+    </tr>
+</table>
 
 ---
 
@@ -976,7 +1237,200 @@ A continuación se detalla la desagregación de las Historias de Usuario en tare
 
 **Repositorio oficial:** [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend).
 
-Se verificaron los Pull Requests mediante la API pública de GitHub el **9 de octubre de 2026**. La tabla distingue la existencia de una contribución, su estado y su integración; el SHA identifica la cabeza del PR consultado.
+Durante el Sprint 2 se implementó la arquitectura modular del frontend en ramas temáticas por Bounded Context, integradas hacia `develop` y liberadas en `main` mediante Pull Requests (#2 al #11) bajo el tag `v1.0.0`. A continuación se presentan los commits verificados por rama en el repositorio oficial:
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Repository</th>
+            <th>Branch</th>
+            <th>Commit Id</th>
+            <th>Commit Message</th>
+            <th>Commit Message Body</th>
+            <th>Commited on (Date)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/shared</td>
+            <td>2adc9d1</td>
+            <td>feat(shared): incorporar base minima independiente de los BC</td>
+            <td>Configuración inicial de Vite, Vue 3, PrimeVue, i18n, router base y capa compartida.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/iam</td>
+            <td>d4ee176</td>
+            <td>feat(iam): import session domain model</td>
+            <td>Definición de entidades de usuario, empresa compradora/proveedora y sesión.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/iam</td>
+            <td>24f7203</td>
+            <td>feat(iam): implement demo authentication and company APIs</td>
+            <td>Adaptadores API demo para inicio de sesión, registro corporativo y perfiles.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/iam</td>
+            <td>81f0975</td>
+            <td>feat(iam): integrate session and profile store</td>
+            <td>Store Pinia para gestión de estado de autenticación, rol y perfil de usuario.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/iam</td>
+            <td>b856edb</td>
+            <td>feat(iam): add authentication views and route guards</td>
+            <td>Vistas de login, registro por segmento y guards de navegación por rol.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/fulfillment</td>
+            <td>43c04be</td>
+            <td>feat(fulfillment): define driver and vehicle domain entities</td>
+            <td>Modelos de dominio para conductores, camiones cisterna y entregas.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/fulfillment</td>
+            <td>1751254</td>
+            <td>feat(fulfillment): implement driver and vehicle views and routing</td>
+            <td>Vistas de administración de flota y conductores con rutas de proveedor.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/notification</td>
+            <td>21eeea6</td>
+            <td>feat(notification): define notification domain entity and value types</td>
+            <td>Definición de entidades de alerta, tipos de evento y estados de lectura.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/notification</td>
+            <td>d5bbbd3</td>
+            <td>feat(notification): add notification list view and register routes</td>
+            <td>Vista del centro de notificaciones y registro de rutas por segmento.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/notification</td>
+            <td>e9717cb</td>
+            <td>test(notification): cover store actions and unread badge count</td>
+            <td>Pruebas unitarias Vitest sobre acciones de lectura y contador de alertas.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/equipment</td>
+            <td>0e6ce9e</td>
+            <td>feat(equipment): import equipment domain model and entity</td>
+            <td>Modelo de dominio para maquinaria, generadores y tanques del comprador.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/equipment</td>
+            <td>b1f8e9c</td>
+            <td>feat(equipment): add client equipment views and register routes</td>
+            <td>Interfaz CRUD de equipos con barras de capacidad y pruebas unitarias.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/inventory</td>
+            <td>f983a3a</td>
+            <td>feat(inventory): import product domain model and entity</td>
+            <td>Modelo de dominio para productos de combustible y movimientos de inventario.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/inventory</td>
+            <td>4561913</td>
+            <td>feat(inventory): add stock management views and register routes</td>
+            <td>Vistas de control de stock físico, reservado y alertas de reposición.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/catalog</td>
+            <td>b189375</td>
+            <td>feat(catalog): added two entities</td>
+            <td>Entidades de catálogo de combustibles y directorio de proveedores.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/catalog</td>
+            <td>a05238f</td>
+            <td>feat(catalog): added presentation</td>
+            <td>Vistas de exploración de catálogo, detalle de proveedor y panel de solicitud.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/ordering</td>
+            <td>bba2b43</td>
+            <td>feat(ordering): added order and request entity</td>
+            <td>Modelos de dominio para solicitudes de combustible y ciclo de vida de órdenes.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/ordering</td>
+            <td>932360c</td>
+            <td>fix(ordering): standardize store filename and add store unit tests</td>
+            <td>Estandarización de store de órdenes, vistas de flujo y pruebas unitarias.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/payment</td>
+            <td>1778e2d</td>
+            <td>feat(payment): import payment and invoice domain entities</td>
+            <td>Entidades de dominio para pagos y comprobantes académicos del sistema.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/payment</td>
+            <td>e6c62b3</td>
+            <td>fix(payment): add missing invoice document component and store tests</td>
+            <td>Componente de comprobante, diálogo de pago demo y pruebas unitarias.</td>
+            <td>2026-10-09</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/reporting</td>
+            <td>9827194</td>
+            <td>feat(reporting): import financial period domain helpers</td>
+            <td>Helpers de dominio para agrupación de métricas por períodos financieros.</td>
+            <td>2026-10-08</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/reporting</td>
+            <td>375f4be</td>
+            <td>feat(reporting): add buyer and provider analytics views and register routes</td>
+            <td>Dashboards de analítica y gráficos para comprador y proveedor.</td>
+            <td>2026-10-09</td>
+        </tr>
+    </tbody>
+</table>
+
+##### Resumen de Pull Requests integrados (Sprint 2)
 
 | Pull Request | Rama | SHA de cabeza | Cuenta autora | Título publicado | Estado verificado |
 |---|---|---|---|---|---|
@@ -992,7 +1446,7 @@ Se verificaron los Pull Requests mediante la API pública de GitHub el **9 de oc
 | [#10](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/10) | `feat/payment` | `e6c62b3` | `joanfpp2-ai` | feat(payment): invoice registry, payment verification and voucher upload | Integrado |
 | [#11](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/11) | `feat/reporting` | `375f4be` | `joanfpp2-ai` | feat(reporting): buyer and provider analytics dashboards and KPI metrics | Integrado |
 
-Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cada uno de los Bounded Contexts asignados en la matriz LACX fueron integrados de forma satisfactoria hacia `develop` y posteriormente liberados en `main` bajo el tag de release `v1.0.0`.
+Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cada uno de los Bounded Contexts fueron integrados de forma satisfactoria hacia `develop` y posteriormente liberados en `main` bajo el tag de release `v1.0.0`.
 
 **Relación con el despliegue:** la demo integrada está disponible en Firebase Hosting y fue recorrida para las capturas de 5.2.2.5. El repositorio oficial cuenta con un pipeline de CI/CD automatizado en GitHub Actions que ejecuta pruebas unitarias y despliega a producción en cada push.
 
@@ -1263,7 +1717,7 @@ Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y 
 
 #### 5.2.3.1. Sprint Planning 3
 
-El tercer sprint se orientó a la construcción de los **Web Services RESTful de FullTank** en C# con ASP.NET Core, su persistencia en MySQL mediante Entity Framework Core, la preparación del despliegue en la nube y la integración con la Web Application desarrollada en el Sprint 2.
+El tercer sprint se orientó a la construcción de los **Web Services RESTful de FullTank** en C# con ASP.NET Core, su persistencia relacional mediante Entity Framework Core, la preparación del despliegue en la nube y la integración con la Web Application desarrollada en el Sprint 2.
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
     <tr align="center" style="background-color: #f2f2f2;">
@@ -1274,23 +1728,23 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
         <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Planning Background</strong></td>
     </tr>
     <tr align="center">
-        <td><strong>Fecha de Planificación</strong></td>
-        <td>20 de octubre de 2026</td>
+        <td><strong>Date</strong></td>
+        <td>2026-10-20</td>
     </tr>
     <tr align="center">
-        <td><strong>Hora</strong></td>
-        <td>16:00</td>
+        <td><strong>Time</strong></td>
+        <td>04:00 PM</td>
     </tr>
     <tr align="center">
-        <td><strong>Lugar</strong></td>
-        <td>Google Meet (sesión virtual de equipo)</td>
+        <td><strong>Location</strong></td>
+        <td>Google Meet (Sesión virtual de equipo)</td>
     </tr>
     <tr align="center">
-        <td><strong>Elaborado por</strong></td>
-        <td>Brayan Alexis Corvacho Damian</td>
+        <td><strong>Prepared By</strong></td>
+        <td>Corvacho Damian, Brayan Alexis</td>
     </tr>
     <tr align="center">
-        <td><strong>Asistentes a la Planificación</strong></td>
+        <td><strong>Attendees (to planning meeting)</strong></td>
         <td>
           Corvacho Damian, Brayan Alexis — U20231A257<br>
           Huingo Tello, Frank Anthony — U202319057<br>
@@ -1299,20 +1753,27 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
         </td>
     </tr>
     <tr align="center">
-        <td><strong>Resumen de Revisión del Sprint 2</strong></td>
+        <td><strong>Sprint 2 Review Summary</strong></td>
         <td>Se integraron los diez Pull Requests de la Web Application (#2 al #11) en <code>develop</code> y <code>main</code>, con 90/90 pruebas aprobadas en Vitest y despliegue automatizado en Firebase Hosting (release <code>v1.0.0</code>). La aplicación funcionaba con una API simulada en memoria, por lo que la persistencia real y los Web Services quedaron como objetivo del siguiente sprint. Quedaron pendientes la recuperación de contraseña (US-16) y la descarga de reportes en PDF (US-35).</td>
     </tr>
     <tr align="center">
-        <td><strong>Resumen de Retrospectiva del Sprint 2</strong></td>
-        <td>Se acordó sustituir los adaptadores en memoria por una API RESTful propia, mantener la misma división por Bounded Contexts en el backend y ajustar el compromiso a la velocidad real del equipo. Para la persistencia se eligió MySQL 8 (en lugar de las alternativas PostgreSQL/SQL Server consideradas en TB1) por su soporte en Entity Framework Core y su despliegue en contenedor. El pago se mantiene como una simulación académica explícita: no se integra una pasarela bancaria real.</td>
+        <td><strong>Sprint 2 Retrospective Summary</strong></td>
+        <td>Se acordó sustituir los adaptadores en memoria por una API RESTful propia, mantener la misma división por Bounded Contexts en el backend y ajustar el compromiso a la capacidad actual del equipo de cuatro integrantes. Para la persistencia inicial se seleccionó MySQL 8 (posteriormente migrado a PostgreSQL 18 en Render Free) por su soporte en Entity Framework Core y despliegue en contenedor. El pago se mantiene como una simulación académica explícita sin pasarela bancaria real.</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Goal &amp; User Stories</strong></td>
+    </tr>
+    <tr>
+        <td align="center"><strong>Sprint 3 Goal</strong></td>
+        <td>Our focus is on implementing and deploying the FullTank RESTful Web Services in ASP.NET Core with relational persistence across all nine Bounded Contexts (IAM, Catalog, Inventory, Ordering, Equipment, Fulfillment, Payment, Notification, and Reporting &amp; Analytics) and connecting them to the Web Application. We believe it delivers persistent end-to-end B2B fuel ordering, fleet dispatch, and simulated receipt issuance to fuel buyers and suppliers. This will be confirmed when the deployed frontend executes the complete catalog-to-receipt workflow against the cloud API with automated test coverage.</td>
     </tr>
     <tr align="center">
-        <td><strong>Sprint Goal</strong></td>
-        <td>Implementar los Web Services RESTful de FullTank en ASP.NET Core con persistencia en MySQL para los nueve Bounded Contexts (IAM, Catalog, Inventory, Ordering, Equipment, Fulfillment, Payment, Notification y Reporting & Analytics), validados con pruebas automatizadas y preparados para su despliegue en Render, de modo que compradores y proveedores completen el flujo catálogo → solicitud → aprobación → despacho → recepción → pago simulado → comprobante desde la Web Application.</td>
+        <td><strong>Sprint 3 Velocity</strong></td>
+        <td>64</td>
     </tr>
     <tr align="center">
-        <td><strong>Sprint Velocity & Capacidad</strong></td>
-        <td>Puntos planificados: <strong>64 Story Points</strong> (27 historias técnicas, TS-01 a TS-27) | Velocidad estimada: <strong>64 Story Points</strong> | Duración: 3 semanas (Sprint 3).</td>
+        <td><strong>Sum of Story Points</strong></td>
+        <td>64 *(27 historias técnicas, TS-01 a TS-27; duración: 3 semanas)*</td>
     </tr>
 </table>
 
@@ -1355,29 +1816,117 @@ El Sprint 3 comprende las 27 historias técnicas de la API definidas en la secci
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-El liderazgo técnico de cada Bounded Context y aspecto del backend fue asumido por los integrantes del equipo según su especialidad técnica en la arquitectura del sistema, coordinando el diseño de contratos, persistencia y revisión cruzada de código.
+Para el Sprint 3 el equipo activo de cuatro integrantes distribuyó el liderazgo técnico (`L`) y la colaboración (`C`) sobre quince aspectos clave de la API RESTful y su integración en la nube: base compartida (`Shared Base`), los nueve Bounded Contexts de negocio (`IAM`, `Catalog`, `Inventory`, `Ordering`, `Equipment`, `Fulfillment`, `Notification`, `Payment`, `Reporting`), persistencia en Entity Framework Core (`Persistence`), configuración de hosting y salud (`Hosting & Config`), pruebas automatizadas en xUnit (`xUnit Tests`), contenedorización y despliegue en Render (`Docker & Render`) y documentación técnica (`Documentation`).
 
-| Aspecto técnico / Bounded Context | Leader (autor de los commits) | Colaboradores y revisión |
-|---|---|---|
-| **Base compartida** — solución .NET, contratos de dominio, unidades de combustible, eventos de dominio, errores localizados y contratos entre módulos | Brayan Corvacho (`BralexCD`) | Frank Huingo, Enrique Mantilla |
-| **IAM** — empresas, usuarios, BCrypt, JWT, registro con `registrationToken`, sign-in, sign-up y perfil | Brayan Corvacho (`BralexCD`) | Enrique Mantilla |
-| **Catalog** — productos de combustible, proveedores favoritos y calificaciones | Enrique Mantilla (`enrique-mantilla`) | Joan Payano |
-| **Inventory** — stock, reservas y movimientos `IN`/`OUT` | Enrique Mantilla (`enrique-mantilla`) | Frank Huingo |
-| **Ordering** — solicitudes, órdenes y transiciones de estado (aprobar, despachar, recibir y cancelar) | Enrique Mantilla (`enrique-mantilla`) | Brayan Corvacho |
-| **Persistencia** — `AppDbContext`, unit of work y migraciones EF Core para MySQL | Enrique Mantilla (`enrique-mantilla`) | Brayan Corvacho |
-| **Equipment** — equipos del comprador, niveles de combustible e historial de recargas | Frank Huingo (`Franz2308`) | Enrique Mantilla |
-| **Fulfillment** — conductores, cisternas, disponibilidad de flota y entregas | Frank Huingo (`Franz2308`) | Brayan Corvacho |
-| **Notification** — alertas por cambios de estado y marcado de lectura | Frank Huingo (`Franz2308`) | Joan Payano |
-| **Payment** — checkout simulado atómico, pagos y comprobantes académicos | Joan Payano (`joanfpp2-ai`) | Frank Huingo |
-| **Reporting & Analytics** — gasto del comprador, ventas del proveedor y dashboards | Joan Payano (`joanfpp2-ai`) | Enrique Mantilla |
-| **Hosting y configuración** — validación de la configuración de producción, health check de MySQL, registro de módulos y datos demo | Brayan Corvacho (`BralexCD`) | Frank Huingo |
-| **Pruebas automatizadas (xUnit)** — reglas de dominio, registro IAM, flujo de órdenes, checkout, seguridad entre empresas y configuración | Frank Huingo, Brayan Corvacho, Enrique Mantilla y Joan Payano (una suite cada uno; ver 5.2.3.4) | Revisión cruzada de suites |
-| **Contenedores y despliegue** — imagen Docker de la API y Blueprint de Render con MySQL privado | Frank Huingo (Docker) y Enrique Mantilla (Render) | Brayan Corvacho |
-| **Documentación del Sprint 3 e informe AV2** | Frank Huingo y Brayan Corvacho | Enrique Mantilla y Joan Payano |
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Team Member<br>(Last Name, First Name)</th>
+            <th>GitHub Username</th>
+            <th>Shared Base<br>(L/C)</th>
+            <th>IAM<br>(L/C)</th>
+            <th>Catalog<br>(L/C)</th>
+            <th>Inventory<br>(L/C)</th>
+            <th>Ordering<br>(L/C)</th>
+            <th>Persistence<br>(L/C)</th>
+            <th>Equipment<br>(L/C)</th>
+            <th>Fulfillment<br>(L/C)</th>
+            <th>Notification<br>(L/C)</th>
+            <th>Payment<br>(L/C)</th>
+            <th>Reporting<br>(L/C)</th>
+            <th>Hosting &amp; Config<br>(L/C)</th>
+            <th>xUnit Tests<br>(L/C)</th>
+            <th>Docker &amp; Render<br>(L/C)</th>
+            <th>Documentation<br>(L/C)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Corvacho Damian, Brayan Alexis</td>
+            <td>BralexCD</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+        </tr>
+        <tr>
+            <td>Mantilla Maldonado, Enrique Manuel</td>
+            <td>enrique-mantilla</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+        </tr>
+        <tr>
+            <td>Huingo Tello, Frank Anthony</td>
+            <td>Franz2308</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+        </tr>
+        <tr>
+            <td>Payano Puchuri, Joan Fabricio</td>
+            <td>joanfpp2-ai</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center"><strong>L</strong></td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+            <td align="center">C</td>
+        </tr>
+    </tbody>
+</table>
+
+*Nota de coliderazgo técnico:* En *Pruebas automatizadas (xUnit)* cada integrante desarrolló su propia suite de pruebas (dominio, IAM, órdenes y checkout) con revisión cruzada; en *Docker & Render*, Frank Huingo lideró la definición del contenedor Docker y Enrique Mantilla la configuración inicial del Blueprint de Render, mientras que Brayan Corvacho ejecutó la migración final a PostgreSQL 18 y despliegue en Render Free; y en *Documentación*, Frank Huingo y Brayan Corvacho co-lideraron la actualización del Sprint 3.
 
 ---
 
 #### 5.2.3.3. Sprint Backlog 3
+
+El objetivo principal del Sprint 3 es construir, probar y desplegar en la nube los Web Services RESTful de FullTank en ASP.NET Core con persistencia relacional y conectar la Web Application en producción para soportar el ciclo operativo completo entre compradores y proveedores.
 
 **Tablero del Sprint Backlog:** [FullTank · FuelPoint | Sprint 3 en Trello](https://trello.com/b/CBQSmZA1/sprint-3).
 
@@ -1386,42 +1935,335 @@ El liderazgo técnico de cada Bounded Context y aspecto del backend fue asumido 
   <p><em>Figura: Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
 </div>
 
-Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `daee12a`) con los criterios de cada historia técnica y con las evidencias de despliegue en producción. **Done** indica que el endpoint o entregable existe y está verificado mediante pruebas o despliegue operativo; **Parcial** indica que falta una operación o que el contrato implementado difiere del descrito en la historia; **To do** indica que no se identificó implementación.
+Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `daee12a`) con los criterios de cada historia técnica y con las evidencias de despliegue en producción. Conforme al formato del curso, los estados se normalizan en `Done` (implementado y verificado mediante pruebas o despliegue), `In-Process` (implementación parcial pendiente de completar alguna operación o reconciliación de contrato) y `To-do` (pendiente de implementación para el Sprint 4).
 
-| Task ID | Descripción de la tarea técnica | Historias asociadas | Responsable | Estado |
-| :--- | :--- | :--- | :--- | :---: |
-| **TSK-301** | Configurar la solución .NET, los contratos de dominio compartidos, el despacho de eventos de dominio y el manejo localizado de errores | Soporte | Brayan Corvacho | **Done** |
-| **TSK-302** | Modelar empresas compradoras, empresas proveedoras y propietarios de cuenta | TS-08, TS-09 | Brayan Corvacho | **Done** |
-| **TSK-303** | Implementar Catalog: productos de combustible, proveedores favoritos y calificaciones | TS-11, TS-22 | Enrique Mantilla | **Done** |
-| **TSK-304** | Implementar Inventory: stock con control de concurrencia, reservas y movimientos | TS-11, TS-12 | Enrique Mantilla | **Done** |
-| **TSK-305** | Implementar Ordering: solicitudes, órdenes y transiciones aprobar → despachar → recibir → pagar, y cancelación | TS-05, TS-13, TS-14, TS-16 | Enrique Mantilla | **Done** |
-| **TSK-306** | Reconciliar la creación de pedidos (`POST /orders` está deshabilitado; la orden se crea al aprobar la solicitud) y el rechazo de solicitudes con TS-04 y TS-15 | TS-04, TS-15 | Enrique Mantilla | **Parcial** |
-| **TSK-307** | Implementar Equipment: equipos, niveles de combustible e historial de recargas | TS-23 | Frank Huingo | **Done** |
-| **TSK-308** | Verificar la asignación de proveedor favorito a un equipo concreto | TS-24 | Por asignar | **Parcial** |
-| **TSK-309** | Implementar Fulfillment: conductores, vehículos, disponibilidad y entregas | TS-17, TS-18, TS-19 | Frank Huingo | **Parcial** |
-| **TSK-310** | Implementar Notification: alertas ante cambios de estado de las órdenes y marcado de lectura individual y masivo | TS-26 | Frank Huingo | **Done** |
-| **TSK-311** | Implementar Payment: checkout simulado atómico con cálculo de IGV, pagos y comprobantes `SIM-INV-*` | TS-20, TS-21 | Joan Payano | **Done** (alcance simulado) |
-| **TSK-312** | Implementar Reporting & Analytics: indicadores de gasto del comprador y de ventas del proveedor | TS-27 | Joan Payano | **Parcial** |
-| **TSK-313** | Implementar IAM: hashing BCrypt, emisión de JWT, registro con `registrationToken`, sign-in, sign-up y perfil | TS-01, TS-06, TS-07, TS-10 | Brayan Corvacho | **Done** |
-| **TSK-314** | Configurar `AppDbContext`, unit of work y migraciones EF Core para MySQL | Soporte | Enrique Mantilla | **Done** |
-| **TSK-315** | Validar la configuración de producción, el health check de MySQL, el registro de módulos y la carga de datos demo | Soporte | Brayan Corvacho | **Done** |
-| **TSK-316** | Escribir pruebas de reglas de dominio y conversión de unidades | Soporte | Frank Huingo | **Done** |
-| **TSK-317** | Escribir pruebas de registro IAM y propiedad de empresas | TS-06 | Brayan Corvacho | **Done** |
-| **TSK-318** | Escribir pruebas del flujo de aprobación, despacho y recepción | TS-14, TS-15 | Enrique Mantilla | **Done** |
-| **TSK-319** | Escribir pruebas de totales del checkout y datos del comprobante | TS-20 | Joan Payano | **Done** |
-| **TSK-320** | Escribir pruebas de acceso entre empresas y de configuración insegura en producción | Soporte | Brayan Corvacho | **Done** |
-| **TSK-321** | Publicar la API en una imagen Docker .NET | Soporte | Frank Huingo | **Done** |
-| **TSK-322** | Conectar la API con MySQL privado mediante el Blueprint de Render | Soporte | Enrique Mantilla | **Done** (configuración) |
-| **TSK-323** | Implementar la recuperación de contraseña por correo | TS-02 (US-16) | Por asignar | **To do** |
-| **TSK-324** | Definir e implementar el cierre de sesión en el backend JWT | TS-03 (US-17) | Por asignar | **To do** |
-| **TSK-325** | Implementar la eliminación de equipos sin pedidos en curso | TS-25 | Por asignar | **To do** |
-| **TSK-326** | Implementar `DELETE` de conductores y vehículos y el registro de entrega fallida | TS-17, TS-18, TS-19 | Por asignar | **To do** |
-| **TSK-327** | Implementar la exportación de reportes en PDF | TS-27 (US-35) | Por asignar | **To do** |
-| **TSK-328** | Aplicar el Blueprint en Render (PostgreSQL 18) y verificar `/health` y Swagger públicos | — | Brayan Corvacho | **Done** |
-| **TSK-329** | Conectar la Web Application con la API pública y publicar la nueva versión en Firebase Hosting | — | Brayan Corvacho | **Done** |
-| **TSK-330** | Documentar el Sprint 3 en el informe del proyecto | — | Frank Huingo y Brayan Corvacho | **Done** |
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <tr align="center" style="background-color: #f2f2f2;">
+        <td colspan="2"><strong>Sprint #</strong></td>
+        <td colspan="6"><strong>Sprint 3</strong></td>
+    </tr>
+    <tr align="center" style="background-color: #eaeaea;">
+        <td colspan="2"><strong>User Story</strong></td>
+        <td colspan="6"><strong>Work-Item / Task</strong></td>
+    </tr>
+    <tr align="center" style="background-color: #f9f9f9;">
+        <td><strong>Story Id</strong></td>
+        <td><strong>Story Title</strong></td>
+        <td><strong>Task Id</strong></td>
+        <td><strong>Task Title</strong></td>
+        <td><strong>Task Description</strong></td>
+        <td><strong>Estimation (Hours)</strong></td>
+        <td><strong>Assigned To</strong></td>
+        <td><strong>Status (To-do / In-Process / To-Review / Done)</strong></td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Arquitectura base y contratos compartidos</td>
+        <td align="center">TSK-301</td>
+        <td>Configuración de solución .NET y Shared</td>
+        <td>Configurar la solución .NET 10, contratos de dominio compartidos, despacho de eventos de dominio y manejo localizado de errores.</td>
+        <td align="center">6</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-08, TS-09</td>
+        <td>Endpoint: Gestionar empresas solicitantes y proveedoras</td>
+        <td align="center">TSK-302</td>
+        <td>Modelo de empresas y propietarios</td>
+        <td>Modelar e implementar entidades, repositorios y servicios para empresas compradoras, proveedoras y propietarios de cuenta.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-11, TS-22</td>
+        <td>Endpoint: Gestionar productos / Calificar proveedores</td>
+        <td align="center">TSK-303</td>
+        <td>Implementación de Catalog</td>
+        <td>Implementar productos de combustible, proveedores favoritos, calificaciones y sus controladores REST.</td>
+        <td align="center">6</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-11, TS-12</td>
+        <td>Endpoint: Gestionar productos / Actualizar stock</td>
+        <td align="center">TSK-304</td>
+        <td>Implementación de Inventory</td>
+        <td>Implementar control de stock con concurrencia, reservas de inventario y registro de movimientos IN/OUT.</td>
+        <td align="center">7</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-05, TS-13, TS-14, TS-16</td>
+        <td>Endpoints de consulta y ciclo de vida de pedidos</td>
+        <td align="center">TSK-305</td>
+        <td>Implementación de Ordering</td>
+        <td>Implementar solicitudes de combustible, órdenes y transiciones aprobar → despachar → recibir → pagar, además de cancelación.</td>
+        <td align="center">8</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-04, TS-15</td>
+        <td>Endpoint: Crear pedido / Gestionar solicitudes</td>
+        <td align="center">TSK-306</td>
+        <td>Reconciliación de creación y rechazo</td>
+        <td>Reconciliar la creación de pedidos (<code>POST /orders</code> deshabilitado; la orden nace al aprobar solicitud) y el rechazo de solicitudes con TS-04 y TS-15.</td>
+        <td align="center">4</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">In-Process</td>
+    </tr>
+    <tr>
+        <td align="center">TS-23</td>
+        <td>Endpoint: Gestionar equipos</td>
+        <td align="center">TSK-307</td>
+        <td>Implementación de Equipment</td>
+        <td>Implementar gestión de equipos del comprador, niveles de combustible e historial de recargas.</td>
+        <td align="center">6</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-24</td>
+        <td>Endpoint: Asignar proveedor favorito</td>
+        <td align="center">TSK-308</td>
+        <td>Proveedor favorito por equipo</td>
+        <td>Verificar y completar la vinculación de proveedor favorito directamente a un equipo específico del comprador.</td>
+        <td align="center">4</td>
+        <td>Por asignar</td>
+        <td align="center">In-Process</td>
+    </tr>
+    <tr>
+        <td align="center">TS-17, TS-18, TS-19</td>
+        <td>Endpoints de entregas, conductores y vehículos</td>
+        <td align="center">TSK-309</td>
+        <td>Implementación de Fulfillment</td>
+        <td>Implementar gestión de conductores, vehículos cisterna, disponibilidad de flota y registro de entregas.</td>
+        <td align="center">8</td>
+        <td>Frank Huingo</td>
+        <td align="center">In-Process</td>
+    </tr>
+    <tr>
+        <td align="center">TS-26</td>
+        <td>Endpoint: Gestionar notificaciones</td>
+        <td align="center">TSK-310</td>
+        <td>Implementación de Notification</td>
+        <td>Implementar generación de alertas ante cambios de estado de órdenes y marcado de lectura individual y masivo.</td>
+        <td align="center">5</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-20, TS-21</td>
+        <td>Endpoint: Registrar, validar y consultar pagos</td>
+        <td align="center">TSK-311</td>
+        <td>Implementación de Payment (simulado)</td>
+        <td>Implementar checkout simulado atómico con cálculo de IGV (18 %), registro de pagos y emisión de comprobantes académicos <code>SIM-INV-*</code>.</td>
+        <td align="center">7</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-27</td>
+        <td>Endpoint: Reportes y analítica</td>
+        <td align="center">TSK-312</td>
+        <td>Implementación de Reporting &amp; Analytics</td>
+        <td>Implementar endpoints de indicadores de gasto del comprador y ventas del proveedor para los dashboards.</td>
+        <td align="center">7</td>
+        <td>Joan Payano</td>
+        <td align="center">In-Process</td>
+    </tr>
+    <tr>
+        <td align="center">TS-01, TS-06, TS-07, TS-10</td>
+        <td>Endpoints de login, registro, usuarios y perfil</td>
+        <td align="center">TSK-313</td>
+        <td>Implementación de IAM</td>
+        <td>Implementar hashing BCrypt, emisión de JWT, registro con <code>registrationToken</code>, sign-in, sign-up y actualización de perfil.</td>
+        <td align="center">8</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Persistencia relacional y migraciones</td>
+        <td align="center">TSK-314</td>
+        <td>Contexto EF Core y migraciones</td>
+        <td>Configurar <code>AppDbContext</code>, Unit of Work y migraciones iniciales de Entity Framework Core.</td>
+        <td align="center">5</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Salud del servicio y datos semilla</td>
+        <td align="center">TSK-315</td>
+        <td>Configuración de hosting y seeder</td>
+        <td>Validar configuración segura de producción, endpoint <code>/health</code>, registro modular y carga inicial de datos demo.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Calidad de dominio</td>
+        <td align="center">TSK-316</td>
+        <td>Pruebas xUnit de reglas de dominio</td>
+        <td>Escribir pruebas unitarias de invariantes de dominio y conversión de unidades de combustible.</td>
+        <td align="center">4</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-06</td>
+        <td>Endpoint: Registrar usuario</td>
+        <td align="center">TSK-317</td>
+        <td>Pruebas xUnit de registro IAM</td>
+        <td>Escribir pruebas unitarias para flujo de registro con token corporativo y validación de propiedad de empresas.</td>
+        <td align="center">4</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-14, TS-15</td>
+        <td>Endpoints de pedidos y solicitudes</td>
+        <td align="center">TSK-318</td>
+        <td>Pruebas xUnit del flujo de órdenes</td>
+        <td>Escribir pruebas automatizadas de aprobación de solicitudes, despacho de flota y confirmación de recepción.</td>
+        <td align="center">5</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-20</td>
+        <td>Endpoint: Registrar y validar pagos</td>
+        <td align="center">TSK-319</td>
+        <td>Pruebas xUnit de checkout y recibos</td>
+        <td>Escribir pruebas automatizadas sobre cálculo de totales, IGV y emisión de comprobantes de pago simulado.</td>
+        <td align="center">4</td>
+        <td>Joan Payano</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Seguridad multiempresa y configuración</td>
+        <td align="center">TSK-320</td>
+        <td>Pruebas xUnit de seguridad y config</td>
+        <td>Escribir pruebas de aislamiento de acceso entre empresas y rechazo de configuraciones inseguras en producción.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Empaquetado en contenedores</td>
+        <td align="center">TSK-321</td>
+        <td>Imagen Docker de la API .NET</td>
+        <td>Definir <code>Dockerfile</code> multietapa de la API RESTful y validar construcción de imagen Release.</td>
+        <td align="center">4</td>
+        <td>Frank Huingo</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Infraestructura como código en nube</td>
+        <td align="center">TSK-322</td>
+        <td>Blueprint de Render y BD privada</td>
+        <td>Configurar Blueprint <code>render.yaml</code> para orquestar la API en contenedor y base de datos privada en Render.</td>
+        <td align="center">5</td>
+        <td>Enrique Mantilla</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">TS-02</td>
+        <td>Endpoint: Recuperar contraseña</td>
+        <td align="center">TSK-323</td>
+        <td>Recuperación de contraseña</td>
+        <td>Implementar endpoint y flujo de restablecimiento de contraseña por correo electrónico (planificado para Sprint 4).</td>
+        <td align="center">5</td>
+        <td>Por asignar</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">TS-03</td>
+        <td>Endpoint: Logout</td>
+        <td align="center">TSK-324</td>
+        <td>Cierre de sesión en backend JWT</td>
+        <td>Definir e implementar revocación/cierre de sesión en el backend JWT (planificado para Sprint 4).</td>
+        <td align="center">3</td>
+        <td>Por asignar</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">TS-25</td>
+        <td>Endpoint: Eliminar equipo</td>
+        <td align="center">TSK-325</td>
+        <td>Eliminación segura de equipos</td>
+        <td>Implementar endpoint <code>DELETE</code> de equipos validando ausencia de pedidos en curso.</td>
+        <td align="center">4</td>
+        <td>Por asignar</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">TS-17, TS-18, TS-19</td>
+        <td>Endpoints de entregas, conductores y vehículos</td>
+        <td align="center">TSK-326</td>
+        <td>Baja de flota y entrega fallida</td>
+        <td>Implementar <code>DELETE</code> de conductores y vehículos y registro de incidencia por entrega fallida.</td>
+        <td align="center">6</td>
+        <td>Por asignar</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">TS-27</td>
+        <td>Endpoint: Reportes y analítica</td>
+        <td align="center">TSK-327</td>
+        <td>Exportación de reportes en PDF</td>
+        <td>Implementar generación y exportación de reportes analíticos de consumo y ventas en formato PDF.</td>
+        <td align="center">6</td>
+        <td>Por asignar</td>
+        <td align="center">To-do</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Despliegue productivo en Render</td>
+        <td align="center">TSK-328</td>
+        <td>Despliegue PostgreSQL 18 y verificación</td>
+        <td>Aplicar Blueprint en Render con PostgreSQL 18 y verificar <code>/health</code> y Swagger UI públicos en producción.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Integración Frontend–Backend</td>
+        <td align="center">TSK-329</td>
+        <td>Conexión de Web App con API pública</td>
+        <td>Conectar el frontend en Firebase Hosting con la API pública en Render y validar el flujo integrado.</td>
+        <td align="center">5</td>
+        <td>Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td align="center">Technical Support</td>
+        <td>Documentación del Sprint 3</td>
+        <td align="center">TSK-330</td>
+        <td>Documentación del informe AV2</td>
+        <td>Documentar planificación, arquitectura, evidencias de ejecución, despliegue y validación del Sprint 3.</td>
+        <td align="center">6</td>
+        <td>Frank Huingo, Brayan Corvacho</td>
+        <td align="center">Done</td>
+    </tr>
+    <tr>
+        <td colspan="5" align="right"><strong>Total Estimated Hours (Sprint 3)</strong></td>
+        <td align="center"><strong>162</strong></td>
+        <td colspan="2"></td>
+    </tr>
+</table>
 
-**Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *Parcial* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados.
+**Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *In-Process* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To-do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados. En TSK-311, el estado *Done* corresponde al alcance académico de checkout simulado definido en 5.2.3.1.
 
 **Coherencia del flujo de pagos:** el flujo implementado es *aprobar solicitud → despachar → confirmar recepción → pagar (checkout simulado) → comprobante*. La aprobación del proveedor reserva stock sin requerir un depósito previo, y el pago no procesa dinero, garantizando una transacción atómica y consistente.
 
@@ -1429,31 +2271,394 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-**Repositorio oficial:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend).
+**Repositorios oficiales del Sprint 3:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) y [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend) (integración con la API en producción).
 
-El historial de `main` se verificó sobre el repositorio integrado el **12 de noviembre de 2026**. `main` apunta al commit de release [`daee12a`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/daee12a) (*Merge branch 'release/postgresql' into main*) y contiene **98 commits**: 73 commits de trabajo y 25 merges `--no-ff`. Inicialmente las ramas temáticas funcionales se integraron en `integration/backend` y se liberaron en `main` mediante `release/backend` (`fde0498`, con persistencia inicial en MySQL 8), y posteriormente se incorporó la migración a **PostgreSQL 18** y validación de despliegue en Render Free mediante `release/postgresql` (`daee12a`).
+El historial de `main` del backend se verificó sobre el repositorio integrado el **12 de noviembre de 2026**, apuntando al commit de release [`daee12a`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/daee12a) (*Merge branch 'release/postgresql' into main*), con **98 commits** (73 commits de trabajo y 25 merges `--no-ff`). Las ramas funcionales se consolidaron inicialmente mediante `release/backend` (`fde0498`, MySQL 8) y luego se migraron a **PostgreSQL 18** en Render Free mediante `release/postgresql` (`daee12a`), conectando finalmente el frontend en Firebase Hosting (`503ecd5`).
 
-**Ramas integradas:** `chore/project-setup`, `feat/catalog`, `feat/inventory`, `feat/equipment`, `feat/orders`, `feat/fulfillment`, `feat/payments`, `feat/notifications`, `feat/analytics`, `feat/accounts`, `feat/database`, `feat/app-setup`, `test/domain-rules`, `test/order-workflow`, `test/payment-checkout`, `test/registration`, `build/docker`, `chore/render`, `test/configuration`, `test/container`, `docs/backend`, `chore/db-tools`, `feat/postgresql` y `release/postgresql`.
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr align="center" style="background-color: #f2f2f2;">
+            <th>Repository</th>
+            <th>Branch</th>
+            <th>Commit Id</th>
+            <th>Commit Message</th>
+            <th>Commit Message Body</th>
+            <th>Commited on (Date)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>97f61a1</td>
+            <td>chore: set up the .NET solution and project settings</td>
+            <td>Creación de la solución .NET y configuración base de proyectos.</td>
+            <td>2026-10-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>a4e85c0</td>
+            <td>feat(shared): define domain contracts and fuel units</td>
+            <td>Definición de contratos base de dominio y unidades de combustible.</td>
+            <td>2026-10-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>556c036</td>
+            <td>feat(shared): dispatch domain events</td>
+            <td>Implementación del despachador interno de eventos de dominio.</td>
+            <td>2026-10-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>bfd1454</td>
+            <td>feat(api): localize errors and handle exceptions</td>
+            <td>Manejo centralizado de excepciones y errores localizados en la API.</td>
+            <td>2026-10-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>163efdd</td>
+            <td>feat(companies): model buyers, suppliers and account owners</td>
+            <td>Modelado de empresas compradoras, proveedoras y propietarios de cuenta.</td>
+            <td>2026-10-13</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/project-setup</td>
+            <td>57375e2</td>
+            <td>feat(shared): define contracts between modules</td>
+            <td>Contratos de integración ACL entre los Bounded Contexts del sistema.</td>
+            <td>2026-10-13</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/catalog</td>
+            <td>74c3ab8</td>
+            <td>feat(catalog): model fuel products, favorites and ratings</td>
+            <td>Entidades de productos de combustible, proveedores favoritos y calificaciones.</td>
+            <td>2026-10-13</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/catalog</td>
+            <td>00a79a3</td>
+            <td>feat(catalog): expose products, favorites and ratings</td>
+            <td>Controladores y endpoints RESTful del módulo Catalog.</td>
+            <td>2026-10-22</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/inventory</td>
+            <td>5deb465</td>
+            <td>feat(inventory): model stock levels and fuel movements</td>
+            <td>Modelo de niveles de inventario y movimientos de entrada/salida.</td>
+            <td>2026-10-13</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/inventory</td>
+            <td>ba94c15</td>
+            <td>feat(inventory): expose stock and movement endpoints</td>
+            <td>Endpoints RESTful de gestión de stock, reservas y movimientos.</td>
+            <td>2026-10-22</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/equipment</td>
+            <td>9f60900</td>
+            <td>feat(equipment): model equipment and refill history</td>
+            <td>Entidades de equipos del comprador e historial de recargas.</td>
+            <td>2026-10-15</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/equipment</td>
+            <td>527a288</td>
+            <td>feat(equipment): expose equipment and refill endpoints</td>
+            <td>Endpoints RESTful para consulta, alta y edición de equipos.</td>
+            <td>2026-10-22</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/orders</td>
+            <td>00ce34f</td>
+            <td>feat(orders): define requests, orders and lifecycle rules</td>
+            <td>Entidades de solicitudes y órdenes con reglas de transición de estado.</td>
+            <td>2026-10-15</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/orders</td>
+            <td>0be20bc</td>
+            <td>feat(orders): expose approval, dispatch and receipt actions</td>
+            <td>Endpoints RESTful de aprobación, despacho, recepción y cancelación.</td>
+            <td>2026-10-23</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/fulfillment</td>
+            <td>19223f5</td>
+            <td>feat(fulfillment): model drivers, vehicles and deliveries</td>
+            <td>Modelo de conductores, cisternas y registro logístico de entregas.</td>
+            <td>2026-10-16</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/fulfillment</td>
+            <td>349a01b</td>
+            <td>feat(fulfillment): expose fleet availability and deliveries</td>
+            <td>Endpoints RESTful de disponibilidad de flota y control de entregas.</td>
+            <td>2026-10-23</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/payments</td>
+            <td>b1e8f3c</td>
+            <td>feat(payment): model payments and academic receipts</td>
+            <td>Modelo de pagos y comprobantes académicos del flujo de facturación.</td>
+            <td>2026-10-19</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/payments</td>
+            <td>5b21a43</td>
+            <td>feat(payment): expose checkout and payment history</td>
+            <td>Endpoints RESTful de checkout simulado atómico e historial de pagos.</td>
+            <td>2026-10-26</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/notifications</td>
+            <td>7523521</td>
+            <td>feat(notification): model alerts and read status</td>
+            <td>Modelo de notificaciones operativas y control de lectura.</td>
+            <td>2026-10-26</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/notifications</td>
+            <td>de3b052</td>
+            <td>feat(notification): expose alerts and mark them as read</td>
+            <td>Endpoints RESTful de consulta y marcado individual/masivo de alertas.</td>
+            <td>2026-10-27</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/analytics</td>
+            <td>8735ec5</td>
+            <td>feat(analytics): define spending and sales summaries</td>
+            <td>Contratos y cálculos de resúmenes de gasto y ventas por período.</td>
+            <td>2026-10-26</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/analytics</td>
+            <td>f7f4e52</td>
+            <td>feat(analytics): expose buyer and supplier dashboards</td>
+            <td>Endpoints RESTful analíticos para dashboards de comprador y proveedor.</td>
+            <td>2026-10-28</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/accounts</td>
+            <td>b040146</td>
+            <td>feat(iam): secure account access with BCrypt and JWT</td>
+            <td>Autenticación con hashing BCrypt y generación de tokens JWT.</td>
+            <td>2026-11-02</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/accounts</td>
+            <td>01696ec</td>
+            <td>feat(iam): expose sign-in, sign-up and profile endpoints</td>
+            <td>Endpoints RESTful de autenticación, registro con token y perfiles.</td>
+            <td>2026-11-02</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/database</td>
+            <td>28dc91a</td>
+            <td>feat(database): wire the context and unit of work</td>
+            <td>Configuración de <code>AppDbContext</code> y patrón Unit of Work.</td>
+            <td>2026-11-03</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/database</td>
+            <td>c6acfaf</td>
+            <td>feat(database): track the MySQL schema with EF migrations</td>
+            <td>Generación de migraciones de esquema relacional en EF Core.</td>
+            <td>2026-11-03</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/app-setup</td>
+            <td>a551f0f</td>
+            <td>feat(hosting): validate production settings and check MySQL</td>
+            <td>Validación estricta de configuración en producción y health check de BD.</td>
+            <td>2026-11-03</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/app-setup</td>
+            <td>4a0ab19</td>
+            <td>feat(platform): wire modules and load demo data</td>
+            <td>Registro de módulos de dominio y carga idempotente de datos demo.</td>
+            <td>2026-11-04</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/domain-rules</td>
+            <td>ed2ba5e</td>
+            <td>test(domain): check fuel units and entity invariants</td>
+            <td>Suite xUnit de invariantes de entidades y conversión de unidades.</td>
+            <td>2026-11-04</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/registration</td>
+            <td>61c128c</td>
+            <td>test(iam): verify registration and company ownership</td>
+            <td>Pruebas xUnit de registro corporativo y validación de propiedad.</td>
+            <td>2026-11-05</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/order-workflow</td>
+            <td>ffc5804</td>
+            <td>test(orders): cover approval, dispatch and receipt</td>
+            <td>Pruebas xUnit del flujo completo aprobar → despachar → recibir.</td>
+            <td>2026-11-05</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/payment-checkout</td>
+            <td>4eef681</td>
+            <td>test(payment): verify checkout totals and receipt data</td>
+            <td>Pruebas xUnit de totales, IGV y comprobante académico del checkout.</td>
+            <td>2026-11-05</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/registration</td>
+            <td>ff11306</td>
+            <td>test(security): reject access across company boundaries</td>
+            <td>Pruebas xUnit de aislamiento y denegación de acceso entre empresas.</td>
+            <td>2026-11-05</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>build/docker</td>
+            <td>b32aa3e</td>
+            <td>build: publish the API in a .NET Docker image</td>
+            <td>Construcción de imagen Docker multietapa para ASP.NET Core 10.</td>
+            <td>2026-11-06</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/render</td>
+            <td>b526de2</td>
+            <td>chore(render): connect the API to private MySQL</td>
+            <td>Definición del Blueprint <code>render.yaml</code> para despliegue en Render.</td>
+            <td>2026-11-06</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/configuration</td>
+            <td>277b258</td>
+            <td>test(config): reject unsafe production settings</td>
+            <td>Pruebas xUnit para bloquear credenciales inseguras en entorno Production.</td>
+            <td>2026-11-06</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>docs/backend</td>
+            <td>d3d0a98</td>
+            <td>docs: explain backend setup and local run commands</td>
+            <td>Documentación de ejecución local, variables de entorno y migraciones.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>test/container</td>
+            <td>19b00e7</td>
+            <td>test(docker): check payment persistence after restart</td>
+            <td>Prueba de humo en contenedores validando persistencia tras reinicio.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>docs/backend</td>
+            <td>d7f6c08</td>
+            <td>docs(render): document deployment and verification steps</td>
+            <td>Guía de despliegue y verificación pública en Render.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>chore/db-tools</td>
+            <td>2908b99</td>
+            <td>chore(db-tools): register MCP tools and document their use</td>
+            <td>Registro del servidor MCP para inspección de esquema y datos.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/postgresql</td>
+            <td>5ddbe00</td>
+            <td>feat(persistence): migrate the API schema to PostgreSQL</td>
+            <td>Migración del esquema EF Core a PostgreSQL 18 para Render Free tier.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend</td>
+            <td>feat/postgresql</td>
+            <td>cbde399</td>
+            <td>ci(render): validate the PostgreSQL free stack</td>
+            <td>Validación CI del stack completo con PostgreSQL en Render Free.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/backend-integration</td>
+            <td>e9c9dab</td>
+            <td>fix(api): align frontend flows with the real backend</td>
+            <td>Alineamiento de adaptadores y flujos SPA del frontend con la API real.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>feat/backend-integration</td>
+            <td>aae3b91</td>
+            <td>ci(firebase): publish the real API build from main</td>
+            <td>Configuración de build productivo apuntando a la API desplegada en Render.</td>
+            <td>2026-11-12</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>fix/e2e-polish</td>
+            <td>5dd35ef</td>
+            <td>fix(e2e): guard buyer fleet calls, label vehicle select, and fix invoice local date</td>
+            <td>Correcciones de integración extremo a extremo y formato de fecha en facturas.</td>
+            <td>2026-11-13</td>
+        </tr>
+        <tr>
+            <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend</td>
+            <td>main</td>
+            <td>503ecd5</td>
+            <td>Merge branch 'develop' into main for Firebase deploy</td>
+            <td>Publicación en Firebase Hosting de la versión integrada con la API real.</td>
+            <td>2026-11-13</td>
+        </tr>
+    </tbody>
+</table>
 
-| Aspecto / Bounded Context | Commits | Cuenta autora | Descripción de los commits |
-|---|---|---|---|
-| Configuración y base compartida | `97f61a1`, `a4e85c0`, `556c036`, `bfd1454`, `57375e2`, `163efdd` | `BralexCD` | Solución .NET; contratos de dominio y unidades de combustible; despacho de eventos de dominio; errores localizados; contratos entre módulos; modelo de empresas y propietarios de cuenta. |
-| Catalog | `74c3ab8`, `83147d6`, `e1e5757`, `1769f62`, `00a79a3` | `enrique-mantilla` | Modelo de productos, favoritos y calificaciones; servicios, persistencia, recursos y endpoints. |
-| Inventory | `5deb465`, `35d98cb`, `ee76621`, `67d2839`, `ba94c15` | `enrique-mantilla` | Niveles de stock y movimientos; reservas; persistencia; recursos y endpoints de stock y movimientos. |
-| Ordering | `00ce34f`, `006601f`, `1ee49cf`, `f02b3a0`, `0be20bc` | `enrique-mantilla` | Solicitudes, órdenes y reglas de ciclo de vida; persistencia; acciones de aprobación, despacho y recepción. |
-| Equipment | `9f60900`, `8324685`, `e211525`, `d9b65d1`, `527a288` | `Franz2308` | Equipos e historial de recargas; niveles de combustible; persistencia y endpoints. |
-| Fulfillment | `19223f5`, `38a1242`, `d222f8c`, `786a988`, `349a01b` | `Franz2308` | Conductores, vehículos y entregas; asignación de flota; persistencia; disponibilidad y endpoints. |
-| Notification | `7523521`, `fb5a9bc`, `1789186`, `83edec9`, `de3b052` | `Franz2308` | Alertas y estado de lectura; envío ante cambios de estado; persistencia y endpoints. |
-| Payment | `b1e8f3c`, `7e19e95`, `8ca166b`, `d023117`, `5b21a43` | `joanfpp2-ai` | Pagos y comprobantes académicos; checkout simulado; persistencia; endpoints de checkout e historial. |
-| Reporting & Analytics | `8735ec5`, `82996c3`, `c6b4d31`, `30371f2`, `f7f4e52` | `joanfpp2-ai` | Resúmenes de gasto y ventas; consultas de órdenes; dashboards del comprador y del proveedor. |
-| IAM | `08d206c`, `fb390fc`, `b040146`, `dfd9e6d`, `13adaa6`, `01696ec` | `BralexCD` | Consultas y contratos; registro y perfil; BCrypt y JWT; persistencia; endpoints de sign-in, sign-up y perfil. |
-| Persistencia | `28dc91a`, `c6acfaf` | `enrique-mantilla` | Contexto de datos y unit of work; migraciones EF Core del esquema MySQL. |
-| Hosting | `a551f0f`, `4a0ab19` | `BralexCD` | Validación de la configuración de producción y comprobación de MySQL; registro de módulos y datos demo. |
-| Pruebas | `ed2ba5e` · `61c128c` · `ffc5804` · `4eef681` · `ff11306` · `277b258` | `Franz2308` · `BralexCD` · `enrique-mantilla` · `joanfpp2-ai` · `BralexCD` · `BralexCD` | Reglas de dominio; registro IAM; flujo de órdenes; checkout; seguridad entre empresas; configuración de producción. |
-| Contenedores y Render | `b32aa3e` · `b526de2` · `19b00e7` · `d7f6c08` | `Franz2308` · `enrique-mantilla` · `BralexCD` | Imagen Docker de la API; conexión inicial con MySQL privado; prueba de persistencia en contenedor y guía de despliegue en Render. |
-| PostgreSQL 18, MCP DB Tools y CI | `d3d0a98`, `93c4ab3`, `2908b99`, `5ddbe00`, `fb9c716`, `cbde399` | `BralexCD` | Documentación de ejecución local, servidor MCP para inspección de base de datos, migración de esquema EF Core a PostgreSQL 18 y validación CI del stack en Render Free. |
-
-**Observación de proceso:** la política de 5.1.2 exige integrar mediante Pull Request con revisión por pares. En el backend la integración se hizo con merges locales, por lo que no existe evidencia de revisión en GitHub. Se registra como acción de mejora para el Sprint 4 (ver 5.2.3.8).
+**Observación de proceso:** la política de 5.1.2 exige integrar mediante Pull Request con revisión por pares. En el backend la integración se hizo con merges locales (`--no-ff`), por lo que no existe evidencia de revisión mediante Pull Requests en GitHub. Se registra como acción de mejora para el Sprint 4 (ver 5.2.3.8).
 
 ---
 
