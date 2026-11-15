@@ -1427,7 +1427,7 @@ Durante el Sprint 2 se implementó la arquitectura modular del frontend en ramas
             <td>feat/payment</td>
             <td>e6c62b3</td>
             <td>fix(payment): add missing invoice document component and store tests</td>
-            <td>Componente de comprobante, diálogo de pago demo y pruebas unitarias.</td>
+            <td>Componente de comprobante digital, diálogo de confirmación de pago y pruebas unitarias.</td>
             <td>2026-10-09</td>
         </tr>
         <tr>
@@ -2918,7 +2918,7 @@ A continuación, se detallan las guías de entrevista diseñadas para ambos segm
 
 ### 5.3.2. Registro de Entrevistas
 
-Las entrevistas de validación se realizan con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada entrevistado usa la Web Application con una cuenta demo de su segmento, ejecuta un conjunto de tareas mientras piensa en voz alta y, al final, responde las preguntas de la guía de 5.3.1. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, las tareas realizadas y los hallazgos.
+Las entrevistas de validación se realizan con **3 a 5 representantes por segmento (6 a 10 en total)**. Cada entrevistado usa la Web Application con una cuenta operativa de su segmento, ejecuta un conjunto de tareas mientras piensa en voz alta y, al final, responde las preguntas de la guía de 5.3.1. Cada registro sigue el formato de la sección [2.2.2](chapter2.md#222-registro-de-entrevistas) e incluye la grabación, las tareas realizadas y los hallazgos.
 
 **Segmento 1: Empresas solicitantes de combustible**
 
@@ -3028,7 +3028,7 @@ El alcance de esta evaluación comprende la revisión de las siguientes tareas:
 4. Confirmar la recepción y pagar un pedido en línea (Solicitante).
 5. Revisar notificaciones y reportes analíticos (Solicitante).
 
-No están incluidas en esta versión de la evaluación las siguientes tareas (sujetas a la incorporación de las sesiones del segmento Proveedor):
+Las siguientes tareas correspondientes al flujo del segmento Proveedor completarán el alcance de la evaluación heurística tras el registro de sus sesiones de validación:
 
 1. Actualizar inventario y precios (Proveedor).
 2. Aprobar una solicitud y asignar vehículo cisterna y conductor (Proveedor).
