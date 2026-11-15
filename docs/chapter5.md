@@ -672,6 +672,9 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
+> **Grabación de Sustentación y Recorrido de la Landing Page (AV1):**
+> [Ver exposición AV1 en YouTube](https://youtu.be/slU0pE19KAY) — *(Duración: **21:27**)*.
+
 En el sprint 1 se diseñó el primer modelo de la landing page. Esta cuenta con diferentes secciones para acceso de los usuarios. Algunas evidencias son:
 - **Home:** Presenta de manera rápida el propósito y valor de FullTank para captar la atención del visitante.
 ![Home](../assets-chapter-5/HomeLandingPage.png)
@@ -1482,15 +1485,15 @@ Se validó el flujo de inicio de sesión para ambos perfiles (comprador y provee
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Pantalla de inicio de sesión de FullTank en vista de escritorio." width="850"/>
-  <p><em>Acceso principal a FullTank con selector rápido de credenciales de acceso, vista de escritorio.</em></p>
+  <p><em>Figura 5.2.2.5.1. Acceso principal a FullTank con selector rápido de credenciales de acceso, vista de escritorio.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/login-mobile.png" alt="Inicio de sesión de FullTank en vista móvil." width="300"/>
-  <p><em>Inicio de sesión en vista móvil.</em></p>
+  <p><em>Figura 5.2.2.5.2. Inicio de sesión en vista móvil.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/registro-mobile.png" alt="Formulario de registro corporativo de FullTank en vista móvil." width="300"/>
-  <p><em>Formulario de registro corporativo, vista móvil.</em></p>
+  <p><em>Figura 5.2.2.5.3. Formulario de registro corporativo, vista móvil.</em></p>
 </div>
 
 ##### 2. Segmento comprador / solicitante
@@ -1499,32 +1502,32 @@ Se recorrieron los módulos de dashboard principal, catálogo de proveedores, ad
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-desktop.png" alt="Dashboard del comprador con indicadores clave y órdenes activas." width="850"/>
-  <p><em>Dashboard del comprador con indicadores clave y resumen de órdenes activas.</em></p>
+  <p><em>Figura 5.2.2.5.4. Dashboard del comprador con indicadores clave y resumen de órdenes activas.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo de proveedores y productos de combustible." width="850"/>
-  <p><em>Catálogo de proveedores y combustibles disponibles.</em></p>
+  <p><em>Figura 5.2.2.5.5. Catálogo de proveedores y combustibles disponibles.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/equipos-desktop.png" alt="Gestión de equipos del comprador con capacidad y nivel de combustible." width="850"/>
-  <p><em>Gestión de equipos del comprador con capacidad de tanque y nivel de combustible.</em></p>
+  <p><em>Figura 5.2.2.5.6. Gestión de equipos del comprador con capacidad de tanque y nivel de combustible.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario de solicitud de combustible desde el detalle del proveedor." width="850"/>
-  <p><em>Formulario de nueva solicitud con selección de combustible, equipo, volumen, dirección y fecha de entrega.</em></p>
+  <p><em>Figura 5.2.2.5.7. Formulario de nueva solicitud con selección de combustible, equipo, volumen, dirección y fecha de entrega.</em></p>
 </div>
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Listado de solicitudes y seguimiento de estados." width="850"/>
-  <p><em>Listado de solicitudes de abastecimiento y seguimiento de estados.</em></p>
+  <p><em>Figura 5.2.2.5.8. Listado de solicitudes de abastecimiento y seguimiento de estados.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-mobile.png" alt="Dashboard del comprador en móvil con barra lateral contraída." width="300"/>
-  <p><em>Dashboard del comprador en vista móvil con navegación lateral contraída.</em></p>
+  <p><em>Figura 5.2.2.5.9. Dashboard del comprador en vista móvil con navegación lateral contraída.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/equipos-mobile.png" alt="Consulta de equipos en vista móvil." width="300"/>
-  <p><em>Consulta de equipos en vista móvil.</em></p>
+  <p><em>Figura 5.2.2.5.10. Consulta de equipos en vista móvil.</em></p>
 </div>
 
 ##### 3. Segmento proveedor / distribuidor
@@ -1533,27 +1536,27 @@ Desde el perfil de empresa distribuidora se validaron el tablero operativo, la b
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-desktop.png" alt="Dashboard del proveedor con métricas operativas y pedidos." width="850"/>
-  <p><em>Dashboard del proveedor con métricas de operación y solicitudes vigentes.</em></p>
+  <p><em>Figura 5.2.2.5.11. Dashboard del proveedor con métricas de operación y solicitudes vigentes.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/pendientes-proveedor-desktop.png" alt="Bandeja de solicitudes pendientes de atención para el proveedor." width="850"/>
-  <p><em>Bandeja de solicitudes pendientes de evaluación para el proveedor.</em></p>
+  <p><em>Figura 5.2.2.5.12. Bandeja de solicitudes pendientes de evaluación para el proveedor.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/inventario-desktop.png" alt="Inventario del proveedor con stock físico, reservado y disponible." width="850"/>
-  <p><em>Gestión de inventario del proveedor con detalle de stock físico, reservado y disponible.</em></p>
+  <p><em>Figura 5.2.2.5.13. Gestión de inventario del proveedor con detalle de stock físico, reservado y disponible.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/flota-desktop.png" alt="Flota de vehículos cisterna registrada y disponibilidad." width="850"/>
-  <p><em>Administración de flota de cisternas y estado de disponibilidad.</em></p>
+  <p><em>Figura 5.2.2.5.14. Administración de flota de cisternas y estado de disponibilidad.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/conductores-desktop.png" alt="Registro de conductores y estado operativo." width="850"/>
-  <p><em>Registro de conductores asignables a despacho.</em></p>
+  <p><em>Figura 5.2.2.5.15. Registro de conductores asignables a despacho.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-mobile.png" alt="Dashboard del proveedor en vista móvil." width="300"/>
-  <p><em>Dashboard del proveedor en vista móvil.</em></p>
+  <p><em>Figura 5.2.2.5.16. Dashboard del proveedor en vista móvil.</em></p>
 </div>
 
 ##### 4. Pagos y facturación
@@ -1562,11 +1565,11 @@ La vista del módulo **Payment** agrupa las órdenes pendientes de cancelación 
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Listado de órdenes pendientes de pago en el módulo Payment." width="850"/>
-  <p><em>Órdenes pendientes de cancelación en el módulo de pagos.</em></p>
+  <p><em>Figura 5.2.2.5.17. Órdenes pendientes de cancelación en el módulo de pagos.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/pago-demo-desktop.png" alt="Diálogo de procesamiento de pago abierto desde el módulo Payment." width="850"/>
-  <p><em>Interfaz de procesamiento de pago en línea y emisión de comprobante.</em></p>
+  <p><em>Figura 5.2.2.5.18. Interfaz de procesamiento de pago en línea y emisión de comprobante.</em></p>
 </div>
 
 ##### 5. Reportes y notificaciones
@@ -1575,15 +1578,15 @@ Se validaron los tableros analíticos de consumo del comprador y ventas del prov
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Reporte analítico del comprador con gráficos de gasto por período y equipo." width="850"/>
-  <p><em>Módulo de analítica del comprador con distribución de gasto por período y equipo.</em></p>
+  <p><em>Figura 5.2.2.5.19. Módulo de analítica del comprador con distribución de gasto por período y equipo.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/reportes-proveedor-desktop.png" alt="Reporte analítico del proveedor con ingresos y clientes." width="850"/>
-  <p><em>Módulo de analítica del proveedor con ingresos, volumen y clientes principales.</em></p>
+  <p><em>Figura 5.2.2.5.20. Módulo de analítica del proveedor con ingresos, volumen y clientes principales.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/notificaciones-desktop.png" alt="Centro de notificaciones operativas del sistema." width="850"/>
-  <p><em>Centro de notificaciones con registro de eventos operativos.</em></p>
+  <p><em>Figura 5.2.2.5.21. Centro de notificaciones con registro de eventos operativos.</em></p>
 </div>
 
 ##### 6. Verificación de responsividad
@@ -1941,7 +1944,7 @@ El objetivo principal del Sprint 3 es construir, probar y desplegar en la nube l
 
 <div align="center">
   <img src="../assets/chapter-5/trello-sprint-3.png" alt="Tablero de Trello oficial de FullTank para el Sprint 3 con las 27 historias técnicas" width="850"/>
-  <p><em>Figura: Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
+  <p><em>Figura 5.2.3.3.1. Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
 </div>
 
 A continuación se detalla la desagregación de las historias técnicas en tareas del Sprint Backlog 3, con sus estimaciones de esfuerzo en horas, responsables asignados y estados de avance (`Done`, `In-Process` y `To-do`):
@@ -2517,7 +2520,7 @@ El historial integrado en la rama `main` del backend culmina en la versión de l
             <td>feat/app-setup</td>
             <td>4a0ab19</td>
             <td>feat(platform): wire modules and load demo data</td>
-            <td>Registro de módulos de dominio y carga idempotente de datos demo.</td>
+            <td>Registro de módulos de dominio y carga idempotente de datos iniciales.</td>
             <td>2026-11-04</td>
         </tr>
         <tr>
@@ -2724,7 +2727,7 @@ Las siguientes capturas corresponden a la prueba de extremo a extremo realizada 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-La API expone documentación interactiva OpenAPI 3.0 mediante Swagger UI (título *FullTank API*, versión `v1`), disponible y operativa públicamente en la nube en `https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html` (así como en el entorno local en `http://localhost:5204/swagger`). Los endpoints protegidos requieren el encabezado `Authorization: Bearer <token>` obtenido tras autenticarse mediante `/api/v1/authentication/sign-in`.
+La API expone documentación interactiva OpenAPI 3.0 mediante Swagger UI (título *FullTank API*, versión `v1`), disponible y operativa públicamente en la nube en `https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html` (así como en el entorno local en `http://localhost:5204/swagger`). El código fuente y la configuración de contratos OpenAPI residen en el repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (commits de configuración, documentación operativa y despliegue `97f61a1`, `bfd1454`, `d3d0a98`, `d7f6c08` y release `daee12a`). Los endpoints protegidos requieren el encabezado `Authorization: Bearer <token>` obtenido tras autenticarse mediante `POST /api/v1/authentication/sign-in`.
 
 A continuación, se presentan las evidencias visuales de la interfaz Swagger UI en producción, organizada según los Bounded Contexts de la arquitectura del sistema:
 
@@ -2781,7 +2784,40 @@ Las rutas siguientes corresponden a los endpoints RESTful implementados y operat
 | Reporting | GET | `/analytics/buyer-dashboard/{buyerCompanyId}`, `/analytics/buyer/{buyerCompanyId}/{recurso}` | BUYER, PROVIDER | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetro `year`. |
 | Reporting | GET | `/analytics/provider-dashboard/{providerId}`, `/analytics/provider/{providerId}/{recurso}` | BUYER, PROVIDER | `sales-summary`, `revenue-over-time`, `revenue-by-fuel-type`, `orders-by-status`, `customers-by-sector`, `top-customers`; parámetro `year`. |
 
-**Operaciones restringidas para proteger el ciclo de vida:** `POST /orders` y `PUT /orders/{id}` responden `400 Bad Request`, porque las órdenes solo se crean al aprobar una solicitud y cambian de estado mediante las acciones anteriores. La creación directa de pagos y comprobantes (`POST /payments`, `POST /invoices`) queda reservada al rol `ADMIN`; el comprador paga únicamente mediante `/payment-checkout`. Los controladores y servicios comprueban que la empresa del usuario autenticado sea la propietaria del recurso consultado o modificado.
+**Ejemplo de respuesta (`200 OK`) para `POST /api/v1/payment-checkout`:** la API serializa en `camelCase` el pago registrado junto con el comprobante emitido de forma atómica:
+
+```json
+{
+  "payment": {
+    "id": 12,
+    "orderId": 8,
+    "companyId": 1,
+    "providerId": 2,
+    "method": "CARD",
+    "amount": 11800.00,
+    "status": "COMPLETED",
+    "maskedCard": "**** 4242",
+    "cardHolder": "Logistica Industrial SAC",
+    "reference": "PAY-20261112-008"
+  },
+  "invoice": {
+    "id": 12,
+    "paymentId": 12,
+    "orderId": 8,
+    "invoiceNumber": "SIM-INV-8",
+    "fuelType": "DIESEL_B5",
+    "quantity": 1000,
+    "unit": "L",
+    "unitPrice": 10.00,
+    "subtotal": 10000.00,
+    "igv": 1800.00,
+    "total": 11800.00,
+    "status": "ISSUED"
+  }
+}
+```
+
+**Operaciones restringidas para proteger el ciclo de vida:** `POST /orders` y `PUT /orders/{id}` responden `400 Bad Request`, porque las órdenes solo se crean al aprobar una solicitud y cambian de estado mediante las acciones anteriores. La creación directa de pagos y comprobantes (`POST /payments`, `POST /invoices`) queda reservada al rol `ADMIN`; el comprador paga únicamente mediante `/payment-checkout`. Los controladores y servicios comprueban que la empresa del usuario autenticado sea la propietaria del recurso consultado o modificado (retornando `403 Forbidden` ante accesos cruzados entre empresas).
 
 ---
 
@@ -3166,14 +3202,3 @@ El video se encuentra incrustado activamente en la sección `#como-funciona` del
   <img src="../assets/chapter-5/video-about-the-product-landing.png" alt="Video About-the-Product reproducido en la sección «How it works» de la Landing Page." width="850"/>
   <p><em>Figura 5.4.1. Video About-the-Product reproducido en la sección «How it works» de la Landing Page.</em></p>
 </div>
-
-## 5.5. Video About-the-Team
-
-El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints, para su publicación e incrustación en la Landing Page:
-
-| Campo | Detalle |
-|---|---|
-| **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
-| **Duración** | En preparación |
-| **Enlace de publicación** | En edición para publicación en YouTube y Microsoft Stream |
-| **Ubicación en la Landing Page** | Sección sobre el equipo en la Landing Page (por incrustar tras su publicación) |

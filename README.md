@@ -194,8 +194,9 @@ La trazabilidad del modelo GitFlow mediante ramas de características independie
     - [5.3.2 Registro de Entrevistas](docs/chapter5.md#532-registro-de-entrevistas)
     - [5.3.3 Evaluaciones según heurísticas](docs/chapter5.md#533-evaluaciones-según-heurísticas)
   - [5.4 Video About-the-Product](docs/chapter5.md#54-video-about-the-product)
-  - [5.5 Video About-the-Team](docs/chapter5.md#55-video-about-the-team)
 - [Conclusiones](#conclusiones)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  - [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
@@ -219,13 +220,31 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 
 ## Conclusiones
 
+### Conclusiones y recomendaciones
+
 1. **Validación del Modelo de Negocio y Lean UX:** La investigación cualitativa con empresas solicitantes y proveedoras de combustible confirmó que la fragmentación en la gestión de pedidos (llamadas telefónicas, WhatsApp y hojas de cálculo desconectadas) es la principal causa de desorganización y retrasos en las entregas. La plataforma FullTank demuestra ser una solución viable y pertinente para centralizar las operaciones, brindando trazabilidad en tiempo real a ambos segmentos.
 2. **Efectividad de la Arquitectura DDD y Modularidad Frontend:** La descomposición del sistema en 9 Bounded Contexts independientes (IAM, Catalog, Equipment, Inventory, Ordering, Payment, Fulfillment, Notification y Reporting) permitió una distribución eficiente del trabajo durante el Sprint 2. Cada módulo en Vue 3 encapsula su dominio, lógica de aplicación e infraestructura. La aplicación publicada permite operar a ambos segmentos; la totalidad de los 10 Pull Requests se encuentran integrados satisfactoriamente en el repositorio oficial.
 3. **Calidad de Software y Buenas Prácticas de Ingeniería:** La aplicación web integrada superó exitosamente 90/90 pruebas automatizadas con Vitest en catorce archivos de especificación (100% de aprobación). Se configuró un pipeline de CI/CD automatizado en GitHub Actions que ejecuta las pruebas, genera la compilación de producción optimizada y despliega continuamente en Firebase Hosting ante cada push a las ramas `develop` y `main`, publicado oficialmente bajo el tag de release `v1.0.0`.
 4. **Web Services y Persistencia en Producción (AV2):** Los nueve Bounded Contexts cuentan con Web Services RESTful en ASP.NET Core (.NET 10) y persistencia relacional con Entity Framework Core sobre PostgreSQL 18 gestionado en la nube de Render, documentados interactivamente con OpenAPI 3.0 / Swagger UI y respaldados por una cobertura exhaustiva de pruebas automatizadas xUnit (89 pruebas en backend) y Vitest en frontend (90 pruebas). La API aplica en el servidor las reglas críticas del negocio: validación de stock y precios desde inventario, transiciones de ciclo de vida de órdenes, cálculo del IGV (18%), emisión de comprobantes académicos y control de acceso seguro multi-inquilino por empresa compradora/proveedora mediante JWT y BCrypt. La solución se encuentra desplegada y operativa en producción en Render (`https://fulltank-av2-api-hqhk.onrender.com`), con health check verificado (`HTTP 200 Healthy`), e integrada extremo a extremo con la Web Application publicada en Firebase Hosting (`https://full-tank-964e2.web.app/`).
 5. **Recomendaciones y Roadmap hacia el Trabajo Final (TB2):**
-   - **Continuidad de validación:** Completar las sesiones de validación con empresas proveedoras junto con su evaluación heurística ([5.3.3](docs/chapter5.md#533-evaluaciones-según-heurísticas)), así como la publicación e incrustación del video *About-the-Team* ([5.5](docs/chapter5.md#55-video-about-the-team)) y la exposición del hito AV2 (estando ya publicado e incrustado en la Landing Page el video *About-the-Product* en [5.4](docs/chapter5.md#54-video-about-the-product)).
+   - **Continuidad de validación:** Completar las sesiones de validación con empresas proveedoras junto con su evaluación heurística ([5.3.3](docs/chapter5.md#533-evaluaciones-según-heurísticas)), así como la publicación e incrustación del video *About-the-Team* ([Video About-the-Team](#video-about-the-team)) y la exposición del hito AV2 (estando ya publicado e incrustado en la Landing Page el video *About-the-Product* en [5.4](docs/chapter5.md#54-video-about-the-product)).
    - **Fase TB2 (Sprint 4):** Completar la recuperación de contraseña, el cierre de sesión, la exportación de reportes en PDF y las operaciones de eliminación restantes; transicionar el flujo de integración de ramas hacia Pull Requests formales con revisión cruzada obligatoria en GitHub, e incorporar en el diseño iterativo las retroalimentaciones obtenidas durante las entrevistas de validación.
+
+### Video About-the-Team
+
+El video *About-the-Team* presenta a los integrantes de FuelPoint, su rol en el proyecto, los logros alcanzados y el proceso colaborativo seguido durante los sprints mediante escenas de trabajo real y testimonios individuales, para su publicación en Microsoft Stream y YouTube e incrustación en la Landing Page:
+
+| Campo | Detalle |
+|---|---|
+| **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
+| **Duración** | En preparación |
+| **Enlace de publicación** | En edición para publicación en YouTube y Microsoft Stream |
+| **Ubicación en la Landing Page** | Sección sobre el equipo en la Landing Page (por incrustar tras su publicación) |
+
+| Secuencia | Tiempo de inicio (`hh:mm:ss`) | Contenido |
+|---|:---:|---|
+| Introducción y retrospectiva colaborativa del equipo | En preparación | Resumen del proceso de desarrollo e integración continua |
+| Testimonios individuales de integrantes | En preparación | Descripción de actividades, logros y competencias alcanzadas |
 
 ---
 
@@ -260,7 +279,7 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 | **TB1** | Exposición de Trabajo Parcial — Sustentación ABET SO5 y Frontend Web Application | Microsoft Stream | [Ver exposición TB1 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBOLr6orh8kSYVocJuNA4awAZE_KVDNpkV2wqSCSsXiDLU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7koIIx) | 21:39 |
 | **AV2** | Exposición de Avance 2 — Web Services, integración y validación | YouTube / Microsoft Stream | En preparación para publicación | — |
 | **AV2** | About-the-Product (1–3 minutos) | YouTube / Microsoft Stream | [Ver en YouTube](https://www.youtube.com/watch?v=Pu_9CAwoQ9k) · [Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCPKLBLwm1dRqTXFocr_NDLAc-UL3_xtE5YgzoztbDQ6V4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dADcmL) ([5.4](docs/chapter5.md#54-video-about-the-product)) | 02:13 |
-| **AV2** | About-the-Team | YouTube / Microsoft Stream | En preparación para publicación ([5.5](docs/chapter5.md#55-video-about-the-team)) | — |
+| **AV2** | About-the-Team | YouTube / Microsoft Stream | En preparación para publicación ([Conclusiones](#video-about-the-team)) | — |
 
 ### Anexo B - Repositorios Oficiales y Artefactos Digitales
 
