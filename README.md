@@ -261,9 +261,8 @@ El siguiente cuadro recoge las acciones declaradas por los integrantes y sus con
 |---|---|---|---|:---:|
 | **AV1** | Exposición de Avance 1 — Presentación de Proyecto y Landing Page | YouTube | [Ver Video en YouTube](https://youtu.be/slU0pE19KAY) | 21:27 |
 | **TB1** | Exposición de Trabajo Parcial — Sustentación ABET SO5 y Frontend Web Application | Microsoft Stream | [Ver exposición TB1 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBOLr6orh8kSYVocJuNA4awAZE_KVDNpkV2wqSCSsXiDLU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7koIIx) | 21:39 |
-
 | **AV2** | Exposición de Avance 2 — Web Services, integración y validación | Pendiente | *Pendiente de publicación* | — |
-| **AV2** | About-the-Product (1–3 minutos) | Pendiente | *Pendiente de publicación* ([5.4](docs/chapter5.md#54-video-about-the-product)) | — |
+| **AV2** | About-the-Product (1–3 minutos) | Microsoft Stream | [Ver Video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCPKLBLwm1dRqTXFocr_NDLAc-UL3_xtE5YgzoztbDQ6V4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dADcmL) ([5.4](docs/chapter5.md#54-video-about-the-product)) | 02:13 |
 | **AV2** | About-the-Team | Pendiente | *Pendiente de publicación* ([5.5](docs/chapter5.md#55-video-about-the-team)) | — |
 
 > *Nota: El video de exposición de AV1 cuenta con acceso público en YouTube, mientras que el enlace de TB1 en Microsoft Stream se encuentra restringido a la organización institucional UPC.*
