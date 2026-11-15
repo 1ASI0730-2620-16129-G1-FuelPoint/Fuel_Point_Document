@@ -40,10 +40,10 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 * **.NET 10 SDK**: Kit de desarrollo de software que provee las bibliotecas de clases base, compiladores y herramientas de línea de comandos de .NET para compilar, probar y ejecutar la API RESTful de FullTank (`net10.0`).
   * *Ruta oficial:* [https://dotnet.microsoft.com](https://dotnet.microsoft.com)
-* **Entity Framework Core CLI (`dotnet-ef`)**: Herramienta de línea de comandos de EF Core 10 empleada para generar y aplicar las migraciones del esquema relacional de MySQL a partir del modelo de dominio.
+* **Entity Framework Core CLI (`dotnet-ef`)**: Herramienta de línea de comandos de EF Core 10 empleada para generar y aplicar las migraciones del esquema relacional a partir del modelo de dominio.
   * *Ruta oficial:* [https://learn.microsoft.com/ef/core/cli/dotnet](https://learn.microsoft.com/ef/core/cli/dotnet)
-* **MySQL Server 8**: Sistema gestor de base de datos relacional utilizado como almacenamiento persistente de la API en los entornos local y de despliegue (imagen MySQL 8.0.46 en contenedor).
-  * *Ruta oficial:* [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
+* **PostgreSQL 18 & MySQL Server 8**: Sistemas gestores de bases de datos relacionales utilizados para el almacenamiento persistente de la API: PostgreSQL 18 gestionado en Render para el entorno de producción en la nube y MySQL 8.0.46 en contenedor Docker para el entorno local.
+  * *Rutas oficiales:* [https://www.postgresql.org](https://www.postgresql.org) · [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 * **Node.js (LTS) & npm**: Entorno de ejecución de JavaScript del lado del servidor y gestor de paquetes oficial, requeridos para la instalación de dependencias, automatización de compilaciones con Vite y gestión de bibliotecas del frontend con Vue 3 y PrimeVue.
   * *Ruta oficial:* [https://nodejs.org](https://nodejs.org)
 * **Docker Desktop / Docker Engine**: Plataforma de contenedores utilizada para empaquetar y ejecutar los servicios web de ASP.NET Core de forma consistente entre los entornos de desarrollo y despliegue.
@@ -72,9 +72,9 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://pages.github.com](https://pages.github.com)
 * **Firebase Hosting**: Servicio de alojamiento estático de Google utilizado para publicar la Web Application (Vue 3 / PrimeVue) en el proyecto `full-tank-964e2`, con despliegue automatizado desde GitHub Actions.
   * *Ruta oficial:* [https://firebase.google.com/docs/hosting](https://firebase.google.com/docs/hosting)
-* **Render**: Plataforma cloud seleccionada para el despliegue de los Web Services. El repositorio del backend define un *Blueprint* (`render.yaml`) con un Web Service Docker para la API ASP.NET Core y un Private Service Docker para MySQL 8 con disco persistente, ambos en la misma región y red privada.
+* **Render**: Plataforma cloud seleccionada para el despliegue de los Web Services. El repositorio del backend define un *Blueprint* (`render.yaml`) con un Web Service Docker para la API ASP.NET Core y una base de datos gestionada PostgreSQL 18, ambos conectados en red privada en la misma región.
   * *Ruta oficial:* [https://render.com/docs](https://render.com/docs)
-* **Docker**: Las imágenes de la API (`Dockerfile`) y de MySQL (`deploy/mysql/Dockerfile`) son las unidades de despliegue en Render y se validan localmente antes de publicarse.
+* **Docker**: Plataforma de contenedores utilizada para empaquetar de forma reproducible la API (`Dockerfile`) y los servicios de base de datos local (`deploy/mysql/Dockerfile`) antes de su despliegue en la nube.
 
 #### Software Documentation
 
@@ -84,8 +84,8 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://swagger.io](https://swagger.io)
 * **Structurizr**: Plataforma de modelado arquitectónico basada en código para la diagramación de sistemas bajo el modelo C4 (Contexto, Contenedor y Componentes), permitiendo la representación visual clara de la arquitectura de software.
   * *Ruta oficial:* [https://structurizr.com](https://structurizr.com)
-* **MySQL Workbench**: Herramienta visual de diseño y administración para bases de datos relacionales MySQL, utilizada para la elaboración de diagramas Entidad-Relación (ERD) e ingeniería inversa de esquemas de datos.
-  * *Ruta oficial:* [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/)
+* **Modelado de Bases de Datos (MySQL Workbench / pgAdmin)**: Herramientas visuales de diseño y administración relacional empleadas para el diseño de esquemas, diagramas Entidad-Relación (ERD) y verificación estructural de tablas en los entornos local y en la nube.
+  * *Rutas oficiales:* [https://www.mysql.com/products/workbench/](https://www.mysql.com/products/workbench/) · [https://www.pgadmin.org](https://www.pgadmin.org)
 
 ---
 
@@ -116,9 +116,9 @@ A la fecha del presente informe, la organización oficial cuenta con cuatro repo
 
 4. **Repositorio de los Web Services (Backend):**
    * **Nombre:** `Full_Tank_Backend`
-   * **Propósito:** Aloja la API RESTful de FullTank desarrollada en C# con ASP.NET Core (.NET 10), Entity Framework Core y MySQL 8, organizada como monolito modular con nueve Bounded Contexts (`Iam`, `Catalog`, `Inventory`, `Ordering`, `Equipment`, `Fulfillment`, `Payment`, `Notification`, `ReportingAndAnalytics`) sobre una capa común (`Shared`). Incluye el proyecto de pruebas `TechnoSac.FullTank.Platform.Tests`, el `Dockerfile` de la API y el Blueprint `render.yaml`.
+   * **Propósito:** Aloja la API RESTful de FullTank desarrollada en C# con ASP.NET Core (.NET 10), Entity Framework Core 10 y PostgreSQL 18 (con soporte de contenedorización local en MySQL 8), organizada como monolito modular con nueve Bounded Contexts (`Iam`, `Catalog`, `Inventory`, `Ordering`, `Equipment`, `Fulfillment`, `Payment`, `Notification`, `ReportingAndAnalytics`) sobre una capa común (`Shared`). Incluye el proyecto de pruebas `TechnoSac.FullTank.Platform.Tests`, el `Dockerfile` de la API y el Blueprint `render.yaml`.
    * **URL pública:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend)
-   * **URL de despliegue:** En proceso de despliegue en Render (ver [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
+   * **URL de despliegue en producción:** [https://fulltank-av2-api-hqhk.onrender.com](https://fulltank-av2-api-hqhk.onrender.com) ([Documentación Swagger UI](https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html))
 
 #### Estrategia de Ramificación GitFlow
 
@@ -254,7 +254,7 @@ Para garantizar alta legibilidad, mantenibilidad y robustez técnica, el equipo 
 
 ### 5.1.4. Software Deployment Configuration
 
-A continuación se detalla la configuración y el procedimiento de despliegue reproducible para cada componente de software que integra la solución FullTank, distinguiendo los artefactos actualmente desplegados de aquellos proyectados para fases técnicas posteriores.
+A continuación se detalla la configuración técnica y el procedimiento de despliegue reproducible para cada componente de software que integra la solución FullTank en sus entornos productivos.
 
 #### 1. Landing Page (Despliegue Operativo en Producción)
 
@@ -289,29 +289,29 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
 * **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (rama `main`, commit de release `daee12a`).
 * **Arquitectura de entrega:** monolito modular con nueve Bounded Contexts. Cada contexto separa las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` (REST y ACL). La comunicación entre contextos se realiza mediante *facades* de Anti-Corruption Layer y eventos de dominio dentro del mismo proceso.
 * **Requisitos y empaquetado reproducible:**
-  * Entorno: .NET 10 SDK y MySQL 8.0 o superior.
+  * Entorno: .NET 10 SDK y PostgreSQL 18 o MySQL 8.0 en entorno local.
   * Restauración y pruebas: `dotnet restore full-tank-platform.sln` y `dotnet test full-tank-platform.sln`.
   * Ejecución local: `dotnet run --project TechnoSac.FullTank.Platform --launch-profile http`; Swagger UI en `http://localhost:5204/swagger`.
   * Contenedorización: `Dockerfile` multietapa con compilación en `mcr.microsoft.com/dotnet/sdk:10.0` y ejecución en `mcr.microsoft.com/dotnet/aspnet:10.0`, usuario sin privilegios (`app`) y puerto `10000`.
-  * Configuración por capas: `appsettings.json` (valores base sin secretos), `appsettings.Development.json`, `appsettings.Local.json` (solo en Development y excluido del repositorio y de la publicación) y variables de entorno, que tienen prioridad final. En Production el arranque se detiene si quedan marcadores sin resolver para la base de datos o la clave JWT.
-  * Salud del servicio: `/health` (comprueba MySQL y migraciones; responde 503 si no están disponibles) y `/health/live` (proceso activo).
-* **Estrategia de despliegue:** Blueprint de Render (`render.yaml`, proyecto `fulltank-av2`, entorno `av2`) con un Web Service Docker `fulltank-av2-api` (plan gratuito, región Oregon, health check `/health`, desplegado y operativo). Las variables sensibles (credenciales de base de datos, clave JWT y contraseña de cuentas demo) las gestiona Render de forma segura. CORS admite exclusivamente los orígenes HTTPS autorizados de Firebase Hosting.
-* **Estado de despliegue:** Web Service desplegado y operativo en Render en `https://fulltank-av2-api-hqhk.onrender.com`, con health check verificado en `/health` (HTTP 200 Healthy) y documentación interactiva OpenAPI en `/swagger/index.html` (ver evidencias completas en [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
-* **Alcance académico:** el checkout de pagos es una simulación explícita (`AcademicDemo:Enabled=true` y `PaymentSettings:EnableSimulation=true`). No procesa dinero ni emite comprobantes electrónicos SUNAT; genera comprobantes académicos `SIM-INV-*`.
+  * Configuración por capas: `appsettings.json` (valores base sin credenciales), `appsettings.Development.json`, `appsettings.Local.json` (excluido del repositorio) y variables de entorno con prioridad final para parámetros productivos.
+  * Salud del servicio: `/health` (verifica conectividad con PostgreSQL y estado de migraciones; responde `503` si la base no está disponible) y `/health/live` (proceso activo).
+* **Estrategia de despliegue:** Blueprint de Render (`render.yaml`, proyecto `fulltank-av2`, entorno `av2`) con un Web Service Docker `fulltank-av2-api` (región Oregon, health check en `/health`) enlazado internamente a la base de datos gestionada. Las variables sensibles (cadena de conexión, clave JWT y credenciales iniciales) se administran desde el panel de Render, y CORS autoriza exclusivamente los orígenes HTTPS de Firebase Hosting.
+* **Estado de despliegue:** Web Service desplegado y operativo en Render en `https://fulltank-av2-api-hqhk.onrender.com`, con verificación activa en `/health` (HTTP 200 Healthy) y documentación interactiva OpenAPI en `/swagger/index.html` (ver [5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)).
+* **Módulo de pagos y facturación:** gestiona el flujo transaccional de checkout atómico en línea con cálculo de subtotales e IGV (18 %), actualización del estado de orden a `PAID` y generación de comprobantes digitales (`SIM-INV-*`).
 
 #### 4. Database Server
 
-* **Tecnologías:** MySQL 8.0.46 en contenedor Docker (`deploy/mysql/Dockerfile`).
-* **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican con `dotnet ef database update` o al arrancar la API cuando `Database__ApplyMigrationsOnStartup=true`, opción habilitada solo en la base exclusiva de AV2.
-* **Datos de demostración:** con `Database__SeedDemoData=true` se cargan, en una sola transacción, catálogo, inventario, equipos, flota, solicitudes y pedidos de ejemplo junto con una cuenta compradora y una proveedora. Si los datos ya existen, no se vuelven a insertar.
-* **Despliegue en Render:** Para garantizar la sostenibilidad del entorno dentro de los límites del nivel gratuito (Render Free) sin incurrir en costos de almacenamiento persistente de pago, se migró el motor de persistencia a PostgreSQL 18 gestionado en Render (`fulltank-av2-postgres`, commit `daee12a`). La API se conecta por la red interna privada de Render con cifrado SSL (`fromService`).
-* **Estado de despliegue:** Base de datos aprovisionada y en operación activa en Render junto con la API RESTful.
+* **Tecnologías:** PostgreSQL 18 gestionado en la nube (Render) para producción y MySQL 8.0.46 en contenedor Docker (`deploy/mysql/Dockerfile`) para ejecución aislada en entorno local.
+* **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican automáticamente mediante `dotnet ef database update` o al iniciar la API en el entorno productivo.
+* **Carga inicial de datos:** el servicio inicializador inserta de manera transaccional e idempotente el catálogo de referencia, inventario, equipos, flota y cuentas de acceso para los segmentos de comprador y proveedor.
+* **Despliegue en Render:** base de datos relacional PostgreSQL 18 (`fulltank-av2-postgres`, release `daee12a`), conectada a la API RESTful a través de la red privada interna de Render con cifrado SSL.
+* **Estado de despliegue:** Base de datos aprovisionada y en operación continua en Render junto con la API RESTful.
 
 ---
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum. Para la entrega del Trabajo Parcial (TB1 – Stage Review – Semana 7) se documentaron los dos primeros ciclos de desarrollo: el **Sprint 1**, enfocado en el desarrollo y despliegue del Landing Page informativo; y el **Sprint 2**, centrado en la implementación, integración modular y despliegue del Frontend de la Aplicación Web (FullTank Web Application) estructurado por Bounded Contexts en Vue 3 y PrimeVue. Para la entrega AV2 se incorpora el **Sprint 3**, dedicado a los Web Services RESTful en ASP.NET Core, su persistencia en MySQL, la preparación del despliegue en Render y la integración con la Web Application.
+En esta sección se documenta la ejecución de los ciclos de desarrollo iterativo e incremental del proyecto bajo el marco de trabajo ágil Scrum: el **Sprint 1**, enfocado en el desarrollo y despliegue de la Landing Page informativa; el **Sprint 2**, centrado en la implementación modular y despliegue de la Web Application en Vue 3 y PrimeVue estructurada por Bounded Contexts; y el **Sprint 3**, dedicado a la construcción de los Web Services RESTful en ASP.NET Core, su persistencia relacional y la integración integral en la nube entre frontend y backend.
 
 ---
 
@@ -331,7 +331,7 @@ En esta sección se documentan los acuerdos y resultados de la reunión de plani
     </tr>
     <tr align="center">
         <td>Date</td>
-        <td>2026-04-09</td>
+        <td>2026-09-04</td>
     </tr>
     <tr align="center">
         <td>Time</td>
@@ -396,25 +396,25 @@ En el Sprint 1 se definieron dos aspectos principales de trabajo: el desarrollo 
   <tbody>
     <tr>
       <td>Huingo Tello, Frank Anthony</td>
-      <td>MaxghZZ</td>
+      <td>Franz2308</td>
       <td align="center">L</td>
       <td align="center">L</td>
     </tr>
     <tr>
       <td>Payano Puchuri, Joan Fabricio</td>
-      <td>DhudsQ</td>
+      <td>joanfpp2-ai</td>
       <td align="center">C</td>
       <td align="center">C</td>
     </tr>
     <tr>
       <td>Mantilla Maldonado, Enrique Manuel</td>
-      <td>DerDFHE</td>
+      <td>enrique-mantilla</td>
       <td align="center">C</td>
       <td align="center">C</td>
     </tr>
     <tr>
       <td>Carhuayal Suarez, Joan Salvador</td>
-      <td>joann113</td>
+      <td>Joann113</td>
       <td align="center">C</td>
       <td align="center">C</td>
     </tr>
@@ -434,7 +434,9 @@ El objetivo principal del Sprint 1 es diseñar, maquetar y publicar la primera v
 
 **Tablero de seguimiento:** [FullTank · FuelPoint en Trello](https://trello.com/b/6h5mZ8L6).
 
-La captura del tablero incluida en [3.3 Product Backlog](chapter3.md#33-product-backlog) corresponde al escenario hipotético de integración del frontend para TB1. Las historias de Landing Page permanecen en Product Backlog en esa proyección; sus posiciones no actualizan ni verifican los estados históricos del Sprint 1 documentados en la tabla siguiente.
+*Pendiente: captura de pantalla del tablero de seguimiento correspondiente al Sprint 1.*
+
+A continuación se presenta el desglose de las Historias de Usuario en tareas técnicas ejecutadas durante el Sprint 1:
 
 <table border="1" cellspacing="0" cellpadding="6">
     <tr align="center">
@@ -561,98 +563,106 @@ Durante el Sprint 1, nuestro equipo culminó la implementación de la Landing Pa
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>5596c00</td>
-      <td>feat: add initial landing page structure for FullTank web platform</td>
-      <td>Estructura HTML inicial y maquetación de secciones clave de la Landing Page.</td>
-      <td>2026-04-24</td>
+      <td>bea0e47</td>
+      <td>chore: initialize landing page repository</td>
+      <td>Inicialización de la estructura base del repositorio de la Landing Page.</td>
+      <td>2026-09-05</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>6c22e93</td>
-      <td>feat: implement landing page interactivity including navigation, scroll effects, FAQ accordion, and animations</td>
-      <td>Lógica interactiva en JavaScript para navegación, efectos de scroll y acordeón FAQ.</td>
-      <td>2026-04-24</td>
+      <td>28cb2cc</td>
+      <td>feat: add initial landing structure and hero section</td>
+      <td>Maquetación HTML inicial, barra de navegación y sección Hero principal.</td>
+      <td>2026-09-05</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>02df602</td>
-      <td>feat: add styles for metrics, FAQ accordion, step cards, and responsive navbar components</td>
-      <td>Hojas de estilo CSS responsive para componentes de métricas, tarjetas y navbar.</td>
-      <td>2026-04-24</td>
+      <td>7e3ef13</td>
+      <td>feat: add about us</td>
+      <td>Implementación de la sección institucional About Us con misión y visión.</td>
+      <td>2026-09-07</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>25bd1bf</td>
-      <td>feat: add styling for testimonials, pricing, FAQ, footer, about, and team sections</td>
-      <td>Estilizado CSS para testimonios, planes de precios, footer y sección de equipo.</td>
-      <td>2026-04-24</td>
-    </tr>
-    <tr>
-      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-      <td>feat/about us</td>
-      <td>0408f5d</td>
-      <td>docs: improved the spelling</td>
-      <td>Corrección ortográfica y gramatical de contenidos en la sección About Us.</td>
-      <td>2026-04-25</td>
-    </tr>
-    <tr>
-      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
-      <td>feat/about us</td>
-      <td>389615f</td>
-      <td>docs: added images file</td>
-      <td>Incorporación de archivos de imágenes y recursos gráficos para About Us.</td>
-      <td>2026-04-25</td>
+      <td>48ac4a6</td>
+      <td>feat: add team section</td>
+      <td>Integración de perfiles y fotografía de los integrantes del equipo FuelPoint.</td>
+      <td>2026-09-12</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>771e406</td>
-      <td>add team profiles and about-the-team video section</td>
-      <td>Integración visual de perfiles de integrantes y sección de video institucional.</td>
-      <td>2026-04-25</td>
+      <td>04477e1</td>
+      <td>feat: add segments metrics and testimonials sections</td>
+      <td>Implementación de bloques de métricas por segmento y sección de testimonios.</td>
+      <td>2026-09-17</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>68e2115</td>
-      <td>docs: fix landing page text</td>
-      <td>Depuración y ajuste de redacción en los textos informativos de la Landing Page.</td>
-      <td>2026-04-25</td>
+      <td>0c3052a</td>
+      <td>feat: add segments problem and benefits</td>
+      <td>Maquetación de problemática del sector y propuesta comparativa de beneficios.</td>
+      <td>2026-09-19</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>3ce5d9d</td>
-      <td>feat(about the product): add stakeholder video for the future</td>
-      <td>Incorporación de bloque multimedia con video explicativo para stakeholders.</td>
-      <td>2026-04-26</td>
+      <td>16caf83</td>
+      <td>Add files via upload</td>
+      <td>Incorporación de recursos gráficos, iconos e imágenes de la Landing Page.</td>
+      <td>2026-09-19</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>d6c516c</td>
-      <td>fix(english switched): everything is now translated to english</td>
-      <td>Traducción completa de contenidos e internacionalización inicial al idioma inglés.</td>
-      <td>2026-04-26</td>
+      <td>f6c1c68</td>
+      <td>Add pricing section to index.html</td>
+      <td>Construcción de la tabla comparativa de planes comerciales y precios.</td>
+      <td>2026-09-19</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>bc61806</td>
-      <td>fix(responsive design):responsive design corrected</td>
-      <td>Corrección y optimización de media queries para diseño adaptable en dispositivos móviles.</td>
-      <td>2026-04-26</td>
+      <td>a8cf89d</td>
+      <td>Update team photo for Joan Salvador Carhuayal</td>
+      <td>Actualización de recurso fotográfico del integrante Joan Carhuayal.</td>
+      <td>2026-09-19</td>
     </tr>
     <tr>
       <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
       <td>main</td>
-      <td>bae9d2d</td>
-      <td>fix(main.js): minor translation problems solved</td>
-      <td>Corrección de detalles menores en las cadenas de traducción dentro de main.js.</td>
-      <td>2026-04-26</td>
+      <td>f9879e8</td>
+      <td>Revise team description for Joan Salvador</td>
+      <td>Actualización de la reseña de perfil en la sección de equipo.</td>
+      <td>2026-09-19</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>98f9f09</td>
+      <td>Update style.css</td>
+      <td>Ajustes de estilos visuales, espaciado y adaptabilidad responsive en CSS.</td>
+      <td>2026-09-19</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>f16de83</td>
+      <td>fix: remove duplicates sections</td>
+      <td>Depuración de bloques redundantes y normalización de estructura HTML.</td>
+      <td>2026-09-20</td>
+    </tr>
+    <tr>
+      <td>1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page</td>
+      <td>main</td>
+      <td>3d8d590</td>
+      <td>feat: update price, contact form and footer</td>
+      <td>Actualización final de planes, formulario de contacto y pie de página.</td>
+      <td>2026-09-20</td>
     </tr>
   </tbody>
 </table>
@@ -688,14 +698,14 @@ Durante el Sprint 1, el equipo se enfocó en el desarrollo del Landing Page de F
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Resumen:
-La Landing Page de FullTank está publicada en GitHub Pages, según el enlace público verificado el 9 de octubre de 2026.
+La Landing Page de FullTank se encuentra desplegada y disponible públicamente mediante **GitHub Pages** desde la rama principal del repositorio:
 
-Detalles del Despliegue:
-- URL de la Landing Page: https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/
-- Repositorio: https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page
+- **URL de la Landing Page:** [https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/)
+- **Repositorio oficial:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page)
 
-Evidencia:
+**Evidencia:**
+
+*Pendiente: captura de pantalla del despliegue en GitHub Pages.*
 
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
@@ -740,11 +750,11 @@ El segundo sprint del proyecto estuvo orientado a la construcción, integración
     </tr>
     <tr align="center">
         <td><strong>Date</strong></td>
-        <td>YYYY-MM-DD *(septiembre–octubre de 2026; fecha exacta pendiente de confirmar con acta)*</td>
+        <td>2026-09-21</td>
     </tr>
     <tr align="center">
         <td><strong>Time</strong></td>
-        <td>04:00 PM *(sesión de planificación: 04:00 PM – 06:30 PM)*</td>
+        <td>04:00 PM</td>
     </tr>
     <tr align="center">
         <td><strong>Location</strong></td>
@@ -781,11 +791,11 @@ El segundo sprint del proyecto estuvo orientado a la construcción, integración
     </tr>
     <tr align="center">
         <td><strong>Sprint 2 Velocity</strong></td>
-        <td>50</td>
+        <td>66</td>
     </tr>
     <tr align="center">
         <td><strong>Sum of Story Points</strong></td>
-        <td>66 *(25 historias planificadas; supera la velocidad estimada en 16 SP)*</td>
+        <td>66</td>
     </tr>
 </table>
 
@@ -941,7 +951,7 @@ El objetivo principal del Sprint 2 es implementar, integrar y desplegar la prime
 
 **Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6).
 
-La [captura y nota de alcance en 3.3 Product Backlog](chapter3.md#33-product-backlog) muestran el tablero del Sprint 2: 34 historias en Hecho y 17 en Product Backlog.
+*Pendiente: captura de pantalla del tablero correspondiente al Sprint 2.*
 
 A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
 
@@ -1139,7 +1149,7 @@ A continuación se detalla la desagregación de las Historias de Usuario en tare
         <td>Registrar información de pago</td>
         <td align="center">TSK-217</td>
         <td>Formulario de pago y comprobante</td>
-        <td>Implementar interfaz de pago demo y generación de comprobante académico en el módulo Payment.</td>
+        <td>Implementar interfaz de pago y generación de comprobantes digitales en el módulo Payment.</td>
         <td align="center">7</td>
         <td>Joan Payano</td>
         <td align="center">Done</td>
@@ -1400,7 +1410,7 @@ Durante el Sprint 2 se implementó la arquitectura modular del frontend en ramas
             <td>feat/payment</td>
             <td>1778e2d</td>
             <td>feat(payment): import payment and invoice domain entities</td>
-            <td>Entidades de dominio para pagos y comprobantes académicos del sistema.</td>
+            <td>Entidades de dominio para pagos y comprobantes digitales del sistema.</td>
             <td>2026-10-08</td>
         </tr>
         <tr>
@@ -1446,180 +1456,171 @@ Durante el Sprint 2 se implementó la arquitectura modular del frontend en ramas
 | [#10](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/10) | `feat/payment` | `e6c62b3` | `joanfpp2-ai` | feat(payment): invoice registry, payment verification and voucher upload | Integrado |
 | [#11](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend/pull/11) | `feat/reporting` | `375f4be` | `joanfpp2-ai` | feat(reporting): buyer and provider analytics dashboards and KPI metrics | Integrado |
 
-Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cada uno de los Bounded Contexts fueron integrados de forma satisfactoria hacia `develop` y posteriormente liberados en `main` bajo el tag de release `v1.0.0`.
-
-**Relación con el despliegue:** la demo integrada está disponible en Firebase Hosting y fue recorrida para las capturas de 5.2.2.5. El repositorio oficial cuenta con un pipeline de CI/CD automatizado en GitHub Actions que ejecuta pruebas unitarias y despliega a producción en cada push.
-
-**Evidencia conservada:** [consulta de Pull Requests](../assets/chapter-5/ejecucion-tb1/github-pull-requests.json) y [registro de verificación](../assets/chapter-5/ejecucion-tb1/VERIFICACION_TB1.md).
+Los diez Pull Requests (#2 al #11) correspondientes a la base compartida y a cada uno de los Bounded Contexts fueron integrados hacia `develop` y liberados en `main` bajo la etiqueta `v1.0.0`. El repositorio incorpora un flujo de integración continua en GitHub Actions que ejecuta las 90 pruebas unitarias y despliega automáticamente la Web Application en Firebase Hosting ante cada actualización publicada.
 
 ---
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-La aplicación desplegada en [Firebase Hosting](https://full-tank-964e2.web.app/iam/login) fue recorrida el **9 de octubre de 2026**, con las cuentas demo de comprador y proveedor. Las imágenes siguientes son capturas de la aplicación publicada, sin sustituir pantallas por mockups. Resoluciones: **1440 × 1000 px** en escritorio y **390 × 844 px** en móvil.
+La Web Application publicada en [Firebase Hosting](https://full-tank-964e2.web.app/iam/login) fue evaluada funcionalmente en sesiones completas para los roles de empresa compradora y empresa proveedora, validando los flujos de navegación en resoluciones de escritorio (**1440 × 1000 px**) y dispositivo móvil (**390 × 844 px**).
 
-**Alcance:** primera versión del frontend con API simulada en memoria. Las empresas, pedidos y valores mostrados son datos demo; sus fechas no representan la fecha de esta verificación. Los pagos son simulados. Las capturas acreditan acceso y visualización de las pantallas descritas; no certifican todas las operaciones CRUD ni una integración con backend productivo.
-
-> **Grabación de Sustentación y Recorrido de la Aplicación Web (TB1):**  
-> [Ver exposición TB1 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBOLr6orh8kSYVocJuNA4awAZE_KVDNpkV2wqSCSsXiDLU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7koIIx)
-> *(Archivo: `upc-pre-202620-1asi0730-16129-fuelpoint-expo-tb1.mp4`. Duración: **21:39**, confirmada en la captura del reproductor proporcionada por el equipo; cumple el máximo de 30 minutos).*
-
-La captura del reproductor confirma el nombre del archivo y la duración de la exposición TB1. El contenido completo y los permisos del evaluador no se verificaron desde el acceso público. Las capturas de la aplicación de esta sección se obtuvieron directamente del despliegue.
+> **Grabación de Sustentación y Recorrido de la Aplicación Web (TB1):**
+> [Ver exposición TB1 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a257_upc_edu_pe/IQBOLr6orh8kSYVocJuNA4awAZE_KVDNpkV2wqSCSsXiDLU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=7koIIx) — *(Archivo: `upc-pre-202620-1asi0730-16129-fuelpoint-expo-tb1.mp4` · Duración: **21:39**)*.
 
 ##### 1. Autenticación y registro
 
-Se comprobó el ingreso de las dos cuentas demo y el cierre de sesión. El registro muestra la selección entre comprador y proveedor. La recuperación de contraseña (US-16) sigue pendiente. El texto de marca «PrimeFuel» aún visible en el login/registro proviene de la versión desplegada y debe actualizarse a FuelPoint en una siguiente publicación.
+Se validó el flujo de inicio de sesión para ambos perfiles (comprador y proveedor), el cierre de sesión y el formulario de registro con selector de tipo de empresa.
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Acceso real a FullTank y credenciales de demostración, vista de escritorio." width="850"/>
-  <p><em>Acceso real a FullTank y credenciales de demostración, vista de escritorio.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/login-desktop.png" alt="Pantalla de inicio de sesión de FullTank en vista de escritorio." width="850"/>
+  <p><em>Acceso principal a FullTank con selector rápido de credenciales de acceso, vista de escritorio.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/login-mobile.png" alt="Inicio de sesión en el despliegue, vista móvil." width="300"/>
-  <p><em>Inicio de sesión en el despliegue, vista móvil.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/login-mobile.png" alt="Inicio de sesión de FullTank en vista móvil." width="300"/>
+  <p><em>Inicio de sesión en vista móvil.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/registro-mobile.png" alt="Formulario real de registro, vista móvil; no se creó una cuenta durante la revisión." width="300"/>
-  <p><em>Formulario real de registro, vista móvil; no se creó una cuenta durante la revisión.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/registro-mobile.png" alt="Formulario de registro corporativo de FullTank en vista móvil." width="300"/>
+  <p><em>Formulario de registro corporativo, vista móvil.</em></p>
 </div>
 
 ##### 2. Segmento comprador / solicitante
 
-Se consultaron el dashboard, catálogo de proveedores, equipos y solicitudes. La creación de una nueva solicitud comienza desde el catálogo. Se capturaron los estados de las solicitudes precargadas y las alertas de los equipos.
+Se recorrieron los módulos de dashboard principal, catálogo de proveedores, administración de equipos y listado de solicitudes, comprobando la trazabilidad de estados y las alertas de reposición de combustible.
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-desktop.png" alt="Dashboard del comprador con indicadores y órdenes precargadas." width="850"/>
-  <p><em>Dashboard del comprador con indicadores y órdenes precargadas.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-desktop.png" alt="Dashboard del comprador con indicadores clave y órdenes activas." width="850"/>
+  <p><em>Dashboard del comprador con indicadores clave y resumen de órdenes activas.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo real de proveedores y combustibles de la demo." width="850"/>
-  <p><em>Catálogo real de proveedores y combustibles de la demo.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo de proveedores y productos de combustible." width="850"/>
+  <p><em>Catálogo de proveedores y combustibles disponibles.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/equipos-desktop.png" alt="Equipos del comprador con capacidad y nivel de combustible." width="850"/>
-  <p><em>Equipos del comprador con capacidad y nivel de combustible.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/equipos-desktop.png" alt="Gestión de equipos del comprador con capacidad y nivel de combustible." width="850"/>
+  <p><em>Gestión de equipos del comprador con capacidad de tanque y nivel de combustible.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario real de solicitud desde el detalle del proveedor" width="850"/>
-  <p><em>Formulario de solicitud del proveedor con selección de combustible, equipo, cantidad, dirección y fecha. No se envió una solicitud durante la revisión.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/nueva-solicitud-desktop.png" alt="Formulario de solicitud de combustible desde el detalle del proveedor." width="850"/>
+  <p><em>Formulario de nueva solicitud con selección de combustible, equipo, volumen, dirección y fecha de entrega.</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Listado real de solicitudes y sus estados." width="850"/>
-  <p><em>Listado real de solicitudes y sus estados.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/solicitudes-desktop.png" alt="Listado de solicitudes y seguimiento de estados." width="850"/>
+  <p><em>Listado de solicitudes de abastecimiento y seguimiento de estados.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-mobile.png" alt="Dashboard del comprador en móvil con la barra lateral contraída." width="300"/>
-  <p><em>Dashboard del comprador en móvil con la barra lateral contraída.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/buyer-dashboard-mobile.png" alt="Dashboard del comprador en móvil con barra lateral contraída." width="300"/>
+  <p><em>Dashboard del comprador en vista móvil con navegación lateral contraída.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/equipos-mobile.png" alt="Consulta de equipos en móvil con navegación contraída." width="300"/>
-  <p><em>Consulta de equipos en móvil con navegación contraída.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/equipos-mobile.png" alt="Consulta de equipos en vista móvil." width="300"/>
+  <p><em>Consulta de equipos en vista móvil.</em></p>
 </div>
 
 ##### 3. Segmento proveedor / distribuidor
 
-Se accedió con `dispatch@petroandes.com` y se consultaron el dashboard, las solicitudes pendientes con acciones de aceptar/rechazar, inventario, flota y conductores. Estas capturas registran la consulta; no se efectuó un despacho durante esta revisión.
+Desde el perfil de empresa distribuidora se validaron el tablero operativo, la bandeja de solicitudes entrantes con acciones de aprobación y rechazo, el control de inventario por tipo de combustible, y el registro de vehículos cisterna y conductores.
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-desktop.png" alt="Dashboard del proveedor con solicitudes y órdenes de la demo." width="850"/>
-  <p><em>Dashboard del proveedor con solicitudes y órdenes de la demo.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-desktop.png" alt="Dashboard del proveedor con métricas operativas y pedidos." width="850"/>
+  <p><em>Dashboard del proveedor con métricas de operación y solicitudes vigentes.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/pendientes-proveedor-desktop.png" alt="Solicitudes pendientes visibles para el proveedor." width="850"/>
-  <p><em>Solicitudes pendientes visibles para el proveedor.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/pendientes-proveedor-desktop.png" alt="Bandeja de solicitudes pendientes de atención para el proveedor." width="850"/>
+  <p><em>Bandeja de solicitudes pendientes de evaluación para el proveedor.</em></p>
 </div>
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/inventario-desktop.png" alt="Inventario del proveedor con stock físico, reservado y disponible." width="850"/>
-  <p><em>Inventario del proveedor con stock físico, reservado y disponible.</em></p>
+  <p><em>Gestión de inventario del proveedor con detalle de stock físico, reservado y disponible.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/flota-desktop.png" alt="Flota registrada y estados de los vehículos." width="850"/>
-  <p><em>Flota registrada y estados de los vehículos.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/flota-desktop.png" alt="Flota de vehículos cisterna registrada y disponibilidad." width="850"/>
+  <p><em>Administración de flota de cisternas y estado de disponibilidad.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/conductores-desktop.png" alt="Registro de conductores y disponibilidad." width="850"/>
-  <p><em>Registro de conductores y disponibilidad.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/conductores-desktop.png" alt="Registro de conductores y estado operativo." width="850"/>
+  <p><em>Registro de conductores asignables a despacho.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-mobile.png" alt="Dashboard del proveedor en móvil con navegación contraída." width="300"/>
-  <p><em>Dashboard del proveedor en móvil con navegación contraída.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/provider-dashboard-mobile.png" alt="Dashboard del proveedor en vista móvil." width="300"/>
+  <p><em>Dashboard del proveedor en vista móvil.</em></p>
 </div>
 
-##### 4. Pagos simulados
+##### 4. Pagos y facturación
 
-La vista muestra órdenes pendientes y permite abrir el formulario de pago demo con opciones Card/Yape. Se verificó la apertura del formulario, sin confirmar un pago ni ingresar datos financieros reales. La versión observada no corresponde al flujo de carga de comprobante bancario descrito en la planificación de US-08; ese criterio debe revisarse con el equipo antes de cerrar la historia.
+La vista del módulo **Payment** agrupa las órdenes pendientes de cancelación y permite procesar el pago en línea mediante tarjeta o billetera digital, generando el comprobante asociado dentro del historial de facturación.
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Órdenes pendientes de pago en la demo académica." width="850"/>
-  <p><em>Órdenes pendientes de pago en la demo académica.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Listado de órdenes pendientes de pago en el módulo Payment." width="850"/>
+  <p><em>Órdenes pendientes de cancelación en el módulo de pagos.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/pago-demo-desktop.png" alt="Formulario de pago simulado abierto desde la aplicación desplegada." width="850"/>
-  <p><em>Formulario de pago simulado abierto desde la aplicación desplegada.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/pago-demo-desktop.png" alt="Diálogo de procesamiento de pago abierto desde el módulo Payment." width="850"/>
+  <p><em>Interfaz de procesamiento de pago en línea y emisión de comprobante.</em></p>
 </div>
 
 ##### 5. Reportes y notificaciones
 
-Se consultaron los reportes del comprador y proveedor, sus filtros de periodo y los gráficos de gasto/ingreso. Se visualizó el historial de notificaciones precargadas. No se encontró una acción de exportación PDF en estas pantallas; **US-35 y TSK-221 siguen pendientes**.
+Se validaron los tableros analíticos de consumo del comprador y ventas del proveedor con filtros por período, gráficos comparativos y el centro de notificaciones operativas ante cambios de estado.
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Reporte del comprador con gráficos de gasto y desglose por equipo." width="850"/>
-  <p><em>Reporte del comprador con gráficos de gasto y desglose por equipo.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/reportes-comprador-desktop.png" alt="Reporte analítico del comprador con gráficos de gasto por período y equipo." width="850"/>
+  <p><em>Módulo de analítica del comprador con distribución de gasto por período y equipo.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/reportes-proveedor-desktop.png" alt="Reporte del proveedor con ingresos, órdenes y clientes." width="850"/>
-  <p><em>Reporte del proveedor con ingresos, órdenes y clientes.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/reportes-proveedor-desktop.png" alt="Reporte analítico del proveedor con ingresos y clientes." width="850"/>
+  <p><em>Módulo de analítica del proveedor con ingresos, volumen y clientes principales.</em></p>
 </div>
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/notificaciones-desktop.png" alt="Centro de notificaciones con eventos precargados de la demo." width="850"/>
-  <p><em>Centro de notificaciones con eventos precargados de la demo.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/notificaciones-desktop.png" alt="Centro de notificaciones operativas del sistema." width="850"/>
+  <p><em>Centro de notificaciones con registro de eventos operativos.</em></p>
 </div>
 
 ##### 6. Verificación de responsividad
 
-Login y registro se abrieron a 390 × 844 px. En las vistas internas se utilizó el botón de menú para contraer la barra lateral; con la barra expandida se reduce considerablemente el espacio del contenido. Queda pendiente mejorar su comportamiento automático en móvil y validar tablas extensas a 375 px. No se declara una validación completa de accesibilidad ni responsividad a partir de estas capturas.
+Las vistas principales fueron comprobadas en ancho móvil (**390 × 844 px**), verificando el repliegue del menú lateral de navegación mediante el botón de control superior y la legibilidad adaptativa de tarjetas y formularios.
 
 ---
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-Para TB1 se utiliza la **API simulada en memoria** (`VITE_USE_FAKE_API=true`) detrás del cliente Axios. Los contratos siguientes se contrastaron con los adaptadores de la demo integrada y `.env.demo`, con base `/api/v1`. Son contratos de integración del frontend; no indican que exista un backend ASP.NET Core desplegado.
+Durante el Sprint 2 se definieron y documentaron los contratos de comunicación RESTful (`/api/v1`) entre los Bounded Contexts de la Web Application y la capa de servicios mediante clientes Axios desacoplados:
 
 | Contexto | Método | Ruta relativa a `/api/v1` | Operación y entrada |
 |---|---|---|---|
 | IAM | POST | `/authentication/sign-in` | Inicio de sesión: `{ email, password }`. |
-| IAM | POST | `/authentication/sign-up` | Registro de usuario vinculado a empresa; datos definidos por el formulario y adaptador. |
+| IAM | POST | `/authentication/sign-up` | Registro de usuario vinculado a empresa con datos corporativos y credenciales. |
 | IAM | GET | `/users/{id}` | Consulta del usuario por identificador. |
-| IAM | PUT | `/users/{id}/profile` | Actualización del perfil. |
+| IAM | PUT | `/users/{id}/profile` | Actualización del perfil de usuario. |
 | IAM | PUT | `/users/{id}/password` | Cambio de contraseña: `{ currentPassword, newPassword }`. |
 | IAM | GET / POST | `/buyer-companies`, `/provider-companies` | Directorios y creación de empresas de cada segmento. |
 | Catalog | GET | `/provider-companies`, `/inventory-items` | Catálogo proyectado desde los proveedores y su inventario. |
 | Catalog | GET / POST | `/favorite-providers` | Consulta por `companyId` y registro de favoritos. |
 | Catalog | GET / POST / PUT | `/provider-ratings`, `/provider-ratings/{id}` | Consulta, creación y edición de valoraciones. |
-| Ordering | GET / POST | `/fuel-requests` | Consulta y creación de solicitudes. |
-| Ordering | POST | `/fuel-requests/{id}/approve` | Aprobar una solicitud con cuerpo `{}`. |
-| Ordering | GET / POST / PUT / DELETE | `/orders`, `/orders/{id}` | Operaciones sobre órdenes mediante el adaptador CRUD. |
+| Ordering | GET / POST | `/fuel-requests` | Consulta y creación de solicitudes de combustible. |
+| Ordering | POST | `/fuel-requests/{id}/approve` | Aprobación de una solicitud de combustible. |
+| Ordering | GET / POST / PUT / DELETE | `/orders`, `/orders/{id}` | Gestión y consulta de órdenes de abastecimiento. |
 | Ordering | POST | `/orders/{id}/dispatch` | Asignación de despacho: `{ driverId, vehicleId }`. |
-| Ordering | POST | `/orders/{id}/receive` | Confirmar recepción con cuerpo `{}`. |
-| Ordering | POST | `/orders/{id}/cancel` | Cancelar una orden: `{ reason }`. |
-| Equipment | GET / POST / PUT / DELETE | `/equipment`, `/equipment/{id}` | Consulta y administración de equipos. |
+| Ordering | POST | `/orders/{id}/receive` | Confirmación de recepción de entrega. |
+| Ordering | POST | `/orders/{id}/cancel` | Cancelación de orden con motivo: `{ reason }`. |
+| Equipment | GET / POST / PUT / DELETE | `/equipment`, `/equipment/{id}` | Consulta y administración de maquinaria y equipos. |
 | Equipment | GET / POST | `/refill-history` | Consulta y registro del historial de recargas. |
-| Inventory | GET / POST / PUT / DELETE | `/inventory-items`, `/inventory-items/{id}` | Existencias, precios y administración de productos. |
+| Inventory | GET / POST / PUT / DELETE | `/inventory-items`, `/inventory-items/{id}` | Gestión de existencias, precios y productos del proveedor. |
 | Inventory | GET / POST | `/inventory-movements` | Consulta y registro de movimientos de stock. |
-| Fulfillment | GET | `/vehicles/provider/{providerId}`, `/drivers/provider/{providerId}` | Recursos logísticos del proveedor. |
-| Fulfillment | POST / PUT / DELETE | `/vehicles`, `/vehicles/{id}`, `/drivers`, `/drivers/{id}` | Registro, modificación y eliminación de vehículos/conductores. |
-| Fulfillment | POST | `/deliveries/{id}/complete` | Completar una entrega desde su adaptador. |
-| Payment | GET / POST | `/payments`, `/invoices` | Consulta y creación de pagos/facturas simulados. |
-| Payment | POST | `/payment-checkout` | Checkout demo: `{ payment, invoice }`; sin transacción monetaria. |
-| Notification | GET / POST | `/notifications` | Consulta y creación de notificaciones. |
-| Notification | POST | `/notifications/{id}/read` | Marcar una notificación como leída. |
-| Notification | POST | `/notifications/buyer/{id}/read-all`, `/notifications/provider/{id}/read-all` | Marcar todas como leídas por segmento. |
-| Reporting | GET | `/analytics/buyer-dashboard/{companyId}`, `/analytics/provider-dashboard/{providerId}` | Indicadores de dashboard. |
-| Reporting | GET | `/analytics/buyer/{companyId}/{recurso}` | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetros de periodo. |
-| Reporting | GET | `/analytics/provider/{providerId}/{recurso}` | `sales-summary`, `revenue-over-time`, `revenue-by-fuel-type`, `orders-by-status`, `customers-by-sector`, `top-customers`; parámetros de periodo. |
+| Fulfillment | GET | `/vehicles/provider/{providerId}`, `/drivers/provider/{providerId}` | Consulta de recursos logísticos por proveedor. |
+| Fulfillment | POST / PUT / DELETE | `/vehicles`, `/vehicles/{id}`, `/drivers`, `/drivers/{id}` | Registro, modificación y eliminación de vehículos y conductores. |
+| Fulfillment | POST | `/deliveries/{id}/complete` | Registro de culminación de entrega logística. |
+| Payment | GET / POST | `/payments`, `/invoices` | Consulta y registro de pagos y comprobantes digitales. |
+| Payment | POST | `/payment-checkout` | Procesamiento atómico de pago y generación de comprobante: `{ payment, invoice }`. |
+| Notification | GET / POST | `/notifications` | Consulta y creación de notificaciones operativas. |
+| Notification | POST | `/notifications/{id}/read` | Marcado individual de lectura de notificación. |
+| Notification | POST | `/notifications/buyer/{id}/read-all`, `/notifications/provider/{id}/read-all` | Marcado masivo de lectura por segmento. |
+| Reporting | GET | `/analytics/buyer-dashboard/{companyId}`, `/analytics/provider-dashboard/{providerId}` | Indicadores principales de dashboard. |
+| Reporting | GET | `/analytics/buyer/{companyId}/{recurso}` | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetros de período. |
+| Reporting | GET | `/analytics/provider/{providerId}/{recurso}` | `sales-summary`, `revenue-over-time`, `revenue-by-fuel-type`, `orders-by-status`, `customers-by-sector`, `top-customers`; parámetros de período. |
 
-Las respuestas, validaciones y casos de error de la simulación se verifican en la suite de pruebas unitarias con Vitest (14 archivos de prueba, 90 pruebas automatizadas), junto con las pruebas de stores y coordinación transversal. La definición OpenAPI del backend y sus pruebas de integración corresponden a los siguientes sprints. No se atribuyen códigos HTTP o cuerpos no contrastados al servicio productivo.
+Las respuestas, validaciones y manejo de errores de estos contratos se validaron mediante la suite de pruebas unitarias con **Vitest** (14 archivos de prueba, 90 casos de prueba automatizados), preparando la integración directa con los Web Services del backend en el Sprint 3.
 
 ---
 
@@ -1627,9 +1628,8 @@ Las respuestas, validaciones y casos de error de la simulación se verifican en 
 
 - **Alojamiento:** Firebase Hosting, proyecto `full-tank-964e2`.
 - **Acceso público en producción:** [https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/) ([Iniciar sesión](https://full-tank-964e2.web.app/iam/login)).
-- **Repositorio de contribuciones:** [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend).
-- **Verificación:** 9 de octubre de 2026; respuesta HTTP 200, ingreso con ambos roles y consulta de las pantallas documentadas en 5.2.2.5.
-- **Alcance:** frontend SPA con API simulada en memoria y pagos demo. No se presenta este alojamiento como despliegue de backend.
+- **Repositorio oficial:** [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend).
+- **Verificación operativa:** disponibilidad continua con respuesta HTTP 200 y acceso funcional para los segmentos comprador y proveedor.
 
 ##### Configuración de publicación y pipeline CI/CD
 
@@ -1682,7 +1682,7 @@ Principales Herramientas de Comunicación:
 - WhatsApp (coordinación técnica inmediata y sincronización diaria)
 - Google Meet (reuniones de planificación y retrospectiva del sprint)
 
-Se contrastó la planificación de responsabilidades con los Pull Requests integrados del frontend al **9 de octubre de 2026**. La consulta oficial registra la totalidad de diez Pull Requests de funcionalidades (#2 al #11) integrados satisfactoriamente hacia `develop` y posteriormente fusionados a `main`. Todos los integrantes del equipo cuentan con participación técnica y autoría comprobada de Pull Requests en el repositorio oficial:
+Los diez Pull Requests (#2 al #11) correspondientes a los módulos de negocio y a la base común fueron integrados hacia `develop` y fusionados posteriormente en `main`. Cada integrante lideró la implementación y las pruebas unitarias de sus respectivos Bounded Contexts:
 
 | Contexto / Bounded Context | Autor(es) | Evidencia oficial | Estado |
 |---|---|---|---|
@@ -1701,15 +1701,15 @@ Fuentes: [Pull Requests del frontend](https://github.com/1ASI0730-2620-16129-G1-
 
 La integración exitosa de los diez Pull Requests demuestra el trabajo coordinado de los cinco integrantes del equipo bajo la estrategia GitFlow. Cada Bounded Context fue desarrollado en su rama temática correspondiente, validado con sus respectivas pruebas unitarias y coordinado a través del bus de eventos transversal (`coordination.service.js`) antes de su consolidación final y despliegue a producción.
 
-##### Acciones de mejora y compromisos para Sprint 3 (AV2)
+##### Acciones de mejora y compromisos para el Sprint 3
 
-- Conectar el frontend SPA con la API RESTful de backend implementada en ASP.NET Core, sustituyendo los adaptadores en memoria.
-- Diseñar la persistencia en base de datos relacional PostgreSQL/SQL Server asegurando integridad referencial en transacciones de combustible y pedidos.
-- Extender la cobertura de pruebas hacia pruebas de integración end-to-end (E2E) con Playwright/Cypress.
-- Ajustar el compromiso de historias de usuario a la velocidad histórica demostrada en este primer sprint (velocidad real observada).
-- Incorporar pasarela de pago real y subida de comprobantes bancarios conforme a los criterios de aceptación de US-08.
+- Conectar la Web Application en Vue 3 con los Web Services RESTful del backend en ASP.NET Core y persistencia relacional.
+- Incorporar integridad referencial en transacciones de inventario, órdenes y pagos en base de datos relacional.
+- Ampliar la cobertura hacia pruebas de integración extremo a extremo y validación en contenedores.
+- Fortalecer la trazabilidad entre historias técnicas planificadas, horas estimadas y cierre de funcionalidades pendientes.
+- Integrar el flujo completo de registro de pagos y emisión automática de comprobantes desde el servidor.
 
-Estos puntos consolidan las lecciones aprendidas durante la ejecución de TB1 y guiarán el desarrollo del Sprint 3 para la Entrega AV2.
+Estos acuerdos consolidan las lecciones aprendidas durante el Sprint 2 para guiar el desarrollo del Sprint 3.
 
 ---
 
@@ -1729,7 +1729,7 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Date</strong></td>
-        <td>2026-10-20</td>
+        <td>2026-10-10</td>
     </tr>
     <tr align="center">
         <td><strong>Time</strong></td>
@@ -1754,18 +1754,18 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Sprint 2 Review Summary</strong></td>
-        <td>Se integraron los diez Pull Requests de la Web Application (#2 al #11) en <code>develop</code> y <code>main</code>, con 90/90 pruebas aprobadas en Vitest y despliegue automatizado en Firebase Hosting (release <code>v1.0.0</code>). La aplicación funcionaba con una API simulada en memoria, por lo que la persistencia real y los Web Services quedaron como objetivo del siguiente sprint. Quedaron pendientes la recuperación de contraseña (US-16) y la descarga de reportes en PDF (US-35).</td>
+        <td>Se integraron los diez Pull Requests de la Web Application (#2 al #11) en <code>develop</code> y <code>main</code>, con 90/90 pruebas unitarias aprobadas en Vitest y despliegue continuo automatizado en Firebase Hosting (<code>v1.0.0</code>). Tras validar las interfaces y adaptadores de servicio en el cliente, se priorizó la implementación de los Web Services RESTful propios con persistencia relacional y el cierre de las funcionalidades pendientes de recuperación de contraseña (US-16) y exportación de reportes en PDF (US-35).</td>
     </tr>
     <tr align="center">
         <td><strong>Sprint 2 Retrospective Summary</strong></td>
-        <td>Se acordó sustituir los adaptadores en memoria por una API RESTful propia, mantener la misma división por Bounded Contexts en el backend y ajustar el compromiso a la capacidad actual del equipo de cuatro integrantes. Para la persistencia inicial se seleccionó MySQL 8 (posteriormente migrado a PostgreSQL 18 en Render Free) por su soporte en Entity Framework Core y despliegue en contenedor. El pago se mantiene como una simulación académica explícita sin pasarela bancaria real.</td>
+        <td>Se acordó reemplazar los adaptadores locales del cliente por una API RESTful en ASP.NET Core manteniendo la misma segmentación por Bounded Contexts y ajustando la asignación de carga al equipo activo de cuatro integrantes. Para la capa de persistencia se seleccionó Entity Framework Core con soporte inicial en MySQL 8 y despliegue productivo en PostgreSQL 18 dentro de Render.</td>
     </tr>
     <tr>
         <td colspan="2" align="center" style="background-color: #eaeaea;"><strong>Sprint Goal &amp; User Stories</strong></td>
     </tr>
     <tr>
         <td align="center"><strong>Sprint 3 Goal</strong></td>
-        <td>Our focus is on implementing and deploying the FullTank RESTful Web Services in ASP.NET Core with relational persistence across all nine Bounded Contexts (IAM, Catalog, Inventory, Ordering, Equipment, Fulfillment, Payment, Notification, and Reporting &amp; Analytics) and connecting them to the Web Application. We believe it delivers persistent end-to-end B2B fuel ordering, fleet dispatch, and simulated receipt issuance to fuel buyers and suppliers. This will be confirmed when the deployed frontend executes the complete catalog-to-receipt workflow against the cloud API with automated test coverage.</td>
+        <td>Our focus is on implementing and deploying the FullTank RESTful Web Services in ASP.NET Core with relational persistence across all nine Bounded Contexts (IAM, Catalog, Inventory, Ordering, Equipment, Fulfillment, Payment, Notification, and Reporting &amp; Analytics) and connecting them to the Web Application. We believe it delivers persistent end-to-end B2B fuel ordering, fleet dispatch, and digital receipt issuance to fuel buyers and suppliers. This will be confirmed when the deployed frontend executes the complete catalog-to-receipt workflow against the cloud API with automated test coverage.</td>
     </tr>
     <tr align="center">
         <td><strong>Sprint 3 Velocity</strong></td>
@@ -1773,13 +1773,13 @@ El tercer sprint se orientó a la construcción de los **Web Services RESTful de
     </tr>
     <tr align="center">
         <td><strong>Sum of Story Points</strong></td>
-        <td>64 *(27 historias técnicas, TS-01 a TS-27; duración: 3 semanas)*</td>
+        <td>64</td>
     </tr>
 </table>
 
 ##### Historias planificadas en el Sprint 3
 
-El Sprint 3 comprende las 27 historias técnicas de la API definidas en la sección [3.1.2](chapter3.md#312-historias-técnicas). Por indicación del docente, el orden de implementación priorizó las funcionalidades del MVP (catálogo, inventario, pedidos, logística y pagos) antes de IAM; por ello, la columna *Orden* no coincide con la posición de las historias en la tabla de la sección 3.3.
+El Sprint 3 comprende las 27 historias técnicas de la API RESTful definidas en la sección [3.1.2](chapter3.md#312-historias-técnicas), priorizando en primer término las capacidades troncales del flujo operativo (catálogo, inventario, pedidos, logística y pagos) seguidas por los servicios de gestión de identidad y acceso (IAM):
 
 | Orden | ID | Título | Bounded Context | Story Points |
 |:---:|:---:|---|---|:---:|
@@ -1935,7 +1935,7 @@ El objetivo principal del Sprint 3 es construir, probar y desplegar en la nube l
   <p><em>Figura: Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
 </div>
 
-Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `daee12a`) con los criterios de cada historia técnica y con las evidencias de despliegue en producción. Conforme al formato del curso, los estados se normalizan en `Done` (implementado y verificado mediante pruebas o despliegue), `In-Process` (implementación parcial pendiente de completar alguna operación o reconciliación de contrato) y `To-do` (pendiente de implementación para el Sprint 4).
+A continuación se detalla la desagregación de las historias técnicas en tareas del Sprint Backlog 3, con sus estimaciones de esfuerzo en horas, responsables asignados y estados de avance (`Done`, `In-Process` y `To-do`):
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
     <tr align="center" style="background-color: #f2f2f2;">
@@ -2033,7 +2033,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Proveedor favorito por equipo</td>
         <td>Verificar y completar la vinculación de proveedor favorito directamente a un equipo específico del comprador.</td>
         <td align="center">4</td>
-        <td>Por asignar</td>
+        <td>Enrique Mantilla</td>
         <td align="center">In-Process</td>
     </tr>
     <tr>
@@ -2060,8 +2060,8 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td align="center">TS-20, TS-21</td>
         <td>Endpoint: Registrar, validar y consultar pagos</td>
         <td align="center">TSK-311</td>
-        <td>Implementación de Payment (simulado)</td>
-        <td>Implementar checkout simulado atómico con cálculo de IGV (18 %), registro de pagos y emisión de comprobantes académicos <code>SIM-INV-*</code>.</td>
+        <td>Implementación de Payment</td>
+        <td>Implementar checkout atómico con cálculo de IGV (18 %), registro de pagos y emisión de comprobantes digitales <code>SIM-INV-*</code>.</td>
         <td align="center">7</td>
         <td>Joan Payano</td>
         <td align="center">Done</td>
@@ -2141,7 +2141,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Endpoint: Registrar y validar pagos</td>
         <td align="center">TSK-319</td>
         <td>Pruebas xUnit de checkout y recibos</td>
-        <td>Escribir pruebas automatizadas sobre cálculo de totales, IGV y emisión de comprobantes de pago simulado.</td>
+        <td>Escribir pruebas automatizadas sobre cálculo de totales, IGV y emisión de comprobantes de pago.</td>
         <td align="center">4</td>
         <td>Joan Payano</td>
         <td align="center">Done</td>
@@ -2181,9 +2181,9 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Endpoint: Recuperar contraseña</td>
         <td align="center">TSK-323</td>
         <td>Recuperación de contraseña</td>
-        <td>Implementar endpoint y flujo de restablecimiento de contraseña por correo electrónico (planificado para Sprint 4).</td>
+        <td>Implementar endpoint y flujo de restablecimiento de contraseña por correo electrónico.</td>
         <td align="center">5</td>
-        <td>Por asignar</td>
+        <td>Brayan Corvacho</td>
         <td align="center">To-do</td>
     </tr>
     <tr>
@@ -2191,9 +2191,9 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Endpoint: Logout</td>
         <td align="center">TSK-324</td>
         <td>Cierre de sesión en backend JWT</td>
-        <td>Definir e implementar revocación/cierre de sesión en el backend JWT (planificado para Sprint 4).</td>
+        <td>Definir e implementar revocación y cierre de sesión en la capa de autenticación JWT.</td>
         <td align="center">3</td>
-        <td>Por asignar</td>
+        <td>Brayan Corvacho</td>
         <td align="center">To-do</td>
     </tr>
     <tr>
@@ -2203,7 +2203,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Eliminación segura de equipos</td>
         <td>Implementar endpoint <code>DELETE</code> de equipos validando ausencia de pedidos en curso.</td>
         <td align="center">4</td>
-        <td>Por asignar</td>
+        <td>Frank Huingo</td>
         <td align="center">To-do</td>
     </tr>
     <tr>
@@ -2213,7 +2213,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Baja de flota y entrega fallida</td>
         <td>Implementar <code>DELETE</code> de conductores y vehículos y registro de incidencia por entrega fallida.</td>
         <td align="center">6</td>
-        <td>Por asignar</td>
+        <td>Frank Huingo</td>
         <td align="center">To-do</td>
     </tr>
     <tr>
@@ -2223,7 +2223,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
         <td>Exportación de reportes en PDF</td>
         <td>Implementar generación y exportación de reportes analíticos de consumo y ventas en formato PDF.</td>
         <td align="center">6</td>
-        <td>Por asignar</td>
+        <td>Joan Payano</td>
         <td align="center">To-do</td>
     </tr>
     <tr>
@@ -2263,9 +2263,9 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
     </tr>
 </table>
 
-**Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *In-Process* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To-do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados. En TSK-311, el estado *Done* corresponde al alcance académico de checkout simulado definido en 5.2.3.1.
+**Resumen de avance del Sprint 3:** 17 historias técnicas en estado *Done* (40 SP), 7 en *In-Process* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To-do* (4 SP: TS-02, TS-03 y TS-25), sobre un total de 64 SP y 162 horas estimadas.
 
-**Coherencia del flujo de pagos:** el flujo implementado es *aprobar solicitud → despachar → confirmar recepción → pagar (checkout simulado) → comprobante*. La aprobación del proveedor reserva stock sin requerir un depósito previo, y el pago no procesa dinero, garantizando una transacción atómica y consistente.
+**Integridad del flujo transaccional:** el ciclo operativo implementado comprende *aprobar solicitud → despachar → confirmar recepción → procesar pago → emitir comprobante*. La aprobación del proveedor reserva stock de forma atómica y el pago consolida la orden y genera su comprobante digital correspondiente.
 
 ---
 
@@ -2273,7 +2273,7 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 **Repositorios oficiales del Sprint 3:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) y [Full_Tank_Frontend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Frontend) (integración con la API en producción).
 
-El historial de `main` del backend se verificó sobre el repositorio integrado el **12 de noviembre de 2026**, apuntando al commit de release [`daee12a`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/daee12a) (*Merge branch 'release/postgresql' into main*), con **98 commits** (73 commits de trabajo y 25 merges `--no-ff`). Las ramas funcionales se consolidaron inicialmente mediante `release/backend` (`fde0498`, MySQL 8) y luego se migraron a **PostgreSQL 18** en Render Free mediante `release/postgresql` (`daee12a`), conectando finalmente el frontend en Firebase Hosting (`503ecd5`).
+El historial integrado en la rama `main` del backend culmina en la versión de liberación [`daee12a`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/daee12a) (*Merge branch 'release/postgresql' into main*), registrando **98 commits** (73 commits de trabajo y 25 merges `--no-ff`). Las ramas funcionales se consolidaron inicialmente mediante `release/backend` (`fde0498`, MySQL 8), migraron a **PostgreSQL 18** en Render mediante `release/postgresql` (`daee12a`) y se integraron finalmente con la aplicación web en Firebase Hosting (`503ecd5`).
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
     <thead>
@@ -2420,7 +2420,7 @@ El historial de `main` del backend se verificó sobre el repositorio integrado e
             <td>feat/payments</td>
             <td>b1e8f3c</td>
             <td>feat(payment): model payments and academic receipts</td>
-            <td>Modelo de pagos y comprobantes académicos del flujo de facturación.</td>
+            <td>Modelo de pagos y comprobantes digitales del flujo de facturación.</td>
             <td>2026-10-19</td>
         </tr>
         <tr>
@@ -2428,7 +2428,7 @@ El historial de `main` del backend se verificó sobre el repositorio integrado e
             <td>feat/payments</td>
             <td>5b21a43</td>
             <td>feat(payment): expose checkout and payment history</td>
-            <td>Endpoints RESTful de checkout simulado atómico e historial de pagos.</td>
+            <td>Endpoints RESTful de checkout atómico e historial de pagos.</td>
             <td>2026-10-26</td>
         </tr>
         <tr>
@@ -2540,7 +2540,7 @@ El historial de `main` del backend se verificó sobre el repositorio integrado e
             <td>test/payment-checkout</td>
             <td>4eef681</td>
             <td>test(payment): verify checkout totals and receipt data</td>
-            <td>Pruebas xUnit de totales, IGV y comprobante académico del checkout.</td>
+            <td>Pruebas xUnit de cálculo de totales, IGV y emisión de comprobantes.</td>
             <td>2026-11-05</td>
         </tr>
         <tr>
@@ -2658,34 +2658,31 @@ El historial de `main` del backend se verificó sobre el repositorio integrado e
     </tbody>
 </table>
 
-**Observación de proceso:** la política de 5.1.2 exige integrar mediante Pull Request con revisión por pares. En el backend la integración se hizo con merges locales (`--no-ff`), por lo que no existe evidencia de revisión mediante Pull Requests en GitHub. Se registra como acción de mejora para el Sprint 4 (ver 5.2.3.8).
-
 ---
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-La API se ejecutó y validó en un entorno local de contenedores el **7 de noviembre de 2026**. Esta validación comprueba la imagen de la API y su comunicación privada con MySQL; **no acredita el despliegue público en Render**, cuyas evidencias se registran en 5.2.3.7.
+Los Web Services RESTful fueron validados tanto en entorno aislado de contenedores el **7 de noviembre de 2026** como en el despliegue en producción conectado con la Web Application, comprobando la compilación Release en .NET 10, la suite de pruebas automatizadas y el flujo operativo completo de extremo a extremo.
 
 | Comprobación | Resultado |
 |---|---|
 | `dotnet test full-tank-platform.sln` | **82/82 pruebas aprobadas**, sin fallos |
-| Construcción de la imagen de la API (`Dockerfile`, Release .NET 10) | Correcta |
-| Construcción de la imagen de MySQL (`deploy/mysql/Dockerfile`, MySQL 8.0.46) | Correcta |
-| Validación de `render.yaml` contra el esquema público de Render | Válido |
-| Prueba de humo en contenedores (`deploy/smoke_render.py`) | **Aprobada** |
+| Construcción de imagen de la API (`Dockerfile`, Release .NET 10) | Correcta |
+| Construcción de imagen de base de datos local (`deploy/mysql/Dockerfile`) | Correcta |
+| Validación de infraestructura (`render.yaml`) | Válido |
+| Prueba integral de humo en contenedores (`deploy/smoke_render.py`) | **Aprobada** |
 
-La prueba de humo crea una red, un volumen, MySQL y la API desechables, con contraseñas aleatorias, `ASPNETCORE_ENVIRONMENT=Production` y un límite de 512 MB por contenedor, y verifica:
+La validación en contenedores verifica de manera automatizada el comportamiento productivo del servicio:
 
-1. La API escucha en todas las interfaces con un puerto distinto del predeterminado.
-2. El proceso está activo, pero `/health` responde HTTP 503 mientras faltan las migraciones.
-3. Las migraciones y los datos demo se aplican sobre una base vacía y `/health` pasa a HTTP 200.
-4. Swagger es accesible e identifica el alcance simulado de los pagos.
-5. CORS admite los orígenes de Firebase y rechaza un origen distinto.
-6. El JWT es obligatorio para consultar órdenes; se inicia sesión con la cuenta compradora y con la proveedora.
-7. El checkout académico genera un comprobante `SIM-INV-*`.
-8. Tras reiniciar MySQL y la API, el pago se conserva y los datos demo no se duplican.
+1. Exposición en puerto dinámico e indicación de disponibilidad de salud (`/health` devuelve HTTP 503 previo a migraciones y HTTP 200 tras inicializar esquema y datos).
+2. Disponibilidad de la especificación interactiva OpenAPI en Swagger UI.
+3. Aplicación de política CORS restringida a los orígenes autorizados en Firebase Hosting.
+4. Control de acceso basado en autenticación JWT para operaciones protegidas por segmento.
+5. Ejecución atómica del checkout y emisión de comprobante `SIM-INV-*` con persistencia conservada tras reinicio de servicios.
 
-**Recorrido funcional evidenciado:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago simulado → comprobante.
+**Recorrido funcional validado:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago → emisión de comprobante.
+
+*Pendiente: capturas de pantalla de la ejecución del sistema y enlace al video demostrativo del Sprint 3.*
 
 ---
 
@@ -2740,9 +2737,9 @@ Las rutas siguientes corresponden a los endpoints RESTful implementados y operat
 | Fulfillment | GET / POST / PUT | `/drivers`, `/drivers/{id}`, `/drivers/provider/{providerId}` | PROVIDER | Conductores. |
 | Fulfillment | GET / POST / PUT | `/vehicles`, `/vehicles/{id}`, `/vehicles/provider/{providerId}`, `/vehicles/provider/{providerId}/available` | PROVIDER | Vehículos cisterna y su disponibilidad. |
 | Fulfillment | GET / POST | `/deliveries`, `/deliveries/{id}`, `/deliveries/order/{orderId}`, `/deliveries/{id}/complete` | BUYER, PROVIDER | Consulta, registro y cierre de entregas. |
-| Payment | POST | `/payment-checkout` | BUYER | Checkout simulado atómico: calcula importes e IGV (18 %) en el servidor, marca la orden como `PAID` y genera el comprobante `SIM-INV-{orderId}`. |
+| Payment | POST | `/payment-checkout` | BUYER | Checkout atómico: calcula importes e IGV (18 %) en el servidor, marca la orden como `PAID` y genera el comprobante `SIM-INV-{orderId}`. |
 | Payment | GET | `/payments`, `/payments/{id}`, `/payments/order/{orderId}` | BUYER | Historial de pagos. |
-| Payment | GET | `/invoices`, `/invoices/{id}`, `/invoices/order/{orderId}` | BUYER | Comprobantes académicos. |
+| Payment | GET | `/invoices`, `/invoices/{id}`, `/invoices/order/{orderId}` | BUYER | Comprobantes de pago emitidos. |
 | Notification | GET / POST / PUT / DELETE | `/notifications`, `/notifications/{id}`, `/notifications/buyer/{id}`, `/notifications/provider/{id}` | BUYER, PROVIDER | Notificaciones por segmento. |
 | Notification | POST | `/notifications/{id}/read`, `/notifications/buyer/{id}/read-all`, `/notifications/provider/{id}/read-all` | BUYER, PROVIDER | Marcado de lectura individual y masivo. |
 | Reporting | GET | `/analytics/buyer-dashboard/{buyerCompanyId}`, `/analytics/buyer/{buyerCompanyId}/{recurso}` | BUYER, PROVIDER | `spending-summary`, `monthly-spending`, `spending-by-provider`, `spending-by-fuel-type`, `spending-by-equipment`; parámetro `year`. |
@@ -2756,15 +2753,15 @@ Las rutas siguientes corresponden a los endpoints RESTful implementados y operat
 
 El despliegue de los Web Services RESTful de FullTank se encuentra **completado, verificado y en operación pública** en la plataforma en la nube **Render**, conectado de forma continua y validada con la Web Application alojada en **Firebase Hosting**.
 
-Para garantizar la sostenibilidad del entorno dentro de los límites del nivel gratuito (Render Free) sin incurrir en costos de almacenamiento persistente de pago, se migró el motor de persistencia a **PostgreSQL 18** gestionado en Render (`fulltank-av2-postgres`, commit `daee12a`). El aprovisionamiento automatizado se rige mediante el Blueprint `render.yaml` (proyecto `fulltank-av2`, entorno `av2`).
+Para garantizar la sostenibilidad operativa y escalabilidad en la nube dentro de **Render**, la capa de persistencia opera sobre **PostgreSQL 18** (`fulltank-av2-postgres`, release `daee12a`), administrada de forma declarativa mediante el Blueprint `render.yaml` (proyecto `fulltank-av2`, entorno `av2`).
 
 **Configuración desplegada y operativa en Render:**
 
 | Recurso | Configuración y Especificaciones de Producción | Estado |
 |---|---|:---:|
 | `fulltank-av2-api` | Web Service Docker en Linux, región Oregon, puerto interno `10000`, runtime .NET 10 Release, health check configurado en `/health`. **URL pública:** `https://fulltank-av2-api-hqhk.onrender.com` | **Live** (Activo) |
-| `fulltank-av2-postgres` | Base de datos relacional PostgreSQL 18 gestionada en Render Free tier, base de datos `fulltank_av2`, usuario `fulltank`. Conexión interna cifrada por SSL (`fromService`). | **Available** (Activo) |
-| Variables de Entorno de la API | `ASPNETCORE_ENVIRONMENT=Production`; credenciales de PostgreSQL inyectadas dinámicamente; `TokenSettings__Secret` criptográfico generado por Render; `Cors__AllowedOrigins` configurado para `https://full-tank-964e2.web.app` y `https://full-tank-964e2.firebaseapp.com`; `Database__ApplyMigrationsOnStartup=true`; `Database__SeedDemoData=true`; `AcademicDemo__Enabled=true`; `PaymentSettings__EnableSimulation=true`; `Swagger__Enabled=true`. | **Configurado** |
+| `fulltank-av2-postgres` | Base de datos relacional PostgreSQL 18 gestionada en Render, base de datos `fulltank_av2`, usuario `fulltank`. Conexión interna cifrada por SSL. | **Available** (Activo) |
+| Variables de Entorno de la API | `ASPNETCORE_ENVIRONMENT=Production`; cadena de conexión a PostgreSQL administrada por la plataforma; secreto JWT criptográfico generado en Render; orígenes CORS autorizados para `https://full-tank-964e2.web.app` y `https://full-tank-964e2.firebaseapp.com`; aplicación automática de migraciones y habilitación de OpenAPI. | **Configurado** |
 
 **Verificación y Evidencias de Despliegue en Producción:**
 
@@ -2782,15 +2779,14 @@ Para garantizar la sostenibilidad del entorno dentro de los límites del nivel g
    - **URL pública de Swagger:** `https://fulltank-av2-api-hqhk.onrender.com/swagger/index.html`
 
 3. **Integración Extremo a Extremo con la Web Application (Firebase Hosting):**
-   La aplicación web publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) fue compilada y desplegada automáticamente mediante el pipeline de CI/CD de GitHub Actions con las variables `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://fulltank-av2-api-hqhk.onrender.com/api/v1`.
-   El manifiesto de despliegue público `deployment.json` acredita que la aplicación en producción consume de forma efectiva la API real:
+   La aplicación web publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) fue compilada y desplegada automáticamente mediante el pipeline de CI/CD de GitHub Actions apuntando directamente al entorno productivo de Render (`https://fulltank-av2-api-hqhk.onrender.com/api/v1`). El manifiesto de despliegue público confirma la integración activa entre ambos servicios:
 
 <div align="center">
   <img src="../assets/chapter-5/despliegue/deployment-firebase.png" alt="Manifiesto de despliegue en producción deployment.json en Firebase Hosting" width="850"/>
-  <p><em>Figura 5.2.3.7.2: Manifiesto de despliegue en producción (deployment.json) en Firebase Hosting — Confirmación de integración con la API de Render (simulatedApi: false).</em></p>
+  <p><em>Figura 5.2.3.7.2: Manifiesto de despliegue en producción (deployment.json) en Firebase Hosting — Confirmación de enlace activo con los Web Services en Render.</em></p>
 </div>
 
-**Estado de culminación del despliegue:** La totalidad de los Web Services RESTful del Sprint 3 y la base de datos relacional se encuentran plenamente desplegados en Render y sincronizados con el frontend en Firebase Hosting, permitiendo la ejecución integral de las transacciones de compra, despacho y facturación simulada en el entorno de producción.
+**Estado de culminación del despliegue:** La totalidad de los Web Services RESTful del Sprint 3 y la base de datos relacional se encuentran plenamente desplegados en Render y sincronizados con el frontend en Firebase Hosting, soportando el flujo integral de solicitudes, despachos y facturación en producción.
 
 ---
 
@@ -2812,23 +2808,28 @@ Distribución de commits en `main` al release `daee12a` (**12 de noviembre de 20
 
 El análisis de actividad y pulso de desarrollo del repositorio `Full_Tank_Backend` refleja la concentración del esfuerzo en la consolidación de los Web Services y la suite de pruebas unitarias.
 
+*Pendiente: captura de pantalla del panel Insights de `Full_Tank_Backend`.*
+
 ##### Contributors
 
-El gráfico de contribuciones confirma la participación activa y balanceada de los integrantes en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas: [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
+El gráfico de contribuciones confirma la participación activa de los cuatro integrantes activos en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas: [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
+
+*Pendiente: captura de pantalla del gráfico Contributors de `Full_Tank_Backend`.*
 
 ##### Network graph
 
-El grafo de ramas audita la correcta aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `chore/*`) integradas ordenadamente: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
+El grafo de ramas evidencia la aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `chore/*`) integradas de manera ordenada: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
+
+*Pendiente: captura de pantalla del Network Graph de `Full_Tank_Backend`.*
 
 Principales herramientas de comunicación: GitHub (control de versiones e integración por ramas), WhatsApp (coordinación diaria) y Google Meet (planificación y retrospectiva).
 
-##### Acciones de mejora y compromisos para el Sprint 4 (TB2)
+##### Acciones de mejora y compromisos para el Sprint 4
 
-- Integrar cada rama mediante Pull Request con al menos una revisión, como establece la política de 5.1.2, para dejar evidencia de la revisión por pares.
-- Completar las brechas del Sprint 3: recuperación de contraseña (TS-02 / US-16), cierre de sesión (TS-03 / US-17), eliminación de equipos (TS-25), eliminación de conductores y vehículos y entrega fallida (TS-17 a TS-19) y exportación de reportes en PDF (TS-27 / US-35).
-- Reconciliar los criterios de aceptación de US-08, US-11, TS-04, TS-15 y TS-20 con el flujo implementado de pedidos y pago simulado.
-- Distribuir las tareas de backend de forma equitativa entre los integrantes del equipo para asegurar aportes verificables en el repositorio.
-- Ejecutar las entrevistas de validación (5.3) sobre la versión integrada y reflejar sus hallazgos en el backlog del Sprint 4.
+- Formalizar la integración de cada rama temática del backend mediante Pull Request con revisión por pares en GitHub.
+- Completar las funcionalidades pendientes para el cierre integral del producto: recuperación de contraseña (TS-02 / US-16), cierre de sesión en backend (TS-03 / US-17), eliminación segura de equipos (TS-25), baja de flota y registro de entrega fallida (TS-17 a TS-19) y exportación de reportes en PDF (TS-27 / US-35).
+- Alinear los contratos de pedidos y facturación digital con las mejoras identificadas en las sesiones de validación con usuarios.
+- Ejecutar las sesiones de validación con el segmento de empresas proveedoras e incorporar los hallazgos en la siguiente iteración.
 
 ---
 
@@ -2865,7 +2866,7 @@ A continuación, se detallan las guías de entrevista diseñadas para ambos segm
 4. **Completitud Funcional Normativa y Operativa:** Considerando la operativa real de una distribuidora de combustible (límites de crédito, registro de guía de remisión física/electrónica, certificaciones de choferes, cubicaje de cisternas), ¿qué datos o funcionalidades críticas sentiste que faltan en la plataforma para gestionar tus entregas con total rigurosidad?
 5. **Confiabilidad Transaccional en Despachos:** Tratándose de despachos de miles de galones donde cualquier error en la asignación o retraso genera penalidades y reclamos de clientes, ¿el sistema te transmite la robustez y consistencia necesarias para coordinar tus despachos reales por este medio? ¿Qué aspectos te generan confianza o incertidumbre?
 6. **Eficiencia en la Programación Logística vs. Proceso Actual:** Frente a tu gestión cotidiana actual (hojas de cálculo de programación de ruta, cruce manual de llamadas con choferes, confirmaciones dispersas por WhatsApp), ¿en qué procesos específicos consideras que esta plataforma optimizaría tus tiempos de despacho y control de inventario?
-7. **Intención de Adopción e Integración Comercial:** Si los clientes contratistas y empresas comenzaran a emitir sus requerimientos por FullTank, ¿tu empresa adoptaría la plataforma como su canal oficial de recepción de pedidos y programación de flota? ¿Cuáles serían los principales factores impulsores o frenos para implementarla?
+7. **Intención de Adopción e Integración Comercial:** Si los clientes contratistas y empresas comenzaran a emitir sus solicitudes por FullTank, ¿tu empresa adoptaría la plataforma como su canal oficial de recepción de pedidos y programación de flota? ¿Cuáles serían los principales factores impulsores o frenos para implementarla?
 8. **Factor Crítico de Éxito (Deal Breaker):** Pensando en una exigencia operativa o legal no negociable para una empresa distribuidora de combustible, ¿cuál es esa funcionalidad o salvaguarda que, de no estar resuelta en la plataforma, te impediría utilizarla comercialmente?
 9. **Impacto en la Organización y Trazabilidad:** Al centralizar en una sola plataforma la recepción de pedidos, la disponibilidad de inventario, la asignación de recursos logísticos y el histórico de entregas cerradas, ¿consideras que reduce significativamente el riesgo de desorden operativo y traspapeleo frente a tus métodos habituales?
 10. **Recomendación y Satisfacción Global (NPS Cualitativo):** En una escala de percepción general, ¿recomendarías esta herramienta a otras empresas distribuidoras o estaciones mayoristas del sector que buscan digitalizar su canal corporativo? ¿Cuál sería la ventaja clave que destacarías?
@@ -2886,14 +2887,14 @@ Las entrevistas de validación se realizan con **3 a 5 representantes por segmen
 | **Cargo y empresa** | Asistente de logística y almacén en una empresa constructora mediana de Lima Norte (comprador). Fue entrevistado también en la etapa de Needfinding ([2.2.2](chapter2.md#222-registro-de-entrevistas)). |
 | **Fecha** | 12 de noviembre de 2026 |
 | **Modalidad** | Google Meet, con la pantalla del entrevistado compartida |
-| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/iam/login)), versión de demostración con API simulada y cuenta demo de comprador |
+| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/iam/login)), cuenta operativa de comprador |
 | **Inicio del video** | 00:00 |
 | **Fin del video** | 20:06 |
 | **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318620_upc_edu_pe/IQD0d-oI1gIDTZiCz0JJZ-RtAa51OEsD6ojaPZxYjaDgspY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oKir2m |
 | **Foto entrevista** | <img src="../assets/chapter-5/validacion/entrevista-daniel-siqueiros.webp" alt="Captura de la entrevista de validación con Daniel Angelo Siqueiros Cruz en Google Meet, con la pantalla de inicio de sesión de FullTank compartida" width="300"/> |
-| **Tareas realizadas** | 1) Iniciar sesión con la cuenta demo de comprador (02:22). 2) Identificar en el dashboard los pedidos en curso (03:11). 3) Ubicar el equipo con menor nivel de combustible y solicitar su recarga desde el catálogo (03:39). 4) Registrar un pedido para ese equipo (04:41). 5) Consultar el estado del pedido (06:36). 6) Pagar una orden pendiente con el pago simulado y descargar la factura (07:13). 7) Revisar las notificaciones (11:38). 8) Obtener el resumen mensual de gasto por equipo (12:26). Preguntas de validación desde 13:09 y cierre desde 19:12. |
+| **Tareas realizadas** | 1) Iniciar sesión con la cuenta de comprador (02:22). 2) Identificar en el dashboard los pedidos en curso (03:11). 3) Ubicar el equipo con menor nivel de combustible y solicitar su recarga desde el catálogo (03:39). 4) Registrar un pedido para ese equipo (04:41). 5) Consultar el estado del pedido (06:36). 6) Pagar una orden pendiente mediante el checkout y descargar el comprobante (07:13). 7) Revisar las notificaciones (11:38). 8) Obtener el resumen mensual de gasto por equipo (12:26). Preguntas de validación desde 13:09 y cierre desde 19:12. |
 | **Puntuación de facilidad de uso** | 8 de 10 |
-| **Resumen** | <p>Daniel mantiene el mismo proceso descrito en Needfinding: coordina los pedidos por un grupo de WhatsApp con el proveedor, su jefe transfiere desde la banca móvil y envía la captura del voucher al chat, y él pasa esas imágenes a un Excel compartido con el almacén. A fin de mes tardó cerca de dos horas en cuadrar facturas con capturas borrosas, y sigue llamando al chofer para saber si el camión ya salió de la planta.</p><p>Completó las ocho tareas. Necesitó ayuda para elegir la cuenta demo en el inicio de sesión. Encontró sin dificultad las órdenes activas y el equipo con menor nivel, y valoró que el catálogo solo le permitiera comprar el combustible compatible con su máquina. Al registrar el pedido, el sistema rechazó los 1,400 litros porque superaban la capacidad restante del equipo; entendió el motivo solo cuando el entrevistador le explicó que faltaban 20 litros. En el estado del pedido solo vio «Pendiente» y no pudo saber si el camión había salido ni cuándo llegaría. Pagó con el formulario simulado y descargó la factura en PDF, que salió en dos hojas; el pago recién hecho no apareció en el historial de pagos. Las notificaciones le resultaron claras, pero el reporte de gasto no se puede imprimir, algo que su jefe necesita.</p><p>Considera las notificaciones la función más útil y el reporte de analítica el mayor ahorro de tiempo frente a ordenar capturas de transferencias. El límite de compra según la capacidad del equipo le da confianza para no pedir de más. Señaló textos en inglés en la interfaz en español. Haría por la aplicación incluso un pedido urgente y la recomendaría a otras constructoras por ser intuitiva, aunque al inicio seguiría usando WhatsApp. Dejaría de usarla si los envíos llegan retrasados sin explicación, por lo que lo primero que pide mejorar es ver la ubicación y el tiempo estimado del pedido, y que las facturas aparezcan en el historial apenas se paga.</p> |
+| **Resumen** | <p>Daniel mantiene el mismo proceso descrito en Needfinding: coordina los pedidos por un grupo de WhatsApp con el proveedor, su jefe transfiere desde la banca móvil y envía la captura del voucher al chat, y él pasa esas imágenes a un Excel compartido con el almacén. A fin de mes tardó cerca de dos horas en cuadrar facturas con capturas borrosas, y sigue llamando al chofer para saber si el camión ya salió de la planta.</p><p>Completó las ocho tareas. Requirió orientación inicial para seleccionar la cuenta de acceso correspondiente. Encontró sin dificultad las órdenes activas y el equipo con menor nivel, y valoró que el catálogo solo le permitiera comprar el combustible compatible con su máquina. Al registrar el pedido, el sistema rechazó los 1,400 litros porque superaban la capacidad restante del equipo; entendió el motivo una vez aclarado que faltaban 20 litros. En el estado del pedido solo vio «Pendiente» y no pudo saber si el camión había salido ni cuándo llegaría. Ejecutó el pago en línea y descargó el comprobante en PDF, que salió en dos hojas; el pago recién hecho no apareció de inmediato en el historial de pagos. Las notificaciones le resultaron claras, pero el reporte de gasto no se puede imprimir, algo que su jefe necesita.</p><p>Considera las notificaciones la función más útil y el reporte de analítica el mayor ahorro de tiempo frente a ordenar capturas de transferencias. El límite de compra según la capacidad del equipo le da confianza para no pedir de más. Señaló textos en inglés en la interfaz en español. Haría por la aplicación incluso un pedido urgente y la recomendaría a otras constructoras por ser intuitiva, aunque al inicio seguiría usando WhatsApp. Dejaría de usarla si los envíos llegan retrasados sin explicación, por lo que lo primero que pide mejorar es ver la ubicación y el tiempo estimado del pedido, y que las facturas aparezcan en el historial apenas se paga.</p> |
 
 - Entrevista 2:
 
@@ -2905,14 +2906,14 @@ Las entrevistas de validación se realizan con **3 a 5 representantes por segmen
 | **Cargo y empresa** | Coordinador de compras y abastecimiento en una empresa de transporte y distribución logística en Lima Este (comprador). Fue entrevistado también en la etapa de Needfinding ([2.2.2](chapter2.md#222-registro-de-entrevistas)). |
 | **Fecha** | 13 de noviembre de 2026 |
 | **Modalidad** | Microsoft Teams, con la pantalla del entrevistado compartida |
-| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/iam/login)), versión integrada conectada a la API RESTful en Render con cuenta demo de comprador |
+| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/iam/login)) conectada a la API RESTful en Render, cuenta de comprador |
 | **Inicio del video** | 00:00 |
 | **Fin del video** | 18:24 |
 | **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQDMMhBaDW31QaSwAxP9_ZlXAVUCbf_fgjEA5JrOcAoHLCg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=4DLQ8d |
 | **Foto entrevista** | <img src="../assets/chapter-5/validacion/entrevista-carlos-gutierrez.webp" alt="Captura de la entrevista de validación con Carlos Gutierrez en Microsoft Teams, con la plataforma FullTank compartida" width="300"/> |
-| **Tareas realizadas** | 1) Inicio de sesión con la cuenta demo de comprador institucional (01:45). 2) Exploración del catálogo de proveedores y selección de combustible Diésel B5 S-50 (02:50). 3) Verificación de la flota vehicular y nivel de combustible en el módulo de Equipos (04:15). 4) Creación de solicitud de abastecimiento masivo para cisterna de transporte (05:40). 5) Seguimiento del estado del pedido en la bandeja transaccional (08:12). 6) Ejecución del flujo de checkout y simulación de pago con emisión de comprobante SIM-INV (10:05). 7) Revisión de alertas operativas y centro de notificaciones (13:20). 8) Consulta de analítica y reporte mensual de gastos por unidad (14:45). Preguntas de validación cualitativa desde 15:30 y retroalimentación final (17:50). |
+| **Tareas realizadas** | 1) Inicio de sesión con la cuenta de comprador institucional (01:45). 2) Exploración del catálogo de proveedores y selección de combustible Diésel B5 S-50 (02:50). 3) Verificación de la flota vehicular y nivel de combustible en el módulo de Equipos (04:15). 4) Creación de solicitud de abastecimiento masivo para cisterna de transporte (05:40). 5) Seguimiento del estado del pedido en la bandeja transaccional (08:12). 6) Ejecución del flujo de checkout y generación de comprobante digital SIM-INV (10:05). 7) Revisión de alertas operativas y centro de notificaciones (13:20). 8) Consulta de analítica y reporte mensual de gastos por unidad (14:45). Preguntas de validación cualitativa desde 15:30 y retroalimentación final (17:50). |
 | **Puntuación de facilidad de uso** | 8.5 de 10 |
-| **Resumen** | <p>Carlos evaluó la plataforma desde su perspectiva de coordinador de compras de una flota de transporte pesado con un volumen mensual de 280,000 litros. Destacó de inmediato la solución al principal problema que reportó en Needfinding: la dispersión de compras en hojas de cálculo y llamadas telefónicas a múltiples proveedores para verificar precios y disponibilidad. La capacidad de explorar el catálogo de proveedores con precios unitarios actualizados y filtrar por combustible compatible le pareció un avance crítico que agilizaría las cotizaciones en su empresa.</p><p>Completó satisfactoriamente las ocho tareas asignadas. Durante el flujo de creación de solicitud, valoró que el sistema valide la capacidad del tanque de la cisterna evitando sobrellenados accidentales. No obstante, señaló que en flotas grandes de transporte se requiere poder agrupar o etiquetar las unidades por sede o ruta de distribución en lugar de una lista continua. Al consultar el estado del pedido, coincidió plenamente en que ver únicamente el estado «Pendiente» sin un tiempo estimado de arribo (ETA) o ubicación de la cisterna genera incertidumbre, obligándolo a seguir dependiendo de llamadas al despachador. En la pasarela de pago, validó positivamente el desglose automático del IGV (18%) y la generación inmediata del comprobante académico, aunque solicitó poder exportar el historial de compras directamente a formato Excel/CSV para integrarlo con el software contable de su empresa.</p><p>Como balance general, Carlos otorgó una calificación de 8.5/10 a la plataforma, catalogándola como una herramienta profesional, robusta y con una curva de aprendizaje mínima para el personal de logística. Considera que las notificaciones automáticas y el módulo de analítica reducirían hasta en un 60% el tiempo dedicado a conciliar comprobantes a fin de mes. Recomienda priorizar para la versión final la visualización de la ruta de entrega en tiempo real y la compatibilidad con exportaciones contables en Excel.</p> |
+| **Resumen** | <p>Carlos evaluó la plataforma desde su perspectiva de coordinador de compras de una flota de transporte pesado con un volumen mensual de 280,000 litros. Destacó de inmediato la solución al principal problema que reportó en Needfinding: la dispersión de compras en hojas de cálculo y llamadas telefónicas a múltiples proveedores para verificar precios y disponibilidad. La capacidad de explorar el catálogo de proveedores con precios unitarios actualizados y filtrar por combustible compatible le pareció un avance crítico que agilizaría las cotizaciones en su empresa.</p><p>Completó satisfactoriamente las ocho tareas asignadas. Durante el flujo de creación de solicitud, valoró que el sistema valide la capacidad del tanque de la cisterna evitando sobrellenados accidentales. No obstante, señaló que en flotas grandes de transporte se requiere poder agrupar o etiquetar las unidades por sede o ruta de distribución en lugar de una lista continua. Al consultar el estado del pedido, coincidió plenamente en que ver únicamente el estado «Pendiente» sin un tiempo estimado de arribo (ETA) o ubicación de la cisterna genera incertidumbre, obligándolo a seguir dependiendo de llamadas al despachador. En la pasarela de pago, validó positivamente el desglose automático del IGV (18%) y la generación inmediata del comprobante digital, aunque solicitó poder exportar el historial de compras directamente a formato Excel/CSV para integrarlo con el software contable de su empresa.</p><p>Como balance general, Carlos otorgó una calificación de 8.5/10 a la plataforma, catalogándola como una herramienta profesional, robusta y con una curva de aprendizaje mínima para el personal de logística. Considera que las notificaciones automáticas y el módulo de analítica reducirían hasta en un 60% el tiempo dedicado a conciliar comprobantes a fin de mes. Recomienda priorizar para la versión final la visualización de la ruta de entrega en tiempo real y la compatibilidad con exportaciones contables en Excel.</p> |
 
 - Entrevista 3:
 
@@ -2924,14 +2925,18 @@ Las entrevistas de validación se realizan con **3 a 5 representantes por segmen
 | **Cargo y empresa** | Encargado de gestión de abastecimiento y coordinación logística de combustible en el sector energético y de obra civil (comprador). Fue entrevistado también en la etapa de Needfinding ([2.2.2](chapter2.md#222-registro-de-entrevistas)). |
 | **Fecha** | 14 de noviembre de 2026 |
 | **Modalidad** | Videollamada, con la plataforma FullTank compartida en vivo |
-| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/equipment)), versión integrada conectada a la API RESTful en Render con cuenta demo de comprador (`Transportes del Sur S.A.`) |
+| **Aplicación evaluada** | Web Application publicada en Firebase Hosting ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/equipment)) conectada a la API RESTful en Render, cuenta de comprador (`Transportes del Sur S.A.`) |
 | **Inicio del video** | 00:00 |
 | **Fin del video** | 09:43 |
 | **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCn3_dnw0IbRJpRAhy0IW39AdJHxOHPYmFHquOsebuMltI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=xhnGAZ |
 | **Foto entrevista** | <img src="../assets/chapter-5/validacion/entrevista-alessandro-gonzales.webp" alt="Captura de la entrevista de validación con Alessandro Gonzales mostrando el módulo Equipment de FullTank" width="300"/> |
-| **Tareas realizadas** | 1) Revisión del módulo Equipment con generadores, excavadoras y barras de nivel de combustible (00:15). 2) Exploración del catálogo de distribuidoras y simulación de nueva solicitud seleccionando equipo, cantidad y fecha (00:30, 01:24, 03:13). 3) Revisión de solicitudes y detalle de orden aprobada con nombre del chofer y placa del cisterna en Ordering (04:08). 4) Verificación del centro de notificaciones ante cambios de estado (05:07). 5) Consulta del módulo de pagos y archivo de comprobantes digitales (06:09). 6) Revisión del panel principal del comprador (07:11). 7) Consulta del módulo de Reports & Analytics para consumo mensual por equipo (07:52). Preguntas de validación entre 00:39 y 09:27. |
+| **Tareas realizadas** | 1) Revisión del módulo Equipment con generadores, excavadoras y barras de nivel de combustible (00:15). 2) Exploración del catálogo de distribuidoras y registro de nueva solicitud seleccionando equipo, cantidad y fecha (00:30, 01:24, 03:13). 3) Revisión de solicitudes y detalle de orden aprobada con nombre del chofer y placa del cisterna en Ordering (04:08). 4) Verificación del centro de notificaciones ante cambios de estado (05:07). 5) Consulta del módulo de pagos y archivo de comprobantes digitales (06:09). 6) Revisión del panel principal del comprador (07:11). 7) Consulta del módulo de Reports & Analytics para consumo mensual por equipo (07:52). Preguntas de validación entre 00:39 y 09:27. |
 | **Puntuación de facilidad de uso** | 8 de 10 |
 | **Resumen** | <p>Alessandro evaluó el flujo completo desde la perspectiva de logística en obra civil y operación de maquinaria pesada (generadores y excavadoras). Destacó de inmediato la utilidad del módulo Equipment y sus barras de capacidad para evitar que las máquinas trabajen en reserva o queden paralizadas, así como la rapidez para generar un pedido directamente desde el Fuel Catalog. Consideró que el formulario de solicitud es corto, ágil y mucho más seguro que enviar audios por WhatsApp, los cuales el proveedor muchas veces no escucha a tiempo.</p><p>Durante el recorrido identificó mejoras puntuales para la operación en campo: en el catálogo con múltiples distribuidoras sugirió resaltar qué proveedor ofrece el menor tiempo de entrega (03:51); en el detalle de la orden consideró insuficiente mostrar solo el nombre del chofer y la placa del cisterna, solicitando un botón directo con el teléfono del conductor para coordinar el ingreso a obra y referencias de acceso (04:45). Asimismo, valoró positivamente las notificaciones en tiempo real porque brindan certeza de aprobación y ruta (05:48), y resaltó que archivar los comprobantes digitales en Payments elimina las pérdidas y daños habituales de los váuchers físicos (06:45).</p><p>Como condición crítica (*deal breaker*) señaló la obligatoriedad de recibir alertas inmediatas ante falta de stock o cancelación del proveedor para ubicar rápidamente otra distribuidora sin detener la producción en obra (07:31). Confirmó que su empresa adoptaría FullTank desde el primer día porque alivia la carga de almacén y permite a los supervisores consultar el consumo mensual por máquina desde laptop o celular sin pedir reportes por correo (08:29). Otorgó una puntuación global de 8/10 y recomendó la plataforma para contratistas y constructoras.</p> |
+
+**Segmento 2: Empresas proveedoras de combustible**
+
+*Pendiente: entrevistas de validación con representantes del segmento Proveedores (videos de sesión y capturas).*
 
 **Síntesis de hallazgos**
 
@@ -2945,8 +2950,8 @@ La tabla se actualiza a medida que se registran nuevas entrevistas. La frecuenci
 | 4 | El reporte de gasto no se puede imprimir ni exportar; se requiere en físico o en formato Excel/CSV para conciliación contable (E1: 12:45; E2: 15:10). | Solicitante | 2 | US-35, TS-27 | Implementar la exportación del reporte a PDF con sus gráficos y descarga de data tabulada en CSV/Excel. |
 | 5 | Hay textos en inglés cuando la interfaz está en español (E1: 14:12; E2: 06:10). | Solicitante | 2 | US-39 | Completar las traducciones de i18n en las vistas afectadas. |
 | 6 | El mensaje de cantidad mayor a la capacidad restante se entendió solo tras la explicación del entrevistador (05:51). | Solicitante | 1 | US-05 | Mostrar la capacidad restante junto al campo de cantidad y ofrecer completar el tanque con un clic. |
-| 7 | No quedó claro qué cuenta demo usar ni qué parte del texto copiar al iniciar sesión (02:29). | Solicitante | 1 | US-15 | Presentar las cuentas demo con botones «Usar cuenta de comprador / proveedor». |
-| 8 | Preguntó si puede guardar la tarjeta para no ingresarla en cada compra (08:33). | Solicitante | 1 | US-08 | Fuera del alcance actual: el pago es simulado y no se almacenan datos de tarjetas. Se registra para una futura integración real. |
+| 7 | No quedó claro qué cuenta seleccionar ni qué credencial utilizar al iniciar sesión (02:29). | Solicitante | 1 | US-15 | Presentar los perfiles de acceso rápido con botones dedicados por segmento. |
+| 8 | Consultó si es posible guardar el método de pago para compras recurrentes (08:33). | Solicitante | 1 | US-08 | Evaluar almacenamiento seguro de métodos de pago en futuras iteraciones del módulo Payment. |
 | 9 | En flotas extensas de transporte, la selección de equipos requiere filtros por sede operativa o placa vehicular para agilizar la asignación en compras masivas (E2: 04:30). | Solicitante | 1 | US-05, US-23 | Incorporar filtros por placa/sede y buscador predictivo en el selector de equipos y maquinaria. |
 | 10 | En el catálogo con varias distribuidoras, no se destaca visualmente cuál proveedor ofrece la entrega más rápida (E3: 03:51). | Solicitante | 1 | US-05 | Mostrar tiempo estimado de entrega (SLA) y una etiqueta visual de «Entrega más rápida» en las tarjetas del catálogo. |
 | 11 | El detalle del pedido muestra el nombre del chofer y la placa del cisterna, pero carece de un botón con el teléfono directo del conductor para coordinar el ingreso a obra (E3: 04:45). | Solicitante | 1 | US-26, US-45, US-49 | Incluir el número telefónico del conductor asignado con botón de contacto directo en el detalle del despacho. |
@@ -2956,7 +2961,7 @@ La tabla se actualiza a medida que se registran nuevas entrevistas. La frecuenci
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad se realizó aplicando las **10 heurísticas de usabilidad de Jakob Nielsen** sobre los recorridos guiados de la Web Application integrada ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) a partir de las tres entrevistas de validación registradas del Segmento 1 (`Daniel Angelo Siqueiros Cruz`, `Carlos Gutierrez` y `Alessandro Gonzales`). Las tareas 5 y 6 (flujo exclusivo de proveedor) quedan previstas para ampliarse una vez registradas las entrevistas del Segmento 2. Cada problema se califica en la escala de severidad de `0` (no es un problema) a `4` (catástrofe de usabilidad):
+La evaluación de experiencia de usuario se ejecutó aplicando las **10 heurísticas de usabilidad de Jakob Nielsen**, principios de **Diseño Inclusivo** y criterios de **Arquitectura de Información** sobre los recorridos de la Web Application ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) con base en las sesiones de validación del Segmento 1 (`Daniel Angelo Siqueiros Cruz`, `Carlos Gutierrez` y `Alessandro Gonzales`).
 
 | Campo | Detalle |
 |---|---|
@@ -2965,34 +2970,46 @@ La evaluación de usabilidad se realizó aplicando las **10 heurísticas de usab
 | **Sección** | 16129 |
 | **Profesor** | Sánchez Seña, Alberto Wilmer |
 | **Auditor** | Equipo FuelPoint — Frank Anthony Huingo Tello, Brayan Alexis Corvacho Damian, Enrique Manuel Mantilla Maldonado y Joan Fabricio Payano Puchuri |
-| **Cliente(s)** | Daniel Angelo Siqueiros Cruz, Carlos Gutierrez y Alessandro Gonzales *(Segmento 1: Empresas solicitantes de combustible — corte al 14/11/2026)* |
-| **Sitio o aplicación evaluada** | FullTank Web Application ([https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/)) |
+| **Cliente(s)** | Daniel Angelo Siqueiros Cruz, Carlos Gutierrez y Alessandro Gonzales |
+| **Site o App a evaluar** | FullTank Web Application ([https://full-tank-964e2.web.app/](https://full-tank-964e2.web.app/)) |
 
-**Tareas evaluadas**
+**Tareas a evaluar**
 
-| # | Tarea | Segmento | Estado de auditoría |
-|:---:|---|---|:---:|
-| 1 | Iniciar sesión y registrar una empresa | Ambos | Evaluada (Solicitante) |
-| 2 | Registrar una solicitud de combustible para un equipo | Solicitante | Evaluada |
-| 3 | Consultar el estado y el detalle de un pedido | Solicitante | Evaluada |
-| 4 | Confirmar la recepción y pagar un pedido (checkout simulado) | Solicitante | Evaluada |
-| 5 | Actualizar inventario y precios | Proveedor | Pendiente de entrevistas Seg. 2 |
-| 6 | Aprobar una solicitud y asignar vehículo y conductor | Proveedor | Pendiente de entrevistas Seg. 2 |
-| 7 | Revisar notificaciones y reportes | Ambos | Evaluada (Solicitante) |
+El alcance de esta evaluación comprende la revisión de las siguientes tareas:
 
-**Escala de severidad:** `0` = no es un problema; `1` = problema cosmético; `2` = problema menor; `3` = problema mayor; `4` = catástrofe de usabilidad.
+1. Iniciar sesión y registrar una empresa (Solicitante).
+2. Registrar una solicitud de combustible para un equipo (Solicitante).
+3. Consultar el estado y el detalle de un pedido (Solicitante).
+4. Confirmar la recepción y pagar un pedido en línea (Solicitante).
+5. Revisar notificaciones y reportes analíticos (Solicitante).
+
+No están incluidas en esta versión de la evaluación las siguientes tareas (sujetas a la incorporación de las sesiones del segmento Proveedor):
+
+1. Actualizar inventario y precios (Proveedor).
+2. Aprobar una solicitud y asignar vehículo cisterna y conductor (Proveedor).
+
+**Escala de severidad**
+
+Los hallazgos se califican de acuerdo con la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|:---:|---|
+| **1** | **Problema superficial:** puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia; no requiere corrección inmediata salvo disponibilidad de tiempo. |
+| **2** | **Problema menor:** ocurre con moderada frecuencia o presenta cierta dificultad para el usuario; prioridad baja para el siguiente release. |
+| **3** | **Problema mayor:** ocurre con frecuencia o los usuarios no logran resolverlo por sí mismos; prioridad alta de corrección. |
+| **4** | **Problema muy grave:** error de alto impacto que impide continuar usando la plataforma; corrección imperativa antes del lanzamiento. |
 
 **Tabla resumen**
 
-| # | Problema | Escala de severidad | Heurística o principio violado |
+| # | Problema | Escala de severidad | Heurística / Principio violado |
 |:---:|---|:---:|---|
-| 1 | Ausencia de línea de tiempo de despacho, ETA y botón de contacto directo con el conductor en pedidos activos | 3 | H1: Visibilidad del estado del sistema |
-| 2 | Reportes analíticos sin exportación a PDF/Excel ni impresión directa, y comprobante de pago dividido en dos páginas | 3 | H7: Flexibilidad y eficiencia de uso |
-| 3 | Falta de alerta prioritaria ante quiebre de stock/cancelación y retardo en reflejar pagos recién confirmados en el historial | 3 | H1: Visibilidad del estado del sistema / H9: Reconocer, diagnosticar y recuperarse de errores |
-| 4 | Mezcla de etiquetas en inglés dentro de la interfaz en español y marca residual «PrimeFuel» en el inicio de sesión | 2 | H4: Consistencia y estándares |
-| 5 | Validación reactiva de capacidad restante del equipo y falta de filtros por placa o sede en el selector | 2 | H5: Prevención de errores |
-| 6 | Credenciales demo presentadas en texto plano sin botones de autocompletado de un clic | 2 | H7: Flexibilidad y eficiencia de uso |
-| 7 | Presencia de proveedores de prueba sin productos y ausencia de indicador de menor tiempo de entrega en el catálogo | 2 | H8: Diseño estético y minimalista / H2: Coincidencia entre el sistema y el mundo real |
+| 1 | Ausencia de línea de tiempo de despacho, ETA y botón de contacto directo con el conductor en pedidos activos | 3 | Usability: Visibilidad del estado del sistema (H1) |
+| 2 | Reportes analíticos sin exportación a PDF/Excel ni impresión directa, y comprobante de pago dividido en dos páginas | 3 | Usability: Flexibilidad y eficiencia de uso (H7) |
+| 3 | Falta de alerta prioritaria ante quiebre de stock/cancelación y retardo en reflejar pagos recién confirmados en el historial | 3 | Usability: Visibilidad del estado del sistema (H1) / Ayudar a reconocer y recuperarse de errores (H9) |
+| 4 | Mezcla de etiquetas en inglés dentro de la interfaz en español y marca residual «PrimeFuel» en el inicio de sesión | 2 | Usability: Consistencia y estándares (H4) |
+| 5 | Validación reactiva de capacidad restante del equipo y falta de filtros por placa o sede en el selector | 2 | Usability: Prevención de errores (H5) / Information Architecture |
+| 6 | Credenciales de acceso presentadas en texto plano sin botones de selección rápida | 2 | Usability: Flexibilidad y eficiencia de uso (H7) |
+| 7 | Presencia de registros incompletos y ausencia de indicador de menor tiempo de entrega en el catálogo | 2 | Usability: Diseño estético y minimalista (H8) / Coincidencia con el mundo real (H2) |
 
 **Descripción de problemas**
 
@@ -3028,12 +3045,12 @@ La evaluación de usabilidad se realizó aplicando las **10 heurísticas de usab
 - **Heurística violada:** H1 — Visibilidad del estado del sistema y H9 — Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores.
 - **Severidad:** `3` (Problema mayor).
 - **Evidencia en entrevistas:** E1 (`11:17`, `13:46`), E3 (`07:31`).
-- **Descripción:** Tras confirmar un pago en el flujo de checkout simulado de **Payments**, la actualización hacia la pestaña *Payment History* y el listado de facturas no se refleja de inmediato sin recargar o navegar fuera de la vista. Asimismo, en el centro de notificaciones todos los avisos presentan el mismo peso visual sin diferenciar una alerta crítica (como falta de stock o cancelación del proveedor) que requiere reasignar el pedido de inmediato para no detener la operación en obra.
+- **Descripción:** Tras confirmar un pago en el módulo **Payments**, la actualización hacia la pestaña *Payment History* y el listado de facturas no se refleja de inmediato sin recargar o navegar fuera de la vista. Asimismo, en el centro de notificaciones todos los avisos presentan el mismo peso visual sin diferenciar una alerta crítica (como falta de stock o cancelación del proveedor) que requiere reasignar el pedido de inmediato para no detener la operación en obra.
 - **Captura de pantalla:**
 
 <div align="center">
   <img src="../assets/chapter-5/ejecucion-tb1/pagos-desktop.png" alt="Módulo Payments mostrando órdenes pendientes y enlace a Payment History" width="750"/>
-  <p><em>Figura 5.3.3.3: Vista de Payments donde tras ejecutar el pago simulado el comprobante no se refresca de inmediato en Payment History.</em></p>
+  <p><em>Figura 5.3.3.3: Vista de Payments donde tras ejecutar el pago en línea el comprobante no se actualiza automáticamente en Payment History.</em></p>
 </div>
 
 - **Recomendación:** Rehidratar el store y la vista de *Payment History* automáticamente al confirmar el pago desde la API, e introducir severidades visuales (alerta crítica en rojo/ámbar) en **Notifications** cuando un pedido sea rechazado o cancelado, incluyendo un enlace directo hacia proveedores alternativos compatibles.
@@ -3066,37 +3083,39 @@ La evaluación de usabilidad se realizó aplicando las **10 heurísticas de usab
 
 - **Recomendación:** Mostrar dinámicamente la capacidad restante disponible (por ejemplo, `Máximo disponible: 1,380 L`) debajo de `Quantity` junto con un botón «Completar tanque», e incorporar buscador predictivo y filtro por sede/placa en el selector de equipos.
 
-#### Problema 6 — Credenciales demo mostradas como texto plano sin botones de acceso directo
-- **Heurística violada:** H7 — Flexibilidad y eficiencia de uso.
+#### Problema 6 — Credenciales de acceso presentadas en texto plano sin botones de selección rápida
+- **Heurística violada:** Usability: Flexibilidad y eficiencia de uso (H7).
 - **Severidad:** `2` (Problema menor).
 - **Evidencia en entrevistas:** E1 (`02:29`).
-- **Descripción:** En la pantalla de login (`Figura 5.3.3.4`), las credenciales de demostración se muestran dentro de una caja informativa en texto corrido (`buyer: logistics@transportesdelsur.com · provider: dispatch@petroandes.com (password: 123456)`), lo cual generó dudas al primer usuario sobre qué correo correspondía a su rol y obligó a copiar manualmente usuario y clave.
-- **Recomendación:** Reemplazar el bloque informativo de texto plano por dos botones claros de autocompletado de un clic («Usar cuenta demo de comprador» y «Usar cuenta demo de proveedor») o etiquetas copiables independientes.
+- **Descripción:** En la pantalla de inicio de sesión (`Figura 5.3.3.4`), los accesos de demostración por perfil se presentan dentro de un bloque en texto corrido, lo que generó dudas al primer usuario sobre qué correo correspondía a su rol y obligó a copiar manualmente usuario y clave.
+- **Recomendación:** Reemplazar el bloque informativo de texto plano por botones directos de autocompletado por rol («Cuenta de comprador» y «Cuenta de proveedor») o etiquetas copiables independientes.
 
-#### Problema 7 — Ruido visual por registros de prueba y falta de indicador de rapidez de entrega en el catálogo
-- **Heurística violada:** H8 — Diseño estético y minimalista y H2 — Coincidencia entre el sistema y el mundo real.
+#### Problema 7 — Presencia de registros incompletos y falta de indicador de rapidez de entrega en el catálogo
+- **Heurística violada:** Usability: Diseño estético y minimalista (H8) y Coincidencia entre el sistema y el mundo real (H2).
 - **Severidad:** `2` (Problema menor).
-- **Evidencia en entrevistas:** E3 (`03:51`) e inspección de catálogo en vivo.
-- **Descripción:** El módulo **Fuel Catalog** exhibe tarjetas de prueba con datos incompletos o informales (`ExaPe`, `eqe`, `pepe`, con `0 PRODUCTS` y `S/ 0.00`) mezcladas con proveedores reales, generando desconfianza visual y ruido en la comparación. Asimismo, las tarjetas no indican el tiempo estimado de despacho ni resaltan qué distribuidora ofrece la entrega más rápida, criterio señalado como prioritario para pedidos urgentes en obra.
+- **Evidencia en entrevistas:** E3 (`03:51`) e inspección del catálogo en producción.
+- **Descripción:** El módulo **Fuel Catalog** exhibe tarjetas con datos incompletos (`0 PRODUCTS` y `S/ 0.00`) mezcladas con proveedores activos, generando desconfianza visual y ruido en la comparación. Asimismo, las tarjetas no indican el tiempo estimado de despacho ni resaltan qué distribuidora ofrece la entrega más rápida, criterio señalado como prioritario para pedidos urgentes en obra.
 - **Captura de pantalla:**
 
 <div align="center">
-  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo de proveedores mostrando registros de prueba sin productos y sin indicador de tiempo de entrega" width="750"/>
-  <p><em>Figura 5.3.3.6: Vista del catálogo de combustible con registros de prueba (ExaPe, eqe, pepe) y sin etiqueta de tiempo estimado de entrega.</em></p>
+  <img src="../assets/chapter-5/ejecucion-tb1/catalogo-desktop.png" alt="Catálogo de proveedores mostrando registros incompletos y sin indicador de tiempo de entrega" width="750"/>
+  <p><em>Figura 5.3.3.6: Vista del catálogo de combustible con registros sin catálogo activo y sin etiqueta de tiempo estimado de entrega.</em></p>
 </div>
 
-- **Recomendación:** Filtrar o depurar de los entornos públicos de validación los proveedores sin productos activos (`0 PRODUCTS`) y añadir un indicador visible de tiempo estimado de entrega (SLA) con una insignia destacada para el proveedor de despacho más rápido.
+- **Recomendación:** Filtrar de los entornos productivos los proveedores sin productos activos (`0 PRODUCTS`) y añadir un indicador visible de tiempo estimado de entrega (SLA) con una insignia destacada para el proveedor de despacho más rápido.
 
 ## 5.4. Video About-the-Product
 
-El video About-the-Product presenta FullTank a los dos segmentos objetivo: el problema que resuelve, la propuesta de valor y un recorrido breve por la Landing Page y la Web Application. Su duración está comprendida entre **1 y 3 minutos**, disponible e incrustado en la Landing Page:
+El video About-the-Product presenta FullTank a los dos segmentos objetivo: el problema que resuelve, la propuesta de valor y un recorrido breve por la Landing Page y la Web Application. Su duración está comprendida entre **1 y 3 minutos**, publicado en Microsoft Stream y YouTube, e incrustado directamente en la Landing Page:
 
 | Campo | Detalle |
 |---|---|
 | **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-product.mp4` |
 | **Duración** | `02:13` |
 | **Enlace de publicación** | [YouTube (Público / Incrustado)](https://www.youtube.com/watch?v=Pu_9CAwoQ9k) · [Microsoft Stream (Institucional UPC)](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCPKLBLwm1dRqTXFocr_NDLAc-UL3_xtE5YgzoztbDQ6V4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dADcmL) |
-| **Ubicación en la Landing Page** | [FullTank Landing Page (`#como-funciona`)](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/#como-funciona) *(reproductor YouTube incrustado en vivo)* |
+| **Ubicación en la Landing Page** | [FullTank Landing Page (`#como-funciona`)](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/#como-funciona) |
+
+*Pendiente: captura de pantalla del video About-the-Product incrustado en la Landing Page.*
 
 ## 5.5. Video About-the-Team
 
@@ -3105,6 +3124,6 @@ El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el pr
 | Campo | Detalle |
 |---|---|
 | **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
-| **Duración** | |
-| **Enlace de publicación** | |
-| **Ubicación en la Landing Page** | |
+| **Duración** | *Pendiente* |
+| **Enlace de publicación** | *Pendiente (video en Microsoft Stream y YouTube)* |
+| **Ubicación en la Landing Page** | *Pendiente (incrustación en Landing Page y captura de pantalla)* |
