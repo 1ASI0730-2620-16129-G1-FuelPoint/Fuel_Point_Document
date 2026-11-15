@@ -434,6 +434,11 @@ El objetivo principal del Sprint 1 es diseñar, maquetar y publicar la primera v
 
 **Tablero de seguimiento:** [FullTank · FuelPoint en Trello](https://trello.com/b/6h5mZ8L6) (la vista consolidada del tablero y sus 10 historias de la Landing Page se registran en la sección [3.3 Product Backlog](chapter3.md#33-product-backlog)).
 
+<div align="center">
+  <img src="../assets/chapter-5/trello-sprint-1.png" alt="Historias de usuario de la Landing Page en el Product Backlog de Trello." width="850"/>
+  <p><em>Figura 5.2.1.3.1. Historias de usuario de la Landing Page en el Product Backlog de Trello.</em></p>
+</div>
+
 A continuación se presenta el desglose de las Historias de Usuario en tareas técnicas ejecutadas durante el Sprint 1:
 
 <table border="1" cellspacing="0" cellpadding="6">
@@ -704,8 +709,8 @@ La Landing Page de FullTank se encuentra desplegada y disponible públicamente m
 **Evidencia visual de publicación:** la Landing Page operativa en GitHub Pages se verifica en producción a través de las vistas capturadas en la sección [5.2.1.5](#5215-execution-evidence-for-sprint-review) (iniciando con la sección principal *Home*):
 
 <div align="center">
-  <img src="../assets-chapter-5/HomeLandingPage.png" alt="Landing Page de FullTank desplegada y operativa en GitHub Pages" width="850"/>
-  <p><em>Figura: Vista principal de la Landing Page de FullTank publicada en GitHub Pages.</em></p>
+  <img src="../assets/chapter-5/despliegue/landing-github-pages.png" alt="Página de inicio de FullTank publicada en GitHub Pages." width="850"/>
+  <p><em>Figura 5.2.1.7.1. Página de inicio de FullTank publicada en GitHub Pages.</em></p>
 </div>
 
 
@@ -953,8 +958,8 @@ El objetivo principal del Sprint 2 es implementar, integrar y desplegar la prime
 **Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6) (34 historias completadas en *Hecho*, 87 Story Points).
 
 <div align="center">
-  <img src="../assets-chapter-5/trello.png" alt="Tablero de Trello oficial de FullTank para el Sprint 2 con 34 historias en Hecho" width="850"/>
-  <p><em>Figura: Tablero de Trello oficial de FullTank correspondiente al seguimiento del Sprint 2 (TB1).</em></p>
+  <img src="../assets/chapter-5/trello-sprint-2.png" alt="Historias de la aplicación web en la columna «Hecho» del tablero de Trello." width="850"/>
+  <p><em>Figura 5.2.2.3.1. Historias de la aplicación web en la columna «Hecho» del tablero de Trello.</em></p>
 </div>
 
 A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
@@ -2688,6 +2693,33 @@ La validación en contenedores verifica de manera automatizada el comportamiento
 
 La evidencia visual de ejecución se encuentra documentada en la especificación interactiva de endpoints ([5.2.3.6](#5236-services-documentation-evidence-for-sprint-review)), el despliegue en producción conectado en Render y Firebase Hosting ([5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)), las pruebas guiadas con usuarios compradores ([5.3.2](#532-registro-de-entrevistas)) y el video demostrativo *About-the-Product* ([5.4](#54-video-about-the-product)).
 
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-sprint-3/inicio-de-sesion.png" alt="Pantalla de inicio de sesión de FullTank en Firebase Hosting." width="850"/>
+  <p><em>Figura 5.2.3.5.1. Pantalla de inicio de sesión de FullTank en Firebase Hosting.</em></p>
+</div>
+
+Las siguientes capturas corresponden a la prueba de extremo a extremo realizada en producción el 12 de noviembre de 2026.
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-sprint-3/catalogo-comprador.png" alt="Catálogo de combustible desde la cuenta compradora." width="850"/>
+  <p><em>Figura 5.2.3.5.2. Catálogo de combustible desde la cuenta compradora.</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-sprint-3/solicitud-proveedor.png" alt="Solicitud de combustible en la bandeja de aprobación del proveedor." width="850"/>
+  <p><em>Figura 5.2.3.5.3. Solicitud de combustible en la bandeja de aprobación del proveedor.</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-sprint-3/pedido-pendiente-de-pago.png" alt="Pedido disponible para pago tras confirmar la recepción." width="850"/>
+  <p><em>Figura 5.2.3.5.4. Pedido disponible para pago tras confirmar la recepción.</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/chapter-5/ejecucion-sprint-3/comprobante-de-pago.png" alt="Comprobante emitido y pago en estado completado." width="850"/>
+  <p><em>Figura 5.2.3.5.5. Comprobante emitido y pago en estado completado.</em></p>
+</div>
+
 ---
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
@@ -2812,13 +2844,28 @@ Distribución de commits en `main` al release `daee12a` (**12 de noviembre de 20
 
 El análisis de actividad y pulso de desarrollo del repositorio `Full_Tank_Backend` (98 commits totales integrados en `main`, con 73 commits de trabajo directo y 25 merges de integración) refleja la concentración del esfuerzo en la consolidación de los Web Services, la migración a PostgreSQL 18 y la suite de 89 pruebas automatizadas, consultable en tiempo real en [Pulse en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/pulse).
 
+<div align="center">
+  <img src="../assets/chapter-5/insights-3.png" alt="Actividad del repositorio Full_Tank_Backend en GitHub Pulse entre el 14 de octubre y el 14 de noviembre de 2026." width="850"/>
+  <p><em>Figura 5.2.3.8.1. Actividad del repositorio Full_Tank_Backend en GitHub Pulse entre el 14 de octubre y el 14 de noviembre de 2026.</em></p>
+</div>
+
 ##### Contributors
 
 El gráfico de contribuciones confirma la participación activa de los cuatro integrantes en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas (`BralexCD` con 51 commits, `enrique-mantilla` con 19, `Franz2308` con 17 y `joanfpp2-ai` con 11): [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
 
+<div align="center">
+  <img src="../assets/chapter-5/contributors-3.png" alt="Gráficos de contribuciones por integrante en el repositorio Full_Tank_Backend." width="850"/>
+  <p><em>Figura 5.2.3.8.2. Gráficos de contribuciones por integrante en el repositorio Full_Tank_Backend.</em></p>
+</div>
+
 ##### Network graph
 
 El grafo de ramas evidencia la aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `build/*`, `chore/*`) integradas de manera ordenada hasta los releases `fde0498` y `daee12a` en `main`: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
+
+<div align="center">
+  <img src="../assets/chapter-5/network-3.png" alt="Grafo de commits y ramas del repositorio Full_Tank_Backend." width="850"/>
+  <p><em>Figura 5.2.3.8.3. Grafo de commits y ramas del repositorio Full_Tank_Backend.</em></p>
+</div>
 
 Principales herramientas de comunicación: GitHub (control de versiones e integración por ramas), WhatsApp (coordinación diaria) y Google Meet (planificación y retrospectiva).
 
@@ -3114,6 +3161,11 @@ El video About-the-Product presenta FullTank a los dos segmentos objetivo: el pr
 | **Ubicación en la Landing Page** | [FullTank Landing Page (`#como-funciona`)](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/#como-funciona) |
 
 El video se encuentra incrustado activamente en la sección `#como-funciona` del archivo `index.html` del repositorio [Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page) mediante el reproductor embebido `https://www.youtube.com/embed/Pu_9CAwoQ9k` (commit `20372c4`).
+
+<div align="center">
+  <img src="../assets/chapter-5/video-about-the-product-landing.png" alt="Video About-the-Product reproducido en la sección «How it works» de la Landing Page." width="850"/>
+  <p><em>Figura 5.4.1. Video About-the-Product reproducido en la sección «How it works» de la Landing Page.</em></p>
+</div>
 
 ## 5.5. Video About-the-Team
 
