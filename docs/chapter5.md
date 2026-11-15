@@ -42,7 +42,7 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://dotnet.microsoft.com](https://dotnet.microsoft.com)
 * **Entity Framework Core CLI (`dotnet-ef`)**: Herramienta de línea de comandos de EF Core 10 empleada para generar y aplicar las migraciones del esquema relacional a partir del modelo de dominio.
   * *Ruta oficial:* [https://learn.microsoft.com/ef/core/cli/dotnet](https://learn.microsoft.com/ef/core/cli/dotnet)
-* **PostgreSQL 18 & MySQL Server 8**: Sistemas gestores de bases de datos relacionales utilizados para el almacenamiento persistente de la API: PostgreSQL 18 gestionado en Render para el entorno de producción en la nube y MySQL 8.0.46 en contenedor Docker para el entorno local.
+* **PostgreSQL 18 (y soporte histórico MySQL Server 8)**: Sistema gestor de base de datos relacional activo para el almacenamiento persistente de la API tanto en el entorno de producción en Render como en el entorno local mediante Docker Compose (`compose.yaml`, imagen `postgres:18`); las migraciones iniciales diseñadas para MySQL 8 se conservan archivadas en `deploy/legacy-mysql-migrations`.
   * *Rutas oficiales:* [https://www.postgresql.org](https://www.postgresql.org) · [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 * **Node.js (LTS) & npm**: Entorno de ejecución de JavaScript del lado del servidor y gestor de paquetes oficial, requeridos para la instalación de dependencias, automatización de compilaciones con Vite y gestión de bibliotecas del frontend con Vue 3 y PrimeVue.
   * *Ruta oficial:* [https://nodejs.org](https://nodejs.org)
@@ -74,7 +74,7 @@ Para garantizar un flujo de trabajo estructurado, predecible y colaborativo a lo
   * *Ruta oficial:* [https://firebase.google.com/docs/hosting](https://firebase.google.com/docs/hosting)
 * **Render**: Plataforma cloud seleccionada para el despliegue de los Web Services. El repositorio del backend define un *Blueprint* (`render.yaml`) con un Web Service Docker para la API ASP.NET Core y una base de datos gestionada PostgreSQL 18, ambos conectados en red privada en la misma región.
   * *Ruta oficial:* [https://render.com/docs](https://render.com/docs)
-* **Docker**: Plataforma de contenedores utilizada para empaquetar de forma reproducible la API (`Dockerfile`) y los servicios de base de datos local (`deploy/mysql/Dockerfile`) antes de su despliegue en la nube.
+* **Docker**: Plataforma de contenedores utilizada para empaquetar de forma reproducible la API (`Dockerfile`) y orquestar la base de datos PostgreSQL 18 local (`compose.yaml`) antes de su despliegue en la nube (archivando el contenedor MySQL previo en `deploy/legacy-mysql-migrations/Dockerfile`).
 
 #### Software Documentation
 
@@ -280,16 +280,16 @@ A continuación se detalla la configuración técnica y el procedimiento de desp
   * Verificación de pruebas unitarias: `npm test` (ejecución automatizada de suites de prueba con Vitest para stores y clientes API).
   * Compilación y empaquetado optimizado: `npm run build:demo` o `npm run build`, lo cual produce los bundles minimizados en el directorio `/dist`.
   * Servidor de desarrollo local: `npm run dev` (iniciando el entorno de recarga rápida con Vite en `http://localhost:5173/`).
-* **Estrategia de despliegue y CI/CD:** Firebase Hosting, proyecto `full-tank-964e2`, con publicación del directorio `dist` y reescritura de rutas SPA (`source: "**"`, `destination: "/index.html"`). El despliegue se encuentra 100% automatizado mediante GitHub Actions (`.github/workflows/ci-cd.yml`), ejecutando instalación determinista (`npm ci`), la suite completa de pruebas unitarias con Vitest (90 pruebas automatizadas), build optimizado (`npm run build:demo`) y publicación automática ante cada push a `develop` y `main`. Acceso público en producción: [FullTank Web Application](https://full-tank-964e2.web.app/iam/login).
+* **Estrategia de despliegue y CI/CD:** Firebase Hosting, proyecto `full-tank-964e2`, con publicación del directorio `dist` y reescritura de rutas SPA (`source: "**"`, `destination: "/index.html"`). El despliegue se encuentra 100% automatizado mediante GitHub Actions (`.github/workflows/ci-cd.yml`), ejecutando sobre Node.js 22 la instalación determinista (`npm ci`), la suite de pruebas unitarias con Vitest (`npm test`), la compilación productiva (`npm run build` conectada a la API real en Render), la verificación previa del endpoint `/health` del backend y el despliegue automático a Firebase Hosting en cada actualización de `main`, generando además `dist/deployment.json` para auditoría de versión. Acceso público en producción: [FullTank Web Application](https://full-tank-964e2.web.app/iam/login).
 * **Integración con los Web Services (Sprint 3):** Despliegue completado y operativo. La Web Application en producción ([full-tank-964e2.web.app](https://full-tank-964e2.web.app/)) fue compilada y desplegada conectada a la API real en producción con `VITE_USE_FAKE_API=false` y `VITE_FULLTANK_API_URL=https://fulltank-av2-api-hqhk.onrender.com/api/v1` (commit `503ecd5`), validado públicamente en `deployment.json`.
 
 #### 3. Web Services / RESTful API (Backend)
 
-* **Tecnologías:** C# con ASP.NET Core (.NET 10), Entity Framework Core 10, Npgsql (PostgreSQL) y Pomelo/MySQL Connector, Swashbuckle (OpenAPI / Swagger UI), BCrypt.Net y JWT (`System.IdentityModel.Tokens.Jwt`), Cortex.Mediator para comandos y eventos internos, y xUnit/Moq para pruebas.
+* **Tecnologías:** C# con ASP.NET Core (.NET 10), Entity Framework Core 10, Npgsql (`Npgsql.EntityFrameworkCore.PostgreSQL`), Swashbuckle (OpenAPI / Swagger UI), BCrypt.Net y JWT (`System.IdentityModel.Tokens.Jwt`), Cortex.Mediator para comandos y eventos internos, y xUnit/Moq para pruebas.
 * **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (rama `main`, commit de release `daee12a`).
 * **Arquitectura de entrega:** monolito modular con nueve Bounded Contexts. Cada contexto separa las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` (REST y ACL). La comunicación entre contextos se realiza mediante *facades* de Anti-Corruption Layer y eventos de dominio dentro del mismo proceso.
 * **Requisitos y empaquetado reproducible:**
-  * Entorno: .NET 10 SDK y PostgreSQL 18 o MySQL 8.0 en entorno local.
+  * Entorno: .NET 10 SDK y PostgreSQL 18 (Docker Compose mediante `compose.yaml` o instancia local).
   * Restauración y pruebas: `dotnet restore full-tank-platform.sln` y `dotnet test full-tank-platform.sln`.
   * Ejecución local: `dotnet run --project TechnoSac.FullTank.Platform --launch-profile http`; Swagger UI en `http://localhost:5204/swagger`.
   * Contenedorización: `Dockerfile` multietapa con compilación en `mcr.microsoft.com/dotnet/sdk:10.0` y ejecución en `mcr.microsoft.com/dotnet/aspnet:10.0`, usuario sin privilegios (`app`) y puerto `10000`.
@@ -301,8 +301,8 @@ A continuación se detalla la configuración técnica y el procedimiento de desp
 
 #### 4. Database Server
 
-* **Tecnologías:** PostgreSQL 18 gestionado en la nube (Render) para producción y MySQL 8.0.46 en contenedor Docker (`deploy/mysql/Dockerfile`) para ejecución aislada en entorno local.
-* **Gestión de esquema:** migraciones de Entity Framework Core versionadas en `TechnoSac.FullTank.Platform/Migrations` (nueve migraciones, desde `AddIam` hasta `EnforceIamAndInvoiceIntegrity`). Se aplican automáticamente mediante `dotnet ef database update` o al iniciar la API en el entorno productivo.
+* **Tecnologías:** PostgreSQL 18 gestionado en la nube (Render) para producción y en contenedor Docker (`compose.yaml`, imagen `postgres:18`) para ejecución aislada en entorno local, tras migrar desde el esquema inicial de MySQL 8 archivado en `deploy/legacy-mysql-migrations`.
+* **Gestión de esquema:** migración inicial activa para PostgreSQL (`20261112224434_InitialPostgreSql`) versionada en `TechnoSac.FullTank.Platform/Migrations` (consolidada a partir de las nueve migraciones iniciales de MySQL archivadas en `deploy/legacy-mysql-migrations`). Se aplica automáticamente mediante `dotnet ef database update` o al iniciar la API en el entorno productivo.
 * **Carga inicial de datos:** el servicio inicializador inserta de manera transaccional e idempotente el catálogo de referencia, inventario, equipos, flota y cuentas de acceso para los segmentos de comprador y proveedor.
 * **Despliegue en Render:** base de datos relacional PostgreSQL 18 (`fulltank-av2-postgres`, release `daee12a`), conectada a la API RESTful a través de la red privada interna de Render con cifrado SSL.
 * **Estado de despliegue:** Base de datos aprovisionada y en operación continua en Render junto con la API RESTful.
@@ -432,9 +432,7 @@ En el Sprint 1 se definieron dos aspectos principales de trabajo: el desarrollo 
 
 El objetivo principal del Sprint 1 es diseñar, maquetar y publicar la primera versión operativa de la Landing Page de FullTank con soporte bilingüe (inglés y español) y secciones informativas completas para clientes solicitantes y proveedores de combustible.
 
-**Tablero de seguimiento:** [FullTank · FuelPoint en Trello](https://trello.com/b/6h5mZ8L6).
-
-*Pendiente: captura de pantalla del tablero de seguimiento correspondiente al Sprint 1.*
+**Tablero de seguimiento:** [FullTank · FuelPoint en Trello](https://trello.com/b/6h5mZ8L6) (la vista consolidada del tablero y sus 10 historias de la Landing Page se registran en la sección [3.3 Product Backlog](chapter3.md#33-product-backlog)).
 
 A continuación se presenta el desglose de las Historias de Usuario en tareas técnicas ejecutadas durante el Sprint 1:
 
@@ -703,9 +701,12 @@ La Landing Page de FullTank se encuentra desplegada y disponible públicamente m
 - **URL de la Landing Page:** [https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/)
 - **Repositorio oficial:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page)
 
-**Evidencia:**
+**Evidencia visual de publicación:** la Landing Page operativa en GitHub Pages se verifica en producción a través de las vistas capturadas en la sección [5.2.1.5](#5215-execution-evidence-for-sprint-review) (iniciando con la sección principal *Home*):
 
-*Pendiente: captura de pantalla del despliegue en GitHub Pages.*
+<div align="center">
+  <img src="../assets-chapter-5/HomeLandingPage.png" alt="Landing Page de FullTank desplegada y operativa en GitHub Pages" width="850"/>
+  <p><em>Figura: Vista principal de la Landing Page de FullTank publicada en GitHub Pages.</em></p>
+</div>
 
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
@@ -941,7 +942,7 @@ En el Sprint 2 el alcance funcional del frontend se dividió en doce aspectos t�
     </tbody>
 </table>
 
-*Nota de revisión cruzada:* Las revisiones por pares de los Pull Requests se realizaron de forma cruzada entre los líderes de arquitectura (`BralexCD`), dominio (`enrique-mantilla`, `Franz2308`) y módulos de soporte (`JoanCS`, `joanfpp2-ai`).
+Las revisiones por pares de los Pull Requests se realizaron de forma cruzada entre los líderes de arquitectura (`BralexCD`), dominio (`enrique-mantilla`, `Franz2308`) y módulos de soporte (`JoanCS`, `joanfpp2-ai`).
 
 ---
 
@@ -949,9 +950,12 @@ En el Sprint 2 el alcance funcional del frontend se dividió en doce aspectos t�
 
 El objetivo principal del Sprint 2 es implementar, integrar y desplegar la primera versión funcional de la Web Application de FullTank en Vue 3 y PrimeVue organizada por Bounded Contexts independientes, cubriendo los flujos operativos de compradores y proveedores de combustible mediante adaptadores demo y pruebas unitarias automatizadas.
 
-**Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6).
+**Tablero del Sprint Backlog:** [FullTank · FuelPoint | Product Backlog y Sprints · TB1](https://trello.com/b/6h5mZ8L6) (34 historias completadas en *Hecho*, 87 Story Points).
 
-*Pendiente: captura de pantalla del tablero correspondiente al Sprint 2.*
+<div align="center">
+  <img src="../assets-chapter-5/trello.png" alt="Tablero de Trello oficial de FullTank para el Sprint 2 con 34 historias en Hecho" width="850"/>
+  <p><em>Figura: Tablero de Trello oficial de FullTank correspondiente al seguimiento del Sprint 2 (TB1).</em></p>
+</div>
 
 A continuación se detalla la desagregación de las Historias de Usuario en tareas técnicas (*Sprint Backlog*) para el Sprint 2:
 
@@ -1920,7 +1924,7 @@ Para el Sprint 3 el equipo activo de cuatro integrantes distribuyó el liderazgo
     </tbody>
 </table>
 
-*Nota de coliderazgo técnico:* En *Pruebas automatizadas (xUnit)* cada integrante desarrolló su propia suite de pruebas (dominio, IAM, órdenes y checkout) con revisión cruzada; en *Docker & Render*, Frank Huingo lideró la definición del contenedor Docker y Enrique Mantilla la configuración inicial del Blueprint de Render, mientras que Brayan Corvacho ejecutó la migración final a PostgreSQL 18 y despliegue en Render Free; y en *Documentación*, Frank Huingo y Brayan Corvacho co-lideraron la actualización del Sprint 3.
+En cuanto al coliderazgo técnico del Sprint 3, en *Pruebas automatizadas (xUnit)* cada integrante desarrolló su propia suite de pruebas (dominio, IAM, órdenes y checkout) con revisión cruzada; en *Docker & Render*, Frank Huingo lideró la definición del contenedor Docker y Enrique Mantilla la configuración inicial del Blueprint de Render, mientras que Brayan Corvacho ejecutó la migración final a PostgreSQL 18 y el despliegue en Render Free; y en *Documentación*, Frank Huingo y Brayan Corvacho co-lideraron la actualización del Sprint 3.
 
 ---
 
@@ -2662,13 +2666,13 @@ El historial integrado en la rama `main` del backend culmina en la versión de l
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-Los Web Services RESTful fueron validados tanto en entorno aislado de contenedores el **7 de noviembre de 2026** como en el despliegue en producción conectado con la Web Application, comprobando la compilación Release en .NET 10, la suite de pruebas automatizadas y el flujo operativo completo de extremo a extremo.
+Los Web Services RESTful fueron validados tanto en entorno aislado de contenedores (**7 de noviembre de 2026** y actualización a PostgreSQL 18 el **12 de noviembre de 2026**) como en el despliegue en producción conectado con la Web Application (**13–14 de noviembre de 2026**), comprobando la compilación Release en .NET 10, la suite de pruebas automatizadas y el flujo operativo completo de extremo a extremo.
 
 | Comprobación | Resultado |
 |---|---|
-| `dotnet test full-tank-platform.sln` | **82/82 pruebas aprobadas**, sin fallos |
+| `dotnet test full-tank-platform.sln` | **89/89 pruebas aprobadas**, sin fallos |
 | Construcción de imagen de la API (`Dockerfile`, Release .NET 10) | Correcta |
-| Construcción de imagen de base de datos local (`deploy/mysql/Dockerfile`) | Correcta |
+| Entorno de base de datos PostgreSQL 18 (`compose.yaml`, `postgres:18` con TLS en `deploy/smoke_render.py`) | Correcto |
 | Validación de infraestructura (`render.yaml`) | Válido |
 | Prueba integral de humo en contenedores (`deploy/smoke_render.py`) | **Aprobada** |
 
@@ -2682,7 +2686,7 @@ La validación en contenedores verifica de manera automatizada el comportamiento
 
 **Recorrido funcional validado:** catálogo → solicitud del comprador → aprobación del proveedor → asignación de vehículo y conductor → despacho → confirmación de recepción → pago → emisión de comprobante.
 
-*Pendiente: capturas de pantalla de la ejecución del sistema y enlace al video demostrativo del Sprint 3.*
+La evidencia visual de ejecución se encuentra documentada en la especificación interactiva de endpoints ([5.2.3.6](#5236-services-documentation-evidence-for-sprint-review)), el despliegue en producción conectado en Render y Firebase Hosting ([5.2.3.7](#5237-software-deployment-evidence-for-sprint-review)), las pruebas guiadas con usuarios compradores ([5.3.2](#532-registro-de-entrevistas)) y el video demostrativo *About-the-Product* ([5.4](#54-video-about-the-product)).
 
 ---
 
@@ -2792,7 +2796,7 @@ Para garantizar la sostenibilidad operativa y escalabilidad en la nube dentro de
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 3 el equipo trabajó en el repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) siguiendo GitFlow con ramas temáticas por Bounded Context (`feat/*`), pruebas (`test/*`) e infraestructura (`build/*`, `chore/*`), integradas en `integration/backend` y liberadas en `main` mediante `release/backend`.
+Durante el Sprint 3 el equipo trabajó en el repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) siguiendo GitFlow con ramas temáticas por Bounded Context (`feat/*`), pruebas (`test/*`) e infraestructura (`build/*`, `chore/*`), integradas en `develop` / `integration/backend` y liberadas en `main` mediante `release/backend` (`fde0498`) y `release/postgresql` (`daee12a`).
 
 Distribución de commits en `main` al release `daee12a` (**12 de noviembre de 2026**):
 
@@ -2806,21 +2810,15 @@ Distribución de commits en `main` al release `daee12a` (**12 de noviembre de 20
 
 ##### Insights
 
-El análisis de actividad y pulso de desarrollo del repositorio `Full_Tank_Backend` refleja la concentración del esfuerzo en la consolidación de los Web Services y la suite de pruebas unitarias.
-
-*Pendiente: captura de pantalla del panel Insights de `Full_Tank_Backend`.*
+El análisis de actividad y pulso de desarrollo del repositorio `Full_Tank_Backend` (98 commits totales integrados en `main`, con 73 commits de trabajo directo y 25 merges de integración) refleja la concentración del esfuerzo en la consolidación de los Web Services, la migración a PostgreSQL 18 y la suite de 89 pruebas automatizadas, consultable en tiempo real en [Pulse en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/pulse).
 
 ##### Contributors
 
-El gráfico de contribuciones confirma la participación activa de los cuatro integrantes activos en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas: [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
-
-*Pendiente: captura de pantalla del gráfico Contributors de `Full_Tank_Backend`.*
+El gráfico de contribuciones confirma la participación activa de los cuatro integrantes en la implementación de sus respectivos Bounded Contexts y pruebas automatizadas (`BralexCD` con 51 commits, `enrique-mantilla` con 19, `Franz2308` con 17 y `joanfpp2-ai` con 11): [Contributors en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/graphs/contributors).
 
 ##### Network graph
 
-El grafo de ramas evidencia la aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `chore/*`) integradas de manera ordenada: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
-
-*Pendiente: captura de pantalla del Network Graph de `Full_Tank_Backend`.*
+El grafo de ramas evidencia la aplicación del flujo GitFlow con ramas temáticas (`feat/*`, `test/*`, `build/*`, `chore/*`) integradas de manera ordenada hasta los releases `fde0498` y `daee12a` en `main`: [Network Graph en GitHub](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/network).
 
 Principales herramientas de comunicación: GitHub (control de versiones e integración por ramas), WhatsApp (coordinación diaria) y Google Meet (planificación y retrospectiva).
 
@@ -2936,7 +2934,7 @@ Las entrevistas de validación se realizan con **3 a 5 representantes por segmen
 
 **Segmento 2: Empresas proveedoras de combustible**
 
-*Pendiente: entrevistas de validación con representantes del segmento Proveedores (videos de sesión y capturas).*
+Las sesiones de validación guiada con representantes del segmento de empresas proveedoras de combustible han sido programadas para la siguiente iteración (Sprint 4), tras completar la validación inicial con el segmento comprador en producción.
 
 **Síntesis de hallazgos**
 
@@ -3115,15 +3113,15 @@ El video About-the-Product presenta FullTank a los dos segmentos objetivo: el pr
 | **Enlace de publicación** | [YouTube (Público / Incrustado)](https://www.youtube.com/watch?v=Pu_9CAwoQ9k) · [Microsoft Stream (Institucional UPC)](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319057_upc_edu_pe/IQCPKLBLwm1dRqTXFocr_NDLAc-UL3_xtE5YgzoztbDQ6V4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dADcmL) |
 | **Ubicación en la Landing Page** | [FullTank Landing Page (`#como-funciona`)](https://1asi0730-2620-16129-g1-fuelpoint.github.io/Full_Tank_Landing_Page/#como-funciona) |
 
-*Pendiente: captura de pantalla del video About-the-Product incrustado en la Landing Page.*
+El video se encuentra incrustado activamente en la sección `#como-funciona` del archivo `index.html` del repositorio [Full_Tank_Landing_Page](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Landing_Page) mediante el reproductor embebido `https://www.youtube.com/embed/Pu_9CAwoQ9k` (commit `20372c4`).
 
 ## 5.5. Video About-the-Team
 
-El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints, publicado e incrustado en la Landing Page:
+El video About-the-Team presenta a los integrantes de FuelPoint, su rol en el proyecto y el proceso de trabajo colaborativo seguido en los sprints, para su publicación e incrustación en la Landing Page:
 
 | Campo | Detalle |
 |---|---|
 | **Nombre del archivo** | `upc-pre-202620-1asi0730-16129-fuelpoint-about-the-team.mp4` |
-| **Duración** | *Pendiente* |
-| **Enlace de publicación** | *Pendiente (video en Microsoft Stream y YouTube)* |
-| **Ubicación en la Landing Page** | *Pendiente (incrustación en Landing Page y captura de pantalla)* |
+| **Duración** | En preparación |
+| **Enlace de publicación** | En edición para publicación en YouTube y Microsoft Stream |
+| **Ubicación en la Landing Page** | Sección sobre el equipo en la Landing Page (por incrustar tras su publicación) |

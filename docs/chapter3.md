@@ -1012,11 +1012,11 @@ Siguiendo las directrices del Scrum Guide (Schwaber & Sutherland, 2020) y las es
   <p><em>Figura: Captura del tablero FullTank · FuelPoint, seguimiento del plan de trabajo TB1, 8 de octubre de 2026.</em></p>
 </div>
 
-La captura adjunta muestra la proyección del tablero al término del plan de integración del frontend para TB1: **34 historias (87 Story Points) en Hecho** y **17 historias (35 Story Points) en Product Backlog**, reflejando la priorización acordada para la entrega parcial.
+La captura adjunta muestra la proyección histórica del tablero al término del plan de integración del frontend para TB1 (8 de octubre de 2026): **34 historias (87 Story Points) en Hecho** y **17 historias (35 Story Points) en Product Backlog**, reflejando la priorización acordada para la entrega parcial.
 
-Las 17 historias pendientes corresponden a 10 historias de Landing Page, recuperación de contraseña (US-16), descarga de reportes PDF (US-35) y cinco endpoints (TS-01 a TS-05). La lista de documentación conserva ocho pendientes que no forman parte de los Story Points del producto y no aparecen en el encuadre de esta captura.
+Las 17 tarjetas ubicadas en Product Backlog en dicha captura correspondían a las 10 historias de la Landing Page (ya completadas en el Sprint 1), recuperación de contraseña (US-16), descarga de reportes PDF (US-35) y cinco endpoints (TS-01 a TS-05). La lista de documentación conservaba ocho tarjetas administrativas fuera de los Story Points del producto.
 
-El tablero de esta captura contiene **51 historias**, mientras que la tabla documental siguiente incluye **73**. Las 22 historias técnicas adicionales de la tabla aún requieren incorporarse al tablero; los conteos de la captura se refieren exclusivamente a sus 51 tarjetas de producto.
+El tablero de la captura contenía **51 historias**, mientras que la tabla documental siguiente consolida las **73 historias** del proyecto (46 funcionales y 27 técnicas). Posteriormente, durante el Sprint 3 (AV2), las 27 historias técnicas de la API (`TS-01` a `TS-27`) se incorporaron y gestionaron en el tablero específico [FullTank · FuelPoint | Sprint 3 en Trello](https://trello.com/b/CBQSmZA1/sprint-3) (véase sección [5.2.3.3](chapter5.md#5233-sprint-backlog-3)).
 
 ### Tabla de Control del Product Backlog
 
