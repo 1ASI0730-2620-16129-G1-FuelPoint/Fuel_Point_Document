@@ -285,8 +285,8 @@ A continuación se detalla la configuración y el procedimiento de despliegue re
 
 #### 3. Web Services / RESTful API (Backend)
 
-* **Tecnologías:** C# con ASP.NET Core (.NET 10), Entity Framework Core 10, MySQL Connector para EF Core, Swashbuckle (OpenAPI / Swagger UI), BCrypt.Net y JWT (`System.IdentityModel.Tokens.Jwt`), Cortex.Mediator para comandos y eventos internos, y xUnit/Moq para pruebas.
-* **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (rama `main`, commit de release `fde0498`).
+* **Tecnologías:** C# con ASP.NET Core (.NET 10), Entity Framework Core 10, Npgsql (PostgreSQL) y Pomelo/MySQL Connector, Swashbuckle (OpenAPI / Swagger UI), BCrypt.Net y JWT (`System.IdentityModel.Tokens.Jwt`), Cortex.Mediator para comandos y eventos internos, y xUnit/Moq para pruebas.
+* **Repositorio oficial de código fuente:** [https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) (rama `main`, commit de release `daee12a`).
 * **Arquitectura de entrega:** monolito modular con nueve Bounded Contexts. Cada contexto separa las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` (REST y ACL). La comunicación entre contextos se realiza mediante *facades* de Anti-Corruption Layer y eventos de dominio dentro del mismo proceso.
 * **Requisitos y empaquetado reproducible:**
   * Entorno: .NET 10 SDK y MySQL 8.0 o superior.
@@ -1386,7 +1386,7 @@ El liderazgo técnico de cada Bounded Context y aspecto del backend fue asumido 
   <p><em>Figura: Tablero de Trello oficial de FullTank para el Sprint 3, mostrando el flujo y la categorización de las 27 historias técnicas de la API RESTful.</em></p>
 </div>
 
-Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `fde0498`) con los criterios de cada historia técnica. **Done** indica que el endpoint existe y su comportamiento principal está cubierto por pruebas o por la validación local; **Parcial** indica que falta una operación o que el contrato implementado difiere del descrito en la historia; **To do** indica que no se identificó implementación.
+Los estados de la tabla se determinaron contrastando el código integrado en `main` (commit `daee12a`) con los criterios de cada historia técnica y con las evidencias de despliegue en producción. **Done** indica que el endpoint o entregable existe y está verificado mediante pruebas o despliegue operativo; **Parcial** indica que falta una operación o que el contrato implementado difiere del descrito en la historia; **To do** indica que no se identificó implementación.
 
 | Task ID | Descripción de la tarea técnica | Historias asociadas | Responsable | Estado |
 | :--- | :--- | :--- | :--- | :---: |
@@ -1417,9 +1417,9 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 | **TSK-325** | Implementar la eliminación de equipos sin pedidos en curso | TS-25 | Por asignar | **To do** |
 | **TSK-326** | Implementar `DELETE` de conductores y vehículos y el registro de entrega fallida | TS-17, TS-18, TS-19 | Por asignar | **To do** |
 | **TSK-327** | Implementar la exportación de reportes en PDF | TS-27 (US-35) | Por asignar | **To do** |
-| **TSK-328** | Aplicar el Blueprint en Render y verificar `/health` y Swagger públicos | — | Por asignar | **To do** |
-| **TSK-329** | Conectar la Web Application con la API pública y publicar la nueva versión en Firebase Hosting | — | Por asignar | **To do** |
-| **TSK-330** | Documentar el Sprint 3 en el informe del proyecto | — | Por asignar | **In progress** |
+| **TSK-328** | Aplicar el Blueprint en Render (PostgreSQL 18) y verificar `/health` y Swagger públicos | — | Brayan Corvacho | **Done** |
+| **TSK-329** | Conectar la Web Application con la API pública y publicar la nueva versión en Firebase Hosting | — | Brayan Corvacho | **Done** |
+| **TSK-330** | Documentar el Sprint 3 en el informe del proyecto | — | Frank Huingo y Brayan Corvacho | **Done** |
 
 **Resumen de avance de las historias técnicas:** 17 historias en *Done* (40 SP), 7 en *Parcial* (20 SP: TS-04, TS-15, TS-17, TS-18, TS-19, TS-24 y TS-27) y 3 en *To do* (4 SP: TS-02, TS-03 y TS-25), sobre 64 SP planificados.
 
@@ -1431,9 +1431,9 @@ Los estados de la tabla se determinaron contrastando el código integrado en `ma
 
 **Repositorio oficial:** [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend).
 
-El historial de `main` se consultó mediante la API pública de GitHub el **11 de noviembre de 2026**. `main` apunta al commit de release [`fde0498`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/fde0498fc75c292af2cfca3964e50c1ffbb3f4e4) (*Merge branch 'release/backend' into main*) y contiene **85 commits**: 65 commits de trabajo y 20 merges `--no-ff`. Las ramas temáticas se integraron en `integration/backend` y se consolidaron en `main` mediante `release/backend`, garantizando la trazabilidad completa del ciclo de vida del software.
+El historial de `main` se verificó sobre el repositorio integrado el **12 de noviembre de 2026**. `main` apunta al commit de release [`daee12a`](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend/commit/daee12a) (*Merge branch 'release/postgresql' into main*) y contiene **98 commits**: 73 commits de trabajo y 25 merges `--no-ff`. Inicialmente las ramas temáticas funcionales se integraron en `integration/backend` y se liberaron en `main` mediante `release/backend` (`fde0498`, con persistencia inicial en MySQL 8), y posteriormente se incorporó la migración a **PostgreSQL 18** y validación de despliegue en Render Free mediante `release/postgresql` (`daee12a`).
 
-**Ramas integradas:** `chore/project-setup`, `feat/catalog`, `feat/inventory`, `feat/equipment`, `feat/orders`, `feat/fulfillment`, `feat/payments`, `feat/notifications`, `feat/analytics`, `feat/accounts`, `feat/database`, `feat/app-setup`, `test/domain-rules`, `test/order-workflow`, `test/payment-checkout`, `test/registration`, `build/docker`, `chore/render` y `test/configuration`.
+**Ramas integradas:** `chore/project-setup`, `feat/catalog`, `feat/inventory`, `feat/equipment`, `feat/orders`, `feat/fulfillment`, `feat/payments`, `feat/notifications`, `feat/analytics`, `feat/accounts`, `feat/database`, `feat/app-setup`, `test/domain-rules`, `test/order-workflow`, `test/payment-checkout`, `test/registration`, `build/docker`, `chore/render`, `test/configuration`, `test/container`, `docs/backend`, `chore/db-tools`, `feat/postgresql` y `release/postgresql`.
 
 | Aspecto / Bounded Context | Commits | Cuenta autora | Descripción de los commits |
 |---|---|---|---|
@@ -1450,7 +1450,8 @@ El historial de `main` se consultó mediante la API pública de GitHub el **11 d
 | Persistencia | `28dc91a`, `c6acfaf` | `enrique-mantilla` | Contexto de datos y unit of work; migraciones EF Core del esquema MySQL. |
 | Hosting | `a551f0f`, `4a0ab19` | `BralexCD` | Validación de la configuración de producción y comprobación de MySQL; registro de módulos y datos demo. |
 | Pruebas | `ed2ba5e` · `61c128c` · `ffc5804` · `4eef681` · `ff11306` · `277b258` | `Franz2308` · `BralexCD` · `enrique-mantilla` · `joanfpp2-ai` · `BralexCD` · `BralexCD` | Reglas de dominio; registro IAM; flujo de órdenes; checkout; seguridad entre empresas; configuración de producción. |
-| Contenedores y Render | `b32aa3e` · `b526de2` | `Franz2308` · `enrique-mantilla` | Imagen Docker de la API; conexión de la API con MySQL privado en Render. |
+| Contenedores y Render | `b32aa3e` · `b526de2` · `19b00e7` · `d7f6c08` | `Franz2308` · `enrique-mantilla` · `BralexCD` | Imagen Docker de la API; conexión inicial con MySQL privado; prueba de persistencia en contenedor y guía de despliegue en Render. |
+| PostgreSQL 18, MCP DB Tools y CI | `d3d0a98`, `93c4ab3`, `2908b99`, `5ddbe00`, `fb9c716`, `cbde399` | `BralexCD` | Documentación de ejecución local, servidor MCP para inspección de base de datos, migración de esquema EF Core a PostgreSQL 18 y validación CI del stack en Render Free. |
 
 **Observación de proceso:** la política de 5.1.2 exige integrar mediante Pull Request con revisión por pares. En el backend la integración se hizo con merges locales, por lo que no existe evidencia de revisión en GitHub. Se registra como acción de mejora para el Sprint 4 (ver 5.2.3.8).
 
@@ -1592,15 +1593,15 @@ Para garantizar la sostenibilidad del entorno dentro de los límites del nivel g
 
 Durante el Sprint 3 el equipo trabajó en el repositorio [Full_Tank_Backend](https://github.com/1ASI0730-2620-16129-G1-FuelPoint/Full_Tank_Backend) siguiendo GitFlow con ramas temáticas por Bounded Context (`feat/*`), pruebas (`test/*`) e infraestructura (`build/*`, `chore/*`), integradas en `integration/backend` y liberadas en `main` mediante `release/backend`.
 
-Distribución de commits en `main` según la API pública de GitHub (consulta del 11 de noviembre de 2026):
+Distribución de commits en `main` al release `daee12a` (**12 de noviembre de 2026**):
 
 | Integrante | Cuenta | Commits de trabajo | Merges de integración | Total | Áreas |
 |---|---|:---:|:---:|:---:|---|
-| Corvacho Damian, Brayan Alexis | `BralexCD` | 18 | 20 | 38 | Base compartida, IAM, hosting, pruebas de registro, seguridad y configuración, integración de ramas |
+| Corvacho Damian, Brayan Alexis | `BralexCD` | 26 | 25 | 51 | Base compartida, IAM, hosting, migración a PostgreSQL 18, MCP DB tools, pruebas y despliegue en Render |
 | Mantilla Maldonado, Enrique Manuel | `enrique-mantilla` | 19 | 0 | 19 | Catalog, Inventory, Ordering, persistencia, pruebas de órdenes y Render |
 | Huingo Tello, Frank Anthony | `Franz2308` | 17 | 0 | 17 | Equipment, Fulfillment, Notification, pruebas de dominio e imagen Docker |
 | Payano Puchuri, Joan Fabricio | `joanfpp2-ai` | 11 | 0 | 11 | Payment, Reporting & Analytics y pruebas de checkout |
-| **Total** | — | **65** | **20** | **85** | — |
+| **Total** | — | **73** | **25** | **98** | — |
 
 ##### Insights
 
@@ -1619,7 +1620,6 @@ Principales herramientas de comunicación: GitHub (control de versiones e integr
 ##### Acciones de mejora y compromisos para el Sprint 4 (TB2)
 
 - Integrar cada rama mediante Pull Request con al menos una revisión, como establece la política de 5.1.2, para dejar evidencia de la revisión por pares.
-- Publicar la API y MySQL en Render, conectar la Web Application a la API pública y actualizar el pipeline de Firebase para usar el build integrado.
 - Completar las brechas del Sprint 3: recuperación de contraseña (TS-02 / US-16), cierre de sesión (TS-03 / US-17), eliminación de equipos (TS-25), eliminación de conductores y vehículos y entrega fallida (TS-17 a TS-19) y exportación de reportes en PDF (TS-27 / US-35).
 - Reconciliar los criterios de aceptación de US-08, US-11, TS-04, TS-15 y TS-20 con el flujo implementado de pedidos y pago simulado.
 - Distribuir las tareas de backend de forma equitativa entre los integrantes del equipo para asegurar aportes verificables en el repositorio.
